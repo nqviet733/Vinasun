@@ -53,6 +53,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="checker.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="check_cuoc.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="day_income.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="driver.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="driver_percentange.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="entity.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityDiagram.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityDiagram.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityDiagram.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="EntityDiagram.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -65,9 +93,45 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="group.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="group_relation_leader.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="leader.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Class1.cs" />
+    <Compile Include="price_range.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="province_income.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="repair_cost.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="subtraction_income.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sumary_number.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="taxi.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="taxi_relation_checker.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="taxi_type.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_role.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\Class1.cs" />
     <Compile Include="View\Class2.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -83,7 +147,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EntityDiagram.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="EntityDiagram.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntityDiagram.Context.cs</LastGenOutput>
+      <DependentUpon>EntityDiagram.edmx</DependentUpon>
+    </None>
     <None Include="EntityDiagram.edmx.diagram">
+      <DependentUpon>EntityDiagram.edmx</DependentUpon>
+    </None>
+    <None Include="EntityDiagram.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntityDiagram.cs</LastGenOutput>
       <DependentUpon>EntityDiagram.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -102,7 +176,12 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="EntityDiagram.edmx.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

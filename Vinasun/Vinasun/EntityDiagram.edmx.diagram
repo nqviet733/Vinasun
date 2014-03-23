@@ -4,8 +4,47 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7845911a5e164d5d9d0f408746d9c62e" Name="Diagram1" >
-        <EntityTypeShape EntityType="EntityDiagram.User" Width="1.5" PointX="2.25" PointY="1.375" />
+      <Diagram DiagramId="7845911a5e164d5d9d0f408746d9c62e" Name="Diagram1" ZoomLevel="80" >
+        <EntityTypeShape EntityType="EntityDiagram.entity" Width="1.5" PointX="8.875" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.user_role" Width="1.5" PointX="12.375" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.taxi" Width="1.5" PointX="4.5" PointY="6.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="EntityDiagram.taxi_type" Width="1.875" PointX="7.375" PointY="9.5" IsExpanded="true" />
+        <AssociationConnector Association="EntityDiagram.taxi_typetaxi" />
+        <EntityTypeShape EntityType="EntityDiagram.price_range" Width="1.5" PointX="12.375" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.driver_percentange" Width="1.875" PointX="9.5" PointY="11.75" IsExpanded="true" />
+        <AssociationConnector Association="EntityDiagram.taxi_typedriver_percentange" />
+        <AssociationConnector Association="EntityDiagram.pricedriver_percentange" />
+        <EntityTypeShape EntityType="EntityDiagram.driver" Width="1.5" PointX="5.375" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.checker" Width="1.5" PointX="16.125" PointY="3.5" IsExpanded="true" />
+        <InheritanceConnector EntityType="EntityDiagram.driver" />
+        <InheritanceConnector EntityType="EntityDiagram.checker" />
+        <InheritanceConnector EntityType="EntityDiagram.checker" />
+        <InheritanceConnector EntityType="EntityDiagram.driver" />
+        <AssociationConnector Association="EntityDiagram.user_rolechecker" />
+        <AssociationConnector Association="EntityDiagram.taxidriver" />
+        <EntityTypeShape EntityType="EntityDiagram.sumary_number" Width="2.25" PointX="4.625" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="EntityDiagram.taxisumary_no" />
+        <EntityTypeShape EntityType="EntityDiagram.day_income" Width="1.5" PointX="1.875" PointY="9.875" IsExpanded="true" />
+        <AssociationConnector Association="EntityDiagram.taxiincome_per_day" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="EntityDiagram.province_income" Width="2.25" PointX="1.125" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="EntityDiagram.taxiincome_provine" />
+        <EntityTypeShape EntityType="EntityDiagram.subtraction_income" Width="2.125" PointX="1.875" PointY="2.875" IsExpanded="false" />
+        <AssociationConnector Association="EntityDiagram.taxisubtraction_income" />
+        <EntityTypeShape EntityType="EntityDiagram.repair_cost" Width="1.5" PointX="0.875" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="EntityDiagram.taxirepair_cost" />
+        <EntityTypeShape EntityType="EntityDiagram.leader" Width="1.5" PointX="12.125" PointY="6.25" IsExpanded="true" />
+        <AssociationConnector Association="EntityDiagram.user_rolepricipal" />
+        <AssociationConnector Association="EntityDiagram.principalchecker" />
+        <EntityTypeShape EntityType="EntityDiagram.group" Width="2" PointX="6.375" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.taxi_relation_checker" Width="2.625" PointX="13.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.group_relation_leader" Width="2.375" PointX="8.5" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="EntityDiagram.groupgroup_relation_leader" />
+        <AssociationConnector Association="EntityDiagram.leadergroup_relation_leader" />
+        <AssociationConnector Association="EntityDiagram.taxitaxi_relation_checker" />
+        <AssociationConnector Association="EntityDiagram.checkertaxi_relation_checker" />
+        <EntityTypeShape EntityType="EntityDiagram.check_cuoc" Width="1.5" PointX="0.5" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="EntityDiagram.taxicheck_cuoc" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
