@@ -1,6 +1,6 @@
-﻿namespace Vinasun
+﻿namespace Vinasun.View
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.components = new System.ComponentModel.Container();
+            this.winRTLiveTileManager1 = new DevExpress.XtraBars.WinRTLiveTiles.WinRTLiveTileManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.winRTLiveTileManager1)).BeginInit();
             this.SuspendLayout();
             // 
-            // simpleButton1
+            // winRTLiveTileManager1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(128, 53);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "simpleButton1";
+            this.winRTLiveTileManager1.ApplicationName = "";
+            this.winRTLiveTileManager1.ContainerControl = this;
+            this.winRTLiveTileManager1.Id = "1178ba8a-3d04-42f0-ae74-e73c8577f356";
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 262);
-            this.Controls.Add(this.simpleButton1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(522, 383);
+            this.Name = "Login";
+            this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.winRTLiveTileManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraBars.WinRTLiveTiles.WinRTLiveTileManager winRTLiveTileManager1;
 
     }
 }
-
