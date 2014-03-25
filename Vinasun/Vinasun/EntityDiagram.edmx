@@ -496,6 +496,14 @@
             <End Role="group" EntitySet="groups" />
             <End Role="Collection" EntitySet="Collections" />
           </AssociationSet>
+          <AssociationSet Name="user_rolemoderator" Association="EntityDiagram.user_rolemoderator">
+            <End Role="user_role" EntitySet="user_role" />
+            <End Role="moderator" EntitySet="entities" />
+          </AssociationSet>
+          <AssociationSet Name="user_roleadministrator" Association="EntityDiagram.user_roleadministrator">
+            <End Role="user_role" EntitySet="user_role" />
+            <End Role="administrator" EntitySet="entities" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="entity">
           <Key>
@@ -516,8 +524,11 @@
           </Key>
           <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" />
-          <NavigationProperty Name="checkers" Relationship="EntityDiagram.user_rolechecker" FromRole="user_role" ToRole="checker" />
-          <NavigationProperty Name="leaders" Relationship="EntityDiagram.user_role_leader" FromRole="user_role" ToRole="leaders" />
+          <NavigationProperty Name="checker" Relationship="EntityDiagram.user_rolechecker" FromRole="user_role" ToRole="checker" />
+          <NavigationProperty Name="leader" Relationship="EntityDiagram.user_role_leader" FromRole="user_role" ToRole="leaders" />
+          <Property Name="permission" Type="String" Nullable="false" />
+          <NavigationProperty Name="moderators" Relationship="EntityDiagram.user_rolemoderator" FromRole="user_role" ToRole="moderator" />
+          <NavigationProperty Name="administrators" Relationship="EntityDiagram.user_roleadministrator" FromRole="user_role" ToRole="administrator" />
         </EntityType>
         <EntityType Name="taxi">
           <Key>
@@ -545,6 +556,7 @@
           <Property Name="description" Type="String" Nullable="false" />
           <NavigationProperty Name="taxi" Relationship="EntityDiagram.taxi_typetaxi" FromRole="taxi_type" ToRole="taxi" />
           <NavigationProperty Name="driver_percentange" Relationship="EntityDiagram.taxi_typedriver_percentange" FromRole="taxi_type" ToRole="driver_percentange" />
+          <Property Name="symbol" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="taxi_typetaxi">
           <End Type="EntityDiagram.taxi_type" Role="taxi_type" Multiplicity="1" />
@@ -582,13 +594,13 @@
         <EntityType Name="checker" BaseType="EntityDiagram.entity">
           <Property Name="username" Type="String" Nullable="false" />
           <Property Name="password" Type="String" Nullable="false" />
-          <NavigationProperty Name="user_roles" Relationship="EntityDiagram.user_rolechecker" FromRole="checker" ToRole="user_role" />
+          <NavigationProperty Name="user_role" Relationship="EntityDiagram.user_rolechecker" FromRole="checker" ToRole="user_role" />
           <NavigationProperty Name="leaders" Relationship="EntityDiagram.principalchecker" FromRole="checker" ToRole="principal" />
           <NavigationProperty Name="taxi" Relationship="EntityDiagram.checkertaxi" FromRole="checker" ToRole="taxi" />
         </EntityType>
         <Association Name="user_rolechecker">
           <End Type="EntityDiagram.user_role" Role="user_role" Multiplicity="1" />
-          <End Type="EntityDiagram.checker" Role="checker" Multiplicity="*" />
+          <End Type="EntityDiagram.checker" Role="checker" Multiplicity="1" />
         </Association>
         <Association Name="taxidriver">
           <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="1" />
@@ -606,7 +618,7 @@
           <Property Name="cuoc" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="taxisumary_no">
-          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="0..1" />
+          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="1" />
           <End Type="EntityDiagram.sumary_number" Role="sumary_no" Multiplicity="*" />
         </Association>
         <EntityType Name="day_income">
@@ -682,7 +694,7 @@
         </EntityType>
         <Association Name="user_role_leader">
           <End Type="EntityDiagram.user_role" Role="user_role" Multiplicity="1" />
-          <End Type="EntityDiagram.leader" Role="leaders" Multiplicity="*" />
+          <End Type="EntityDiagram.leader" Role="leaders" Multiplicity="1" />
         </Association>
         <Association Name="principalchecker">
           <End Type="EntityDiagram.leader" Role="principal" Multiplicity="1" />
@@ -736,6 +748,26 @@
         <Association Name="groupCollection">
           <End Type="EntityDiagram.group" Role="group" Multiplicity="1" />
           <End Type="EntityDiagram.Collection" Role="Collection" Multiplicity="*" />
+        </Association>
+        <EntityType Name="administrator" BaseType="EntityDiagram.entity">
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="user_role" Relationship="EntityDiagram.user_roleadministrator" FromRole="administrator" ToRole="user_role" />
+          <Property Name="username" Type="String" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="moderator" BaseType="EntityDiagram.entity">
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="user_role" Relationship="EntityDiagram.user_rolemoderator" FromRole="moderator" ToRole="user_role" />
+          <Property Name="username" Type="String" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="user_rolemoderator">
+          <End Type="EntityDiagram.user_role" Role="user_role" Multiplicity="1" />
+          <End Type="EntityDiagram.moderator" Role="moderator" Multiplicity="1" />
+        </Association>
+        <Association Name="user_roleadministrator">
+          <End Type="EntityDiagram.user_role" Role="user_role" Multiplicity="1" />
+          <End Type="EntityDiagram.administrator" Role="administrator" Multiplicity="1" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -910,7 +942,6 @@
       <EndProperty Name="sumary_no">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
-      <Condition ColumnName="taxi_id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="taxiincome_per_day" TypeName="EntityDiagram.taxiincome_per_day" StoreEntitySet="day_income">
       <EndProperty Name="taxi">

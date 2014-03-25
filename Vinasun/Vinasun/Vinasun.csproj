@@ -64,27 +64,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="checker.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="check_cuoc.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Collection.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="day_income.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="driver.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="driver_percentange.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="entity.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
     <Compile Include="EntityDiagram.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,39 +86,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="group.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="leader.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\Class1.cs" />
-    <Compile Include="price_range.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="province_income.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="repair_cost.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="subtraction_income.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sumary_number.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="taxi.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="taxi_type.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="user_role.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
     <Compile Include="View\Class1.cs" />
     <Compile Include="View\Class2.cs" />
     <Compile Include="View\Login.cs">
