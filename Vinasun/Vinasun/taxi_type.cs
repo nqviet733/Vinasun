@@ -20,7 +20,7 @@ namespace Vinasun
             this.driver_percentange = new HashSet<driver_percentange>();
         }
     
-        public int id { get; set; }
+        public short id { get; set; }
         public string description { get; set; }
     
         public virtual ICollection<taxi> taxi { get; set; }

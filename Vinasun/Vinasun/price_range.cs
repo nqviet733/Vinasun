@@ -16,13 +16,13 @@ namespace Vinasun
     {
         public price_range()
         {
-            this.driver_percentange = new HashSet<driver_percentange>();
+            this.driver_percentanges = new HashSet<driver_percentange>();
         }
     
-        public int id { get; set; }
-        public string start { get; set; }
-        public string end { get; set; }
+        public short id { get; set; }
+        public int start { get; set; }
+        public int end { get; set; }
     
-        public virtual ICollection<driver_percentange> driver_percentange { get; set; }
+        public virtual ICollection<driver_percentange> driver_percentanges { get; set; }
     }
 }

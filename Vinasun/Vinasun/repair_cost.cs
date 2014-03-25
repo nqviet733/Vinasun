@@ -14,9 +14,11 @@ namespace Vinasun
     
     public partial class repair_cost
     {
-        public int id { get; set; }
-        public string created { get; set; }
+        public long id { get; set; }
+        public System.DateTime created { get; set; }
+        public System.DateTime date_in { get; set; }
+        public System.DateTime date_out { get; set; }
     
-        public virtual taxi taxi { get; set; }
+        public virtual taxi taxis { get; set; }
     }
 }

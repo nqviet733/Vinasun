@@ -70,6 +70,9 @@
     <Compile Include="check_cuoc.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
+    <Compile Include="Collection.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="day_income.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
@@ -107,9 +110,6 @@
     <Compile Include="group.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="group_relation_leader.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
     <Compile Include="leader.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
@@ -132,9 +132,6 @@
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
     <Compile Include="taxi.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="taxi_relation_checker.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
     <Compile Include="taxi_type.cs">

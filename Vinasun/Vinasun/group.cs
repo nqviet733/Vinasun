@@ -16,12 +16,14 @@ namespace Vinasun
     {
         public group()
         {
-            this.group_relation_leader = new HashSet<group_relation_leader>();
+            this.Collections = new HashSet<Collection>();
         }
     
         public int id { get; set; }
         public string name { get; set; }
+        public string address { get; set; }
     
-        public virtual ICollection<group_relation_leader> group_relation_leader { get; set; }
+        public virtual leader leader { get; set; }
+        public virtual ICollection<Collection> Collections { get; set; }
     }
 }

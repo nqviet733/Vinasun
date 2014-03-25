@@ -15,6 +15,6 @@ namespace Vinasun
     public partial class driver : entity
     {
     
-        public virtual taxi taxi { get; set; }
+        public virtual taxi taxis { get; set; }
     }
 }

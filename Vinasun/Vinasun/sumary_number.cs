@@ -14,12 +14,12 @@ namespace Vinasun
     
     public partial class sumary_number
     {
-        public int id { get; set; }
-        public string created { get; set; }
-        public string total { get; set; }
-        public string km { get; set; }
+        public long id { get; set; }
+        public System.DateTime created { get; set; }
+        public int total { get; set; }
+        public int km { get; set; }
         public string cuoc { get; set; }
     
-        public virtual taxi taxi { get; set; }
+        public virtual taxi taxis { get; set; }
     }
 }

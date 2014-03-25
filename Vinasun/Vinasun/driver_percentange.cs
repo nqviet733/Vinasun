@@ -14,10 +14,10 @@ namespace Vinasun
     
     public partial class driver_percentange
     {
-        public int id { get; set; }
-        public string percent { get; set; }
+        public short id { get; set; }
+        public int percent { get; set; }
     
-        public virtual taxi_type taxi_type { get; set; }
-        public virtual price_range price { get; set; }
+        public virtual taxi_type taxi_types { get; set; }
+        public virtual price_range price_range { get; set; }
     }
 }

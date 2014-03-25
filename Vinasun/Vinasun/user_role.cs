@@ -17,13 +17,13 @@ namespace Vinasun
         public user_role()
         {
             this.checkers = new HashSet<checker>();
-            this.pricipals = new HashSet<leader>();
+            this.leaders = new HashSet<leader>();
         }
     
-        public int id { get; set; }
+        public short id { get; set; }
         public string description { get; set; }
     
         public virtual ICollection<checker> checkers { get; set; }
-        public virtual ICollection<leader> pricipals { get; set; }
+        public virtual ICollection<leader> leaders { get; set; }
     }
 }

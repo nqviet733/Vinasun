@@ -14,8 +14,12 @@ namespace Vinasun
     
     public partial class subtraction_income
     {
-        public int Id { get; set; }
+        public long id { get; set; }
+        public int taximet { get; set; }
+        public string cuopco { get; set; }
+        public string another { get; set; }
+        public string thuxe { get; set; }
     
-        public virtual taxi taxi { get; set; }
+        public virtual taxi taxis { get; set; }
     }
 }

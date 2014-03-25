@@ -17,15 +17,14 @@ namespace Vinasun
         public leader()
         {
             this.checkers = new HashSet<checker>();
-            this.group_relation_leader = new HashSet<group_relation_leader>();
         }
     
         public int id { get; set; }
         public string username { get; set; }
         public string password { get; set; }
     
-        public virtual user_role user_role { get; set; }
+        public virtual user_role user_roles { get; set; }
         public virtual ICollection<checker> checkers { get; set; }
-        public virtual ICollection<group_relation_leader> group_relation_leader { get; set; }
+        public virtual group group { get; set; }
     }
 }

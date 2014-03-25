@@ -14,9 +14,12 @@ namespace Vinasun
     
     public partial class province_income
     {
-        public int id { get; set; }
-        public string created { get; set; }
+        public long id { get; set; }
+        public System.DateTime created { get; set; }
+        public int cuoc_income { get; set; }
+        public int over_income { get; set; }
+        public int price_income { get; set; }
     
-        public virtual taxi taxi { get; set; }
+        public virtual taxi taxis { get; set; }
     }
 }

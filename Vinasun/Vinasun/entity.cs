@@ -17,9 +17,10 @@ namespace Vinasun
         public int id { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }
-        public string birthday { get; set; }
-        public string gender { get; set; }
+        public Nullable<System.DateTime> birthday { get; set; }
+        public bool gender { get; set; }
         public string email { get; set; }
         public string businessphone { get; set; }
+        public Nullable<System.DateTime> date_join { get; set; }
     }
 }

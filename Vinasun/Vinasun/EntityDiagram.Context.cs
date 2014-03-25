@@ -38,8 +38,7 @@ namespace Vinasun
         public virtual DbSet<repair_cost> repair_cost { get; set; }
         public virtual DbSet<leader> leaders { get; set; }
         public virtual DbSet<group> groups { get; set; }
-        public virtual DbSet<taxi_relation_checker> taxi_relation_checker { get; set; }
-        public virtual DbSet<group_relation_leader> group_relation_leader { get; set; }
         public virtual DbSet<check_cuoc> check_cuoc { get; set; }
+        public virtual DbSet<Collection> Collections { get; set; }
     }
 }

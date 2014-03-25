@@ -16,15 +16,14 @@ namespace Vinasun
     {
         public checker()
         {
-            this.principal = new HashSet<leader>();
-            this.taxi_relation_checker = new HashSet<taxi_relation_checker>();
+            this.taxi = new HashSet<taxi>();
         }
     
         public string username { get; set; }
         public string password { get; set; }
     
-        public virtual user_role user_role { get; set; }
-        public virtual ICollection<leader> principal { get; set; }
-        public virtual ICollection<taxi_relation_checker> taxi_relation_checker { get; set; }
+        public virtual user_role user_roles { get; set; }
+        public virtual leader leaders { get; set; }
+        public virtual ICollection<taxi> taxi { get; set; }
     }
 }
