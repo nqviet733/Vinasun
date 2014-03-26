@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="7845911a5e164d5d9d0f408746d9c62e" Name="Diagram1" ZoomLevel="82" >
-        <EntityTypeShape EntityType="EntityDiagram.entity" Width="1.5" PointX="12" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.entity" Width="1.5" PointX="11.75" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="EntityDiagram.user_role" Width="1.5" PointX="17.125" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EntityDiagram.taxi" Width="1.875" PointX="8" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="EntityDiagram.taxi_type" Width="1.875" PointX="10.875" PointY="9.5" IsExpanded="true" />
@@ -40,14 +40,14 @@
         <EntityTypeShape EntityType="EntityDiagram.group" Width="2" PointX="17.625" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EntityDiagram.check_cuoc" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.taxicheck_cuoc" />
-        <EntityTypeShape EntityType="EntityDiagram.Collection" Width="1.5" PointX="15.375" PointY="9.75" />
+        <EntityTypeShape EntityType="EntityDiagram.collection" Width="1.5" PointX="15.375" PointY="9.75" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.groupleader" />
         <AssociationConnector Association="EntityDiagram.checkertaxi" ManuallyRouted="false" >
         </AssociationConnector>
         <AssociationConnector Association="EntityDiagram.groupCollection" ManuallyRouted="false" >
         </AssociationConnector>
-        <EntityTypeShape EntityType="EntityDiagram.administrator" Width="1.5" PointX="14.125" PointY="4.75" />
-        <EntityTypeShape EntityType="EntityDiagram.moderator" Width="1.5" PointX="14.5" PointY="2.375" />
+        <EntityTypeShape EntityType="EntityDiagram.administrator" Width="1.5" PointX="14.125" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.moderator" Width="1.5" PointX="14.5" PointY="2.375" IsExpanded="true" />
         <InheritanceConnector EntityType="EntityDiagram.moderator" />
         <InheritanceConnector EntityType="EntityDiagram.administrator" />
         <AssociationConnector Association="EntityDiagram.user_rolemoderator" />
