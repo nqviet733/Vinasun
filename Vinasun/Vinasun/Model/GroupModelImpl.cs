@@ -39,7 +39,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all groups
-        IList<Group> GroupModel.retrieveAllGroup(EntityDiagramContainer container)
+        IList<Group> GroupModel.retrieveAllGroups(EntityDiagramContainer container)
         {
             try
             {

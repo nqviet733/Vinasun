@@ -18,7 +18,7 @@ namespace Vinasun
         {
             this.SumaryNumbers = new HashSet<SumaryNumber>();
             this.DayIncomes = new HashSet<DayIncome>();
-            this.ProvineIncome = new HashSet<ProvineIncome>();
+            this.ProvineIncomes = new HashSet<ProvineIncome>();
             this.SubtractionIncomes = new HashSet<SubtractionIncome>();
             this.RepairCosts = new HashSet<RepairCost>();
             this.TripChecks = new HashSet<TripCheck>();
@@ -33,7 +33,7 @@ namespace Vinasun
         public virtual TaxiType TaxiType { get; set; }
         public virtual ICollection<SumaryNumber> SumaryNumbers { get; set; }
         public virtual ICollection<DayIncome> DayIncomes { get; set; }
-        public virtual ICollection<ProvineIncome> ProvineIncome { get; set; }
+        public virtual ICollection<ProvineIncome> ProvineIncomes { get; set; }
         public virtual ICollection<SubtractionIncome> SubtractionIncomes { get; set; }
         public virtual ICollection<RepairCost> RepairCosts { get; set; }
         public virtual ICollection<TripCheck> TripChecks { get; set; }

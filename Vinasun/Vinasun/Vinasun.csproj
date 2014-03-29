@@ -98,7 +98,8 @@
     <Compile Include="Model\GroupModelImpl.cs" />
     <Compile Include="Model\TaxiModel.cs" />
     <Compile Include="Model\TaxiModelImpl.cs" />
-    <Compile Include="Model\UserRole.cs" />
+    <Compile Include="Model\UserRoleModel.cs" />
+    <Compile Include="Model\UserRoleImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProvineIncome.cs">

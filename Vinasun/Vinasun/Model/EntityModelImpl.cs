@@ -65,6 +65,7 @@ namespace Vinasun.Model
                 entity.dateJoin = entityIn.dateJoin;
                 entity.UserRole = entityIn.UserRole;
                 entity.Leader = entityIn.Leader;
+                entity.Group = entity.Group;
 
                 container.SaveChanges();
             }

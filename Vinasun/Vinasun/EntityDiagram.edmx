@@ -110,7 +110,7 @@
     <Property Name="taxiNo" Type="nvarchar(max)" Nullable="false" />
     <Property Name="dateJoin" Type="datetime" Nullable="true" />
     <Property Name="model" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="TaxiType_id" Type="smallint" Nullable="false" />
+    <Property Name="TaxiType_id" Type="smallint" Nullable="true" />
     <Property Name="Entity_id" Type="int" Nullable="true" />
     <Property Name="Group_id" Type="int" Nullable="true" />
   </EntityType>
@@ -241,7 +241,7 @@
     <Property Name="permission" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <Association Name="taxi_typetaxi">
-    <End Role="taxi_type" Type="EntityDiagram.Store.TaxiTypes" Multiplicity="1" />
+    <End Role="taxi_type" Type="EntityDiagram.Store.TaxiTypes" Multiplicity="0..1" />
     <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi_type">
@@ -543,7 +543,7 @@
           <NavigationProperty Name="TaxiType" Relationship="EntityDiagram.taxi_typetaxi" FromRole="taxi" ToRole="taxi_type" />
           <NavigationProperty Name="SumaryNumbers" Relationship="EntityDiagram.taxisumary_no" FromRole="taxi" ToRole="sumary_no" />
           <NavigationProperty Name="DayIncomes" Relationship="EntityDiagram.taxiincome_per_day" FromRole="taxi" ToRole="income_per_day" />
-          <NavigationProperty Name="ProvineIncome" Relationship="EntityDiagram.taxiincome_provine" FromRole="taxi" ToRole="income_provine" />
+          <NavigationProperty Name="ProvineIncomes" Relationship="EntityDiagram.taxiincome_provine" FromRole="taxi" ToRole="income_provine" />
           <NavigationProperty Name="SubtractionIncomes" Relationship="EntityDiagram.taxisubtraction_income" FromRole="taxi" ToRole="subtraction_income" />
           <NavigationProperty Name="RepairCosts" Relationship="EntityDiagram.taxirepair_cost" FromRole="taxi" ToRole="repair_cost" />
           <NavigationProperty Name="TripChecks" Relationship="EntityDiagram.taxicheck_cuoc" FromRole="taxi" ToRole="check_cuoc" />
@@ -565,7 +565,7 @@
           <Property Name="symbol" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="taxi_typetaxi">
-          <End Type="EntityDiagram.TaxiType" Role="taxi_type" Multiplicity="1" />
+          <End Type="EntityDiagram.TaxiType" Role="taxi_type" Multiplicity="0..1" />
           <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="*" />
         </Association>
         <EntityType Name="RriceRange">
@@ -917,6 +917,7 @@
       <EndProperty Name="taxi">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
+      <Condition ColumnName="TaxiType_id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="taxi_typedriver_percentange" TypeName="EntityDiagram.taxi_typedriver_percentange" StoreEntitySet="DriverPercentanges">
       <EndProperty Name="taxi_type">

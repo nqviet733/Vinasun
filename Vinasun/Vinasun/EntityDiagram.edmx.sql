@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/29/2014 16:32:25
+-- Date Created: 03/29/2014 19:18:56
 -- Generated from EDMX file: C:\Users\nqvie_000\Source\Repos\Vinasun\Vinasun\Vinasun\EntityDiagram.edmx
 -- --------------------------------------------------
 
@@ -18,99 +18,99 @@ GO
 -- --------------------------------------------------
 
 IF OBJECT_ID(N'[dbo].[FK_taxi_typetaxi]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Taxis1] DROP CONSTRAINT [FK_taxi_typetaxi];
+    ALTER TABLE [dbo].[Taxis] DROP CONSTRAINT [FK_taxi_typetaxi];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxi_typedriver_percentange]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[driver_percentanges] DROP CONSTRAINT [FK_taxi_typedriver_percentange];
+    ALTER TABLE [dbo].[DriverPercentanges] DROP CONSTRAINT [FK_taxi_typedriver_percentange];
 GO
 IF OBJECT_ID(N'[dbo].[FK_pricedriver_percentange]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[driver_percentanges] DROP CONSTRAINT [FK_pricedriver_percentange];
+    ALTER TABLE [dbo].[DriverPercentanges] DROP CONSTRAINT [FK_pricedriver_percentange];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxisumary_no]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[sumary_numbers] DROP CONSTRAINT [FK_taxisumary_no];
+    ALTER TABLE [dbo].[SumaryNumbers] DROP CONSTRAINT [FK_taxisumary_no];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxiincome_per_day]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[day_incomes] DROP CONSTRAINT [FK_taxiincome_per_day];
+    ALTER TABLE [dbo].[DayIncomes] DROP CONSTRAINT [FK_taxiincome_per_day];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxiincome_provine]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[province_incomes] DROP CONSTRAINT [FK_taxiincome_provine];
+    ALTER TABLE [dbo].[ProvineIncomes] DROP CONSTRAINT [FK_taxiincome_provine];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxisubtraction_income]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[subtraction_incomes] DROP CONSTRAINT [FK_taxisubtraction_income];
+    ALTER TABLE [dbo].[SubtractionIncomes] DROP CONSTRAINT [FK_taxisubtraction_income];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxirepair_cost]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[repair_costs] DROP CONSTRAINT [FK_taxirepair_cost];
+    ALTER TABLE [dbo].[RepairCosts] DROP CONSTRAINT [FK_taxirepair_cost];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxicheck_cuoc]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[trip_checks] DROP CONSTRAINT [FK_taxicheck_cuoc];
+    ALTER TABLE [dbo].[TripChecks] DROP CONSTRAINT [FK_taxicheck_cuoc];
 GO
 IF OBJECT_ID(N'[dbo].[FK_groupCollection]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Collections1] DROP CONSTRAINT [FK_groupCollection];
+    ALTER TABLE [dbo].[Collections] DROP CONSTRAINT [FK_groupCollection];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxireason]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[reason_no_incomes] DROP CONSTRAINT [FK_taxireason];
+    ALTER TABLE [dbo].[ReasonNoIncomes] DROP CONSTRAINT [FK_taxireason];
 GO
 IF OBJECT_ID(N'[dbo].[FK_user_roleentity]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Entities1] DROP CONSTRAINT [FK_user_roleentity];
+    ALTER TABLE [dbo].[Entities] DROP CONSTRAINT [FK_user_roleentity];
 GO
 IF OBJECT_ID(N'[dbo].[FK_entityentity]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Entities1] DROP CONSTRAINT [FK_entityentity];
+    ALTER TABLE [dbo].[Entities] DROP CONSTRAINT [FK_entityentity];
 GO
 IF OBJECT_ID(N'[dbo].[FK_entitygroup]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Entities1] DROP CONSTRAINT [FK_entitygroup];
+    ALTER TABLE [dbo].[Entities] DROP CONSTRAINT [FK_entitygroup];
 GO
 IF OBJECT_ID(N'[dbo].[FK_entitytaxi]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Taxis1] DROP CONSTRAINT [FK_entitytaxi];
+    ALTER TABLE [dbo].[Taxis] DROP CONSTRAINT [FK_entitytaxi];
 GO
 IF OBJECT_ID(N'[dbo].[FK_grouptaxi]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Taxis1] DROP CONSTRAINT [FK_grouptaxi];
+    ALTER TABLE [dbo].[Taxis] DROP CONSTRAINT [FK_grouptaxi];
 GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[Entities1]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Entities1];
+IF OBJECT_ID(N'[dbo].[Entities]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Entities];
 GO
-IF OBJECT_ID(N'[dbo].[Taxis1]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Taxis1];
+IF OBJECT_ID(N'[dbo].[Taxis]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Taxis];
 GO
-IF OBJECT_ID(N'[dbo].[taxi_types]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[taxi_types];
+IF OBJECT_ID(N'[dbo].[TaxiTypes]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TaxiTypes];
 GO
-IF OBJECT_ID(N'[dbo].[price_ranges]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[price_ranges];
+IF OBJECT_ID(N'[dbo].[RriceRanges]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[RriceRanges];
 GO
-IF OBJECT_ID(N'[dbo].[driver_percentanges]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[driver_percentanges];
+IF OBJECT_ID(N'[dbo].[DriverPercentanges]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DriverPercentanges];
 GO
-IF OBJECT_ID(N'[dbo].[sumary_numbers]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[sumary_numbers];
+IF OBJECT_ID(N'[dbo].[SumaryNumbers]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[SumaryNumbers];
 GO
-IF OBJECT_ID(N'[dbo].[day_incomes]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[day_incomes];
+IF OBJECT_ID(N'[dbo].[DayIncomes]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DayIncomes];
 GO
-IF OBJECT_ID(N'[dbo].[province_incomes]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[province_incomes];
+IF OBJECT_ID(N'[dbo].[ProvineIncomes]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ProvineIncomes];
 GO
-IF OBJECT_ID(N'[dbo].[subtraction_incomes]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[subtraction_incomes];
+IF OBJECT_ID(N'[dbo].[SubtractionIncomes]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[SubtractionIncomes];
 GO
-IF OBJECT_ID(N'[dbo].[repair_costs]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[repair_costs];
+IF OBJECT_ID(N'[dbo].[RepairCosts]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[RepairCosts];
 GO
-IF OBJECT_ID(N'[dbo].[Groups1]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Groups1];
+IF OBJECT_ID(N'[dbo].[Groups]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Groups];
 GO
-IF OBJECT_ID(N'[dbo].[trip_checks]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[trip_checks];
+IF OBJECT_ID(N'[dbo].[TripChecks]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TripChecks];
 GO
-IF OBJECT_ID(N'[dbo].[Collections1]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Collections1];
+IF OBJECT_ID(N'[dbo].[Collections]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Collections];
 GO
-IF OBJECT_ID(N'[dbo].[reason_no_incomes]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[reason_no_incomes];
+IF OBJECT_ID(N'[dbo].[ReasonNoIncomes]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ReasonNoIncomes];
 GO
 IF OBJECT_ID(N'[dbo].[UserRoles]', 'U') IS NOT NULL
     DROP TABLE [dbo].[UserRoles];
@@ -142,7 +142,7 @@ CREATE TABLE [dbo].[Taxis] (
     [taxiNo] nvarchar(max)  NOT NULL,
     [dateJoin] datetime  NULL,
     [model] nvarchar(max)  NULL,
-    [TaxiType_id] smallint  NOT NULL,
+    [TaxiType_id] smallint  NULL,
     [Entity_id] int  NULL,
     [Group_id] int  NULL
 );
