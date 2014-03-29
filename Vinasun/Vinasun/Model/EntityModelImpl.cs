@@ -9,6 +9,7 @@ namespace Vinasun.Model
 {
     class EntityModelImpl: EntityModel
     {
+
         //Create new entity
         void EntityModel.addEntity(EntityDiagramContainer container, Entity entity)
         {
@@ -93,5 +94,6 @@ namespace Vinasun.Model
                 Console.WriteLine("Unable to delete already exist entity. Try again, and if the problem persists see your system administrator: " + ex);
             }
         }
+
     }
 }

@@ -9,7 +9,7 @@ namespace Vinasun.Model
 {
     class TaxiModelImpl:TaxiModel
     {
-        
+
         //Create new Taxi
         void TaxiModel.addTaxi(EntityDiagramContainer container, Taxi taxi)
         {
@@ -90,5 +90,6 @@ namespace Vinasun.Model
                 Console.WriteLine("Unable to delete already exist Taxi. Try again, and if the problem persists see your system administrator: " + ex);
             }
         }
+
     }
 }

@@ -86,5 +86,6 @@ namespace Vinasun.Model
                 Console.WriteLine("Unable to delete already exist group. Try again, and if the problem persists see your system administrator: " + ex);
             }
         }
+
     }
 }

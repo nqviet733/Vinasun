@@ -92,6 +92,8 @@
     <Compile Include="Model\GroupModelImpl.cs" />
     <Compile Include="Model\TaxiModel.cs" />
     <Compile Include="Model\TaxiModelImpl.cs" />
+    <Compile Include="Model\TaxiTypeModelImpl.cs" />
+    <Compile Include="Model\TaxiTypeModel.cs" />
     <Compile Include="Model\UserRoleModel.cs" />
     <Compile Include="Model\UserRoleModelImpl.cs" />
     <Compile Include="Program.cs" />

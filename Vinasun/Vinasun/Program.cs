@@ -23,6 +23,7 @@ namespace Vinasun
             GroupModel gm = new GroupModelImpl();
             EntityModel em = new EntityModelImpl();
             TaxiModel tm = new TaxiModelImpl();
+            UserRoleModel urm = new UserRoleModelImpl();
             var con = new EntityDiagramContainer();
 
             //====Group
@@ -67,6 +68,22 @@ namespace Vinasun
             //tm.updateTaxi(con, taxi);
             //tm.deleteTaxi(con, taxi);
 
+
+            //====User Role
+            //UserRole ur = new UserRole();
+
+            //ur.description = "Admin";
+            //ur.permission = "Add new user, change configure";
+            //ur.description = "Other";
+            //ur.permission = "Other";
+            //urm.addUserRole(con, ur);
+            //var userRole = urm.retrieveUserRole(con, 4);
+            //var userRoles = urm.retrieveAllUserRoles(con);
+            //userRole.description = "Leader";
+            //userRole.permission = "Add new checker, view group info, summary report";
+            //urm.updateUserRole(con, userRole);
+            //tm.updateTaxi(con, taxi);
+            //urm.deleteUserRole(con, userRole);
 
         }
     }
