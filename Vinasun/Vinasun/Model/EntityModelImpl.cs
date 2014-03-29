@@ -37,7 +37,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all entities
-        IList<Entity> EntityModel.retrieveAllEntity(EntityDiagramContainer container)
+        IList<Entity> EntityModel.retrieveAllEntities(EntityDiagramContainer container)
         {
             try
             {
