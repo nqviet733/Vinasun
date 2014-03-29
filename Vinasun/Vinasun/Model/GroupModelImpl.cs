@@ -58,9 +58,9 @@ namespace Vinasun.Model
         {
             try
             {
-                var g = container.Groups.FirstOrDefault(c => c.id == group.id);
-                g.name = group.name;
-                g.address = group.address;
+                var gr = container.Groups.FirstOrDefault(c => c.id == group.id);
+                gr.name = group.name;
+                gr.address = group.address;
                 container.SaveChanges();
             }
             catch (Exception ex)
@@ -74,10 +74,10 @@ namespace Vinasun.Model
         {
             try
             {
-                var gr = (from g in container.Groups
-                          where g.id == groupIn.id
-                          select g).FirstOrDefault();
-                container.Groups.Remove(gr);
+                var g = (from gr in container.Groups
+                          where gr.id == groupIn.id
+                          select gr).FirstOrDefault();
+                container.Groups.Remove(g);
                 container.SaveChanges();
 
             }

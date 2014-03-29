@@ -89,6 +89,10 @@
     <Compile Include="EntityClass\PriceRange.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\CollectionModel.cs" />
+    <Compile Include="Model\CollectionModelImpl.cs" />
+    <Compile Include="Model\DriverPercentangeModel.cs" />
+    <Compile Include="Model\DriverPercentangeModelImpl.cs" />
     <Compile Include="Model\EntityModel.cs" />
     <Compile Include="Model\EntityModelImpl.cs" />
     <Compile Include="Model\GroupModel.cs" />

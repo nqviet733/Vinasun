@@ -74,10 +74,10 @@ namespace Vinasun.Model
         {
             try
             {
-                var priceRange = (from PriceRange in container.PriceRanges
-                                where PriceRange.id == priceRangeIn.id
-                                select PriceRange).FirstOrDefault();
-                container.PriceRanges.Remove(priceRange);
+                var pr = (from priceRange in container.PriceRanges
+                                  where priceRange.id == priceRangeIn.id
+                                  select priceRange).FirstOrDefault();
+                container.PriceRanges.Remove(pr);
                 container.SaveChanges();
 
             }

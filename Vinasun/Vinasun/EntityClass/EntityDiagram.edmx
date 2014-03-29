@@ -136,8 +136,8 @@
     </Key>
     <Property Name="id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="percent" Type="int" Nullable="false" />
-    <Property Name="taxiType_id" Type="smallint" Nullable="false" />
-    <Property Name="PriceRange_id" Type="smallint" Nullable="false" />
+    <Property Name="TaxiType_id" Type="smallint" Nullable="true" />
+    <Property Name="PriceRange_id" Type="smallint" Nullable="true" />
   </EntityType>
   <EntityType Name="SumaryNumbers">
     <Key>
@@ -148,7 +148,7 @@
     <Property Name="total" Type="int" Nullable="false" />
     <Property Name="kmSum" Type="int" Nullable="false" />
     <Property Name="tripSum" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Taxi_id" Type="int" Nullable="false" />
+    <Property Name="Taxi_id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="DayIncomes">
     <Key>
@@ -160,7 +160,7 @@
     <Property Name="driverIncome" Type="int" Nullable="false" />
     <Property Name="companyIncome" Type="int" Nullable="false" />
     <Property Name="rateIncome" Type="int" Nullable="false" />
-    <Property Name="Taxi_id" Type="int" Nullable="false" />
+    <Property Name="Taxi_id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="ProvineIncomes">
     <Key>
@@ -208,7 +208,7 @@
     <Property Name="created" Type="datetime" Nullable="false" />
     <Property Name="dateGo" Type="datetime" Nullable="false" />
     <Property Name="dateBack" Type="datetime" Nullable="false" />
-    <Property Name="Taxi_id" Type="int" Nullable="false" />
+    <Property Name="Taxi_id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="Collections">
     <Key>
@@ -253,19 +253,19 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="taxi_typedriver_percentange">
-    <End Role="taxi_type" Type="EntityDiagram.Store.TaxiTypes" Multiplicity="1" />
+    <End Role="taxi_type" Type="EntityDiagram.Store.TaxiTypes" Multiplicity="0..1" />
     <End Role="driver_percentange" Type="EntityDiagram.Store.DriverPercentanges" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi_type">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="driver_percentange">
-        <PropertyRef Name="taxiType_id" />
+        <PropertyRef Name="TaxiType_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="pricedriver_percentange">
-    <End Role="price" Type="EntityDiagram.Store.PriceRanges" Multiplicity="1" />
+    <End Role="price" Type="EntityDiagram.Store.PriceRanges" Multiplicity="0..1" />
     <End Role="driver_percentange" Type="EntityDiagram.Store.DriverPercentanges" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="price">
@@ -277,7 +277,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="taxisumary_no">
-    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="1" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="0..1" />
     <End Role="sumary_no" Type="EntityDiagram.Store.SumaryNumbers" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi">
@@ -289,7 +289,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="taxiincome_per_day">
-    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="1" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="0..1" />
     <End Role="income_per_day" Type="EntityDiagram.Store.DayIncomes" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi">
@@ -337,7 +337,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="taxicheck_cuoc">
-    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="1" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="0..1" />
     <End Role="check_cuoc" Type="EntityDiagram.Store.TripChecks" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi">
@@ -583,15 +583,15 @@
           </Key>
           <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="percent" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="taxiType" Relationship="EntityDiagram.taxi_typedriver_percentange" FromRole="driver_percentange" ToRole="taxi_type" />
+          <NavigationProperty Name="TaxiType" Relationship="EntityDiagram.taxi_typedriver_percentange" FromRole="driver_percentange" ToRole="taxi_type" />
           <NavigationProperty Name="PriceRange" Relationship="EntityDiagram.pricedriver_percentange" FromRole="driver_percentange" ToRole="price" />
         </EntityType>
         <Association Name="taxi_typedriver_percentange">
-          <End Type="EntityDiagram.TaxiType" Role="taxi_type" Multiplicity="1" />
+          <End Type="EntityDiagram.TaxiType" Role="taxi_type" Multiplicity="0..1" />
           <End Type="EntityDiagram.DriverPercentange" Role="driver_percentange" Multiplicity="*" />
         </Association>
         <Association Name="pricedriver_percentange">
-          <End Type="EntityDiagram.PriceRange" Role="price" Multiplicity="1" />
+          <End Type="EntityDiagram.PriceRange" Role="price" Multiplicity="0..1" />
           <End Type="EntityDiagram.DriverPercentange" Role="driver_percentange" Multiplicity="*" />
         </Association>
         <EntityType Name="SumaryNumber">
@@ -606,7 +606,7 @@
           <Property Name="tripSum" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="taxisumary_no">
-          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="1" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="0..1" />
           <End Type="EntityDiagram.SumaryNumber" Role="sumary_no" Multiplicity="*" />
         </Association>
         <EntityType Name="DayIncome">
@@ -622,7 +622,7 @@
           <Property Name="rateIncome" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="taxiincome_per_day">
-          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="1" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="0..1" />
           <End Type="EntityDiagram.DayIncome" Role="income_per_day" Multiplicity="*" />
         </Association>
         <EntityType Name="ProvineIncome">
@@ -689,7 +689,7 @@
           <Property Name="dateBack" Type="DateTime" Nullable="false" />
         </EntityType>
         <Association Name="taxicheck_cuoc">
-          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="1" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="0..1" />
           <End Type="EntityDiagram.TripCheck" Role="check_cuoc" Multiplicity="*" />
         </Association>
         <EntityType Name="Collection">
@@ -921,11 +921,12 @@
     </AssociationSetMapping>
     <AssociationSetMapping Name="taxi_typedriver_percentange" TypeName="EntityDiagram.taxi_typedriver_percentange" StoreEntitySet="DriverPercentanges">
       <EndProperty Name="taxi_type">
-        <ScalarProperty Name="id" ColumnName="taxiType_id" />
+        <ScalarProperty Name="id" ColumnName="TaxiType_id" />
       </EndProperty>
       <EndProperty Name="driver_percentange">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
+      <Condition ColumnName="TaxiType_id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="pricedriver_percentange" TypeName="EntityDiagram.pricedriver_percentange" StoreEntitySet="DriverPercentanges">
       <EndProperty Name="price">
@@ -934,6 +935,7 @@
       <EndProperty Name="driver_percentange">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
+      <Condition ColumnName="PriceRange_id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="taxisumary_no" TypeName="EntityDiagram.taxisumary_no" StoreEntitySet="SumaryNumbers">
       <EndProperty Name="taxi">
@@ -942,6 +944,7 @@
       <EndProperty Name="sumary_no">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
+      <Condition ColumnName="Taxi_id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="taxiincome_per_day" TypeName="EntityDiagram.taxiincome_per_day" StoreEntitySet="DayIncomes">
       <EndProperty Name="taxi">
@@ -950,6 +953,7 @@
       <EndProperty Name="income_per_day">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
+      <Condition ColumnName="Taxi_id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="taxiincome_provine" TypeName="EntityDiagram.taxiincome_provine" StoreEntitySet="ProvineIncomes">
       <EndProperty Name="taxi">
@@ -985,6 +989,7 @@
       <EndProperty Name="check_cuoc">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
+      <Condition ColumnName="Taxi_id" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="groupCollection" TypeName="EntityDiagram.groupCollection" StoreEntitySet="Collections">
       <EndProperty Name="group">

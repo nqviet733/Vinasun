@@ -26,6 +26,7 @@ namespace Vinasun
             UserRoleModel urm = new UserRoleModelImpl();
             TaxiTypeModel ttm = new TaxiTypeModelImpl();
             PriceRangeModel prm = new PriceRangeModelImpl();
+            DriverPercentangeModel dpm = new DriverPercentangeModelImpl();
             var con = new EntityDiagramContainer();
 
             //====Group
@@ -102,16 +103,36 @@ namespace Vinasun
 
 
             //====Price Range
-            PriceRange pr = new PriceRange();
-            pr.start = 0;
-            pr.end = 399;
+            //PriceRange pr = new PriceRange();
+            //pr.start = 400;
+            //pr.end = 999;
 
-            prm.addPriceRange(con, pr);
-            //var taxiType = ttm.retrieveTaxiType(con, 3);
-            //var taxiTypes = ttm.retrieveAllTaxiTypes(con);
-            //taxiType.description = "Xe G Cho";
-            //ttm.updateTaxiType(con, taxiType);
+            //prm.addPriceRange(con, pr);
+            //var priceRange = prm.retrievePriceRange(con, 1);
+            //var priceRanges = prm.retrieveAllPriceRanges(con);
+            //priceRange.start = 500;
+            //prm.updatePriceRange(con, priceRange);
+            //prm.deletePriceRange(con, priceRange);
             //ttm.deleteTaxiType(con, taxiType);
+
+
+            //====DriverPercentange
+            //DriverPercentange dp = new DriverPercentange();
+            //dp.percent = 20;
+            //dpm.addDriverPercentange(con, dp);
+            //var driverPercentange = dpm.retrieveDriverPercentange(con, 1);
+            //var driverPercentanges = dpm.retrieveAllDriverPercentanges(con);
+            //driverPercentange.percent = 30;
+            //dpm.updateDriverPercentange(con, driverPercentange);
+            //dpm.deleteDriverPercentange(con, driverPercentange);
+            //prm.addPriceRange(con, pr);
+            //var priceRange = prm.retrievePriceRange(con, 1);
+            //var priceRanges = prm.retrieveAllPriceRanges(con);
+            //priceRange.start = 500;
+            //prm.updatePriceRange(con, priceRange);
+            //prm.deletePriceRange(con, priceRange);
+            //ttm.deleteTaxiType(con, taxiType);
+
 
         }
     }

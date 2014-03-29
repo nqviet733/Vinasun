@@ -74,10 +74,10 @@ namespace Vinasun.Model
         {
             try
             {
-                var taxiType = (from TaxiType in container.TaxiTypes
-                                where TaxiType.id == taxiTypeIn.id
-                                select TaxiType).FirstOrDefault();
-                container.TaxiTypes.Remove(taxiType);
+                var ttt = (from taxiType in container.TaxiTypes
+                                where taxiType.id == taxiTypeIn.id
+                                select taxiType).FirstOrDefault();
+                container.TaxiTypes.Remove(ttt);
                 container.SaveChanges();
 
             }

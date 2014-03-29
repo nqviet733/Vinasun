@@ -78,10 +78,10 @@ namespace Vinasun.Model
         {
             try
             {
-                var taxi = (from t in container.Taxis
-                          where t.id == taxiIn.id
-                          select t).FirstOrDefault();
-                container.Taxis.Remove(taxi);
+                var tx = (from taxi in container.Taxis
+                            where taxi.id == taxiIn.id
+                            select taxi).FirstOrDefault();
+                container.Taxis.Remove(tx);
                 container.SaveChanges();
 
             }

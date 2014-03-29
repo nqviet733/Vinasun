@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/29/2014 22:13:16
+-- Date Created: 03/29/2014 22:57:32
 -- Generated from EDMX file: C:\Users\nqvie_000\Source\Repos\Vinasun\Vinasun\Vinasun\EntityClass\EntityDiagram.edmx
 -- --------------------------------------------------
 
@@ -79,8 +79,8 @@ GO
 IF OBJECT_ID(N'[dbo].[TaxiTypes]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TaxiTypes];
 GO
-IF OBJECT_ID(N'[dbo].[RriceRanges]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[RriceRanges];
+IF OBJECT_ID(N'[dbo].[PriceRanges]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PriceRanges];
 GO
 IF OBJECT_ID(N'[dbo].[DriverPercentanges]', 'U') IS NOT NULL
     DROP TABLE [dbo].[DriverPercentanges];
@@ -168,8 +168,8 @@ GO
 CREATE TABLE [dbo].[DriverPercentanges] (
     [id] smallint IDENTITY(1,1) NOT NULL,
     [percent] int  NOT NULL,
-    [taxiType_id] smallint  NOT NULL,
-    [PriceRange_id] smallint  NOT NULL
+    [TaxiType_id] smallint  NULL,
+    [PriceRange_id] smallint  NULL
 );
 GO
 
@@ -180,7 +180,7 @@ CREATE TABLE [dbo].[SumaryNumbers] (
     [total] int  NOT NULL,
     [kmSum] int  NOT NULL,
     [tripSum] nvarchar(max)  NOT NULL,
-    [Taxi_id] int  NOT NULL
+    [Taxi_id] int  NULL
 );
 GO
 
@@ -192,7 +192,7 @@ CREATE TABLE [dbo].[DayIncomes] (
     [driverIncome] int  NOT NULL,
     [companyIncome] int  NOT NULL,
     [rateIncome] int  NOT NULL,
-    [Taxi_id] int  NOT NULL
+    [Taxi_id] int  NULL
 );
 GO
 
@@ -240,7 +240,7 @@ CREATE TABLE [dbo].[TripChecks] (
     [created] datetime  NOT NULL,
     [dateGo] datetime  NOT NULL,
     [dateBack] datetime  NOT NULL,
-    [Taxi_id] int  NOT NULL
+    [Taxi_id] int  NULL
 );
 GO
 
@@ -387,10 +387,10 @@ ON [dbo].[Taxis]
     ([TaxiType_id]);
 GO
 
--- Creating foreign key on [taxiType_id] in table 'DriverPercentanges'
+-- Creating foreign key on [TaxiType_id] in table 'DriverPercentanges'
 ALTER TABLE [dbo].[DriverPercentanges]
 ADD CONSTRAINT [FK_taxi_typedriver_percentange]
-    FOREIGN KEY ([taxiType_id])
+    FOREIGN KEY ([TaxiType_id])
     REFERENCES [dbo].[TaxiTypes]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -399,7 +399,7 @@ GO
 -- Creating non-clustered index for FOREIGN KEY 'FK_taxi_typedriver_percentange'
 CREATE INDEX [IX_FK_taxi_typedriver_percentange]
 ON [dbo].[DriverPercentanges]
-    ([taxiType_id]);
+    ([TaxiType_id]);
 GO
 
 -- Creating foreign key on [PriceRange_id] in table 'DriverPercentanges'

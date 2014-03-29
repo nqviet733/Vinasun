@@ -17,7 +17,7 @@ namespace Vinasun.EntityClass
         public short id { get; set; }
         public int percent { get; set; }
     
-        public virtual TaxiType taxiType { get; set; }
+        public virtual TaxiType TaxiType { get; set; }
         public virtual PriceRange PriceRange { get; set; }
     }
 }

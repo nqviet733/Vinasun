@@ -74,10 +74,10 @@ namespace Vinasun.Model
         {
             try
             {
-                var userRole = (from UserRole in container.UserRoles
-                         where UserRole.id == userRoleIn.id
-                         select UserRole).FirstOrDefault();
-                container.UserRoles.Remove(userRole);
+                var ur = (from userRole in container.UserRoles
+                                where userRole.id == userRoleIn.id
+                                select userRole).FirstOrDefault();
+                container.UserRoles.Remove(ur);
                 container.SaveChanges();
 
             }
