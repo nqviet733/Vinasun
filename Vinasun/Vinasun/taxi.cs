@@ -12,33 +12,33 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class taxi
+    public partial class Taxi
     {
-        public taxi()
+        public Taxi()
         {
-            this.sumary_numbers = new HashSet<sumary_number>();
-            this.day_incomes = new HashSet<day_income>();
-            this.income_provines = new HashSet<province_income>();
-            this.subtraction_incomes = new HashSet<subtraction_income>();
-            this.repair_costs = new HashSet<repair_cost>();
-            this.trip_checks = new HashSet<trip_check>();
-            this.reason_no_incomes = new HashSet<reason_no_income>();
+            this.SumaryNumbers = new HashSet<SumaryNumber>();
+            this.DayIncomes = new HashSet<DayIncome>();
+            this.ProvineIncome = new HashSet<ProvineIncome>();
+            this.SubtractionIncomes = new HashSet<SubtractionIncome>();
+            this.RepairCosts = new HashSet<RepairCost>();
+            this.TripChecks = new HashSet<TripCheck>();
+            this.ReasonNoIncomes = new HashSet<ReasonNoIncome>();
         }
     
         public int id { get; set; }
-        public string taxi_no { get; set; }
-        public Nullable<System.DateTime> date_join { get; set; }
+        public string taxiNo { get; set; }
+        public Nullable<System.DateTime> dateJoin { get; set; }
         public string model { get; set; }
     
-        public virtual taxi_type taxi_type { get; set; }
-        public virtual ICollection<sumary_number> sumary_numbers { get; set; }
-        public virtual ICollection<day_income> day_incomes { get; set; }
-        public virtual ICollection<province_income> income_provines { get; set; }
-        public virtual ICollection<subtraction_income> subtraction_incomes { get; set; }
-        public virtual ICollection<repair_cost> repair_costs { get; set; }
-        public virtual ICollection<trip_check> trip_checks { get; set; }
-        public virtual ICollection<reason_no_income> reason_no_incomes { get; set; }
-        public virtual entity entity { get; set; }
-        public virtual group group { get; set; }
+        public virtual TaxiType TaxiType { get; set; }
+        public virtual ICollection<SumaryNumber> SumaryNumbers { get; set; }
+        public virtual ICollection<DayIncome> DayIncomes { get; set; }
+        public virtual ICollection<ProvineIncome> ProvineIncome { get; set; }
+        public virtual ICollection<SubtractionIncome> SubtractionIncomes { get; set; }
+        public virtual ICollection<RepairCost> RepairCosts { get; set; }
+        public virtual ICollection<TripCheck> TripChecks { get; set; }
+        public virtual ICollection<ReasonNoIncome> ReasonNoIncomes { get; set; }
+        public virtual Entity Entity { get; set; }
+        public virtual Group Group { get; set; }
     }
 }

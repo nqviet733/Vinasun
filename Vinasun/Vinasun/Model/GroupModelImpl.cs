@@ -11,11 +11,11 @@ namespace Vinasun.Model
     {
 
         //Create new group
-        void GroupModel.addGroup(EntityDiagramContainer container, group group)
+        void GroupModel.addGroup(EntityDiagramContainer container, Group group)
         {
             try
             {
-                container.groups.Add(group);
+                container.Groups.Add(group);
                 container.SaveChanges();
             }
             catch(Exception ex)
@@ -25,11 +25,11 @@ namespace Vinasun.Model
         }
 
         //retrieve a group already exist
-        group GroupModel.retrieveGroup(EntityDiagramContainer container, int groupId)
+        Group GroupModel.retrieveGroup(EntityDiagramContainer container, int groupId)
         {
             try
             {
-                return container.groups.Find(groupId);
+                return container.Groups.Find(groupId);
             }
             catch (Exception ex)
             {
@@ -39,11 +39,11 @@ namespace Vinasun.Model
         }
 
         //retrieve all groups
-        IList<group> GroupModel.retrieveAllGroup(EntityDiagramContainer container)
+        IList<Group> GroupModel.retrieveAllGroup(EntityDiagramContainer container)
         {
             try
             {
-                return container.Set<group>().ToList();
+                return container.Set<Group>().ToList();
             }
             catch (Exception ex)
             {
@@ -53,11 +53,11 @@ namespace Vinasun.Model
         }
 
         //update a group already exist
-        void GroupModel.updateGroup(EntityDiagramContainer container, group group)
+        void GroupModel.updateGroup(EntityDiagramContainer container, Group group)
         {
             try
             {
-                var g = container.groups.FirstOrDefault(c=>c.id == group.id);
+                var g = container.Groups.FirstOrDefault(c => c.id == group.id);
                 g.name = group.name;
                 g.address = group.address;
                 container.SaveChanges();
@@ -69,14 +69,14 @@ namespace Vinasun.Model
         }
 
         //delete a group already exist
-        void GroupModel.deleteGroup(EntityDiagramContainer container, group group_in)
+        void GroupModel.deleteGroup(EntityDiagramContainer container, Group groupIn)
         {
             try
             {
-                var gr = (from g in container.groups
-                          where g.id == group_in.id
+                var gr = (from g in container.Groups
+                          where g.id == groupIn.id
                           select g).FirstOrDefault();
-                container.groups.Remove(gr);
+                container.Groups.Remove(gr);
                 container.SaveChanges();
 
             }

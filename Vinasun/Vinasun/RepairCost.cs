@@ -12,14 +12,13 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class sumary_number
+    public partial class RepairCost
     {
         public long id { get; set; }
         public System.DateTime created { get; set; }
-        public int total { get; set; }
-        public int km_sum { get; set; }
-        public string trip_sum { get; set; }
+        public System.DateTime dateIn { get; set; }
+        public System.DateTime dateOut { get; set; }
     
-        public virtual taxi taxi { get; set; }
+        public virtual Taxi Taxi { get; set; }
     }
 }

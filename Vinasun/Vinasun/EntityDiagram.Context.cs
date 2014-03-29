@@ -25,20 +25,20 @@ namespace Vinasun
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<entity> enties { get; set; }
-        public virtual DbSet<taxi> taxis { get; set; }
-        public virtual DbSet<taxi_type> taxi_types { get; set; }
-        public virtual DbSet<price_range> price_ranges { get; set; }
-        public virtual DbSet<driver_percentange> driver_percentanges { get; set; }
-        public virtual DbSet<sumary_number> sumary_numbers { get; set; }
-        public virtual DbSet<day_income> day_incomes { get; set; }
-        public virtual DbSet<province_income> province_incomes { get; set; }
-        public virtual DbSet<subtraction_income> subtraction_incomes { get; set; }
-        public virtual DbSet<repair_cost> repair_costs { get; set; }
-        public virtual DbSet<group> groups { get; set; }
-        public virtual DbSet<trip_check> trip_checks { get; set; }
-        public virtual DbSet<collection> collections { get; set; }
-        public virtual DbSet<reason_no_income> reason_no_incomes { get; set; }
-        public virtual DbSet<user_role> user_role { get; set; }
+        public virtual DbSet<Entity> Entities { get; set; }
+        public virtual DbSet<Taxi> Taxis { get; set; }
+        public virtual DbSet<TaxiType> TaxiTypes { get; set; }
+        public virtual DbSet<RriceRange> RriceRanges { get; set; }
+        public virtual DbSet<DriverPercentange> DriverPercentanges { get; set; }
+        public virtual DbSet<SumaryNumber> SumaryNumbers { get; set; }
+        public virtual DbSet<DayIncome> DayIncomes { get; set; }
+        public virtual DbSet<ProvineIncome> ProvineIncomes { get; set; }
+        public virtual DbSet<SubtractionIncome> SubtractionIncomes { get; set; }
+        public virtual DbSet<RepairCost> RepairCosts { get; set; }
+        public virtual DbSet<Group> Groups { get; set; }
+        public virtual DbSet<TripCheck> TripChecks { get; set; }
+        public virtual DbSet<Collection> Collections { get; set; }
+        public virtual DbSet<ReasonNoIncome> ReasonNoIncomes { get; set; }
+        public virtual DbSet<UserRole> UserRoles { get; set; }
     }
 }

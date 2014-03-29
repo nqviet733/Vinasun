@@ -12,17 +12,13 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class user_role
+    public partial class TripCheck
     {
-        public user_role()
-        {
-            this.entities = new HashSet<entity>();
-        }
+        public long id { get; set; }
+        public System.DateTime created { get; set; }
+        public System.DateTime dateGo { get; set; }
+        public System.DateTime dateBack { get; set; }
     
-        public int id { get; set; }
-        public string description { get; set; }
-        public string permission { get; set; }
-    
-        public virtual ICollection<entity> entities { get; set; }
+        public virtual Taxi Taxi { get; set; }
     }
 }

@@ -12,12 +12,12 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class entity
+    public partial class Entity
     {
-        public entity()
+        public Entity()
         {
-            this.checkers = new HashSet<entity>();
-            this.taxis = new HashSet<taxi>();
+            this.Checkers = new HashSet<Entity>();
+            this.Taxis = new HashSet<Taxi>();
         }
     
         public int id { get; set; }
@@ -26,13 +26,13 @@ namespace Vinasun
         public Nullable<System.DateTime> birthday { get; set; }
         public bool gender { get; set; }
         public string email { get; set; }
-        public string businessphone { get; set; }
-        public Nullable<System.DateTime> date_join { get; set; }
+        public string businessPhone { get; set; }
+        public Nullable<System.DateTime> dateJoin { get; set; }
     
-        public virtual user_role user_role { get; set; }
-        public virtual ICollection<entity> checkers { get; set; }
-        public virtual entity leader { get; set; }
-        public virtual group groups { get; set; }
-        public virtual ICollection<taxi> taxis { get; set; }
+        public virtual UserRole UserRole { get; set; }
+        public virtual ICollection<Entity> Checkers { get; set; }
+        public virtual Entity Leader { get; set; }
+        public virtual Group Group { get; set; }
+        public virtual ICollection<Taxi> Taxis { get; set; }
     }
 }

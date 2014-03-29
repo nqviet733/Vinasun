@@ -12,12 +12,14 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class reason_no_income
+    public partial class ProvineIncome
     {
         public long id { get; set; }
         public System.DateTime created { get; set; }
-        public string status { get; set; }
+        public int tripIncome { get; set; }
+        public int overIncome { get; set; }
+        public int priceIncome { get; set; }
     
-        public virtual taxi taxi { get; set; }
+        public virtual Taxi Taxi { get; set; }
     }
 }

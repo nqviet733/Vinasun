@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vinasun.Entity
+namespace Vinasun.Model
 {
-    class Class1
+    class TaxiModelImpl
     {
     }
 }

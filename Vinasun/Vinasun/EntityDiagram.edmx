@@ -6,87 +6,87 @@
     <edmx:StorageModels>
     <Schema Namespace="EntityDiagram.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="EntityDiagramStoreContainer">
-    <EntitySet Name="enties" EntityType="EntityDiagram.Store.enties" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="taxis" EntityType="EntityDiagram.Store.taxis" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="taxi_types" EntityType="EntityDiagram.Store.taxi_types" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="price_ranges" EntityType="EntityDiagram.Store.price_ranges" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="driver_percentanges" EntityType="EntityDiagram.Store.driver_percentanges" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="sumary_numbers" EntityType="EntityDiagram.Store.sumary_numbers" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="day_incomes" EntityType="EntityDiagram.Store.day_incomes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="province_incomes" EntityType="EntityDiagram.Store.province_incomes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="subtraction_incomes" EntityType="EntityDiagram.Store.subtraction_incomes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="repair_costs" EntityType="EntityDiagram.Store.repair_costs" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="groups" EntityType="EntityDiagram.Store.groups" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="trip_checks" EntityType="EntityDiagram.Store.trip_checks" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="collections" EntityType="EntityDiagram.Store.collections" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="reason_no_incomes" EntityType="EntityDiagram.Store.reason_no_incomes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="user_role" EntityType="EntityDiagram.Store.user_role" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Entities" EntityType="EntityDiagram.Store.Entities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Taxis" EntityType="EntityDiagram.Store.Taxis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TaxiTypes" EntityType="EntityDiagram.Store.TaxiTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RriceRanges" EntityType="EntityDiagram.Store.RriceRanges" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DriverPercentanges" EntityType="EntityDiagram.Store.DriverPercentanges" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SumaryNumbers" EntityType="EntityDiagram.Store.SumaryNumbers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DayIncomes" EntityType="EntityDiagram.Store.DayIncomes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProvineIncomes" EntityType="EntityDiagram.Store.ProvineIncomes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SubtractionIncomes" EntityType="EntityDiagram.Store.SubtractionIncomes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RepairCosts" EntityType="EntityDiagram.Store.RepairCosts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Groups" EntityType="EntityDiagram.Store.Groups" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TripChecks" EntityType="EntityDiagram.Store.TripChecks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Collections" EntityType="EntityDiagram.Store.Collections" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ReasonNoIncomes" EntityType="EntityDiagram.Store.ReasonNoIncomes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserRoles" EntityType="EntityDiagram.Store.UserRoles" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="taxi_typetaxi" Association="EntityDiagram.Store.taxi_typetaxi">
-      <End Role="taxi_type" EntitySet="taxi_types" />
-      <End Role="taxi" EntitySet="taxis" />
+      <End Role="taxi_type" EntitySet="TaxiTypes" />
+      <End Role="taxi" EntitySet="Taxis" />
     </AssociationSet>
     <AssociationSet Name="taxi_typedriver_percentange" Association="EntityDiagram.Store.taxi_typedriver_percentange">
-      <End Role="taxi_type" EntitySet="taxi_types" />
-      <End Role="driver_percentange" EntitySet="driver_percentanges" />
+      <End Role="taxi_type" EntitySet="TaxiTypes" />
+      <End Role="driver_percentange" EntitySet="DriverPercentanges" />
     </AssociationSet>
     <AssociationSet Name="pricedriver_percentange" Association="EntityDiagram.Store.pricedriver_percentange">
-      <End Role="price" EntitySet="price_ranges" />
-      <End Role="driver_percentange" EntitySet="driver_percentanges" />
+      <End Role="price" EntitySet="RriceRanges" />
+      <End Role="driver_percentange" EntitySet="DriverPercentanges" />
     </AssociationSet>
     <AssociationSet Name="taxisumary_no" Association="EntityDiagram.Store.taxisumary_no">
-      <End Role="taxi" EntitySet="taxis" />
-      <End Role="sumary_no" EntitySet="sumary_numbers" />
+      <End Role="taxi" EntitySet="Taxis" />
+      <End Role="sumary_no" EntitySet="SumaryNumbers" />
     </AssociationSet>
     <AssociationSet Name="taxiincome_per_day" Association="EntityDiagram.Store.taxiincome_per_day">
-      <End Role="taxi" EntitySet="taxis" />
-      <End Role="income_per_day" EntitySet="day_incomes" />
+      <End Role="taxi" EntitySet="Taxis" />
+      <End Role="income_per_day" EntitySet="DayIncomes" />
     </AssociationSet>
     <AssociationSet Name="taxiincome_provine" Association="EntityDiagram.Store.taxiincome_provine">
-      <End Role="taxi" EntitySet="taxis" />
-      <End Role="income_provine" EntitySet="province_incomes" />
+      <End Role="taxi" EntitySet="Taxis" />
+      <End Role="income_provine" EntitySet="ProvineIncomes" />
     </AssociationSet>
     <AssociationSet Name="taxisubtraction_income" Association="EntityDiagram.Store.taxisubtraction_income">
-      <End Role="taxi" EntitySet="taxis" />
-      <End Role="subtraction_income" EntitySet="subtraction_incomes" />
+      <End Role="taxi" EntitySet="Taxis" />
+      <End Role="subtraction_income" EntitySet="SubtractionIncomes" />
     </AssociationSet>
     <AssociationSet Name="taxirepair_cost" Association="EntityDiagram.Store.taxirepair_cost">
-      <End Role="taxi" EntitySet="taxis" />
-      <End Role="repair_cost" EntitySet="repair_costs" />
+      <End Role="taxi" EntitySet="Taxis" />
+      <End Role="repair_cost" EntitySet="RepairCosts" />
     </AssociationSet>
     <AssociationSet Name="taxicheck_cuoc" Association="EntityDiagram.Store.taxicheck_cuoc">
-      <End Role="taxi" EntitySet="taxis" />
-      <End Role="check_cuoc" EntitySet="trip_checks" />
+      <End Role="taxi" EntitySet="Taxis" />
+      <End Role="check_cuoc" EntitySet="TripChecks" />
     </AssociationSet>
     <AssociationSet Name="groupCollection" Association="EntityDiagram.Store.groupCollection">
-      <End Role="group" EntitySet="groups" />
-      <End Role="Collection" EntitySet="collections" />
+      <End Role="group" EntitySet="Groups" />
+      <End Role="Collection" EntitySet="Collections" />
     </AssociationSet>
     <AssociationSet Name="taxireason" Association="EntityDiagram.Store.taxireason">
-      <End Role="taxi" EntitySet="taxis" />
-      <End Role="reason" EntitySet="reason_no_incomes" />
+      <End Role="taxi" EntitySet="Taxis" />
+      <End Role="reason" EntitySet="ReasonNoIncomes" />
     </AssociationSet>
     <AssociationSet Name="user_roleentity" Association="EntityDiagram.Store.user_roleentity">
-      <End Role="user_role" EntitySet="user_role" />
-      <End Role="entity" EntitySet="enties" />
+      <End Role="user_role" EntitySet="UserRoles" />
+      <End Role="entity" EntitySet="Entities" />
     </AssociationSet>
     <AssociationSet Name="entityentity" Association="EntityDiagram.Store.entityentity">
-      <End Role="entity" EntitySet="enties" />
-      <End Role="entity1" EntitySet="enties" />
+      <End Role="entity" EntitySet="Entities" />
+      <End Role="entity1" EntitySet="Entities" />
     </AssociationSet>
     <AssociationSet Name="entitygroup" Association="EntityDiagram.Store.entitygroup">
-      <End Role="entity" EntitySet="enties" />
-      <End Role="group" EntitySet="groups" />
+      <End Role="entity" EntitySet="Entities" />
+      <End Role="group" EntitySet="Groups" />
     </AssociationSet>
     <AssociationSet Name="entitytaxi" Association="EntityDiagram.Store.entitytaxi">
-      <End Role="entity" EntitySet="enties" />
-      <End Role="taxi" EntitySet="taxis" />
+      <End Role="entity" EntitySet="Entities" />
+      <End Role="taxi" EntitySet="Taxis" />
     </AssociationSet>
     <AssociationSet Name="grouptaxi" Association="EntityDiagram.Store.grouptaxi">
-      <End Role="group" EntitySet="groups" />
-      <End Role="taxi" EntitySet="taxis" />
+      <End Role="group" EntitySet="Groups" />
+      <End Role="taxi" EntitySet="Taxis" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="enties">
+  <EntityType Name="Entities">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -96,25 +96,25 @@
     <Property Name="birthday" Type="datetime" Nullable="true" />
     <Property Name="gender" Type="bit" Nullable="false" />
     <Property Name="email" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="businessphone" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="date_join" Type="datetime" Nullable="true" />
-    <Property Name="user_role_id" Type="int" Nullable="true" />
-    <Property Name="leader_id" Type="int" Nullable="true" />
-    <Property Name="groups_id" Type="int" Nullable="true" />
+    <Property Name="businessPhone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dateJoin" Type="datetime" Nullable="true" />
+    <Property Name="UserRole_id" Type="int" Nullable="true" />
+    <Property Name="Leader_id" Type="int" Nullable="true" />
+    <Property Name="Group_id" Type="int" Nullable="true" />
   </EntityType>
-  <EntityType Name="taxis">
+  <EntityType Name="Taxis">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="taxi_no" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="date_join" Type="datetime" Nullable="true" />
+    <Property Name="taxiNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dateJoin" Type="datetime" Nullable="true" />
     <Property Name="model" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="taxi_type_id" Type="smallint" Nullable="false" />
-    <Property Name="entity_id" Type="int" Nullable="true" />
-    <Property Name="group_id" Type="int" Nullable="true" />
+    <Property Name="TaxiType_id" Type="smallint" Nullable="false" />
+    <Property Name="Entity_id" Type="int" Nullable="true" />
+    <Property Name="Group_id" Type="int" Nullable="true" />
   </EntityType>
-  <EntityType Name="taxi_types">
+  <EntityType Name="TaxiTypes">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -122,7 +122,7 @@
     <Property Name="description" Type="nvarchar(max)" Nullable="false" />
     <Property Name="symbol" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
-  <EntityType Name="price_ranges">
+  <EntityType Name="RriceRanges">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -130,69 +130,69 @@
     <Property Name="start" Type="int" Nullable="false" />
     <Property Name="end" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="driver_percentanges">
+  <EntityType Name="DriverPercentanges">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="percent" Type="int" Nullable="false" />
-    <Property Name="taxi_type_id" Type="smallint" Nullable="false" />
-    <Property Name="price_range_id" Type="smallint" Nullable="false" />
+    <Property Name="taxiType_id" Type="smallint" Nullable="false" />
+    <Property Name="PriceRange_id" Type="smallint" Nullable="false" />
   </EntityType>
-  <EntityType Name="sumary_numbers">
+  <EntityType Name="SumaryNumbers">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="created" Type="datetime" Nullable="false" />
     <Property Name="total" Type="int" Nullable="false" />
-    <Property Name="km_sum" Type="int" Nullable="false" />
-    <Property Name="trip_sum" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="taxi_id" Type="int" Nullable="false" />
+    <Property Name="kmSum" Type="int" Nullable="false" />
+    <Property Name="tripSum" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Taxi_id" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="day_incomes">
+  <EntityType Name="DayIncomes">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="created" Type="datetime" Nullable="false" />
-    <Property Name="money_sum" Type="int" Nullable="false" />
-    <Property Name="driver_income" Type="int" Nullable="false" />
-    <Property Name="company_income" Type="int" Nullable="false" />
-    <Property Name="rate_income" Type="int" Nullable="false" />
-    <Property Name="taxi_id" Type="int" Nullable="false" />
+    <Property Name="moneySum" Type="int" Nullable="false" />
+    <Property Name="driverIncome" Type="int" Nullable="false" />
+    <Property Name="companyIncome" Type="int" Nullable="false" />
+    <Property Name="rateIncome" Type="int" Nullable="false" />
+    <Property Name="Taxi_id" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="province_incomes">
+  <EntityType Name="ProvineIncomes">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="created" Type="datetime" Nullable="false" />
-    <Property Name="trip_income" Type="int" Nullable="false" />
-    <Property Name="over_income" Type="int" Nullable="false" />
-    <Property Name="price_income" Type="int" Nullable="false" />
-    <Property Name="taxi_id" Type="int" Nullable="true" />
+    <Property Name="tripIncome" Type="int" Nullable="false" />
+    <Property Name="overIncome" Type="int" Nullable="false" />
+    <Property Name="priceIncome" Type="int" Nullable="false" />
+    <Property Name="Taxi_id" Type="int" Nullable="true" />
   </EntityType>
-  <EntityType Name="subtraction_incomes">
+  <EntityType Name="SubtractionIncomes">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="reason" Type="int" Nullable="false" />
     <Property Name="created" Type="datetime" Nullable="false" />
-    <Property Name="taxi_id" Type="int" Nullable="true" />
+    <Property Name="Taxi_id" Type="int" Nullable="true" />
   </EntityType>
-  <EntityType Name="repair_costs">
+  <EntityType Name="RepairCosts">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="created" Type="datetime" Nullable="false" />
-    <Property Name="date_in" Type="datetime" Nullable="false" />
-    <Property Name="date_out" Type="datetime" Nullable="false" />
-    <Property Name="taxi_id" Type="int" Nullable="true" />
+    <Property Name="dateIn" Type="datetime" Nullable="false" />
+    <Property Name="dateOut" Type="datetime" Nullable="false" />
+    <Property Name="Taxi_id" Type="int" Nullable="true" />
   </EntityType>
-  <EntityType Name="groups">
+  <EntityType Name="Groups">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -200,39 +200,39 @@
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="address" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
-  <EntityType Name="trip_checks">
+  <EntityType Name="TripChecks">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="created" Type="datetime" Nullable="false" />
-    <Property Name="date_go" Type="datetime" Nullable="false" />
-    <Property Name="date_back" Type="datetime" Nullable="false" />
-    <Property Name="taxi_id" Type="int" Nullable="false" />
+    <Property Name="dateGo" Type="datetime" Nullable="false" />
+    <Property Name="dateBack" Type="datetime" Nullable="false" />
+    <Property Name="Taxi_id" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="collections">
+  <EntityType Name="Collections">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="taxi_type" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="money_sum" Type="int" Nullable="false" />
+    <Property Name="taxiType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="moneySum" Type="int" Nullable="false" />
     <Property Name="driver" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="km_sum" Type="int" Nullable="false" />
-    <Property Name="trip_sum" Type="int" Nullable="false" />
+    <Property Name="kmSum" Type="int" Nullable="false" />
+    <Property Name="tripSum" Type="int" Nullable="false" />
     <Property Name="created" Type="datetime" Nullable="false" />
-    <Property Name="group_id" Type="int" Nullable="true" />
+    <Property Name="Group_id" Type="int" Nullable="true" />
   </EntityType>
-  <EntityType Name="reason_no_incomes">
+  <EntityType Name="ReasonNoIncomes">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="created" Type="datetime" Nullable="false" />
     <Property Name="status" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="taxi_id" Type="int" Nullable="true" />
+    <Property Name="Taxi_id" Type="int" Nullable="true" />
   </EntityType>
-  <EntityType Name="user_role">
+  <EntityType Name="UserRoles">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -241,194 +241,194 @@
     <Property Name="permission" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <Association Name="taxi_typetaxi">
-    <End Role="taxi_type" Type="EntityDiagram.Store.taxi_types" Multiplicity="1" />
-    <End Role="taxi" Type="EntityDiagram.Store.taxis" Multiplicity="*" />
+    <End Role="taxi_type" Type="EntityDiagram.Store.TaxiTypes" Multiplicity="1" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi_type">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="taxi">
-        <PropertyRef Name="taxi_type_id" />
+        <PropertyRef Name="TaxiType_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="taxi_typedriver_percentange">
-    <End Role="taxi_type" Type="EntityDiagram.Store.taxi_types" Multiplicity="1" />
-    <End Role="driver_percentange" Type="EntityDiagram.Store.driver_percentanges" Multiplicity="*" />
+    <End Role="taxi_type" Type="EntityDiagram.Store.TaxiTypes" Multiplicity="1" />
+    <End Role="driver_percentange" Type="EntityDiagram.Store.DriverPercentanges" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi_type">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="driver_percentange">
-        <PropertyRef Name="taxi_type_id" />
+        <PropertyRef Name="taxiType_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="pricedriver_percentange">
-    <End Role="price" Type="EntityDiagram.Store.price_ranges" Multiplicity="1" />
-    <End Role="driver_percentange" Type="EntityDiagram.Store.driver_percentanges" Multiplicity="*" />
+    <End Role="price" Type="EntityDiagram.Store.RriceRanges" Multiplicity="1" />
+    <End Role="driver_percentange" Type="EntityDiagram.Store.DriverPercentanges" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="price">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="driver_percentange">
-        <PropertyRef Name="price_range_id" />
+        <PropertyRef Name="PriceRange_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="taxisumary_no">
-    <End Role="taxi" Type="EntityDiagram.Store.taxis" Multiplicity="1" />
-    <End Role="sumary_no" Type="EntityDiagram.Store.sumary_numbers" Multiplicity="*" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="1" />
+    <End Role="sumary_no" Type="EntityDiagram.Store.SumaryNumbers" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="sumary_no">
-        <PropertyRef Name="taxi_id" />
+        <PropertyRef Name="Taxi_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="taxiincome_per_day">
-    <End Role="taxi" Type="EntityDiagram.Store.taxis" Multiplicity="1" />
-    <End Role="income_per_day" Type="EntityDiagram.Store.day_incomes" Multiplicity="*" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="1" />
+    <End Role="income_per_day" Type="EntityDiagram.Store.DayIncomes" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="income_per_day">
-        <PropertyRef Name="taxi_id" />
+        <PropertyRef Name="Taxi_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="taxiincome_provine">
-    <End Role="taxi" Type="EntityDiagram.Store.taxis" Multiplicity="0..1" />
-    <End Role="income_provine" Type="EntityDiagram.Store.province_incomes" Multiplicity="*" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="0..1" />
+    <End Role="income_provine" Type="EntityDiagram.Store.ProvineIncomes" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="income_provine">
-        <PropertyRef Name="taxi_id" />
+        <PropertyRef Name="Taxi_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="taxisubtraction_income">
-    <End Role="taxi" Type="EntityDiagram.Store.taxis" Multiplicity="0..1" />
-    <End Role="subtraction_income" Type="EntityDiagram.Store.subtraction_incomes" Multiplicity="*" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="0..1" />
+    <End Role="subtraction_income" Type="EntityDiagram.Store.SubtractionIncomes" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="subtraction_income">
-        <PropertyRef Name="taxi_id" />
+        <PropertyRef Name="Taxi_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="taxirepair_cost">
-    <End Role="taxi" Type="EntityDiagram.Store.taxis" Multiplicity="0..1" />
-    <End Role="repair_cost" Type="EntityDiagram.Store.repair_costs" Multiplicity="*" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="0..1" />
+    <End Role="repair_cost" Type="EntityDiagram.Store.RepairCosts" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="repair_cost">
-        <PropertyRef Name="taxi_id" />
+        <PropertyRef Name="Taxi_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="taxicheck_cuoc">
-    <End Role="taxi" Type="EntityDiagram.Store.taxis" Multiplicity="1" />
-    <End Role="check_cuoc" Type="EntityDiagram.Store.trip_checks" Multiplicity="*" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="1" />
+    <End Role="check_cuoc" Type="EntityDiagram.Store.TripChecks" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="check_cuoc">
-        <PropertyRef Name="taxi_id" />
+        <PropertyRef Name="Taxi_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="groupCollection">
-    <End Role="group" Type="EntityDiagram.Store.groups" Multiplicity="0..1" />
-    <End Role="Collection" Type="EntityDiagram.Store.collections" Multiplicity="*" />
+    <End Role="group" Type="EntityDiagram.Store.Groups" Multiplicity="0..1" />
+    <End Role="Collection" Type="EntityDiagram.Store.Collections" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="group">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="Collection">
-        <PropertyRef Name="group_id" />
+        <PropertyRef Name="Group_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="taxireason">
-    <End Role="taxi" Type="EntityDiagram.Store.taxis" Multiplicity="0..1" />
-    <End Role="reason" Type="EntityDiagram.Store.reason_no_incomes" Multiplicity="*" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="0..1" />
+    <End Role="reason" Type="EntityDiagram.Store.ReasonNoIncomes" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="taxi">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="reason">
-        <PropertyRef Name="taxi_id" />
+        <PropertyRef Name="Taxi_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="user_roleentity">
-    <End Role="user_role" Type="EntityDiagram.Store.user_role" Multiplicity="0..1" />
-    <End Role="entity" Type="EntityDiagram.Store.enties" Multiplicity="*" />
+    <End Role="user_role" Type="EntityDiagram.Store.UserRoles" Multiplicity="0..1" />
+    <End Role="entity" Type="EntityDiagram.Store.Entities" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="user_role">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="entity">
-        <PropertyRef Name="user_role_id" />
+        <PropertyRef Name="UserRole_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="entityentity">
-    <End Role="entity" Type="EntityDiagram.Store.enties" Multiplicity="0..1" />
-    <End Role="entity1" Type="EntityDiagram.Store.enties" Multiplicity="*" />
+    <End Role="entity" Type="EntityDiagram.Store.Entities" Multiplicity="0..1" />
+    <End Role="entity1" Type="EntityDiagram.Store.Entities" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="entity">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="entity1">
-        <PropertyRef Name="leader_id" />
+        <PropertyRef Name="Leader_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="entitygroup">
-    <End Role="entity" Type="EntityDiagram.Store.enties" Multiplicity="*" />
-    <End Role="group" Type="EntityDiagram.Store.groups" Multiplicity="0..1" />
+    <End Role="entity" Type="EntityDiagram.Store.Entities" Multiplicity="*" />
+    <End Role="group" Type="EntityDiagram.Store.Groups" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="group">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="entity">
-        <PropertyRef Name="groups_id" />
+        <PropertyRef Name="Group_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="entitytaxi">
-    <End Role="entity" Type="EntityDiagram.Store.enties" Multiplicity="0..1" />
-    <End Role="taxi" Type="EntityDiagram.Store.taxis" Multiplicity="*" />
+    <End Role="entity" Type="EntityDiagram.Store.Entities" Multiplicity="0..1" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="entity">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="taxi">
-        <PropertyRef Name="entity_id" />
+        <PropertyRef Name="Entity_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="grouptaxi">
-    <End Role="group" Type="EntityDiagram.Store.groups" Multiplicity="0..1" />
-    <End Role="taxi" Type="EntityDiagram.Store.taxis" Multiplicity="*" />
+    <End Role="group" Type="EntityDiagram.Store.Groups" Multiplicity="0..1" />
+    <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="group">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="taxi">
-        <PropertyRef Name="group_id" />
+        <PropertyRef Name="Group_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -437,87 +437,87 @@
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="EntityDiagram" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="EntityDiagramContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="enties" EntityType="EntityDiagram.entity" />
-          <EntitySet Name="taxis" EntityType="EntityDiagram.taxi" />
-          <EntitySet Name="taxi_types" EntityType="EntityDiagram.taxi_type" />
+          <EntitySet Name="Entities" EntityType="EntityDiagram.Entity" />
+          <EntitySet Name="Taxis" EntityType="EntityDiagram.Taxi" />
+          <EntitySet Name="TaxiTypes" EntityType="EntityDiagram.TaxiType" />
           <AssociationSet Name="taxi_typetaxi" Association="EntityDiagram.taxi_typetaxi">
-            <End Role="taxi_type" EntitySet="taxi_types" />
-            <End Role="taxi" EntitySet="taxis" />
+            <End Role="taxi_type" EntitySet="TaxiTypes" />
+            <End Role="taxi" EntitySet="Taxis" />
           </AssociationSet>
-          <EntitySet Name="price_ranges" EntityType="EntityDiagram.price_range" />
-          <EntitySet Name="driver_percentanges" EntityType="EntityDiagram.driver_percentange" />
+          <EntitySet Name="RriceRanges" EntityType="EntityDiagram.RriceRange" />
+          <EntitySet Name="DriverPercentanges" EntityType="EntityDiagram.DriverPercentange" />
           <AssociationSet Name="taxi_typedriver_percentange" Association="EntityDiagram.taxi_typedriver_percentange">
-            <End Role="taxi_type" EntitySet="taxi_types" />
-            <End Role="driver_percentange" EntitySet="driver_percentanges" />
+            <End Role="taxi_type" EntitySet="TaxiTypes" />
+            <End Role="driver_percentange" EntitySet="DriverPercentanges" />
           </AssociationSet>
           <AssociationSet Name="pricedriver_percentange" Association="EntityDiagram.pricedriver_percentange">
-            <End Role="price" EntitySet="price_ranges" />
-            <End Role="driver_percentange" EntitySet="driver_percentanges" />
+            <End Role="price" EntitySet="RriceRanges" />
+            <End Role="driver_percentange" EntitySet="DriverPercentanges" />
           </AssociationSet>
-          <EntitySet Name="sumary_numbers" EntityType="EntityDiagram.sumary_number" />
+          <EntitySet Name="SumaryNumbers" EntityType="EntityDiagram.SumaryNumber" />
           <AssociationSet Name="taxisumary_no" Association="EntityDiagram.taxisumary_no">
-            <End Role="taxi" EntitySet="taxis" />
-            <End Role="sumary_no" EntitySet="sumary_numbers" />
+            <End Role="taxi" EntitySet="Taxis" />
+            <End Role="sumary_no" EntitySet="SumaryNumbers" />
           </AssociationSet>
-          <EntitySet Name="day_incomes" EntityType="EntityDiagram.day_income" />
+          <EntitySet Name="DayIncomes" EntityType="EntityDiagram.DayIncome" />
           <AssociationSet Name="taxiincome_per_day" Association="EntityDiagram.taxiincome_per_day">
-            <End Role="taxi" EntitySet="taxis" />
-            <End Role="income_per_day" EntitySet="day_incomes" />
+            <End Role="taxi" EntitySet="Taxis" />
+            <End Role="income_per_day" EntitySet="DayIncomes" />
           </AssociationSet>
-          <EntitySet Name="province_incomes" EntityType="EntityDiagram.province_income" />
+          <EntitySet Name="ProvineIncomes" EntityType="EntityDiagram.ProvineIncome" />
           <AssociationSet Name="taxiincome_provine" Association="EntityDiagram.taxiincome_provine">
-            <End Role="taxi" EntitySet="taxis" />
-            <End Role="income_provine" EntitySet="province_incomes" />
+            <End Role="taxi" EntitySet="Taxis" />
+            <End Role="income_provine" EntitySet="ProvineIncomes" />
           </AssociationSet>
-          <EntitySet Name="subtraction_incomes" EntityType="EntityDiagram.subtraction_income" />
+          <EntitySet Name="SubtractionIncomes" EntityType="EntityDiagram.SubtractionIncome" />
           <AssociationSet Name="taxisubtraction_income" Association="EntityDiagram.taxisubtraction_income">
-            <End Role="taxi" EntitySet="taxis" />
-            <End Role="subtraction_income" EntitySet="subtraction_incomes" />
+            <End Role="taxi" EntitySet="Taxis" />
+            <End Role="subtraction_income" EntitySet="SubtractionIncomes" />
           </AssociationSet>
-          <EntitySet Name="repair_costs" EntityType="EntityDiagram.repair_cost" />
+          <EntitySet Name="RepairCosts" EntityType="EntityDiagram.RepairCost" />
           <AssociationSet Name="taxirepair_cost" Association="EntityDiagram.taxirepair_cost">
-            <End Role="taxi" EntitySet="taxis" />
-            <End Role="repair_cost" EntitySet="repair_costs" />
+            <End Role="taxi" EntitySet="Taxis" />
+            <End Role="repair_cost" EntitySet="RepairCosts" />
           </AssociationSet>
-          <EntitySet Name="groups" EntityType="EntityDiagram.group" />
-          <EntitySet Name="trip_checks" EntityType="EntityDiagram.trip_check" />
+          <EntitySet Name="Groups" EntityType="EntityDiagram.Group" />
+          <EntitySet Name="TripChecks" EntityType="EntityDiagram.TripCheck" />
           <AssociationSet Name="taxicheck_cuoc" Association="EntityDiagram.taxicheck_cuoc">
-            <End Role="taxi" EntitySet="taxis" />
-            <End Role="check_cuoc" EntitySet="trip_checks" />
+            <End Role="taxi" EntitySet="Taxis" />
+            <End Role="check_cuoc" EntitySet="TripChecks" />
           </AssociationSet>
-          <EntitySet Name="collections" EntityType="EntityDiagram.collection" />
+          <EntitySet Name="Collections" EntityType="EntityDiagram.Collection" />
           <AssociationSet Name="groupCollection" Association="EntityDiagram.groupCollection">
-            <End Role="group" EntitySet="groups" />
-            <End Role="Collection" EntitySet="collections" />
+            <End Role="group" EntitySet="Groups" />
+            <End Role="Collection" EntitySet="Collections" />
           </AssociationSet>
-          <EntitySet Name="reason_no_incomes" EntityType="EntityDiagram.reason_no_income" />
+          <EntitySet Name="ReasonNoIncomes" EntityType="EntityDiagram.ReasonNoIncome" />
           <AssociationSet Name="taxireason" Association="EntityDiagram.taxireason">
-            <End Role="taxi" EntitySet="taxis" />
-            <End Role="reason" EntitySet="reason_no_incomes" />
+            <End Role="taxi" EntitySet="Taxis" />
+            <End Role="reason" EntitySet="ReasonNoIncomes" />
           </AssociationSet>
-          <EntitySet Name="user_role" EntityType="EntityDiagram.user_role" />
+          <EntitySet Name="UserRoles" EntityType="EntityDiagram.UserRole" />
           <AssociationSet Name="user_roleentity" Association="EntityDiagram.user_roleentity">
-            <End Role="user_role" EntitySet="user_role" />
-            <End Role="entity" EntitySet="enties" />
+            <End Role="user_role" EntitySet="UserRoles" />
+            <End Role="entity" EntitySet="Entities" />
           </AssociationSet>
           <AssociationSet Name="entityentity" Association="EntityDiagram.entityentity">
-            <End Role="entity" EntitySet="enties" />
-            <End Role="entity1" EntitySet="enties" />
+            <End Role="entity" EntitySet="Entities" />
+            <End Role="entity1" EntitySet="Entities" />
           </AssociationSet>
           <AssociationSet Name="entitygroup" Association="EntityDiagram.entitygroup">
-            <End Role="entity" EntitySet="enties" />
-            <End Role="group" EntitySet="groups" />
+            <End Role="entity" EntitySet="Entities" />
+            <End Role="group" EntitySet="Groups" />
           </AssociationSet>
           <AssociationSet Name="entitytaxi" Association="EntityDiagram.entitytaxi">
-            <End Role="entity" EntitySet="enties" />
-            <End Role="taxi" EntitySet="taxis" />
+            <End Role="entity" EntitySet="Entities" />
+            <End Role="taxi" EntitySet="Taxis" />
           </AssociationSet>
           <AssociationSet Name="grouptaxi" Association="EntityDiagram.grouptaxi">
-            <End Role="group" EntitySet="groups" />
-            <End Role="taxi" EntitySet="taxis" />
+            <End Role="group" EntitySet="Groups" />
+            <End Role="taxi" EntitySet="Taxis" />
           </AssociationSet>
           </EntityContainer>
-        <EntityType Name="entity">
+        <EntityType Name="Entity">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -527,229 +527,229 @@
           <Property Name="birthday" Type="DateTime" Nullable="true" />
           <Property Name="gender" Type="Boolean" Nullable="false" />
           <Property Name="email" Type="String" Nullable="true" />
-          <Property Name="businessphone" Type="String" Nullable="false" />
-          <Property Name="date_join" Type="DateTime" Nullable="true" />
-          <NavigationProperty Name="user_role" Relationship="EntityDiagram.user_roleentity" FromRole="entity" ToRole="user_role" />
-          <NavigationProperty Name="checkers" Relationship="EntityDiagram.entityentity" FromRole="entity" ToRole="entity1" />
-          <NavigationProperty Name="leader" Relationship="EntityDiagram.entityentity" FromRole="entity1" ToRole="entity" />
-          <NavigationProperty Name="groups" Relationship="EntityDiagram.entitygroup" FromRole="entity" ToRole="group" />
-          <NavigationProperty Name="taxis" Relationship="EntityDiagram.entitytaxi" FromRole="entity" ToRole="taxi" />
+          <Property Name="businessPhone" Type="String" Nullable="false" />
+          <Property Name="dateJoin" Type="DateTime" Nullable="true" />
+          <NavigationProperty Name="UserRole" Relationship="EntityDiagram.user_roleentity" FromRole="entity" ToRole="user_role" />
+          <NavigationProperty Name="Checkers" Relationship="EntityDiagram.entityentity" FromRole="entity" ToRole="entity1" />
+          <NavigationProperty Name="Leader" Relationship="EntityDiagram.entityentity" FromRole="entity1" ToRole="entity" />
+          <NavigationProperty Name="Group" Relationship="EntityDiagram.entitygroup" FromRole="entity" ToRole="group" />
+          <NavigationProperty Name="Taxis" Relationship="EntityDiagram.entitytaxi" FromRole="entity" ToRole="taxi" />
           </EntityType>
-        <EntityType Name="taxi">
+        <EntityType Name="Taxi">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="taxi_type" Relationship="EntityDiagram.taxi_typetaxi" FromRole="taxi" ToRole="taxi_type" />
-          <NavigationProperty Name="sumary_numbers" Relationship="EntityDiagram.taxisumary_no" FromRole="taxi" ToRole="sumary_no" />
-          <NavigationProperty Name="day_incomes" Relationship="EntityDiagram.taxiincome_per_day" FromRole="taxi" ToRole="income_per_day" />
-          <NavigationProperty Name="income_provines" Relationship="EntityDiagram.taxiincome_provine" FromRole="taxi" ToRole="income_provine" />
-          <NavigationProperty Name="subtraction_incomes" Relationship="EntityDiagram.taxisubtraction_income" FromRole="taxi" ToRole="subtraction_income" />
-          <NavigationProperty Name="repair_costs" Relationship="EntityDiagram.taxirepair_cost" FromRole="taxi" ToRole="repair_cost" />
-          <NavigationProperty Name="trip_checks" Relationship="EntityDiagram.taxicheck_cuoc" FromRole="taxi" ToRole="check_cuoc" />
-          <Property Name="taxi_no" Type="String" Nullable="false" />
-          <Property Name="date_join" Type="DateTime" Nullable="true" />
+          <NavigationProperty Name="TaxiType" Relationship="EntityDiagram.taxi_typetaxi" FromRole="taxi" ToRole="taxi_type" />
+          <NavigationProperty Name="SumaryNumbers" Relationship="EntityDiagram.taxisumary_no" FromRole="taxi" ToRole="sumary_no" />
+          <NavigationProperty Name="DayIncomes" Relationship="EntityDiagram.taxiincome_per_day" FromRole="taxi" ToRole="income_per_day" />
+          <NavigationProperty Name="ProvineIncome" Relationship="EntityDiagram.taxiincome_provine" FromRole="taxi" ToRole="income_provine" />
+          <NavigationProperty Name="SubtractionIncomes" Relationship="EntityDiagram.taxisubtraction_income" FromRole="taxi" ToRole="subtraction_income" />
+          <NavigationProperty Name="RepairCosts" Relationship="EntityDiagram.taxirepair_cost" FromRole="taxi" ToRole="repair_cost" />
+          <NavigationProperty Name="TripChecks" Relationship="EntityDiagram.taxicheck_cuoc" FromRole="taxi" ToRole="check_cuoc" />
+          <Property Name="taxiNo" Type="String" Nullable="false" />
+          <Property Name="dateJoin" Type="DateTime" Nullable="true" />
           <Property Name="model" Type="String" Nullable="true" />
-          <NavigationProperty Name="reason_no_incomes" Relationship="EntityDiagram.taxireason" FromRole="taxi" ToRole="reason" />
-          <NavigationProperty Name="entity" Relationship="EntityDiagram.entitytaxi" FromRole="taxi" ToRole="entity" />
-          <NavigationProperty Name="group" Relationship="EntityDiagram.grouptaxi" FromRole="taxi" ToRole="group" />
+          <NavigationProperty Name="ReasonNoIncomes" Relationship="EntityDiagram.taxireason" FromRole="taxi" ToRole="reason" />
+          <NavigationProperty Name="Entity" Relationship="EntityDiagram.entitytaxi" FromRole="taxi" ToRole="entity" />
+          <NavigationProperty Name="Group" Relationship="EntityDiagram.grouptaxi" FromRole="taxi" ToRole="group" />
         </EntityType>
-        <EntityType Name="taxi_type">
+        <EntityType Name="TaxiType">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="description" Type="String" Nullable="false" />
-          <NavigationProperty Name="taxis" Relationship="EntityDiagram.taxi_typetaxi" FromRole="taxi_type" ToRole="taxi" />
-          <NavigationProperty Name="driver_percentanges" Relationship="EntityDiagram.taxi_typedriver_percentange" FromRole="taxi_type" ToRole="driver_percentange" />
+          <NavigationProperty Name="Taxis" Relationship="EntityDiagram.taxi_typetaxi" FromRole="taxi_type" ToRole="taxi" />
+          <NavigationProperty Name="DriverPercentanges" Relationship="EntityDiagram.taxi_typedriver_percentange" FromRole="taxi_type" ToRole="driver_percentange" />
           <Property Name="symbol" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="taxi_typetaxi">
-          <End Type="EntityDiagram.taxi_type" Role="taxi_type" Multiplicity="1" />
-          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="*" />
+          <End Type="EntityDiagram.TaxiType" Role="taxi_type" Multiplicity="1" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="*" />
         </Association>
-        <EntityType Name="price_range">
+        <EntityType Name="RriceRange">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="start" Type="Int32" Nullable="false" />
           <Property Name="end" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="driver_percentange" Relationship="EntityDiagram.pricedriver_percentange" FromRole="price" ToRole="driver_percentange" />
+          <NavigationProperty Name="DriverPercentanges" Relationship="EntityDiagram.pricedriver_percentange" FromRole="price" ToRole="driver_percentange" />
         </EntityType>
-        <EntityType Name="driver_percentange">
+        <EntityType Name="DriverPercentange">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="percent" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="taxi_type" Relationship="EntityDiagram.taxi_typedriver_percentange" FromRole="driver_percentange" ToRole="taxi_type" />
-          <NavigationProperty Name="price_range" Relationship="EntityDiagram.pricedriver_percentange" FromRole="driver_percentange" ToRole="price" />
+          <NavigationProperty Name="taxiType" Relationship="EntityDiagram.taxi_typedriver_percentange" FromRole="driver_percentange" ToRole="taxi_type" />
+          <NavigationProperty Name="PriceRange" Relationship="EntityDiagram.pricedriver_percentange" FromRole="driver_percentange" ToRole="price" />
         </EntityType>
         <Association Name="taxi_typedriver_percentange">
-          <End Type="EntityDiagram.taxi_type" Role="taxi_type" Multiplicity="1" />
-          <End Type="EntityDiagram.driver_percentange" Role="driver_percentange" Multiplicity="*" />
+          <End Type="EntityDiagram.TaxiType" Role="taxi_type" Multiplicity="1" />
+          <End Type="EntityDiagram.DriverPercentange" Role="driver_percentange" Multiplicity="*" />
         </Association>
         <Association Name="pricedriver_percentange">
-          <End Type="EntityDiagram.price_range" Role="price" Multiplicity="1" />
-          <End Type="EntityDiagram.driver_percentange" Role="driver_percentange" Multiplicity="*" />
+          <End Type="EntityDiagram.RriceRange" Role="price" Multiplicity="1" />
+          <End Type="EntityDiagram.DriverPercentange" Role="driver_percentange" Multiplicity="*" />
         </Association>
-        <EntityType Name="sumary_number">
+        <EntityType Name="SumaryNumber">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="created" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="taxi" Relationship="EntityDiagram.taxisumary_no" FromRole="sumary_no" ToRole="taxi" />
+          <NavigationProperty Name="Taxi" Relationship="EntityDiagram.taxisumary_no" FromRole="sumary_no" ToRole="taxi" />
           <Property Name="total" Type="Int32" Nullable="false" />
-          <Property Name="km_sum" Type="Int32" Nullable="false" />
-          <Property Name="trip_sum" Type="String" Nullable="false" />
+          <Property Name="kmSum" Type="Int32" Nullable="false" />
+          <Property Name="tripSum" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="taxisumary_no">
-          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="1" />
-          <End Type="EntityDiagram.sumary_number" Role="sumary_no" Multiplicity="*" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="1" />
+          <End Type="EntityDiagram.SumaryNumber" Role="sumary_no" Multiplicity="*" />
         </Association>
-        <EntityType Name="day_income">
+        <EntityType Name="DayIncome">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="taxi" Relationship="EntityDiagram.taxiincome_per_day" FromRole="income_per_day" ToRole="taxi" />
+          <NavigationProperty Name="Taxi" Relationship="EntityDiagram.taxiincome_per_day" FromRole="income_per_day" ToRole="taxi" />
           <Property Name="created" Type="DateTime" Nullable="false" />
-          <Property Name="money_sum" Type="Int32" Nullable="false" />
-          <Property Name="driver_income" Type="Int32" Nullable="false" />
-          <Property Name="company_income" Type="Int32" Nullable="false" />
-          <Property Name="rate_income" Type="Int32" Nullable="false" />
+          <Property Name="moneySum" Type="Int32" Nullable="false" />
+          <Property Name="driverIncome" Type="Int32" Nullable="false" />
+          <Property Name="companyIncome" Type="Int32" Nullable="false" />
+          <Property Name="rateIncome" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="taxiincome_per_day">
-          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="1" />
-          <End Type="EntityDiagram.day_income" Role="income_per_day" Multiplicity="*" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="1" />
+          <End Type="EntityDiagram.DayIncome" Role="income_per_day" Multiplicity="*" />
         </Association>
-        <EntityType Name="province_income">
+        <EntityType Name="ProvineIncome">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="taxi" Relationship="EntityDiagram.taxiincome_provine" FromRole="income_provine" ToRole="taxi" />
+          <NavigationProperty Name="Taxi" Relationship="EntityDiagram.taxiincome_provine" FromRole="income_provine" ToRole="taxi" />
           <Property Name="created" Type="DateTime" Nullable="false" />
-          <Property Name="trip_income" Type="Int32" Nullable="false" />
-          <Property Name="over_income" Type="Int32" Nullable="false" />
-          <Property Name="price_income" Type="Int32" Nullable="false" />
+          <Property Name="tripIncome" Type="Int32" Nullable="false" />
+          <Property Name="overIncome" Type="Int32" Nullable="false" />
+          <Property Name="priceIncome" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="taxiincome_provine">
-          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="0..1" />
-          <End Type="EntityDiagram.province_income" Role="income_provine" Multiplicity="*" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="0..1" />
+          <End Type="EntityDiagram.ProvineIncome" Role="income_provine" Multiplicity="*" />
         </Association>
-        <EntityType Name="subtraction_income">
+        <EntityType Name="SubtractionIncome">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="taxi" Relationship="EntityDiagram.taxisubtraction_income" FromRole="subtraction_income" ToRole="taxi" />
+          <NavigationProperty Name="Taxi" Relationship="EntityDiagram.taxisubtraction_income" FromRole="subtraction_income" ToRole="taxi" />
           <Property Name="reason" Type="Int32" Nullable="false" />
           <Property Name="created" Type="DateTime" Nullable="false" />
         </EntityType>
         <Association Name="taxisubtraction_income">
-          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="0..1" />
-          <End Type="EntityDiagram.subtraction_income" Role="subtraction_income" Multiplicity="*" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="0..1" />
+          <End Type="EntityDiagram.SubtractionIncome" Role="subtraction_income" Multiplicity="*" />
         </Association>
-        <EntityType Name="repair_cost">
+        <EntityType Name="RepairCost">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="taxi" Relationship="EntityDiagram.taxirepair_cost" FromRole="repair_cost" ToRole="taxi" />
+          <NavigationProperty Name="Taxi" Relationship="EntityDiagram.taxirepair_cost" FromRole="repair_cost" ToRole="taxi" />
           <Property Name="created" Type="DateTime" Nullable="false" />
-          <Property Name="date_in" Type="DateTime" Nullable="false" />
-          <Property Name="date_out" Type="DateTime" Nullable="false" />
+          <Property Name="dateIn" Type="DateTime" Nullable="false" />
+          <Property Name="dateOut" Type="DateTime" Nullable="false" />
         </EntityType>
         <Association Name="taxirepair_cost">
-          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="0..1" />
-          <End Type="EntityDiagram.repair_cost" Role="repair_cost" Multiplicity="*" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="0..1" />
+          <End Type="EntityDiagram.RepairCost" Role="repair_cost" Multiplicity="*" />
         </Association>
-        <EntityType Name="group">
+        <EntityType Name="Group">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" />
           <Property Name="address" Type="String" Nullable="false" />
-          <NavigationProperty Name="collections" Relationship="EntityDiagram.groupCollection" FromRole="group" ToRole="Collection" />
-          <NavigationProperty Name="entities" Relationship="EntityDiagram.entitygroup" FromRole="group" ToRole="entity" />
-          <NavigationProperty Name="taxis" Relationship="EntityDiagram.grouptaxi" FromRole="group" ToRole="taxi" />
+          <NavigationProperty Name="Collections" Relationship="EntityDiagram.groupCollection" FromRole="group" ToRole="Collection" />
+          <NavigationProperty Name="Entities" Relationship="EntityDiagram.entitygroup" FromRole="group" ToRole="entity" />
+          <NavigationProperty Name="Taxis" Relationship="EntityDiagram.grouptaxi" FromRole="group" ToRole="taxi" />
         </EntityType>
-        <EntityType Name="trip_check">
+        <EntityType Name="TripCheck">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="taxi" Relationship="EntityDiagram.taxicheck_cuoc" FromRole="check_cuoc" ToRole="taxi" />
+          <NavigationProperty Name="Taxi" Relationship="EntityDiagram.taxicheck_cuoc" FromRole="check_cuoc" ToRole="taxi" />
           <Property Name="created" Type="DateTime" Nullable="false" />
-          <Property Name="date_go" Type="DateTime" Nullable="false" />
-          <Property Name="date_back" Type="DateTime" Nullable="false" />
+          <Property Name="dateGo" Type="DateTime" Nullable="false" />
+          <Property Name="dateBack" Type="DateTime" Nullable="false" />
         </EntityType>
         <Association Name="taxicheck_cuoc">
-          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="1" />
-          <End Type="EntityDiagram.trip_check" Role="check_cuoc" Multiplicity="*" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="1" />
+          <End Type="EntityDiagram.TripCheck" Role="check_cuoc" Multiplicity="*" />
         </Association>
-        <EntityType Name="collection">
+        <EntityType Name="Collection">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="taxi_type" Type="String" Nullable="false" />
-          <Property Name="money_sum" Type="Int32" Nullable="false" />
+          <Property Name="taxiType" Type="String" Nullable="false" />
+          <Property Name="moneySum" Type="Int32" Nullable="false" />
           <Property Name="driver" Type="String" Nullable="false" />
-          <Property Name="km_sum" Type="Int32" Nullable="false" />
-          <Property Name="trip_sum" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="group" Relationship="EntityDiagram.groupCollection" FromRole="Collection" ToRole="group" />
+          <Property Name="kmSum" Type="Int32" Nullable="false" />
+          <Property Name="tripSum" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Group" Relationship="EntityDiagram.groupCollection" FromRole="Collection" ToRole="group" />
           <Property Name="created" Type="DateTime" Nullable="false" />
         </EntityType>
         <Association Name="groupCollection">
-          <End Type="EntityDiagram.group" Role="group" Multiplicity="0..1" />
-          <End Type="EntityDiagram.collection" Role="Collection" Multiplicity="*" />
+          <End Type="EntityDiagram.Group" Role="group" Multiplicity="0..1" />
+          <End Type="EntityDiagram.Collection" Role="Collection" Multiplicity="*" />
         </Association>
-        <EntityType Name="reason_no_income">
+        <EntityType Name="ReasonNoIncome">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="created" Type="DateTime" Nullable="false" />
           <Property Name="status" Type="String" Nullable="false" />
-          <NavigationProperty Name="taxi" Relationship="EntityDiagram.taxireason" FromRole="reason" ToRole="taxi" />
+          <NavigationProperty Name="Taxi" Relationship="EntityDiagram.taxireason" FromRole="reason" ToRole="taxi" />
         </EntityType>
         <Association Name="taxireason">
-          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="0..1" />
-          <End Type="EntityDiagram.reason_no_income" Role="reason" Multiplicity="*" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="0..1" />
+          <End Type="EntityDiagram.ReasonNoIncome" Role="reason" Multiplicity="*" />
         </Association>
-        <EntityType Name="user_role">
+        <EntityType Name="UserRole">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="description" Type="String" Nullable="false" />
           <Property Name="permission" Type="String" Nullable="false" />
-          <NavigationProperty Name="entities" Relationship="EntityDiagram.user_roleentity" FromRole="user_role" ToRole="entity" />
+          <NavigationProperty Name="Entities" Relationship="EntityDiagram.user_roleentity" FromRole="user_role" ToRole="entity" />
         </EntityType>
         <Association Name="user_roleentity">
-          <End Type="EntityDiagram.user_role" Role="user_role" Multiplicity="0..1" />
-          <End Type="EntityDiagram.entity" Role="entity" Multiplicity="*" />
+          <End Type="EntityDiagram.UserRole" Role="user_role" Multiplicity="0..1" />
+          <End Type="EntityDiagram.Entity" Role="entity" Multiplicity="*" />
         </Association>
         <Association Name="entityentity">
-          <End Type="EntityDiagram.entity" Role="entity" Multiplicity="0..1" />
-          <End Type="EntityDiagram.entity" Role="entity1" Multiplicity="*" />
+          <End Type="EntityDiagram.Entity" Role="entity" Multiplicity="0..1" />
+          <End Type="EntityDiagram.Entity" Role="entity1" Multiplicity="*" />
         </Association>
         <Association Name="entitygroup">
-          <End Type="EntityDiagram.entity" Role="entity" Multiplicity="*" />
-          <End Type="EntityDiagram.group" Role="group" Multiplicity="0..1" />
+          <End Type="EntityDiagram.Entity" Role="entity" Multiplicity="*" />
+          <End Type="EntityDiagram.Group" Role="group" Multiplicity="0..1" />
         </Association>
         <Association Name="entitytaxi">
-          <End Type="EntityDiagram.entity" Role="entity" Multiplicity="0..1" />
-          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="*" />
+          <End Type="EntityDiagram.Entity" Role="entity" Multiplicity="0..1" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="*" />
         </Association>
         <Association Name="grouptaxi">
-          <End Type="EntityDiagram.group" Role="group" Multiplicity="0..1" />
-          <End Type="EntityDiagram.taxi" Role="taxi" Multiplicity="*" />
+          <End Type="EntityDiagram.Group" Role="group" Multiplicity="0..1" />
+          <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -757,296 +757,296 @@
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="EntityDiagramStoreContainer" CdmEntityContainer="EntityDiagramContainer">
-    <EntitySetMapping Name="enties">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.entity)">
-        <MappingFragment StoreEntitySet="enties">
+    <EntitySetMapping Name="Entities">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.Entity)">
+        <MappingFragment StoreEntitySet="Entities">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="firstname" ColumnName="firstname" />
           <ScalarProperty Name="lastname" ColumnName="lastname" />
           <ScalarProperty Name="birthday" ColumnName="birthday" />
           <ScalarProperty Name="gender" ColumnName="gender" />
           <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="businessphone" ColumnName="businessphone" />
-          <ScalarProperty Name="date_join" ColumnName="date_join" />
+          <ScalarProperty Name="businessPhone" ColumnName="businessPhone" />
+          <ScalarProperty Name="dateJoin" ColumnName="dateJoin" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="taxis">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.taxi)">
-        <MappingFragment StoreEntitySet="taxis">
+    <EntitySetMapping Name="Taxis">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.Taxi)">
+        <MappingFragment StoreEntitySet="Taxis">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="taxi_no" ColumnName="taxi_no" />
-          <ScalarProperty Name="date_join" ColumnName="date_join" />
+          <ScalarProperty Name="taxiNo" ColumnName="taxiNo" />
+          <ScalarProperty Name="dateJoin" ColumnName="dateJoin" />
           <ScalarProperty Name="model" ColumnName="model" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="taxi_types">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.taxi_type)">
-        <MappingFragment StoreEntitySet="taxi_types">
+    <EntitySetMapping Name="TaxiTypes">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.TaxiType)">
+        <MappingFragment StoreEntitySet="TaxiTypes">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="symbol" ColumnName="symbol" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="price_ranges">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.price_range)">
-        <MappingFragment StoreEntitySet="price_ranges">
+    <EntitySetMapping Name="RriceRanges">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.RriceRange)">
+        <MappingFragment StoreEntitySet="RriceRanges">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="start" ColumnName="start" />
           <ScalarProperty Name="end" ColumnName="end" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="driver_percentanges">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.driver_percentange)">
-        <MappingFragment StoreEntitySet="driver_percentanges">
+    <EntitySetMapping Name="DriverPercentanges">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.DriverPercentange)">
+        <MappingFragment StoreEntitySet="DriverPercentanges">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="percent" ColumnName="percent" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="sumary_numbers">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.sumary_number)">
-        <MappingFragment StoreEntitySet="sumary_numbers">
+    <EntitySetMapping Name="SumaryNumbers">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.SumaryNumber)">
+        <MappingFragment StoreEntitySet="SumaryNumbers">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="created" ColumnName="created" />
           <ScalarProperty Name="total" ColumnName="total" />
-          <ScalarProperty Name="km_sum" ColumnName="km_sum" />
-          <ScalarProperty Name="trip_sum" ColumnName="trip_sum" />
+          <ScalarProperty Name="kmSum" ColumnName="kmSum" />
+          <ScalarProperty Name="tripSum" ColumnName="tripSum" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="day_incomes">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.day_income)">
-        <MappingFragment StoreEntitySet="day_incomes">
+    <EntitySetMapping Name="DayIncomes">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.DayIncome)">
+        <MappingFragment StoreEntitySet="DayIncomes">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="created" ColumnName="created" />
-          <ScalarProperty Name="money_sum" ColumnName="money_sum" />
-          <ScalarProperty Name="driver_income" ColumnName="driver_income" />
-          <ScalarProperty Name="company_income" ColumnName="company_income" />
-          <ScalarProperty Name="rate_income" ColumnName="rate_income" />
+          <ScalarProperty Name="moneySum" ColumnName="moneySum" />
+          <ScalarProperty Name="driverIncome" ColumnName="driverIncome" />
+          <ScalarProperty Name="companyIncome" ColumnName="companyIncome" />
+          <ScalarProperty Name="rateIncome" ColumnName="rateIncome" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="province_incomes">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.province_income)">
-        <MappingFragment StoreEntitySet="province_incomes">
+    <EntitySetMapping Name="ProvineIncomes">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.ProvineIncome)">
+        <MappingFragment StoreEntitySet="ProvineIncomes">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="created" ColumnName="created" />
-          <ScalarProperty Name="trip_income" ColumnName="trip_income" />
-          <ScalarProperty Name="over_income" ColumnName="over_income" />
-          <ScalarProperty Name="price_income" ColumnName="price_income" />
+          <ScalarProperty Name="tripIncome" ColumnName="tripIncome" />
+          <ScalarProperty Name="overIncome" ColumnName="overIncome" />
+          <ScalarProperty Name="priceIncome" ColumnName="priceIncome" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="subtraction_incomes">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.subtraction_income)">
-        <MappingFragment StoreEntitySet="subtraction_incomes">
+    <EntitySetMapping Name="SubtractionIncomes">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.SubtractionIncome)">
+        <MappingFragment StoreEntitySet="SubtractionIncomes">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="reason" ColumnName="reason" />
           <ScalarProperty Name="created" ColumnName="created" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="repair_costs">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.repair_cost)">
-        <MappingFragment StoreEntitySet="repair_costs">
+    <EntitySetMapping Name="RepairCosts">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.RepairCost)">
+        <MappingFragment StoreEntitySet="RepairCosts">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="created" ColumnName="created" />
-          <ScalarProperty Name="date_in" ColumnName="date_in" />
-          <ScalarProperty Name="date_out" ColumnName="date_out" />
+          <ScalarProperty Name="dateIn" ColumnName="dateIn" />
+          <ScalarProperty Name="dateOut" ColumnName="dateOut" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="groups">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.group)">
-        <MappingFragment StoreEntitySet="groups">
+    <EntitySetMapping Name="Groups">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.Group)">
+        <MappingFragment StoreEntitySet="Groups">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="address" ColumnName="address" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="trip_checks">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.trip_check)">
-        <MappingFragment StoreEntitySet="trip_checks">
+    <EntitySetMapping Name="TripChecks">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.TripCheck)">
+        <MappingFragment StoreEntitySet="TripChecks">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="created" ColumnName="created" />
-          <ScalarProperty Name="date_go" ColumnName="date_go" />
-          <ScalarProperty Name="date_back" ColumnName="date_back" />
+          <ScalarProperty Name="dateGo" ColumnName="dateGo" />
+          <ScalarProperty Name="dateBack" ColumnName="dateBack" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="collections">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.collection)">
-        <MappingFragment StoreEntitySet="collections">
+    <EntitySetMapping Name="Collections">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.Collection)">
+        <MappingFragment StoreEntitySet="Collections">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="taxi_type" ColumnName="taxi_type" />
-          <ScalarProperty Name="money_sum" ColumnName="money_sum" />
+          <ScalarProperty Name="taxiType" ColumnName="taxiType" />
+          <ScalarProperty Name="moneySum" ColumnName="moneySum" />
           <ScalarProperty Name="driver" ColumnName="driver" />
-          <ScalarProperty Name="km_sum" ColumnName="km_sum" />
-          <ScalarProperty Name="trip_sum" ColumnName="trip_sum" />
+          <ScalarProperty Name="kmSum" ColumnName="kmSum" />
+          <ScalarProperty Name="tripSum" ColumnName="tripSum" />
           <ScalarProperty Name="created" ColumnName="created" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="reason_no_incomes">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.reason_no_income)">
-        <MappingFragment StoreEntitySet="reason_no_incomes">
+    <EntitySetMapping Name="ReasonNoIncomes">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.ReasonNoIncome)">
+        <MappingFragment StoreEntitySet="ReasonNoIncomes">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="created" ColumnName="created" />
           <ScalarProperty Name="status" ColumnName="status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="user_role">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.user_role)">
-        <MappingFragment StoreEntitySet="user_role">
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.UserRole)">
+        <MappingFragment StoreEntitySet="UserRoles">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="permission" ColumnName="permission" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="taxi_typetaxi" TypeName="EntityDiagram.taxi_typetaxi" StoreEntitySet="taxis">
+    <AssociationSetMapping Name="taxi_typetaxi" TypeName="EntityDiagram.taxi_typetaxi" StoreEntitySet="Taxis">
       <EndProperty Name="taxi_type">
-        <ScalarProperty Name="id" ColumnName="taxi_type_id" />
+        <ScalarProperty Name="id" ColumnName="TaxiType_id" />
       </EndProperty>
       <EndProperty Name="taxi">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="taxi_typedriver_percentange" TypeName="EntityDiagram.taxi_typedriver_percentange" StoreEntitySet="driver_percentanges">
+    <AssociationSetMapping Name="taxi_typedriver_percentange" TypeName="EntityDiagram.taxi_typedriver_percentange" StoreEntitySet="DriverPercentanges">
       <EndProperty Name="taxi_type">
-        <ScalarProperty Name="id" ColumnName="taxi_type_id" />
+        <ScalarProperty Name="id" ColumnName="taxiType_id" />
       </EndProperty>
       <EndProperty Name="driver_percentange">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="pricedriver_percentange" TypeName="EntityDiagram.pricedriver_percentange" StoreEntitySet="driver_percentanges">
+    <AssociationSetMapping Name="pricedriver_percentange" TypeName="EntityDiagram.pricedriver_percentange" StoreEntitySet="DriverPercentanges">
       <EndProperty Name="price">
-        <ScalarProperty Name="id" ColumnName="price_range_id" />
+        <ScalarProperty Name="id" ColumnName="PriceRange_id" />
       </EndProperty>
       <EndProperty Name="driver_percentange">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="taxisumary_no" TypeName="EntityDiagram.taxisumary_no" StoreEntitySet="sumary_numbers">
+    <AssociationSetMapping Name="taxisumary_no" TypeName="EntityDiagram.taxisumary_no" StoreEntitySet="SumaryNumbers">
       <EndProperty Name="taxi">
-        <ScalarProperty Name="id" ColumnName="taxi_id" />
+        <ScalarProperty Name="id" ColumnName="Taxi_id" />
       </EndProperty>
       <EndProperty Name="sumary_no">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="taxiincome_per_day" TypeName="EntityDiagram.taxiincome_per_day" StoreEntitySet="day_incomes">
+    <AssociationSetMapping Name="taxiincome_per_day" TypeName="EntityDiagram.taxiincome_per_day" StoreEntitySet="DayIncomes">
       <EndProperty Name="taxi">
-        <ScalarProperty Name="id" ColumnName="taxi_id" />
+        <ScalarProperty Name="id" ColumnName="Taxi_id" />
       </EndProperty>
       <EndProperty Name="income_per_day">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="taxiincome_provine" TypeName="EntityDiagram.taxiincome_provine" StoreEntitySet="province_incomes">
+    <AssociationSetMapping Name="taxiincome_provine" TypeName="EntityDiagram.taxiincome_provine" StoreEntitySet="ProvineIncomes">
       <EndProperty Name="taxi">
-        <ScalarProperty Name="id" ColumnName="taxi_id" />
+        <ScalarProperty Name="id" ColumnName="Taxi_id" />
       </EndProperty>
       <EndProperty Name="income_provine">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
-      <Condition ColumnName="taxi_id" IsNull="false" />
+      <Condition ColumnName="Taxi_id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="taxisubtraction_income" TypeName="EntityDiagram.taxisubtraction_income" StoreEntitySet="subtraction_incomes">
+    <AssociationSetMapping Name="taxisubtraction_income" TypeName="EntityDiagram.taxisubtraction_income" StoreEntitySet="SubtractionIncomes">
       <EndProperty Name="taxi">
-        <ScalarProperty Name="id" ColumnName="taxi_id" />
+        <ScalarProperty Name="id" ColumnName="Taxi_id" />
       </EndProperty>
       <EndProperty Name="subtraction_income">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
-      <Condition ColumnName="taxi_id" IsNull="false" />
+      <Condition ColumnName="Taxi_id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="taxirepair_cost" TypeName="EntityDiagram.taxirepair_cost" StoreEntitySet="repair_costs">
+    <AssociationSetMapping Name="taxirepair_cost" TypeName="EntityDiagram.taxirepair_cost" StoreEntitySet="RepairCosts">
       <EndProperty Name="taxi">
-        <ScalarProperty Name="id" ColumnName="taxi_id" />
+        <ScalarProperty Name="id" ColumnName="Taxi_id" />
       </EndProperty>
       <EndProperty Name="repair_cost">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
-      <Condition ColumnName="taxi_id" IsNull="false" />
+      <Condition ColumnName="Taxi_id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="taxicheck_cuoc" TypeName="EntityDiagram.taxicheck_cuoc" StoreEntitySet="trip_checks">
+    <AssociationSetMapping Name="taxicheck_cuoc" TypeName="EntityDiagram.taxicheck_cuoc" StoreEntitySet="TripChecks">
       <EndProperty Name="taxi">
-        <ScalarProperty Name="id" ColumnName="taxi_id" />
+        <ScalarProperty Name="id" ColumnName="Taxi_id" />
       </EndProperty>
       <EndProperty Name="check_cuoc">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="groupCollection" TypeName="EntityDiagram.groupCollection" StoreEntitySet="collections">
+    <AssociationSetMapping Name="groupCollection" TypeName="EntityDiagram.groupCollection" StoreEntitySet="Collections">
       <EndProperty Name="group">
-        <ScalarProperty Name="id" ColumnName="group_id" />
+        <ScalarProperty Name="id" ColumnName="Group_id" />
       </EndProperty>
       <EndProperty Name="Collection">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
-      <Condition ColumnName="group_id" IsNull="false" />
+      <Condition ColumnName="Group_id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="taxireason" TypeName="EntityDiagram.taxireason" StoreEntitySet="reason_no_incomes">
+    <AssociationSetMapping Name="taxireason" TypeName="EntityDiagram.taxireason" StoreEntitySet="ReasonNoIncomes">
       <EndProperty Name="taxi">
-        <ScalarProperty Name="id" ColumnName="taxi_id" />
+        <ScalarProperty Name="id" ColumnName="Taxi_id" />
       </EndProperty>
       <EndProperty Name="reason">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
-      <Condition ColumnName="taxi_id" IsNull="false" />
+      <Condition ColumnName="Taxi_id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="user_roleentity" TypeName="EntityDiagram.user_roleentity" StoreEntitySet="enties">
+    <AssociationSetMapping Name="user_roleentity" TypeName="EntityDiagram.user_roleentity" StoreEntitySet="Entities">
       <EndProperty Name="user_role">
-        <ScalarProperty Name="id" ColumnName="user_role_id" />
+        <ScalarProperty Name="id" ColumnName="UserRole_id" />
       </EndProperty>
       <EndProperty Name="entity">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
-      <Condition ColumnName="user_role_id" IsNull="false" />
+      <Condition ColumnName="UserRole_id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="entityentity" TypeName="EntityDiagram.entityentity" StoreEntitySet="enties">
+    <AssociationSetMapping Name="entityentity" TypeName="EntityDiagram.entityentity" StoreEntitySet="Entities">
       <EndProperty Name="entity">
-        <ScalarProperty Name="id" ColumnName="leader_id" />
+        <ScalarProperty Name="id" ColumnName="Leader_id" />
       </EndProperty>
       <EndProperty Name="entity1">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
-      <Condition ColumnName="leader_id" IsNull="false" />
+      <Condition ColumnName="Leader_id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="entitygroup" TypeName="EntityDiagram.entitygroup" StoreEntitySet="enties">
+    <AssociationSetMapping Name="entitygroup" TypeName="EntityDiagram.entitygroup" StoreEntitySet="Entities">
       <EndProperty Name="group">
-        <ScalarProperty Name="id" ColumnName="groups_id" />
+        <ScalarProperty Name="id" ColumnName="Group_id" />
       </EndProperty>
       <EndProperty Name="entity">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
-      <Condition ColumnName="groups_id" IsNull="false" />
+      <Condition ColumnName="Group_id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="entitytaxi" TypeName="EntityDiagram.entitytaxi" StoreEntitySet="taxis">
+    <AssociationSetMapping Name="entitytaxi" TypeName="EntityDiagram.entitytaxi" StoreEntitySet="Taxis">
       <EndProperty Name="entity">
-        <ScalarProperty Name="id" ColumnName="entity_id" />
+        <ScalarProperty Name="id" ColumnName="Entity_id" />
       </EndProperty>
       <EndProperty Name="taxi">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
-      <Condition ColumnName="entity_id" IsNull="false" />
+      <Condition ColumnName="Entity_id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="grouptaxi" TypeName="EntityDiagram.grouptaxi" StoreEntitySet="taxis">
+    <AssociationSetMapping Name="grouptaxi" TypeName="EntityDiagram.grouptaxi" StoreEntitySet="Taxis">
       <EndProperty Name="group">
-        <ScalarProperty Name="id" ColumnName="group_id" />
+        <ScalarProperty Name="id" ColumnName="Group_id" />
       </EndProperty>
       <EndProperty Name="taxi">
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
-      <Condition ColumnName="group_id" IsNull="false" />
+      <Condition ColumnName="Group_id" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>

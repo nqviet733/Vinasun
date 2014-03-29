@@ -12,16 +12,16 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class collection
+    public partial class Collection
     {
         public long id { get; set; }
-        public string taxi_type { get; set; }
-        public int money_sum { get; set; }
+        public string taxiType { get; set; }
+        public int moneySum { get; set; }
         public string driver { get; set; }
-        public int km_sum { get; set; }
-        public int trip_sum { get; set; }
+        public int kmSum { get; set; }
+        public int tripSum { get; set; }
         public System.DateTime created { get; set; }
     
-        public virtual group group { get; set; }
+        public virtual Group Group { get; set; }
     }
 }

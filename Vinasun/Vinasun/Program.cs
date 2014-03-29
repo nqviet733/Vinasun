@@ -36,7 +36,8 @@ namespace Vinasun
 
             var gr = gm.retrieveAllGroup(con);
 
-            gm.deleteGroup(con, group);
+            var group1 = gm.retrieveGroup(con, 19);
+            gm.deleteGroup(con, group1);
 
         }
     }

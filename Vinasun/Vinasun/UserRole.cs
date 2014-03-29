@@ -12,12 +12,17 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class driver_percentange
+    public partial class UserRole
     {
-        public short id { get; set; }
-        public int percent { get; set; }
+        public UserRole()
+        {
+            this.Entities = new HashSet<Entity>();
+        }
     
-        public virtual taxi_type taxi_type { get; set; }
-        public virtual price_range price_range { get; set; }
+        public int id { get; set; }
+        public string description { get; set; }
+        public string permission { get; set; }
+    
+        public virtual ICollection<Entity> Entities { get; set; }
     }
 }

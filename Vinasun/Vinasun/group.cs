@@ -12,21 +12,21 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class group
+    public partial class Group
     {
-        public group()
+        public Group()
         {
-            this.collections = new HashSet<collection>();
-            this.entities = new HashSet<entity>();
-            this.taxis = new HashSet<taxi>();
+            this.Collections = new HashSet<Collection>();
+            this.Entities = new HashSet<Entity>();
+            this.Taxis = new HashSet<Taxi>();
         }
     
         public int id { get; set; }
         public string name { get; set; }
         public string address { get; set; }
     
-        public virtual ICollection<collection> collections { get; set; }
-        public virtual ICollection<entity> entities { get; set; }
-        public virtual ICollection<taxi> taxis { get; set; }
+        public virtual ICollection<Collection> Collections { get; set; }
+        public virtual ICollection<Entity> Entities { get; set; }
+        public virtual ICollection<Taxi> Taxis { get; set; }
     }
 }

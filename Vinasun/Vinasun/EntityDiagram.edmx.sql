@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/29/2014 09:58:21
+-- Date Created: 03/29/2014 16:32:25
 -- Generated from EDMX file: C:\Users\nqvie_000\Source\Repos\Vinasun\Vinasun\Vinasun\EntityDiagram.edmx
 -- --------------------------------------------------
 
@@ -18,7 +18,7 @@ GO
 -- --------------------------------------------------
 
 IF OBJECT_ID(N'[dbo].[FK_taxi_typetaxi]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[taxis] DROP CONSTRAINT [FK_taxi_typetaxi];
+    ALTER TABLE [dbo].[Taxis1] DROP CONSTRAINT [FK_taxi_typetaxi];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxi_typedriver_percentange]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[driver_percentanges] DROP CONSTRAINT [FK_taxi_typedriver_percentange];
@@ -45,36 +45,36 @@ IF OBJECT_ID(N'[dbo].[FK_taxicheck_cuoc]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[trip_checks] DROP CONSTRAINT [FK_taxicheck_cuoc];
 GO
 IF OBJECT_ID(N'[dbo].[FK_groupCollection]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[collections] DROP CONSTRAINT [FK_groupCollection];
+    ALTER TABLE [dbo].[Collections1] DROP CONSTRAINT [FK_groupCollection];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxireason]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[reason_no_incomes] DROP CONSTRAINT [FK_taxireason];
 GO
 IF OBJECT_ID(N'[dbo].[FK_user_roleentity]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[enties] DROP CONSTRAINT [FK_user_roleentity];
+    ALTER TABLE [dbo].[Entities1] DROP CONSTRAINT [FK_user_roleentity];
 GO
 IF OBJECT_ID(N'[dbo].[FK_entityentity]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[enties] DROP CONSTRAINT [FK_entityentity];
+    ALTER TABLE [dbo].[Entities1] DROP CONSTRAINT [FK_entityentity];
 GO
 IF OBJECT_ID(N'[dbo].[FK_entitygroup]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[enties] DROP CONSTRAINT [FK_entitygroup];
+    ALTER TABLE [dbo].[Entities1] DROP CONSTRAINT [FK_entitygroup];
 GO
 IF OBJECT_ID(N'[dbo].[FK_entitytaxi]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[taxis] DROP CONSTRAINT [FK_entitytaxi];
+    ALTER TABLE [dbo].[Taxis1] DROP CONSTRAINT [FK_entitytaxi];
 GO
 IF OBJECT_ID(N'[dbo].[FK_grouptaxi]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[taxis] DROP CONSTRAINT [FK_grouptaxi];
+    ALTER TABLE [dbo].[Taxis1] DROP CONSTRAINT [FK_grouptaxi];
 GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[enties]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[enties];
+IF OBJECT_ID(N'[dbo].[Entities1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Entities1];
 GO
-IF OBJECT_ID(N'[dbo].[taxis]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[taxis];
+IF OBJECT_ID(N'[dbo].[Taxis1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Taxis1];
 GO
 IF OBJECT_ID(N'[dbo].[taxi_types]', 'U') IS NOT NULL
     DROP TABLE [dbo].[taxi_types];
@@ -100,174 +100,174 @@ GO
 IF OBJECT_ID(N'[dbo].[repair_costs]', 'U') IS NOT NULL
     DROP TABLE [dbo].[repair_costs];
 GO
-IF OBJECT_ID(N'[dbo].[groups]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[groups];
+IF OBJECT_ID(N'[dbo].[Groups1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Groups1];
 GO
 IF OBJECT_ID(N'[dbo].[trip_checks]', 'U') IS NOT NULL
     DROP TABLE [dbo].[trip_checks];
 GO
-IF OBJECT_ID(N'[dbo].[collections]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[collections];
+IF OBJECT_ID(N'[dbo].[Collections1]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Collections1];
 GO
 IF OBJECT_ID(N'[dbo].[reason_no_incomes]', 'U') IS NOT NULL
     DROP TABLE [dbo].[reason_no_incomes];
 GO
-IF OBJECT_ID(N'[dbo].[user_role]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[user_role];
+IF OBJECT_ID(N'[dbo].[UserRoles]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[UserRoles];
 GO
 
 -- --------------------------------------------------
 -- Creating all tables
 -- --------------------------------------------------
 
--- Creating table 'enties'
-CREATE TABLE [dbo].[enties] (
+-- Creating table 'Entities'
+CREATE TABLE [dbo].[Entities] (
     [id] int IDENTITY(1,1) NOT NULL,
     [firstname] nvarchar(max)  NOT NULL,
     [lastname] nvarchar(max)  NOT NULL,
     [birthday] datetime  NULL,
     [gender] bit  NOT NULL,
     [email] nvarchar(max)  NULL,
-    [businessphone] nvarchar(max)  NOT NULL,
-    [date_join] datetime  NULL,
-    [user_role_id] int  NULL,
-    [leader_id] int  NULL,
-    [groups_id] int  NULL
+    [businessPhone] nvarchar(max)  NOT NULL,
+    [dateJoin] datetime  NULL,
+    [UserRole_id] int  NULL,
+    [Leader_id] int  NULL,
+    [Group_id] int  NULL
 );
 GO
 
--- Creating table 'taxis'
-CREATE TABLE [dbo].[taxis] (
+-- Creating table 'Taxis'
+CREATE TABLE [dbo].[Taxis] (
     [id] int IDENTITY(1,1) NOT NULL,
-    [taxi_no] nvarchar(max)  NOT NULL,
-    [date_join] datetime  NULL,
+    [taxiNo] nvarchar(max)  NOT NULL,
+    [dateJoin] datetime  NULL,
     [model] nvarchar(max)  NULL,
-    [taxi_type_id] smallint  NOT NULL,
-    [entity_id] int  NULL,
-    [group_id] int  NULL
+    [TaxiType_id] smallint  NOT NULL,
+    [Entity_id] int  NULL,
+    [Group_id] int  NULL
 );
 GO
 
--- Creating table 'taxi_types'
-CREATE TABLE [dbo].[taxi_types] (
+-- Creating table 'TaxiTypes'
+CREATE TABLE [dbo].[TaxiTypes] (
     [id] smallint IDENTITY(1,1) NOT NULL,
     [description] nvarchar(max)  NOT NULL,
     [symbol] nvarchar(max)  NOT NULL
 );
 GO
 
--- Creating table 'price_ranges'
-CREATE TABLE [dbo].[price_ranges] (
+-- Creating table 'RriceRanges'
+CREATE TABLE [dbo].[RriceRanges] (
     [id] smallint IDENTITY(1,1) NOT NULL,
     [start] int  NOT NULL,
     [end] int  NOT NULL
 );
 GO
 
--- Creating table 'driver_percentanges'
-CREATE TABLE [dbo].[driver_percentanges] (
+-- Creating table 'DriverPercentanges'
+CREATE TABLE [dbo].[DriverPercentanges] (
     [id] smallint IDENTITY(1,1) NOT NULL,
     [percent] int  NOT NULL,
-    [taxi_type_id] smallint  NOT NULL,
-    [price_range_id] smallint  NOT NULL
+    [taxiType_id] smallint  NOT NULL,
+    [PriceRange_id] smallint  NOT NULL
 );
 GO
 
--- Creating table 'sumary_numbers'
-CREATE TABLE [dbo].[sumary_numbers] (
+-- Creating table 'SumaryNumbers'
+CREATE TABLE [dbo].[SumaryNumbers] (
     [id] bigint IDENTITY(1,1) NOT NULL,
     [created] datetime  NOT NULL,
     [total] int  NOT NULL,
-    [km_sum] int  NOT NULL,
-    [trip_sum] nvarchar(max)  NOT NULL,
-    [taxi_id] int  NOT NULL
+    [kmSum] int  NOT NULL,
+    [tripSum] nvarchar(max)  NOT NULL,
+    [Taxi_id] int  NOT NULL
 );
 GO
 
--- Creating table 'day_incomes'
-CREATE TABLE [dbo].[day_incomes] (
+-- Creating table 'DayIncomes'
+CREATE TABLE [dbo].[DayIncomes] (
     [id] bigint IDENTITY(1,1) NOT NULL,
     [created] datetime  NOT NULL,
-    [money_sum] int  NOT NULL,
-    [driver_income] int  NOT NULL,
-    [company_income] int  NOT NULL,
-    [rate_income] int  NOT NULL,
-    [taxi_id] int  NOT NULL
+    [moneySum] int  NOT NULL,
+    [driverIncome] int  NOT NULL,
+    [companyIncome] int  NOT NULL,
+    [rateIncome] int  NOT NULL,
+    [Taxi_id] int  NOT NULL
 );
 GO
 
--- Creating table 'province_incomes'
-CREATE TABLE [dbo].[province_incomes] (
+-- Creating table 'ProvineIncomes'
+CREATE TABLE [dbo].[ProvineIncomes] (
     [id] bigint IDENTITY(1,1) NOT NULL,
     [created] datetime  NOT NULL,
-    [trip_income] int  NOT NULL,
-    [over_income] int  NOT NULL,
-    [price_income] int  NOT NULL,
-    [taxi_id] int  NULL
+    [tripIncome] int  NOT NULL,
+    [overIncome] int  NOT NULL,
+    [priceIncome] int  NOT NULL,
+    [Taxi_id] int  NULL
 );
 GO
 
--- Creating table 'subtraction_incomes'
-CREATE TABLE [dbo].[subtraction_incomes] (
+-- Creating table 'SubtractionIncomes'
+CREATE TABLE [dbo].[SubtractionIncomes] (
     [id] bigint IDENTITY(1,1) NOT NULL,
     [reason] int  NOT NULL,
     [created] datetime  NOT NULL,
-    [taxi_id] int  NULL
+    [Taxi_id] int  NULL
 );
 GO
 
--- Creating table 'repair_costs'
-CREATE TABLE [dbo].[repair_costs] (
+-- Creating table 'RepairCosts'
+CREATE TABLE [dbo].[RepairCosts] (
     [id] bigint IDENTITY(1,1) NOT NULL,
     [created] datetime  NOT NULL,
-    [date_in] datetime  NOT NULL,
-    [date_out] datetime  NOT NULL,
-    [taxi_id] int  NULL
+    [dateIn] datetime  NOT NULL,
+    [dateOut] datetime  NOT NULL,
+    [Taxi_id] int  NULL
 );
 GO
 
--- Creating table 'groups'
-CREATE TABLE [dbo].[groups] (
+-- Creating table 'Groups'
+CREATE TABLE [dbo].[Groups] (
     [id] int IDENTITY(1,1) NOT NULL,
     [name] nvarchar(max)  NOT NULL,
     [address] nvarchar(max)  NOT NULL
 );
 GO
 
--- Creating table 'trip_checks'
-CREATE TABLE [dbo].[trip_checks] (
+-- Creating table 'TripChecks'
+CREATE TABLE [dbo].[TripChecks] (
     [id] bigint IDENTITY(1,1) NOT NULL,
     [created] datetime  NOT NULL,
-    [date_go] datetime  NOT NULL,
-    [date_back] datetime  NOT NULL,
-    [taxi_id] int  NOT NULL
+    [dateGo] datetime  NOT NULL,
+    [dateBack] datetime  NOT NULL,
+    [Taxi_id] int  NOT NULL
 );
 GO
 
--- Creating table 'collections'
-CREATE TABLE [dbo].[collections] (
+-- Creating table 'Collections'
+CREATE TABLE [dbo].[Collections] (
     [id] bigint IDENTITY(1,1) NOT NULL,
-    [taxi_type] nvarchar(max)  NOT NULL,
-    [money_sum] int  NOT NULL,
+    [taxiType] nvarchar(max)  NOT NULL,
+    [moneySum] int  NOT NULL,
     [driver] nvarchar(max)  NOT NULL,
-    [km_sum] int  NOT NULL,
-    [trip_sum] int  NOT NULL,
+    [kmSum] int  NOT NULL,
+    [tripSum] int  NOT NULL,
     [created] datetime  NOT NULL,
-    [group_id] int  NULL
+    [Group_id] int  NULL
 );
 GO
 
--- Creating table 'reason_no_incomes'
-CREATE TABLE [dbo].[reason_no_incomes] (
+-- Creating table 'ReasonNoIncomes'
+CREATE TABLE [dbo].[ReasonNoIncomes] (
     [id] bigint IDENTITY(1,1) NOT NULL,
     [created] datetime  NOT NULL,
     [status] nvarchar(max)  NOT NULL,
-    [taxi_id] int  NULL
+    [Taxi_id] int  NULL
 );
 GO
 
--- Creating table 'user_role'
-CREATE TABLE [dbo].[user_role] (
+-- Creating table 'UserRoles'
+CREATE TABLE [dbo].[UserRoles] (
     [id] int IDENTITY(1,1) NOT NULL,
     [description] nvarchar(max)  NOT NULL,
     [permission] nvarchar(max)  NOT NULL
@@ -278,93 +278,93 @@ GO
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
 
--- Creating primary key on [id] in table 'enties'
-ALTER TABLE [dbo].[enties]
-ADD CONSTRAINT [PK_enties]
+-- Creating primary key on [id] in table 'Entities'
+ALTER TABLE [dbo].[Entities]
+ADD CONSTRAINT [PK_Entities]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'taxis'
-ALTER TABLE [dbo].[taxis]
-ADD CONSTRAINT [PK_taxis]
+-- Creating primary key on [id] in table 'Taxis'
+ALTER TABLE [dbo].[Taxis]
+ADD CONSTRAINT [PK_Taxis]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'taxi_types'
-ALTER TABLE [dbo].[taxi_types]
-ADD CONSTRAINT [PK_taxi_types]
+-- Creating primary key on [id] in table 'TaxiTypes'
+ALTER TABLE [dbo].[TaxiTypes]
+ADD CONSTRAINT [PK_TaxiTypes]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'price_ranges'
-ALTER TABLE [dbo].[price_ranges]
-ADD CONSTRAINT [PK_price_ranges]
+-- Creating primary key on [id] in table 'RriceRanges'
+ALTER TABLE [dbo].[RriceRanges]
+ADD CONSTRAINT [PK_RriceRanges]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'driver_percentanges'
-ALTER TABLE [dbo].[driver_percentanges]
-ADD CONSTRAINT [PK_driver_percentanges]
+-- Creating primary key on [id] in table 'DriverPercentanges'
+ALTER TABLE [dbo].[DriverPercentanges]
+ADD CONSTRAINT [PK_DriverPercentanges]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'sumary_numbers'
-ALTER TABLE [dbo].[sumary_numbers]
-ADD CONSTRAINT [PK_sumary_numbers]
+-- Creating primary key on [id] in table 'SumaryNumbers'
+ALTER TABLE [dbo].[SumaryNumbers]
+ADD CONSTRAINT [PK_SumaryNumbers]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'day_incomes'
-ALTER TABLE [dbo].[day_incomes]
-ADD CONSTRAINT [PK_day_incomes]
+-- Creating primary key on [id] in table 'DayIncomes'
+ALTER TABLE [dbo].[DayIncomes]
+ADD CONSTRAINT [PK_DayIncomes]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'province_incomes'
-ALTER TABLE [dbo].[province_incomes]
-ADD CONSTRAINT [PK_province_incomes]
+-- Creating primary key on [id] in table 'ProvineIncomes'
+ALTER TABLE [dbo].[ProvineIncomes]
+ADD CONSTRAINT [PK_ProvineIncomes]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'subtraction_incomes'
-ALTER TABLE [dbo].[subtraction_incomes]
-ADD CONSTRAINT [PK_subtraction_incomes]
+-- Creating primary key on [id] in table 'SubtractionIncomes'
+ALTER TABLE [dbo].[SubtractionIncomes]
+ADD CONSTRAINT [PK_SubtractionIncomes]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'repair_costs'
-ALTER TABLE [dbo].[repair_costs]
-ADD CONSTRAINT [PK_repair_costs]
+-- Creating primary key on [id] in table 'RepairCosts'
+ALTER TABLE [dbo].[RepairCosts]
+ADD CONSTRAINT [PK_RepairCosts]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'groups'
-ALTER TABLE [dbo].[groups]
-ADD CONSTRAINT [PK_groups]
+-- Creating primary key on [id] in table 'Groups'
+ALTER TABLE [dbo].[Groups]
+ADD CONSTRAINT [PK_Groups]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'trip_checks'
-ALTER TABLE [dbo].[trip_checks]
-ADD CONSTRAINT [PK_trip_checks]
+-- Creating primary key on [id] in table 'TripChecks'
+ALTER TABLE [dbo].[TripChecks]
+ADD CONSTRAINT [PK_TripChecks]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'collections'
-ALTER TABLE [dbo].[collections]
-ADD CONSTRAINT [PK_collections]
+-- Creating primary key on [id] in table 'Collections'
+ALTER TABLE [dbo].[Collections]
+ADD CONSTRAINT [PK_Collections]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'reason_no_incomes'
-ALTER TABLE [dbo].[reason_no_incomes]
-ADD CONSTRAINT [PK_reason_no_incomes]
+-- Creating primary key on [id] in table 'ReasonNoIncomes'
+ALTER TABLE [dbo].[ReasonNoIncomes]
+ADD CONSTRAINT [PK_ReasonNoIncomes]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'user_role'
-ALTER TABLE [dbo].[user_role]
-ADD CONSTRAINT [PK_user_role]
+-- Creating primary key on [id] in table 'UserRoles'
+ALTER TABLE [dbo].[UserRoles]
+ADD CONSTRAINT [PK_UserRoles]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
@@ -372,244 +372,244 @@ GO
 -- Creating all FOREIGN KEY constraints
 -- --------------------------------------------------
 
--- Creating foreign key on [taxi_type_id] in table 'taxis'
-ALTER TABLE [dbo].[taxis]
+-- Creating foreign key on [TaxiType_id] in table 'Taxis'
+ALTER TABLE [dbo].[Taxis]
 ADD CONSTRAINT [FK_taxi_typetaxi]
-    FOREIGN KEY ([taxi_type_id])
-    REFERENCES [dbo].[taxi_types]
+    FOREIGN KEY ([TaxiType_id])
+    REFERENCES [dbo].[TaxiTypes]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_taxi_typetaxi'
 CREATE INDEX [IX_FK_taxi_typetaxi]
-ON [dbo].[taxis]
-    ([taxi_type_id]);
+ON [dbo].[Taxis]
+    ([TaxiType_id]);
 GO
 
--- Creating foreign key on [taxi_type_id] in table 'driver_percentanges'
-ALTER TABLE [dbo].[driver_percentanges]
+-- Creating foreign key on [taxiType_id] in table 'DriverPercentanges'
+ALTER TABLE [dbo].[DriverPercentanges]
 ADD CONSTRAINT [FK_taxi_typedriver_percentange]
-    FOREIGN KEY ([taxi_type_id])
-    REFERENCES [dbo].[taxi_types]
+    FOREIGN KEY ([taxiType_id])
+    REFERENCES [dbo].[TaxiTypes]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_taxi_typedriver_percentange'
 CREATE INDEX [IX_FK_taxi_typedriver_percentange]
-ON [dbo].[driver_percentanges]
-    ([taxi_type_id]);
+ON [dbo].[DriverPercentanges]
+    ([taxiType_id]);
 GO
 
--- Creating foreign key on [price_range_id] in table 'driver_percentanges'
-ALTER TABLE [dbo].[driver_percentanges]
+-- Creating foreign key on [PriceRange_id] in table 'DriverPercentanges'
+ALTER TABLE [dbo].[DriverPercentanges]
 ADD CONSTRAINT [FK_pricedriver_percentange]
-    FOREIGN KEY ([price_range_id])
-    REFERENCES [dbo].[price_ranges]
+    FOREIGN KEY ([PriceRange_id])
+    REFERENCES [dbo].[RriceRanges]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_pricedriver_percentange'
 CREATE INDEX [IX_FK_pricedriver_percentange]
-ON [dbo].[driver_percentanges]
-    ([price_range_id]);
+ON [dbo].[DriverPercentanges]
+    ([PriceRange_id]);
 GO
 
--- Creating foreign key on [taxi_id] in table 'sumary_numbers'
-ALTER TABLE [dbo].[sumary_numbers]
+-- Creating foreign key on [Taxi_id] in table 'SumaryNumbers'
+ALTER TABLE [dbo].[SumaryNumbers]
 ADD CONSTRAINT [FK_taxisumary_no]
-    FOREIGN KEY ([taxi_id])
-    REFERENCES [dbo].[taxis]
+    FOREIGN KEY ([Taxi_id])
+    REFERENCES [dbo].[Taxis]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_taxisumary_no'
 CREATE INDEX [IX_FK_taxisumary_no]
-ON [dbo].[sumary_numbers]
-    ([taxi_id]);
+ON [dbo].[SumaryNumbers]
+    ([Taxi_id]);
 GO
 
--- Creating foreign key on [taxi_id] in table 'day_incomes'
-ALTER TABLE [dbo].[day_incomes]
+-- Creating foreign key on [Taxi_id] in table 'DayIncomes'
+ALTER TABLE [dbo].[DayIncomes]
 ADD CONSTRAINT [FK_taxiincome_per_day]
-    FOREIGN KEY ([taxi_id])
-    REFERENCES [dbo].[taxis]
+    FOREIGN KEY ([Taxi_id])
+    REFERENCES [dbo].[Taxis]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_taxiincome_per_day'
 CREATE INDEX [IX_FK_taxiincome_per_day]
-ON [dbo].[day_incomes]
-    ([taxi_id]);
+ON [dbo].[DayIncomes]
+    ([Taxi_id]);
 GO
 
--- Creating foreign key on [taxi_id] in table 'province_incomes'
-ALTER TABLE [dbo].[province_incomes]
+-- Creating foreign key on [Taxi_id] in table 'ProvineIncomes'
+ALTER TABLE [dbo].[ProvineIncomes]
 ADD CONSTRAINT [FK_taxiincome_provine]
-    FOREIGN KEY ([taxi_id])
-    REFERENCES [dbo].[taxis]
+    FOREIGN KEY ([Taxi_id])
+    REFERENCES [dbo].[Taxis]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_taxiincome_provine'
 CREATE INDEX [IX_FK_taxiincome_provine]
-ON [dbo].[province_incomes]
-    ([taxi_id]);
+ON [dbo].[ProvineIncomes]
+    ([Taxi_id]);
 GO
 
--- Creating foreign key on [taxi_id] in table 'subtraction_incomes'
-ALTER TABLE [dbo].[subtraction_incomes]
+-- Creating foreign key on [Taxi_id] in table 'SubtractionIncomes'
+ALTER TABLE [dbo].[SubtractionIncomes]
 ADD CONSTRAINT [FK_taxisubtraction_income]
-    FOREIGN KEY ([taxi_id])
-    REFERENCES [dbo].[taxis]
+    FOREIGN KEY ([Taxi_id])
+    REFERENCES [dbo].[Taxis]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_taxisubtraction_income'
 CREATE INDEX [IX_FK_taxisubtraction_income]
-ON [dbo].[subtraction_incomes]
-    ([taxi_id]);
+ON [dbo].[SubtractionIncomes]
+    ([Taxi_id]);
 GO
 
--- Creating foreign key on [taxi_id] in table 'repair_costs'
-ALTER TABLE [dbo].[repair_costs]
+-- Creating foreign key on [Taxi_id] in table 'RepairCosts'
+ALTER TABLE [dbo].[RepairCosts]
 ADD CONSTRAINT [FK_taxirepair_cost]
-    FOREIGN KEY ([taxi_id])
-    REFERENCES [dbo].[taxis]
+    FOREIGN KEY ([Taxi_id])
+    REFERENCES [dbo].[Taxis]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_taxirepair_cost'
 CREATE INDEX [IX_FK_taxirepair_cost]
-ON [dbo].[repair_costs]
-    ([taxi_id]);
+ON [dbo].[RepairCosts]
+    ([Taxi_id]);
 GO
 
--- Creating foreign key on [taxi_id] in table 'trip_checks'
-ALTER TABLE [dbo].[trip_checks]
+-- Creating foreign key on [Taxi_id] in table 'TripChecks'
+ALTER TABLE [dbo].[TripChecks]
 ADD CONSTRAINT [FK_taxicheck_cuoc]
-    FOREIGN KEY ([taxi_id])
-    REFERENCES [dbo].[taxis]
+    FOREIGN KEY ([Taxi_id])
+    REFERENCES [dbo].[Taxis]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_taxicheck_cuoc'
 CREATE INDEX [IX_FK_taxicheck_cuoc]
-ON [dbo].[trip_checks]
-    ([taxi_id]);
+ON [dbo].[TripChecks]
+    ([Taxi_id]);
 GO
 
--- Creating foreign key on [group_id] in table 'collections'
-ALTER TABLE [dbo].[collections]
+-- Creating foreign key on [Group_id] in table 'Collections'
+ALTER TABLE [dbo].[Collections]
 ADD CONSTRAINT [FK_groupCollection]
-    FOREIGN KEY ([group_id])
-    REFERENCES [dbo].[groups]
+    FOREIGN KEY ([Group_id])
+    REFERENCES [dbo].[Groups]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_groupCollection'
 CREATE INDEX [IX_FK_groupCollection]
-ON [dbo].[collections]
-    ([group_id]);
+ON [dbo].[Collections]
+    ([Group_id]);
 GO
 
--- Creating foreign key on [taxi_id] in table 'reason_no_incomes'
-ALTER TABLE [dbo].[reason_no_incomes]
+-- Creating foreign key on [Taxi_id] in table 'ReasonNoIncomes'
+ALTER TABLE [dbo].[ReasonNoIncomes]
 ADD CONSTRAINT [FK_taxireason]
-    FOREIGN KEY ([taxi_id])
-    REFERENCES [dbo].[taxis]
+    FOREIGN KEY ([Taxi_id])
+    REFERENCES [dbo].[Taxis]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_taxireason'
 CREATE INDEX [IX_FK_taxireason]
-ON [dbo].[reason_no_incomes]
-    ([taxi_id]);
+ON [dbo].[ReasonNoIncomes]
+    ([Taxi_id]);
 GO
 
--- Creating foreign key on [user_role_id] in table 'enties'
-ALTER TABLE [dbo].[enties]
+-- Creating foreign key on [UserRole_id] in table 'Entities'
+ALTER TABLE [dbo].[Entities]
 ADD CONSTRAINT [FK_user_roleentity]
-    FOREIGN KEY ([user_role_id])
-    REFERENCES [dbo].[user_role]
+    FOREIGN KEY ([UserRole_id])
+    REFERENCES [dbo].[UserRoles]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_user_roleentity'
 CREATE INDEX [IX_FK_user_roleentity]
-ON [dbo].[enties]
-    ([user_role_id]);
+ON [dbo].[Entities]
+    ([UserRole_id]);
 GO
 
--- Creating foreign key on [leader_id] in table 'enties'
-ALTER TABLE [dbo].[enties]
+-- Creating foreign key on [Leader_id] in table 'Entities'
+ALTER TABLE [dbo].[Entities]
 ADD CONSTRAINT [FK_entityentity]
-    FOREIGN KEY ([leader_id])
-    REFERENCES [dbo].[enties]
+    FOREIGN KEY ([Leader_id])
+    REFERENCES [dbo].[Entities]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_entityentity'
 CREATE INDEX [IX_FK_entityentity]
-ON [dbo].[enties]
-    ([leader_id]);
+ON [dbo].[Entities]
+    ([Leader_id]);
 GO
 
--- Creating foreign key on [groups_id] in table 'enties'
-ALTER TABLE [dbo].[enties]
+-- Creating foreign key on [Group_id] in table 'Entities'
+ALTER TABLE [dbo].[Entities]
 ADD CONSTRAINT [FK_entitygroup]
-    FOREIGN KEY ([groups_id])
-    REFERENCES [dbo].[groups]
+    FOREIGN KEY ([Group_id])
+    REFERENCES [dbo].[Groups]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_entitygroup'
 CREATE INDEX [IX_FK_entitygroup]
-ON [dbo].[enties]
-    ([groups_id]);
+ON [dbo].[Entities]
+    ([Group_id]);
 GO
 
--- Creating foreign key on [entity_id] in table 'taxis'
-ALTER TABLE [dbo].[taxis]
+-- Creating foreign key on [Entity_id] in table 'Taxis'
+ALTER TABLE [dbo].[Taxis]
 ADD CONSTRAINT [FK_entitytaxi]
-    FOREIGN KEY ([entity_id])
-    REFERENCES [dbo].[enties]
+    FOREIGN KEY ([Entity_id])
+    REFERENCES [dbo].[Entities]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_entitytaxi'
 CREATE INDEX [IX_FK_entitytaxi]
-ON [dbo].[taxis]
-    ([entity_id]);
+ON [dbo].[Taxis]
+    ([Entity_id]);
 GO
 
--- Creating foreign key on [group_id] in table 'taxis'
-ALTER TABLE [dbo].[taxis]
+-- Creating foreign key on [Group_id] in table 'Taxis'
+ALTER TABLE [dbo].[Taxis]
 ADD CONSTRAINT [FK_grouptaxi]
-    FOREIGN KEY ([group_id])
-    REFERENCES [dbo].[groups]
+    FOREIGN KEY ([Group_id])
+    REFERENCES [dbo].[Groups]
         ([id])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_grouptaxi'
 CREATE INDEX [IX_FK_grouptaxi]
-ON [dbo].[taxis]
-    ([group_id]);
+ON [dbo].[Taxis]
+    ([Group_id]);
 GO
 
 -- --------------------------------------------------

@@ -12,13 +12,15 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class trip_check
+    public partial class DayIncome
     {
         public long id { get; set; }
         public System.DateTime created { get; set; }
-        public System.DateTime date_go { get; set; }
-        public System.DateTime date_back { get; set; }
+        public int moneySum { get; set; }
+        public int driverIncome { get; set; }
+        public int companyIncome { get; set; }
+        public int rateIncome { get; set; }
     
-        public virtual taxi taxi { get; set; }
+        public virtual Taxi Taxi { get; set; }
     }
 }

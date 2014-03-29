@@ -12,19 +12,19 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class taxi_type
+    public partial class TaxiType
     {
-        public taxi_type()
+        public TaxiType()
         {
-            this.taxis = new HashSet<taxi>();
-            this.driver_percentanges = new HashSet<driver_percentange>();
+            this.Taxis = new HashSet<Taxi>();
+            this.DriverPercentanges = new HashSet<DriverPercentange>();
         }
     
         public short id { get; set; }
         public string description { get; set; }
         public string symbol { get; set; }
     
-        public virtual ICollection<taxi> taxis { get; set; }
-        public virtual ICollection<driver_percentange> driver_percentanges { get; set; }
+        public virtual ICollection<Taxi> Taxis { get; set; }
+        public virtual ICollection<DriverPercentange> DriverPercentanges { get; set; }
     }
 }

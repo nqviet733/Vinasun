@@ -12,17 +12,17 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class price_range
+    public partial class RriceRange
     {
-        public price_range()
+        public RriceRange()
         {
-            this.driver_percentange = new HashSet<driver_percentange>();
+            this.DriverPercentanges = new HashSet<DriverPercentange>();
         }
     
         public short id { get; set; }
         public int start { get; set; }
         public int end { get; set; }
     
-        public virtual ICollection<driver_percentange> driver_percentange { get; set; }
+        public virtual ICollection<DriverPercentange> DriverPercentanges { get; set; }
     }
 }

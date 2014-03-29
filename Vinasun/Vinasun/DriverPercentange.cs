@@ -12,12 +12,12 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class subtraction_income
+    public partial class DriverPercentange
     {
-        public long id { get; set; }
-        public int reason { get; set; }
-        public System.DateTime created { get; set; }
+        public short id { get; set; }
+        public int percent { get; set; }
     
-        public virtual taxi taxi { get; set; }
+        public virtual TaxiType taxiType { get; set; }
+        public virtual RriceRange PriceRange { get; set; }
     }
 }
