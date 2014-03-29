@@ -24,10 +24,10 @@
         <AssociationConnector Association="EntityDiagram.taxisubtraction_income" />
         <EntityTypeShape EntityType="EntityDiagram.repair_cost" Width="1.5" PointX="2.5" PointY="7.375" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.taxirepair_cost" />
-        <EntityTypeShape EntityType="EntityDiagram.group" Width="2" PointX="13.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.group" Width="2" PointX="13.25" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EntityDiagram.trip_check" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.taxicheck_cuoc" />
-        <EntityTypeShape EntityType="EntityDiagram.collection" Width="1.5" PointX="16.375" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.collection" Width="1.5" PointX="16" PointY="5.625" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.groupCollection" ManuallyRouted="false" >
         </AssociationConnector>
         <EntityTypeShape EntityType="EntityDiagram.reason_no_income" Width="2" PointX="2.5" PointY="10.125" />
@@ -35,15 +35,12 @@
         <EntityTypeShape EntityType="EntityDiagram.user_role" Width="1.5" PointX="15.75" PointY="3" />
         <AssociationConnector Association="EntityDiagram.user_roleentity" />
         <AssociationConnector Association="EntityDiagram.entityentity" ManuallyRouted="true" >
-          <ConnectorPoint PointX="12.149113640586322" PointY="2.8750000000000009" />
-          <ConnectorPoint PointX="12.149113640586322" PointY="2.0208333106181477" />
+          <ConnectorPoint PointX="11.985682057596209" PointY="2.875" />
+          <ConnectorPoint PointX="11.985682057596209" PointY="2.0208333106181477" />
           <ConnectorPoint PointX="13.146690014988987" PointY="2.0208333106181477" />
-          <ConnectorPoint PointX="13.146690014988987" PointY="2.8750000000000004" />
+          <ConnectorPoint PointX="13.146690014988987" PointY="2.8750000000000124" />
         </AssociationConnector>
-        <AssociationConnector Association="EntityDiagram.entitygroup" ManuallyRouted="true" >
-          <ConnectorPoint PointX="13.25" PointY="5.17509771484375" />
-          <ConnectorPoint PointX="14.476685339868222" PointY="5.17509771484375" />
-          <ConnectorPoint PointX="14.476685339868222" PointY="7.25" />
+        <AssociationConnector Association="EntityDiagram.entitygroup" ManuallyRouted="false" >
         </AssociationConnector>
         <AssociationConnector Association="EntityDiagram.entitytaxi" />
         <AssociationConnector Association="EntityDiagram.grouptaxi" />

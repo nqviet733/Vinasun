@@ -20,19 +20,24 @@ namespace Vinasun
             //Application.Run(new Form1());
 
             GroupModel gm = new GroupModelImpl();
-
-            leader l = new leader();
-            l.username = "abs";
-            l.password = "123";
+            var con = new EntityDiagramContainer();
 
             group g = new group();
             g.name = "New Group";
-            g.address = "HCMC";
-            g.leader = l;
+            g.address = "HCMC";    
+            gm.addGroup(con, g);
 
-                
-            var con = new EntityDiagramContainer();
-            gm.addGroup(con,g);
+            g.address = "Ha Noi";
+            gm.updateGroup(con,g);
+
+            var group = gm.retrieveGroup(con, g.id);
+            Console.WriteLine("Name: " + group.name);
+            Console.WriteLine("Group: " + group.address);
+
+            var gr = gm.retrieveAllGroup(con);
+
+            gm.deleteGroup(con, group);
+
         }
     }
 }
