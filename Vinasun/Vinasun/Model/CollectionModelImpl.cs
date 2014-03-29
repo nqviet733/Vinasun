@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class CollectionModelImpl
+    class CollectionModelImpl : CollectionModel
     {
 
         //Create new collection
