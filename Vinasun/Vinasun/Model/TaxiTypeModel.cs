@@ -12,7 +12,7 @@ namespace Vinasun.Model
 
         void addTaxiType(EntityDiagramContainer container, TaxiType taxiType);
         TaxiType retrieveTaxiType(EntityDiagramContainer container, int taxiTypeId);
-        IList<TaxiType> retrieveAllEntities(EntityDiagramContainer container);
+        IList<TaxiType> retrieveAllTaxiTypes(EntityDiagramContainer container);
         void updateTaxiType(EntityDiagramContainer container, TaxiType taxiType);
         void deleteTaxiType(EntityDiagramContainer container, TaxiType taxiType);
 

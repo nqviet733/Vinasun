@@ -9,7 +9,7 @@
     <EntitySet Name="Entities" EntityType="EntityDiagram.Store.Entities" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Taxis" EntityType="EntityDiagram.Store.Taxis" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="TaxiTypes" EntityType="EntityDiagram.Store.TaxiTypes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="RriceRanges" EntityType="EntityDiagram.Store.RriceRanges" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PriceRanges" EntityType="EntityDiagram.Store.PriceRanges" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DriverPercentanges" EntityType="EntityDiagram.Store.DriverPercentanges" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="SumaryNumbers" EntityType="EntityDiagram.Store.SumaryNumbers" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DayIncomes" EntityType="EntityDiagram.Store.DayIncomes" store:Type="Tables" Schema="dbo" />
@@ -30,7 +30,7 @@
       <End Role="driver_percentange" EntitySet="DriverPercentanges" />
     </AssociationSet>
     <AssociationSet Name="pricedriver_percentange" Association="EntityDiagram.Store.pricedriver_percentange">
-      <End Role="price" EntitySet="RriceRanges" />
+      <End Role="price" EntitySet="PriceRanges" />
       <End Role="driver_percentange" EntitySet="DriverPercentanges" />
     </AssociationSet>
     <AssociationSet Name="taxisumary_no" Association="EntityDiagram.Store.taxisumary_no">
@@ -122,7 +122,7 @@
     <Property Name="description" Type="nvarchar(max)" Nullable="false" />
     <Property Name="symbol" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
-  <EntityType Name="RriceRanges">
+  <EntityType Name="PriceRanges">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -265,7 +265,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="pricedriver_percentange">
-    <End Role="price" Type="EntityDiagram.Store.RriceRanges" Multiplicity="1" />
+    <End Role="price" Type="EntityDiagram.Store.PriceRanges" Multiplicity="1" />
     <End Role="driver_percentange" Type="EntityDiagram.Store.DriverPercentanges" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="price">
@@ -444,14 +444,14 @@
             <End Role="taxi_type" EntitySet="TaxiTypes" />
             <End Role="taxi" EntitySet="Taxis" />
           </AssociationSet>
-          <EntitySet Name="RriceRanges" EntityType="EntityDiagram.RriceRange" />
+          <EntitySet Name="PriceRanges" EntityType="EntityDiagram.PriceRange" />
           <EntitySet Name="DriverPercentanges" EntityType="EntityDiagram.DriverPercentange" />
           <AssociationSet Name="taxi_typedriver_percentange" Association="EntityDiagram.taxi_typedriver_percentange">
             <End Role="taxi_type" EntitySet="TaxiTypes" />
             <End Role="driver_percentange" EntitySet="DriverPercentanges" />
           </AssociationSet>
           <AssociationSet Name="pricedriver_percentange" Association="EntityDiagram.pricedriver_percentange">
-            <End Role="price" EntitySet="RriceRanges" />
+            <End Role="price" EntitySet="PriceRanges" />
             <End Role="driver_percentange" EntitySet="DriverPercentanges" />
           </AssociationSet>
           <EntitySet Name="SumaryNumbers" EntityType="EntityDiagram.SumaryNumber" />
@@ -568,7 +568,7 @@
           <End Type="EntityDiagram.TaxiType" Role="taxi_type" Multiplicity="0..1" />
           <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="*" />
         </Association>
-        <EntityType Name="RriceRange">
+        <EntityType Name="PriceRange">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -591,7 +591,7 @@
           <End Type="EntityDiagram.DriverPercentange" Role="driver_percentange" Multiplicity="*" />
         </Association>
         <Association Name="pricedriver_percentange">
-          <End Type="EntityDiagram.RriceRange" Role="price" Multiplicity="1" />
+          <End Type="EntityDiagram.PriceRange" Role="price" Multiplicity="1" />
           <End Type="EntityDiagram.DriverPercentange" Role="driver_percentange" Multiplicity="*" />
         </Association>
         <EntityType Name="SumaryNumber">
@@ -790,9 +790,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="RriceRanges">
-      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.RriceRange)">
-        <MappingFragment StoreEntitySet="RriceRanges">
+    <EntitySetMapping Name="PriceRanges">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.PriceRange)">
+        <MappingFragment StoreEntitySet="PriceRanges">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="start" ColumnName="start" />
           <ScalarProperty Name="end" ColumnName="end" />

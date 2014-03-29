@@ -28,7 +28,7 @@ namespace Vinasun.EntityClass
         public virtual DbSet<Entity> Entities { get; set; }
         public virtual DbSet<Taxi> Taxis { get; set; }
         public virtual DbSet<TaxiType> TaxiTypes { get; set; }
-        public virtual DbSet<RriceRange> RriceRanges { get; set; }
+        public virtual DbSet<PriceRange> PriceRanges { get; set; }
         public virtual DbSet<DriverPercentange> DriverPercentanges { get; set; }
         public virtual DbSet<SumaryNumber> SumaryNumbers { get; set; }
         public virtual DbSet<DayIncome> DayIncomes { get; set; }

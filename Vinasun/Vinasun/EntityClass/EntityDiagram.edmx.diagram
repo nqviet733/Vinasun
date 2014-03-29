@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="EntityDiagram.Taxi" Width="1.875" PointX="8" PointY="6.5" IsExpanded="true" />
         <EntityTypeShape EntityType="EntityDiagram.TaxiType" Width="1.875" PointX="10.875" PointY="9.5" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.taxi_typetaxi" />
-        <EntityTypeShape EntityType="EntityDiagram.RriceRange" Width="2" PointX="10.625" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.PriceRange" Width="2" PointX="10.625" PointY="13.5" IsExpanded="true" />
         <EntityTypeShape EntityType="EntityDiagram.DriverPercentange" Width="1.875" PointX="13.25" PointY="12" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.taxi_typedriver_percentange" />
         <AssociationConnector Association="EntityDiagram.pricedriver_percentange" />

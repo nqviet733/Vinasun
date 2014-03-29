@@ -86,10 +86,15 @@
     <Compile Include="EntityClass\Group.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
+    <Compile Include="EntityClass\PriceRange.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\EntityModel.cs" />
     <Compile Include="Model\EntityModelImpl.cs" />
     <Compile Include="Model\GroupModel.cs" />
     <Compile Include="Model\GroupModelImpl.cs" />
+    <Compile Include="Model\PriceRangeModel.cs" />
+    <Compile Include="Model\PriceRangeModelImpl.cs" />
     <Compile Include="Model\TaxiModel.cs" />
     <Compile Include="Model\TaxiModelImpl.cs" />
     <Compile Include="Model\TaxiTypeModelImpl.cs" />
@@ -105,9 +110,6 @@
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityClass\RepairCost.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EntityClass\RriceRange.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityClass\SubtractionIncome.cs">
@@ -175,7 +177,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="EntityClass\EntityDiagram.edmx.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

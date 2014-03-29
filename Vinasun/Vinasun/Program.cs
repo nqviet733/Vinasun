@@ -24,6 +24,8 @@ namespace Vinasun
             EntityModel em = new EntityModelImpl();
             TaxiModel tm = new TaxiModelImpl();
             UserRoleModel urm = new UserRoleModelImpl();
+            TaxiTypeModel ttm = new TaxiTypeModelImpl();
+            PriceRangeModel prm = new PriceRangeModelImpl();
             var con = new EntityDiagramContainer();
 
             //====Group
@@ -84,6 +86,32 @@ namespace Vinasun
             //urm.updateUserRole(con, userRole);
             //tm.updateTaxi(con, taxi);
             //urm.deleteUserRole(con, userRole);
+
+
+            //====Taxi Type
+            //TaxiType tt = new TaxiType();
+            //tt.symbol = "G";
+            //tt.description = "Xe G";
+            
+            //ttm.addTaxiType(con, tt);
+            //var taxiType = ttm.retrieveTaxiType(con, 3);
+            //var taxiTypes = ttm.retrieveAllTaxiTypes(con);
+            //taxiType.description = "Xe G Cho";
+            //ttm.updateTaxiType(con, taxiType);
+            //ttm.deleteTaxiType(con, taxiType);
+
+
+            //====Price Range
+            PriceRange pr = new PriceRange();
+            pr.start = 0;
+            pr.end = 399;
+
+            prm.addPriceRange(con, pr);
+            //var taxiType = ttm.retrieveTaxiType(con, 3);
+            //var taxiTypes = ttm.retrieveAllTaxiTypes(con);
+            //taxiType.description = "Xe G Cho";
+            //ttm.updateTaxiType(con, taxiType);
+            //ttm.deleteTaxiType(con, taxiType);
 
         }
     }

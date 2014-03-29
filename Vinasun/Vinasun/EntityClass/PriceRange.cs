@@ -12,9 +12,9 @@ namespace Vinasun.EntityClass
     using System;
     using System.Collections.Generic;
     
-    public partial class RriceRange
+    public partial class PriceRange
     {
-        public RriceRange()
+        public PriceRange()
         {
             this.DriverPercentanges = new HashSet<DriverPercentange>();
         }
