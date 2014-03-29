@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vinasun
+namespace Vinasun.EntityClass
 {
     using System;
     using System.Collections.Generic;

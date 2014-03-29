@@ -7,17 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vinasun
+namespace Vinasun.EntityClass
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class RepairCost
+    public partial class ProvineIncome
     {
         public long id { get; set; }
         public System.DateTime created { get; set; }
-        public System.DateTime dateIn { get; set; }
-        public System.DateTime dateOut { get; set; }
+        public int tripIncome { get; set; }
+        public int overIncome { get; set; }
+        public int priceIncome { get; set; }
     
         public virtual Taxi Taxi { get; set; }
     }

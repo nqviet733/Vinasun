@@ -7,17 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vinasun
+namespace Vinasun.EntityClass
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class DriverPercentange
+    public partial class SubtractionIncome
     {
-        public short id { get; set; }
-        public int percent { get; set; }
+        public long id { get; set; }
+        public int reason { get; set; }
+        public System.DateTime created { get; set; }
     
-        public virtual TaxiType taxiType { get; set; }
-        public virtual RriceRange PriceRange { get; set; }
+        public virtual Taxi Taxi { get; set; }
     }
 }

@@ -7,18 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vinasun
+namespace Vinasun.EntityClass
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class SumaryNumber
+    public partial class TripCheck
     {
         public long id { get; set; }
         public System.DateTime created { get; set; }
-        public int total { get; set; }
-        public int kmSum { get; set; }
-        public string tripSum { get; set; }
+        public System.DateTime dateGo { get; set; }
+        public System.DateTime dateBack { get; set; }
     
         public virtual Taxi Taxi { get; set; }
     }

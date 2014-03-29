@@ -7,20 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vinasun
+namespace Vinasun.EntityClass
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class DayIncome
+    public partial class Collection
     {
         public long id { get; set; }
-        public System.DateTime created { get; set; }
+        public string taxiType { get; set; }
         public int moneySum { get; set; }
-        public int driverIncome { get; set; }
-        public int companyIncome { get; set; }
-        public int rateIncome { get; set; }
+        public string driver { get; set; }
+        public int kmSum { get; set; }
+        public int tripSum { get; set; }
+        public System.DateTime created { get; set; }
     
-        public virtual Taxi Taxi { get; set; }
+        public virtual Group Group { get; set; }
     }
 }

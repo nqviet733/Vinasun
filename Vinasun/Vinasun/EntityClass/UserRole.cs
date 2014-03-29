@@ -7,19 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vinasun
+namespace Vinasun.EntityClass
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ProvineIncome
+    public partial class UserRole
     {
-        public long id { get; set; }
-        public System.DateTime created { get; set; }
-        public int tripIncome { get; set; }
-        public int overIncome { get; set; }
-        public int priceIncome { get; set; }
+        public UserRole()
+        {
+            this.Entities = new HashSet<Entity>();
+        }
     
-        public virtual Taxi Taxi { get; set; }
+        public int id { get; set; }
+        public string description { get; set; }
+        public string permission { get; set; }
+    
+        public virtual ICollection<Entity> Entities { get; set; }
     }
 }

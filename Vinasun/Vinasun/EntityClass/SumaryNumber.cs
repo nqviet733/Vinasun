@@ -7,24 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vinasun
+namespace Vinasun.EntityClass
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TaxiType
+    public partial class SumaryNumber
     {
-        public TaxiType()
-        {
-            this.Taxis = new HashSet<Taxi>();
-            this.DriverPercentanges = new HashSet<DriverPercentange>();
-        }
+        public long id { get; set; }
+        public System.DateTime created { get; set; }
+        public int total { get; set; }
+        public int kmSum { get; set; }
+        public string tripSum { get; set; }
     
-        public short id { get; set; }
-        public string description { get; set; }
-        public string symbol { get; set; }
-    
-        public virtual ICollection<Taxi> Taxis { get; set; }
-        public virtual ICollection<DriverPercentange> DriverPercentanges { get; set; }
+        public virtual Taxi Taxi { get; set; }
     }
 }

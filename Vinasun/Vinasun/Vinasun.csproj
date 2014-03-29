@@ -56,34 +56,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Collection.cs">
+    <Compile Include="EntityClass\Collection.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="DayIncome.cs">
+    <Compile Include="EntityClass\DayIncome.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="DriverPercentange.cs">
+    <Compile Include="EntityClass\DriverPercentange.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="Entity.cs">
+    <Compile Include="EntityClass\Entity.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityDiagram.Context.cs">
+    <Compile Include="EntityClass\EntityDiagram.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityDiagram.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityDiagram.cs">
+    <Compile Include="EntityClass\EntityDiagram.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityDiagram.Designer.cs">
+    <Compile Include="EntityClass\EntityDiagram.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityDiagram.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Group.cs">
+    <Compile Include="EntityClass\Group.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\EntityModel.cs" />
@@ -96,34 +96,34 @@
     <Compile Include="Model\UserRoleModelImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProvineIncome.cs">
+    <Compile Include="EntityClass\ProvineIncome.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="ReasonNoIncome.cs">
+    <Compile Include="EntityClass\ReasonNoIncome.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="RepairCost.cs">
+    <Compile Include="EntityClass\RepairCost.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="RriceRange.cs">
+    <Compile Include="EntityClass\RriceRange.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="SubtractionIncome.cs">
+    <Compile Include="EntityClass\SubtractionIncome.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="SumaryNumber.cs">
+    <Compile Include="EntityClass\SumaryNumber.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="Taxi.cs">
+    <Compile Include="EntityClass\Taxi.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="TaxiType.cs">
+    <Compile Include="EntityClass\TaxiType.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="TripCheck.cs">
+    <Compile Include="EntityClass\TripCheck.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserRole.cs">
+    <Compile Include="EntityClass\UserRole.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
     <Compile Include="View\Class1.cs" />
@@ -137,19 +137,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="EntityDiagram.edmx">
+    <EntityDeploy Include="EntityClass\EntityDiagram.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EntityDiagram.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="EntityDiagram.Context.tt">
+    <None Include="EntityClass\EntityDiagram.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EntityDiagram.Context.cs</LastGenOutput>
       <DependentUpon>EntityDiagram.edmx</DependentUpon>
     </None>
-    <None Include="EntityDiagram.edmx.diagram">
+    <None Include="EntityClass\EntityDiagram.edmx.diagram">
       <DependentUpon>EntityDiagram.edmx</DependentUpon>
     </None>
-    <None Include="EntityDiagram.tt">
+    <None Include="EntityClass\EntityDiagram.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EntityDiagram.cs</LastGenOutput>
       <DependentUpon>EntityDiagram.edmx</DependentUpon>
@@ -173,12 +173,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="EntityDiagram.edmx.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entity\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

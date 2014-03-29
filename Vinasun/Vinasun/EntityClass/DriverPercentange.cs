@@ -7,22 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vinasun
+namespace Vinasun.EntityClass
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class RriceRange
+    public partial class DriverPercentange
     {
-        public RriceRange()
-        {
-            this.DriverPercentanges = new HashSet<DriverPercentange>();
-        }
-    
         public short id { get; set; }
-        public int start { get; set; }
-        public int end { get; set; }
+        public int percent { get; set; }
     
-        public virtual ICollection<DriverPercentange> DriverPercentanges { get; set; }
+        public virtual TaxiType taxiType { get; set; }
+        public virtual RriceRange PriceRange { get; set; }
     }
 }

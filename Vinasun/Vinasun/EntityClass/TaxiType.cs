@@ -7,22 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vinasun
+namespace Vinasun.EntityClass
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class UserRole
+    public partial class TaxiType
     {
-        public UserRole()
+        public TaxiType()
         {
-            this.Entities = new HashSet<Entity>();
+            this.Taxis = new HashSet<Taxi>();
+            this.DriverPercentanges = new HashSet<DriverPercentange>();
         }
     
-        public int id { get; set; }
+        public short id { get; set; }
         public string description { get; set; }
-        public string permission { get; set; }
+        public string symbol { get; set; }
     
-        public virtual ICollection<Entity> Entities { get; set; }
+        public virtual ICollection<Taxi> Taxis { get; set; }
+        public virtual ICollection<DriverPercentange> DriverPercentanges { get; set; }
     }
 }

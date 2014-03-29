@@ -7,17 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vinasun
+namespace Vinasun.EntityClass
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TripCheck
+    public partial class ReasonNoIncome
     {
         public long id { get; set; }
         public System.DateTime created { get; set; }
-        public System.DateTime dateGo { get; set; }
-        public System.DateTime dateBack { get; set; }
+        public string status { get; set; }
     
         public virtual Taxi Taxi { get; set; }
     }

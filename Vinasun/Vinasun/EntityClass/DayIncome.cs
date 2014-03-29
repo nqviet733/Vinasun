@@ -7,16 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Vinasun
+namespace Vinasun.EntityClass
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ReasonNoIncome
+    public partial class DayIncome
     {
         public long id { get; set; }
         public System.DateTime created { get; set; }
-        public string status { get; set; }
+        public int moneySum { get; set; }
+        public int driverIncome { get; set; }
+        public int companyIncome { get; set; }
+        public int rateIncome { get; set; }
     
         public virtual Taxi Taxi { get; set; }
     }
