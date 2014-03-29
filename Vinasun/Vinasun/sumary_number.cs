@@ -17,8 +17,8 @@ namespace Vinasun
         public long id { get; set; }
         public System.DateTime created { get; set; }
         public int total { get; set; }
-        public int km { get; set; }
-        public string cuoc { get; set; }
+        public int km_sum { get; set; }
+        public string trip_sum { get; set; }
     
         public virtual taxi taxi { get; set; }
     }

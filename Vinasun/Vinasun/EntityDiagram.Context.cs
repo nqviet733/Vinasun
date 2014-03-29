@@ -25,20 +25,20 @@ namespace Vinasun
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<entity> entity { get; set; }
-        public virtual DbSet<user_role> user_role { get; set; }
-        public virtual DbSet<taxi> taxi { get; set; }
-        public virtual DbSet<taxi_type> taxi_type { get; set; }
-        public virtual DbSet<price_range> price_range { get; set; }
-        public virtual DbSet<driver_percentange> driver_percentange { get; set; }
-        public virtual DbSet<sumary_number> sumary_number { get; set; }
-        public virtual DbSet<day_income> day_income { get; set; }
-        public virtual DbSet<province_income> province_income { get; set; }
-        public virtual DbSet<subtraction_income> subtraction_income { get; set; }
-        public virtual DbSet<repair_cost> repair_cost { get; set; }
-        public virtual DbSet<leader> leader { get; set; }
-        public virtual DbSet<group> group { get; set; }
-        public virtual DbSet<check_cuoc> check_cuoc { get; set; }
+        public virtual DbSet<entity> enties { get; set; }
+        public virtual DbSet<taxi> taxis { get; set; }
+        public virtual DbSet<taxi_type> taxi_types { get; set; }
+        public virtual DbSet<price_range> price_ranges { get; set; }
+        public virtual DbSet<driver_percentange> driver_percentanges { get; set; }
+        public virtual DbSet<sumary_number> sumary_numbers { get; set; }
+        public virtual DbSet<day_income> day_incomes { get; set; }
+        public virtual DbSet<province_income> province_incomes { get; set; }
+        public virtual DbSet<subtraction_income> subtraction_incomes { get; set; }
+        public virtual DbSet<repair_cost> repair_costs { get; set; }
+        public virtual DbSet<group> groups { get; set; }
+        public virtual DbSet<trip_check> trip_checks { get; set; }
         public virtual DbSet<collection> collections { get; set; }
+        public virtual DbSet<reason_no_income> reason_no_incomes { get; set; }
+        public virtual DbSet<user_role> user_role { get; set; }
     }
 }

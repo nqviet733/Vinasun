@@ -12,11 +12,13 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class administrator : entity
+    public partial class trip_check
     {
-        public string username { get; set; }
-        public string password { get; set; }
+        public long id { get; set; }
+        public System.DateTime created { get; set; }
+        public System.DateTime date_go { get; set; }
+        public System.DateTime date_back { get; set; }
     
-        public virtual user_role user_role { get; set; }
+        public virtual taxi taxi { get; set; }
     }
 }

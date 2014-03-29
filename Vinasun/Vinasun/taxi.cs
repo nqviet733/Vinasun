@@ -16,28 +16,29 @@ namespace Vinasun
     {
         public taxi()
         {
-            this.drivers = new HashSet<driver>();
             this.sumary_numbers = new HashSet<sumary_number>();
             this.day_incomes = new HashSet<day_income>();
             this.income_provines = new HashSet<province_income>();
             this.subtraction_incomes = new HashSet<subtraction_income>();
             this.repair_costs = new HashSet<repair_cost>();
-            this.check_cuocs = new HashSet<check_cuoc>();
+            this.trip_checks = new HashSet<trip_check>();
+            this.reason_no_incomes = new HashSet<reason_no_income>();
         }
     
         public int id { get; set; }
-        public string number_car { get; set; }
+        public string taxi_no { get; set; }
         public Nullable<System.DateTime> date_join { get; set; }
         public string model { get; set; }
     
         public virtual taxi_type taxi_type { get; set; }
-        public virtual ICollection<driver> drivers { get; set; }
         public virtual ICollection<sumary_number> sumary_numbers { get; set; }
         public virtual ICollection<day_income> day_incomes { get; set; }
         public virtual ICollection<province_income> income_provines { get; set; }
         public virtual ICollection<subtraction_income> subtraction_incomes { get; set; }
         public virtual ICollection<repair_cost> repair_costs { get; set; }
-        public virtual ICollection<check_cuoc> check_cuocs { get; set; }
-        public virtual checker checkers { get; set; }
+        public virtual ICollection<trip_check> trip_checks { get; set; }
+        public virtual ICollection<reason_no_income> reason_no_incomes { get; set; }
+        public virtual entity entity { get; set; }
+        public virtual group group { get; set; }
     }
 }

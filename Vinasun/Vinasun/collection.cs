@@ -16,10 +16,10 @@ namespace Vinasun
     {
         public long id { get; set; }
         public string taxi_type { get; set; }
-        public int sum_money { get; set; }
+        public int money_sum { get; set; }
         public string driver { get; set; }
-        public int sum_km { get; set; }
-        public int sum_cuoc { get; set; }
+        public int km_sum { get; set; }
+        public int trip_sum { get; set; }
         public System.DateTime created { get; set; }
     
         public virtual group group { get; set; }

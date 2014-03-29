@@ -12,19 +12,12 @@ namespace Vinasun
     using System;
     using System.Collections.Generic;
     
-    public partial class leader
+    public partial class reason_no_income
     {
-        public leader()
-        {
-            this.checkers = new HashSet<checker>();
-        }
+        public long id { get; set; }
+        public System.DateTime created { get; set; }
+        public string status { get; set; }
     
-        public int id { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
-    
-        public virtual user_role user_roles { get; set; }
-        public virtual ICollection<checker> checkers { get; set; }
-        public virtual group group { get; set; }
+        public virtual taxi taxi { get; set; }
     }
 }

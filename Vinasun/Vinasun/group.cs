@@ -17,13 +17,16 @@ namespace Vinasun
         public group()
         {
             this.collections = new HashSet<collection>();
+            this.entities = new HashSet<entity>();
+            this.taxis = new HashSet<taxi>();
         }
     
         public int id { get; set; }
         public string name { get; set; }
         public string address { get; set; }
     
-        public virtual leader leader { get; set; }
         public virtual ICollection<collection> collections { get; set; }
+        public virtual ICollection<entity> entities { get; set; }
+        public virtual ICollection<taxi> taxis { get; set; }
     }
 }

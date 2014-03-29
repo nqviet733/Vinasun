@@ -14,6 +14,12 @@ namespace Vinasun
     
     public partial class entity
     {
+        public entity()
+        {
+            this.checkers = new HashSet<entity>();
+            this.taxis = new HashSet<taxi>();
+        }
+    
         public int id { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }
@@ -22,5 +28,11 @@ namespace Vinasun
         public string email { get; set; }
         public string businessphone { get; set; }
         public Nullable<System.DateTime> date_join { get; set; }
+    
+        public virtual user_role user_role { get; set; }
+        public virtual ICollection<entity> checkers { get; set; }
+        public virtual entity leader { get; set; }
+        public virtual group groups { get; set; }
+        public virtual ICollection<taxi> taxis { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vinasun.Model
 {
-    class Class1
+    interface TaxiModel
     {
     }
 }

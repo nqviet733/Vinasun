@@ -14,13 +14,15 @@ namespace Vinasun
     
     public partial class user_role
     {
-        public short id { get; set; }
+        public user_role()
+        {
+            this.entities = new HashSet<entity>();
+        }
+    
+        public int id { get; set; }
         public string description { get; set; }
         public string permission { get; set; }
     
-        public virtual checker checker { get; set; }
-        public virtual leader leader { get; set; }
-        public virtual moderator moderator { get; set; }
-        public virtual administrator administrator { get; set; }
+        public virtual ICollection<entity> entities { get; set; }
     }
 }

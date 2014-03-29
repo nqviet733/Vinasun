@@ -16,7 +16,7 @@ namespace Vinasun
     {
         public long id { get; set; }
         public System.DateTime created { get; set; }
-        public int cuoc_income { get; set; }
+        public int trip_income { get; set; }
         public int over_income { get; set; }
         public int price_income { get; set; }
     
