@@ -16,7 +16,7 @@ namespace Vinasun.EntityClass
     {
         public Taxi()
         {
-            this.SumaryNumbers = new HashSet<SumaryNumber>();
+            this.SummaryNumbers = new HashSet<SummaryNumber>();
             this.DayIncomes = new HashSet<DayIncome>();
             this.ProvineIncomes = new HashSet<ProvineIncome>();
             this.SubtractionIncomes = new HashSet<SubtractionIncome>();
@@ -31,7 +31,7 @@ namespace Vinasun.EntityClass
         public string model { get; set; }
     
         public virtual TaxiType TaxiType { get; set; }
-        public virtual ICollection<SumaryNumber> SumaryNumbers { get; set; }
+        public virtual ICollection<SummaryNumber> SummaryNumbers { get; set; }
         public virtual ICollection<DayIncome> DayIncomes { get; set; }
         public virtual ICollection<ProvineIncome> ProvineIncomes { get; set; }
         public virtual ICollection<SubtractionIncome> SubtractionIncomes { get; set; }

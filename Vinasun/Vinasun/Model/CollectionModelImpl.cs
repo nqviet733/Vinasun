@@ -70,8 +70,7 @@ namespace Vinasun.Model
             int signal = 0;
             try
             {
-                var collection = container.Collections.FirstOrDefault(c => c.id == collectionIn.id);
-                
+                container.Collections.FirstOrDefault(c => c.id == collectionIn.id);
                 signal = container.SaveChanges();
             }
             catch (Exception ex)

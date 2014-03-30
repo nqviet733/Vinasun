@@ -13,7 +13,7 @@
         <EntityTypeShape EntityType="EntityDiagram.DriverPercentange" Width="1.875" PointX="13.25" PointY="12" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.taxi_typedriver_percentange" />
         <AssociationConnector Association="EntityDiagram.pricedriver_percentange" />
-        <EntityTypeShape EntityType="EntityDiagram.SumaryNumber" Width="2.25" PointX="8.125" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.SummaryNumber" Width="2.25" PointX="8.125" PointY="10.75" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.taxisumary_no" />
         <EntityTypeShape EntityType="EntityDiagram.DayIncome" Width="1.5" PointX="5.625" PointY="10.25" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.taxiincome_per_day" ManuallyRouted="false" >

@@ -69,10 +69,7 @@ namespace Vinasun.Model
             int signal = 0;
             try
             {
-                var userRole = container.UserRoles.FirstOrDefault(c => c.id == userRoleIn.id);
-                userRole.description = userRoleIn.description;
-                userRole.permission = userRoleIn.permission;
-
+                container.UserRoles.FirstOrDefault(c => c.id == userRoleIn.id);
                 signal = container.SaveChanges();
             }
             catch (Exception ex)

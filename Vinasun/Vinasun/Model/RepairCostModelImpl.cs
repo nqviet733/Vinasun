@@ -69,7 +69,7 @@ namespace Vinasun.Model
             int signal = 0;
             try
             {
-                var repairCost = container.RepairCosts.FirstOrDefault(c => c.id == repairCostIn.id);
+                container.RepairCosts.FirstOrDefault(c => c.id == repairCostIn.id);
                 signal = container.SaveChanges();
             }
             catch (Exception ex)

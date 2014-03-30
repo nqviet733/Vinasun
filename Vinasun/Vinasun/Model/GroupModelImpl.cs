@@ -70,9 +70,7 @@ namespace Vinasun.Model
             int signal = 0;
             try
             {
-                var gr = container.Groups.FirstOrDefault(c => c.id == group.id);
-                gr.name = group.name;
-                gr.address = group.address;
+                container.Groups.FirstOrDefault(c => c.id == group.id);
                 signal = container.SaveChanges();
             }
             catch (Exception ex)

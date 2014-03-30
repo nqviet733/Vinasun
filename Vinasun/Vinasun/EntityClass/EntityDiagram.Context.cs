@@ -30,7 +30,7 @@ namespace Vinasun.EntityClass
         public virtual DbSet<TaxiType> TaxiTypes { get; set; }
         public virtual DbSet<PriceRange> PriceRanges { get; set; }
         public virtual DbSet<DriverPercentange> DriverPercentanges { get; set; }
-        public virtual DbSet<SumaryNumber> SumaryNumbers { get; set; }
+        public virtual DbSet<SummaryNumber> SummaryNumbers { get; set; }
         public virtual DbSet<DayIncome> DayIncomes { get; set; }
         public virtual DbSet<ProvineIncome> ProvineIncomes { get; set; }
         public virtual DbSet<SubtractionIncome> SubtractionIncomes { get; set; }

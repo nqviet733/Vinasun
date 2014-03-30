@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/29/2014 22:57:32
+-- Date Created: 03/30/2014 13:12:50
 -- Generated from EDMX file: C:\Users\nqvie_000\Source\Repos\Vinasun\Vinasun\Vinasun\EntityClass\EntityDiagram.edmx
 -- --------------------------------------------------
 
@@ -173,8 +173,8 @@ CREATE TABLE [dbo].[DriverPercentanges] (
 );
 GO
 
--- Creating table 'SumaryNumbers'
-CREATE TABLE [dbo].[SumaryNumbers] (
+-- Creating table 'SummaryNumbers'
+CREATE TABLE [dbo].[SummaryNumbers] (
     [id] bigint IDENTITY(1,1) NOT NULL,
     [created] datetime  NOT NULL,
     [total] int  NOT NULL,
@@ -308,9 +308,9 @@ ADD CONSTRAINT [PK_DriverPercentanges]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'SumaryNumbers'
-ALTER TABLE [dbo].[SumaryNumbers]
-ADD CONSTRAINT [PK_SumaryNumbers]
+-- Creating primary key on [id] in table 'SummaryNumbers'
+ALTER TABLE [dbo].[SummaryNumbers]
+ADD CONSTRAINT [PK_SummaryNumbers]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
@@ -417,8 +417,8 @@ ON [dbo].[DriverPercentanges]
     ([PriceRange_id]);
 GO
 
--- Creating foreign key on [Taxi_id] in table 'SumaryNumbers'
-ALTER TABLE [dbo].[SumaryNumbers]
+-- Creating foreign key on [Taxi_id] in table 'SummaryNumbers'
+ALTER TABLE [dbo].[SummaryNumbers]
 ADD CONSTRAINT [FK_taxisumary_no]
     FOREIGN KEY ([Taxi_id])
     REFERENCES [dbo].[Taxis]
@@ -428,7 +428,7 @@ GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_taxisumary_no'
 CREATE INDEX [IX_FK_taxisumary_no]
-ON [dbo].[SumaryNumbers]
+ON [dbo].[SummaryNumbers]
     ([Taxi_id]);
 GO
 

@@ -69,10 +69,7 @@ namespace Vinasun.Model
             int signal = 0;
             try
             {
-                var taxiType = container.TaxiTypes.FirstOrDefault(c => c.id == taxiTypeIn.id);
-                taxiType.description = taxiTypeIn.description;
-                taxiType.symbol = taxiTypeIn.symbol;
-
+                container.TaxiTypes.FirstOrDefault(c => c.id == taxiTypeIn.id);
                 signal = container.SaveChanges();
             }
             catch (Exception ex)

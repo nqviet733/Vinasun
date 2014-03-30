@@ -69,8 +69,7 @@ namespace Vinasun.Model
             int signal = 0;
             try
             {
-                var dayIncome = container.DayIncomes.FirstOrDefault(c => c.id == dayIncomeIn.id);
-
+                container.DayIncomes.FirstOrDefault(c => c.id == dayIncomeIn.id);
                 signal = container.SaveChanges();
             }
             catch (Exception ex)

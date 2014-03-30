@@ -12,7 +12,7 @@ namespace Vinasun.EntityClass
     using System;
     using System.Collections.Generic;
     
-    public partial class SumaryNumber
+    public partial class SummaryNumber
     {
         public long id { get; set; }
         public System.DateTime created { get; set; }

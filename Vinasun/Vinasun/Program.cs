@@ -147,12 +147,12 @@ namespace Vinasun
             //c.kmSum = 100;
             //c.tripSum = 10;
             //c.created = new DateTime(2013, 09, 23);
-            ////cm.addCollection(con, c);
+            //cm.addCollection(con, c);
 
-            //var collection = cm.retrieveCollection(con, 1);
+            var collection = cm.retrieveCollection(con, 1);
             //var collections = cm.retrieveAllCollections(con);
-            //collection.kmSum = 15;
-            //cm.updateCollection(con, collection);
+            collection.kmSum = 50;
+            cm.updateCollection(con, collection);
             //cm.deleteCollection(con, collection);
 
             //====DayIncome
@@ -181,19 +181,19 @@ namespace Vinasun
             //rnim.deleteReasonNoIncome(con, reasonNoIncome);
 
             //====DayIncome
-            RepairCost rc = new RepairCost();
-            rc.created = new DateTime(2003, 09, 23);
-            rc.dateIn = new DateTime(2003, 09, 25);
+            //RepairCost rc = new RepairCost();
+            //rc.created = new DateTime(2003, 09, 23);
+            //rc.dateIn = new DateTime(2003, 09, 25);
             //rc.dateOut = new DateTime(2003, 10, 25);
-            int s = rcm.addRepairCost(con, rc);
-            var repairCosts = rcm.retrieveAllRepairCosts(con);
-            var i = repairCosts.Count();
-            //rnim.addReasonNoIncome(con, rni);
-            //var reasonNoIncome = rnim.retrieveReasonNoIncome(con, 1);
-            //var reasonNoIncomes = rnim.retrieveAllReasonNoIncomes(con);
-            //reasonNoIncome.status = "Sua Chua";
-            //rnim.updateReasonNoIncome(con, reasonNoIncome);
-            //rnim.deleteReasonNoIncome(con, reasonNoIncome);
+            //int s = rcm.addRepairCost(con, rc);
+            //var repairCost = rcm.retrieveRepairCost(con, 10);
+            //var repairCosts = rcm.retrieveAllRepairCosts(con);
+            //var i = repairCosts.Count();
+            //repairCost.created = DateTime.Now;
+            //var ii = rcm.updateRepairCost(con, repairCost);
+            //var iii = rcm.deleteRepairCost(con, repairCost);
+
+
         }
     }
 }

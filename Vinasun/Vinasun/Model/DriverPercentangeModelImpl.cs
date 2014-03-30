@@ -69,11 +69,7 @@ namespace Vinasun.Model
             int signal = 0;
             try
             {
-                var driverPercentange = container.DriverPercentanges.FirstOrDefault(c => c.id == driverPercentangeIn.id);
-                driverPercentange.percent = driverPercentangeIn.percent;
-                driverPercentange.PriceRange = driverPercentangeIn.PriceRange;
-                driverPercentange.TaxiType = driverPercentangeIn.TaxiType;
-
+                container.DriverPercentanges.FirstOrDefault(c => c.id == driverPercentangeIn.id);
                 signal = container.SaveChanges();
             }
             catch (Exception ex)

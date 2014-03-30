@@ -69,10 +69,7 @@ namespace Vinasun.Model
             int signal = 0;
             try
             {
-                var priceRange = container.PriceRanges.FirstOrDefault(c => c.id == priceRangeIn.id);
-                priceRange.start = priceRangeIn.start;
-                priceRange.end = priceRangeIn.end;
-
+                container.PriceRanges.FirstOrDefault(c => c.id == priceRangeIn.id);
                 signal = container.SaveChanges();
             }
             catch (Exception ex)

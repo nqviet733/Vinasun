@@ -89,6 +89,9 @@
     <Compile Include="EntityClass\PriceRange.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
+    <Compile Include="EntityClass\SummaryNumber.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\CollectionModel.cs" />
     <Compile Include="Model\CollectionModelImpl.cs" />
     <Compile Include="Model\RepairCostModel.cs" />
@@ -105,6 +108,8 @@
     <Compile Include="Model\PriceRangeModelImpl.cs" />
     <Compile Include="Model\ReasonNoIncomeModel.cs" />
     <Compile Include="Model\ReasonNoIncomeModelImpl.cs" />
+    <Compile Include="Model\SummaryNumberModel.cs" />
+    <Compile Include="Model\SummaryNumberModelImpl.cs" />
     <Compile Include="Model\TaxiModel.cs" />
     <Compile Include="Model\TaxiModelImpl.cs" />
     <Compile Include="Model\TaxiTypeModelImpl.cs" />
@@ -123,9 +128,6 @@
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityClass\SubtractionIncome.cs">
-      <DependentUpon>EntityDiagram.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EntityClass\SumaryNumber.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityClass\Taxi.cs">

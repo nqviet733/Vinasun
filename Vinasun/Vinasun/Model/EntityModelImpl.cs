@@ -69,18 +69,7 @@ namespace Vinasun.Model
             int signal = 0;
             try
             {
-                var entity = container.Entities.FirstOrDefault(c => c.id == entityIn.id);
-                entity.firstname = entityIn.firstname;
-                entity.lastname = entityIn.lastname;
-                entity.birthday = entityIn.birthday;
-                entity.gender = entityIn.gender;
-                entity.email = entityIn.email;
-                entity.businessPhone = entityIn.businessPhone;
-                entity.dateJoin = entityIn.dateJoin;
-                entity.UserRole = entityIn.UserRole;
-                entity.Leader = entityIn.Leader;
-                entity.Group = entity.Group;
-
+                container.Entities.FirstOrDefault(c => c.id == entityIn.id);
                 signal = container.SaveChanges();
             }
             catch (Exception ex)
