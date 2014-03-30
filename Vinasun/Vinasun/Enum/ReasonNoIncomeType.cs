@@ -8,9 +8,9 @@ namespace Vinasun.Enum
 {
     public enum ReasonNoIncomeType
     {
-        N = "Nợ",
-        TN = "Thu Nợ",
-        NX = "Nằm Xưởng",
-        ND = "Nằm Đoàn",
+        N,
+        TN,
+        NX,
+        ND,
     }
 }

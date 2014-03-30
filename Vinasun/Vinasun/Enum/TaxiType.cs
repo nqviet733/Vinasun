@@ -8,9 +8,9 @@ namespace Vinasun.Enum
 {
     public enum TaxiType
     {
-        T7J = "Taxi 7J",
-        T4 = "Taxi 4",
-        T7G = "Taxi 7G",
-        T7J2 = "Taxi 7J 2 Lạnh",
+        T7J,
+        T4,
+        T7G,
+        T7J2,
     }
 }

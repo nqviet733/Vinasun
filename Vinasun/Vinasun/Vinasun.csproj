@@ -151,8 +151,6 @@
     <Compile Include="EntityClass\UserRole.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
-    <Compile Include="View\Class1.cs" />
-    <Compile Include="View\Class2.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -200,6 +198,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="EntityClass\EntityDiagram.edmx.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

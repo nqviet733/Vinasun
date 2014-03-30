@@ -8,8 +8,8 @@ namespace Vinasun.Model
 {
     public enum ReasonType
     {
-        TM = "TaxiMet",
-        CC = "Cúp Cò",
-        K = "Khác",
+        TM,
+        CC,
+        K,
     }
 }
