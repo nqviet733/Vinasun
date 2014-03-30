@@ -11,80 +11,95 @@ namespace Vinasun.Model
     {
 
         //Create new UserRole
-        void UserRoleModel.addUserRole(EntityDiagramContainer container, UserRole userRole)
+        int UserRoleModel.addUserRole(EntityDiagramContainer container, UserRole userRole)
         {
+            int signal = 0;
             try
             {
                 container.UserRoles.Add(userRole);
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to add new UserRole. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //retrieve a UserRole already exist
         UserRole UserRoleModel.retrieveUserRole(EntityDiagramContainer container, int userRoleId)
         {
+            UserRole ur = null;
             try
             {
-                return container.UserRoles.Find(userRoleId);
+                ur = container.UserRoles.Find(userRoleId);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to retrieve a UserRole. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            return ur;
         }
 
         //retrieve all user roles
         IList<UserRole> UserRoleModel.retrieveAllUserRoles(EntityDiagramContainer container)
         {
+            IList<UserRole> urs = null;
             try
             {
-                return container.Set<UserRole>().ToList();
+                urs = container.Set<UserRole>().ToList();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to get list UserRole. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            finally
+            {
+                if (urs == null)
+                {
+                    urs = new List<UserRole>();
+                }
+            }
+            return urs;
         }
 
         //update a UserRole already exist
-        void UserRoleModel.updateUserRole(EntityDiagramContainer container, UserRole userRoleIn)
+        int UserRoleModel.updateUserRole(EntityDiagramContainer container, UserRole userRoleIn)
         {
+            int signal = 0;
             try
             {
                 var userRole = container.UserRoles.FirstOrDefault(c => c.id == userRoleIn.id);
                 userRole.description = userRoleIn.description;
                 userRole.permission = userRoleIn.permission;
 
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to update already exist UserRole. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //delete a UserRole already exist
-        void UserRoleModel.deleteUserRole(EntityDiagramContainer container, UserRole userRoleIn)
+        int UserRoleModel.deleteUserRole(EntityDiagramContainer container, UserRole userRoleIn)
         {
+            int signal = 0;
             try
             {
                 var ur = (from userRole in container.UserRoles
                                 where userRole.id == userRoleIn.id
                                 select userRole).FirstOrDefault();
                 container.UserRoles.Remove(ur);
-                container.SaveChanges();
+                signal = container.SaveChanges();
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to delete already exist UserRole. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
     }

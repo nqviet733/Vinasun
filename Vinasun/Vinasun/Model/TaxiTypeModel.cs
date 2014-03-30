@@ -10,11 +10,11 @@ namespace Vinasun.Model
     interface TaxiTypeModel
     {
 
-        void addTaxiType(EntityDiagramContainer container, TaxiType taxiType);
+        int addTaxiType(EntityDiagramContainer container, TaxiType taxiType);
         TaxiType retrieveTaxiType(EntityDiagramContainer container, int taxiTypeId);
         IList<TaxiType> retrieveAllTaxiTypes(EntityDiagramContainer container);
-        void updateTaxiType(EntityDiagramContainer container, TaxiType taxiType);
-        void deleteTaxiType(EntityDiagramContainer container, TaxiType taxiType);
+        int updateTaxiType(EntityDiagramContainer container, TaxiType taxiType);
+        int deleteTaxiType(EntityDiagramContainer container, TaxiType taxiType);
 
     }
 }

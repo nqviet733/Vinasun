@@ -10,11 +10,11 @@ namespace Vinasun.Model
     interface GroupModel
     {
 
-        void addGroup(EntityDiagramContainer container, Group group);
+        int addGroup(EntityDiagramContainer container, Group group);
         Group retrieveGroup(EntityDiagramContainer container, int groupId);
         IList<Group> retrieveAllGroups(EntityDiagramContainer container);
-        void updateGroup(EntityDiagramContainer container, Group group);
-        void deleteGroup(EntityDiagramContainer container, Group group);
+        int updateGroup(EntityDiagramContainer container, Group group);
+        int deleteGroup(EntityDiagramContainer container, Group group);
 
     }
 }

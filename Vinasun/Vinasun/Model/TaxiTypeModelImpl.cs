@@ -11,80 +11,95 @@ namespace Vinasun.Model
     {
 
         //Create new TaxiType
-        void TaxiTypeModel.addTaxiType(EntityDiagramContainer container, TaxiType taxiType)
+        int TaxiTypeModel.addTaxiType(EntityDiagramContainer container, TaxiType taxiType)
         {
+            int signal = 0;
             try
             {
                 container.TaxiTypes.Add(taxiType);
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to add new TaxiType. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //retrieve a TaxiType already exist
         TaxiType TaxiTypeModel.retrieveTaxiType(EntityDiagramContainer container, int taxiTypeId)
         {
+            TaxiType tt = null;
             try
             {
-                return container.TaxiTypes.Find(taxiTypeId);
+                tt = container.TaxiTypes.Find(taxiTypeId);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to retrieve a TaxiType. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            return tt;
         }
 
         //retrieve all taxi types
         IList<TaxiType> TaxiTypeModel.retrieveAllTaxiTypes(EntityDiagramContainer container)
         {
+            IList<TaxiType> tts = null;
             try
             {
-                return container.Set<TaxiType>().ToList();
+                tts = container.Set<TaxiType>().ToList();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to get list TaxiType. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            finally
+            {
+                if (tts == null)
+                {
+                    tts = new List<TaxiType>();
+                }
+            }
+            return tts;
         }
 
         //update a TaxiType already exist
-        void TaxiTypeModel.updateTaxiType(EntityDiagramContainer container, TaxiType taxiTypeIn)
+        int TaxiTypeModel.updateTaxiType(EntityDiagramContainer container, TaxiType taxiTypeIn)
         {
+            int signal = 0;
             try
             {
                 var taxiType = container.TaxiTypes.FirstOrDefault(c => c.id == taxiTypeIn.id);
                 taxiType.description = taxiTypeIn.description;
                 taxiType.symbol = taxiTypeIn.symbol;
 
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to update already exist TaxiType. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //delete a TaxiType already exist
-        void TaxiTypeModel.deleteTaxiType(EntityDiagramContainer container, TaxiType taxiTypeIn)
+        int TaxiTypeModel.deleteTaxiType(EntityDiagramContainer container, TaxiType taxiTypeIn)
         {
+            int signal = 0;
             try
             {
                 var ttt = (from taxiType in container.TaxiTypes
                                 where taxiType.id == taxiTypeIn.id
                                 select taxiType).FirstOrDefault();
                 container.TaxiTypes.Remove(ttt);
-                container.SaveChanges();
+                signal = container.SaveChanges();
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to delete already exist TaxiType. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
     }

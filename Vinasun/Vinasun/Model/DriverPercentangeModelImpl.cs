@@ -11,50 +11,62 @@ namespace Vinasun.Model
     {
 
         //Create new DriverPercentange
-        void DriverPercentangeModel.addDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentange)
+        int DriverPercentangeModel.addDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentange)
         {
+            int signal = 0;
             try
             {
                 container.DriverPercentanges.Add(driverPercentange);
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to add new DriverPercentange. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //retrieve a DriverPercentange already exist
         DriverPercentange DriverPercentangeModel.retrieveDriverPercentange(EntityDiagramContainer container, int driverPercentangeId)
         {
+            DriverPercentange dp = null;
             try
             {
-                return container.DriverPercentanges.Find(driverPercentangeId);
+                dp = container.DriverPercentanges.Find(driverPercentangeId);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to retrieve a DriverPercentange. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            return dp;
         }
 
         //retrieve all driver Percentange
         IList<DriverPercentange> DriverPercentangeModel.retrieveAllDriverPercentanges(EntityDiagramContainer container)
         {
+            IList<DriverPercentange> dps = null;
             try
             {
-                return container.Set<DriverPercentange>().ToList();
+                dps = container.Set<DriverPercentange>().ToList();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to get list DriverPercentange. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            finally
+            {
+                if (dps == null)
+                {
+                    dps = new List<DriverPercentange>();
+                }
+            }
+            return dps;
         }
 
         //update a DriverPercentange already exist
-        void DriverPercentangeModel.updateDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentangeIn)
+        int DriverPercentangeModel.updateDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentangeIn)
         {
+            int signal = 0;
             try
             {
                 var driverPercentange = container.DriverPercentanges.FirstOrDefault(c => c.id == driverPercentangeIn.id);
@@ -62,30 +74,33 @@ namespace Vinasun.Model
                 driverPercentange.PriceRange = driverPercentangeIn.PriceRange;
                 driverPercentange.TaxiType = driverPercentangeIn.TaxiType;
 
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to update already exist DriverPercentange. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //delete a DriverPercentange already exist
-        void DriverPercentangeModel.deleteDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentangeIn)
+        int DriverPercentangeModel.deleteDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentangeIn)
         {
+            int signal = 0;
             try
             {
                 var dp = (from driverPercentange in container.DriverPercentanges
                                          where driverPercentange.id == driverPercentangeIn.id
                                          select driverPercentange).FirstOrDefault();
                 container.DriverPercentanges.Remove(dp);
-                container.SaveChanges();
+                signal = container.SaveChanges();
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to delete already exist DriverPercentange. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
     }
 }

@@ -12,79 +12,94 @@ namespace Vinasun.Model
     {
 
         //Create new group
-        void GroupModel.addGroup(EntityDiagramContainer container, Group group)
+        int GroupModel.addGroup(EntityDiagramContainer container, Group group)
         {
+            int signal = 0;
             try
             {
                 container.Groups.Add(group);
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch(Exception ex)
             {
                 Console.WriteLine("Unable to add new group. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //retrieve a group already exist
         Group GroupModel.retrieveGroup(EntityDiagramContainer container, int groupId)
         {
+            Group g = null;
             try
             {
-                return container.Groups.Find(groupId);
+                g = container.Groups.Find(groupId);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to retrieve a group. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            return g;
         }
 
         //retrieve all groups
         IList<Group> GroupModel.retrieveAllGroups(EntityDiagramContainer container)
         {
+            IList<Group> gs = null;
             try
             {
-                return container.Set<Group>().ToList();
+                gs = container.Set<Group>().ToList();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to get list group. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            finally
+            {
+                if (gs == null)
+                {
+                    gs = new List<Group>();
+                }
+            }
+            return gs;
         }
 
         //update a group already exist
-        void GroupModel.updateGroup(EntityDiagramContainer container, Group group)
+        int GroupModel.updateGroup(EntityDiagramContainer container, Group group)
         {
+            int signal = 0;
             try
             {
                 var gr = container.Groups.FirstOrDefault(c => c.id == group.id);
                 gr.name = group.name;
                 gr.address = group.address;
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to update already exist group. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //delete a group already exist
-        void GroupModel.deleteGroup(EntityDiagramContainer container, Group groupIn)
+        int GroupModel.deleteGroup(EntityDiagramContainer container, Group groupIn)
         {
+            int signal = 0;
             try
             {
                 var g = (from gr in container.Groups
                           where gr.id == groupIn.id
                           select gr).FirstOrDefault();
                 container.Groups.Remove(g);
-                container.SaveChanges();
+                signal = container.SaveChanges();
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to delete already exist group. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
     }

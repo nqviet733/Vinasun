@@ -11,50 +11,62 @@ namespace Vinasun.Model
     {
 
         //Create new Taxi
-        void TaxiModel.addTaxi(EntityDiagramContainer container, Taxi taxi)
+        int TaxiModel.addTaxi(EntityDiagramContainer container, Taxi taxi)
         {
+            int signal = 0;
             try
             {
                 container.Taxis.Add(taxi);
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch(Exception ex)
             {
                 Console.WriteLine("Unable to add new Taxi. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //retrieve a Taxi already exist
         Taxi TaxiModel.retrieveTaxi(EntityDiagramContainer container, int taxiId)
         {
+            Taxi t = null;
             try
             {
-                return container.Taxis.Find(taxiId);
+                t = container.Taxis.Find(taxiId);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to retrieve a Taxi. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            return t;
         }
 
         //retrieve all Taxis
         IList<Taxi> TaxiModel.retrieveAllTaxis(EntityDiagramContainer container)
         {
+            IList<Taxi> txs = null;
             try
             {
-                return container.Set<Taxi>().ToList();
+                txs = container.Set<Taxi>().ToList();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to get list Taxi. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            finally
+            {
+                if (txs == null)
+                {
+                    txs = new List<Taxi>();
+                }
+            }
+            return txs;
         }
 
         //update a Taxi already exist
-        void TaxiModel.updateTaxi(EntityDiagramContainer container, Taxi taxi)
+        int TaxiModel.updateTaxi(EntityDiagramContainer container, Taxi taxi)
         {
+            int signal = 0;
             try
             {
                 var t = container.Taxis.FirstOrDefault(c => c.id == taxi.id);
@@ -65,30 +77,33 @@ namespace Vinasun.Model
                 t.Group = taxi.Group;
                 t.Entity = taxi.Entity;
 
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to update already exist Taxi. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //delete a Taxi already exist
-        void TaxiModel.deleteTaxi(EntityDiagramContainer container, Taxi taxiIn)
+        int TaxiModel.deleteTaxi(EntityDiagramContainer container, Taxi taxiIn)
         {
+            int signal = 0;
             try
             {
                 var tx = (from taxi in container.Taxis
                             where taxi.id == taxiIn.id
                             select taxi).FirstOrDefault();
                 container.Taxis.Remove(tx);
-                container.SaveChanges();
+                signal = container.SaveChanges();
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to delete already exist Taxi. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
     }

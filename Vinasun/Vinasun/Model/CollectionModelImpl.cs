@@ -11,78 +11,94 @@ namespace Vinasun.Model
     {
 
         //Create new collection
-        void CollectionModel.addCollection(EntityDiagramContainer container, Collection collection)
+        int CollectionModel.addCollection(EntityDiagramContainer container, Collection collection)
         {
+            int signal = 0;
             try
             {
                 container.Collections.Add(collection);
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to add new collection. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //retrieve a collection already exist
         Collection CollectionModel.retrieveCollection(EntityDiagramContainer container, int collectionId)
         {
+            Collection c = null;
             try
             {
-                return container.Collections.Find(collectionId);
+                c = container.Collections.Find(collectionId);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to retrieve a collection. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            return c;
         }
 
         //retrieve all collections
         IList<Collection> CollectionModel.retrieveAllCollections(EntityDiagramContainer container)
         {
+            IList<Collection> cs = null;
             try
             {
-                return container.Set<Collection>().ToList();
+                cs = container.Set<Collection>().ToList();
+                
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to get list collection. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            finally
+            {
+                if (cs == null)
+                {
+                    cs = new List<Collection>();
+                }
+            }
+            return cs;
         }
 
         //update a collection already exist
-        void CollectionModel.updateCollection(EntityDiagramContainer container, Collection collectionIn)
+        int CollectionModel.updateCollection(EntityDiagramContainer container, Collection collectionIn)
         {
+            int signal = 0;
             try
             {
                 var collection = container.Collections.FirstOrDefault(c => c.id == collectionIn.id);
                 
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to update already exist collection. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //delete a collection already exist
-        void CollectionModel.deleteCollection(EntityDiagramContainer container, Collection collectionIn)
+        int CollectionModel.deleteCollection(EntityDiagramContainer container, Collection collectionIn)
         {
+            int signal = 0;
             try
             {
                 var c = (from collection in container.Collections
                          where collection.id == collectionIn.id
                          select collection).FirstOrDefault();
                 container.Collections.Remove(c);
-                container.SaveChanges();
+                signal = container.SaveChanges();
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to delete already exist collection. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
     }

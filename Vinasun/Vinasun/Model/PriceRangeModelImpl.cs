@@ -11,80 +11,95 @@ namespace Vinasun.Model
     {
 
         //Create new PriceRange
-        void PriceRangeModel.addPriceRange(EntityDiagramContainer container, PriceRange priceRange)
+        int PriceRangeModel.addPriceRange(EntityDiagramContainer container, PriceRange priceRange)
         {
+            int signal = 0;
             try
             {
                 container.PriceRanges.Add(priceRange);
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to add new PriceRange. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //retrieve a PriceRange already exist
         PriceRange PriceRangeModel.retrievePriceRange(EntityDiagramContainer container, int priceRangeId)
         {
+            PriceRange pr = null;
             try
             {
-                return container.PriceRanges.Find(priceRangeId);
+                pr = container.PriceRanges.Find(priceRangeId);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to retrieve a PriceRange. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            return pr;
         }
 
         //retrieve all price ranges
         IList<PriceRange> PriceRangeModel.retrieveAllPriceRanges(EntityDiagramContainer container)
         {
+            IList<PriceRange> prs = null;
             try
             {
-                return container.Set<PriceRange>().ToList();
+                prs = container.Set<PriceRange>().ToList();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to get list PriceRange. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            finally
+            {
+                if (prs == null)
+                {
+                    prs = new List<PriceRange>();
+                }
+            }
+            return prs;
         }
 
         //update a PriceRange already exist
-        void PriceRangeModel.updatePriceRange(EntityDiagramContainer container, PriceRange priceRangeIn)
+        int PriceRangeModel.updatePriceRange(EntityDiagramContainer container, PriceRange priceRangeIn)
         {
+            int signal = 0;
             try
             {
                 var priceRange = container.PriceRanges.FirstOrDefault(c => c.id == priceRangeIn.id);
                 priceRange.start = priceRangeIn.start;
                 priceRange.end = priceRangeIn.end;
 
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to update already exist PriceRange. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //delete a PriceRange already exist
-        void PriceRangeModel.deletePriceRange(EntityDiagramContainer container, PriceRange priceRangeIn)
+        int PriceRangeModel.deletePriceRange(EntityDiagramContainer container, PriceRange priceRangeIn)
         {
+            int signal = 0;
             try
             {
                 var pr = (from priceRange in container.PriceRanges
                                   where priceRange.id == priceRangeIn.id
                                   select priceRange).FirstOrDefault();
                 container.PriceRanges.Remove(pr);
-                container.SaveChanges();
+                signal = container.SaveChanges();
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to delete already exist PriceRange. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
     }

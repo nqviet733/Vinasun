@@ -10,11 +10,11 @@ namespace Vinasun.Model
     interface DriverPercentangeModel
     {
 
-        void addDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentange);
+        int addDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentange);
         DriverPercentange retrieveDriverPercentange(EntityDiagramContainer container, int driverPercentangeId);
         IList<DriverPercentange> retrieveAllDriverPercentanges(EntityDiagramContainer container);
-        void updateDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentange);
-        void deleteDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentange);
+        int updateDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentange);
+        int deleteDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentange);
 
     }
 }

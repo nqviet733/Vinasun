@@ -27,6 +27,10 @@ namespace Vinasun
             TaxiTypeModel ttm = new TaxiTypeModelImpl();
             PriceRangeModel prm = new PriceRangeModelImpl();
             DriverPercentangeModel dpm = new DriverPercentangeModelImpl();
+            CollectionModel cm = new CollectionModelImpl();
+            DayIncomeModel dim = new DayIncomeModelImpl();
+            ReasonNoIncomeModel rnim = new ReasonNoIncomeModelImpl();
+            RepairCostModel rcm = new RepairCostModelImpl();
             var con = new EntityDiagramContainer();
 
             //====Group
@@ -134,6 +138,62 @@ namespace Vinasun
             //ttm.deleteTaxiType(con, taxiType);
 
 
+
+            //====Collections
+            //Collection c = new Collection();
+            //c.taxiType = "7";
+            //c.moneySum = 1000;
+            //c.driver = "Trong Nhan";
+            //c.kmSum = 100;
+            //c.tripSum = 10;
+            //c.created = new DateTime(2013, 09, 23);
+            ////cm.addCollection(con, c);
+
+            //var collection = cm.retrieveCollection(con, 1);
+            //var collections = cm.retrieveAllCollections(con);
+            //collection.kmSum = 15;
+            //cm.updateCollection(con, collection);
+            //cm.deleteCollection(con, collection);
+
+            //====DayIncome
+            //DayIncome di = new DayIncome();
+            //di.created = new DateTime(2009, 09, 23);
+            //di.moneySum = 100;
+            //di.driverIncome = 70;
+            //di.companyIncome = 30;
+            //di.rateIncome = 50;
+            ////dim.addDayIncome(con, di);
+            //var dayIncome = dim.retrieveDayIncome(con, 1);
+            //var dayIncomes = dim.retrieveAllDayIncomes(con);
+            //dayIncome.moneySum = 150;
+            //dim.updateDayIncome(con, dayIncome);
+            //dim.deleteDayIncome(con, dayIncome);
+
+            //====DayIncome
+            //ReasonNoIncome rni = new ReasonNoIncome();
+            //rni.created = new DateTime(2003, 09, 23);
+            //rni.status = "Nam Kho";
+            ////rnim.addReasonNoIncome(con, rni);
+            //var reasonNoIncome = rnim.retrieveReasonNoIncome(con, 1);
+            //var reasonNoIncomes = rnim.retrieveAllReasonNoIncomes(con);
+            //reasonNoIncome.status = "Sua Chua";
+            //rnim.updateReasonNoIncome(con, reasonNoIncome);
+            //rnim.deleteReasonNoIncome(con, reasonNoIncome);
+
+            //====DayIncome
+            RepairCost rc = new RepairCost();
+            rc.created = new DateTime(2003, 09, 23);
+            rc.dateIn = new DateTime(2003, 09, 25);
+            //rc.dateOut = new DateTime(2003, 10, 25);
+            int s = rcm.addRepairCost(con, rc);
+            var repairCosts = rcm.retrieveAllRepairCosts(con);
+            var i = repairCosts.Count();
+            //rnim.addReasonNoIncome(con, rni);
+            //var reasonNoIncome = rnim.retrieveReasonNoIncome(con, 1);
+            //var reasonNoIncomes = rnim.retrieveAllReasonNoIncomes(con);
+            //reasonNoIncome.status = "Sua Chua";
+            //rnim.updateReasonNoIncome(con, reasonNoIncome);
+            //rnim.deleteReasonNoIncome(con, reasonNoIncome);
         }
     }
 }

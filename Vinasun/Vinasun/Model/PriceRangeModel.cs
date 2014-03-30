@@ -10,11 +10,11 @@ namespace Vinasun.Model
     interface PriceRangeModel
     {
 
-        void addPriceRange(EntityDiagramContainer container, PriceRange priceRange);
+        int addPriceRange(EntityDiagramContainer container, PriceRange priceRange);
         PriceRange retrievePriceRange(EntityDiagramContainer container, int priceRangeId);
         IList<PriceRange> retrieveAllPriceRanges(EntityDiagramContainer container);
-        void updatePriceRange(EntityDiagramContainer container, PriceRange priceRange);
-        void deletePriceRange(EntityDiagramContainer container, PriceRange priceRange);
+        int updatePriceRange(EntityDiagramContainer container, PriceRange priceRange);
+        int deletePriceRange(EntityDiagramContainer container, PriceRange priceRange);
 
     }
 }

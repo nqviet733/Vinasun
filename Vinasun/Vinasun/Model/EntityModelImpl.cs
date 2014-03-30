@@ -11,50 +11,62 @@ namespace Vinasun.Model
     {
 
         //Create new entity
-        void EntityModel.addEntity(EntityDiagramContainer container, Entity entity)
+        int EntityModel.addEntity(EntityDiagramContainer container, Entity entity)
         {
+            int signal = 0;
             try
             {
                 container.Entities.Add(entity);
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to add new entity. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //retrieve a entity already exist
         Entity EntityModel.retrieveEntity(EntityDiagramContainer container, int entityId)
         {
+            Entity e = null;
             try
             {
-                return container.Entities.Find(entityId);
+                e = container.Entities.Find(entityId);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to retrieve a entity. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            return e;
         }
 
         //retrieve all entities
         IList<Entity> EntityModel.retrieveAllEntities(EntityDiagramContainer container)
         {
+            IList<Entity> es = null;
             try
             {
-                return container.Set<Entity>().ToList();
+                es = container.Set<Entity>().ToList();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to get list entity. Try again, and if the problem persists see your system administrator: " + ex);
             }
-            return null;
+            finally
+            {
+                if (es == null)
+                {
+                    es = new List<Entity>();
+                }
+            }
+            return es;
         }
 
         //update a entity already exist
-        void EntityModel.updateEntity(EntityDiagramContainer container, Entity entityIn)
+        int EntityModel.updateEntity(EntityDiagramContainer container, Entity entityIn)
         {
+            int signal = 0;
             try
             {
                 var entity = container.Entities.FirstOrDefault(c => c.id == entityIn.id);
@@ -69,30 +81,33 @@ namespace Vinasun.Model
                 entity.Leader = entityIn.Leader;
                 entity.Group = entity.Group;
 
-                container.SaveChanges();
+                signal = container.SaveChanges();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to update already exist entity. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
         //delete a entity already exist
-        void EntityModel.deleteEntity(EntityDiagramContainer container, Entity entityIn)
+        int EntityModel.deleteEntity(EntityDiagramContainer container, Entity entityIn)
         {
+            int signal = 0;
             try
             {
                 var e = (from entity in container.Entities
                          where entity.id == entityIn.id
                          select entity).FirstOrDefault();
                 container.Entities.Remove(e);
-                container.SaveChanges();
+                signal = container.SaveChanges();
 
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Unable to delete already exist entity. Try again, and if the problem persists see your system administrator: " + ex);
             }
+            return signal;
         }
 
     }
