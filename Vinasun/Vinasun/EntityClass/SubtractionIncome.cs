@@ -15,7 +15,7 @@ namespace Vinasun.EntityClass
     public partial class SubtractionIncome
     {
         public long id { get; set; }
-        public int reason { get; set; }
+        public string reason { get; set; }
         public System.DateTime created { get; set; }
     
         public virtual Taxi Taxi { get; set; }

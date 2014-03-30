@@ -31,6 +31,10 @@ namespace Vinasun
             DayIncomeModel dim = new DayIncomeModelImpl();
             ReasonNoIncomeModel rnim = new ReasonNoIncomeModelImpl();
             RepairCostModel rcm = new RepairCostModelImpl();
+            SummaryNumberModel snm = new SummaryNumberModelImpl();
+            ProvineIncomeModel pim = new ProvineIncomeModelImpl();
+            TripCheckModel tcm = new TripCheckModelImpl();
+            SubtractionIncomeModel sim = new SubtractionIncomeModelImpl();
             var con = new EntityDiagramContainer();
 
             //====Group
@@ -149,10 +153,10 @@ namespace Vinasun
             //c.created = new DateTime(2013, 09, 23);
             //cm.addCollection(con, c);
 
-            var collection = cm.retrieveCollection(con, 1);
+            //var collection = cm.retrieveCollection(con, 1);
             //var collections = cm.retrieveAllCollections(con);
-            collection.kmSum = 50;
-            cm.updateCollection(con, collection);
+            //collection.kmSum = 50;
+            //cm.updateCollection(con, collection);
             //cm.deleteCollection(con, collection);
 
             //====DayIncome
@@ -180,7 +184,7 @@ namespace Vinasun
             //rnim.updateReasonNoIncome(con, reasonNoIncome);
             //rnim.deleteReasonNoIncome(con, reasonNoIncome);
 
-            //====DayIncome
+            //====RepairCost
             //RepairCost rc = new RepairCost();
             //rc.created = new DateTime(2003, 09, 23);
             //rc.dateIn = new DateTime(2003, 09, 25);
@@ -194,6 +198,55 @@ namespace Vinasun
             //var iii = rcm.deleteRepairCost(con, repairCost);
 
 
+            //====Summary Number
+            //SummaryNumber sn = new SummaryNumber();
+            //sn.created = DateTime.Now;
+            //sn.total = 100;
+            //sn.kmSum = 200;
+            //sn.tripSum = 20;
+            //int s = snm.addSummaryNumber(con,sn);
+            //var summaryNumber = snm.retrieveSummaryNumber(con, 1);
+            //var summaryNumbers = snm.retrieveAllSummaryNumbers(con);
+            //summaryNumber.total = 300;
+            //var ii = snm.updateSummaryNumber(con, summaryNumber);
+            //var iii = snm.deleteSummaryNumber(con, summaryNumber);
+
+
+            //====Provine Income
+            //ProvineIncome pi = new ProvineIncome();
+            //pi.created = DateTime.Now;
+            //pi.tripIncome = 100;
+            //pi.overIncome = 200;
+            //pi.priceIncome = 20;
+            ////int s = pim.addProvineIncome(con, pi);
+            //var provineIncome = pim.retrieveProvineIncome(con, 1);
+            //var provineIncomes = pim.retrieveAllProvineIncomes(con);
+            //provineIncome.tripIncome = 300;
+            //var ii = pim.updateProvineIncome(con, provineIncome);
+            //var iii = pim.deleteProvineIncome(con, provineIncome);
+
+            //====Trip Check
+            //TripCheck tc = new TripCheck();
+            //tc.created = DateTime.Now;
+            //tc.dateGo = DateTime.Now;
+            //tc.dateBack = DateTime.Now;
+            //int s = tcm.addTripCheck(con, tc);
+            //var tripCheck = tcm.retrieveTripCheck(con, 1);
+            //var tripChecks = tcm.retrieveAllTripChecks(con);
+            //tripCheck.created = DateTime.Now.AddDays(1);
+            //var ii = tcm.updateTripCheck(con, tripCheck);
+            //var iii = tcm.deleteTripCheck(con, tripCheck);
+
+            //====Subtraction Income
+            //SubtractionIncome si = new SubtractionIncome();
+            //si.created = DateTime.Now;
+            //si.reason = "Repair";
+            //int s = sim.addSubtractionIncome(con, si);
+            //var subIncome = sim.retrieveSubtractionIncome(con, 1);
+            //var tripChecks = sim.retrieveAllSubtractionIncomes(con);
+            //subIncome.created = DateTime.Now.AddDays(1);
+            //var ii = sim.updateSubtractionIncome(con, subIncome);
+            //var iii = sim.deleteSubtractionIncome(con, subIncome);
         }
     }
 }

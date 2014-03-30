@@ -94,6 +94,8 @@
     </Compile>
     <Compile Include="Model\CollectionModel.cs" />
     <Compile Include="Model\CollectionModelImpl.cs" />
+    <Compile Include="Model\ProvineIncomeModel.cs" />
+    <Compile Include="Model\ProvineIncomeModelImpl.cs" />
     <Compile Include="Model\RepairCostModel.cs" />
     <Compile Include="Model\RepairCostModelImpl.cs" />
     <Compile Include="Model\DayIncomeModel.cs" />
@@ -108,12 +110,16 @@
     <Compile Include="Model\PriceRangeModelImpl.cs" />
     <Compile Include="Model\ReasonNoIncomeModel.cs" />
     <Compile Include="Model\ReasonNoIncomeModelImpl.cs" />
+    <Compile Include="Model\SubtractionIncomeModel.cs" />
+    <Compile Include="Model\SubtractionIncomeModelImpl.cs" />
     <Compile Include="Model\SummaryNumberModel.cs" />
     <Compile Include="Model\SummaryNumberModelImpl.cs" />
     <Compile Include="Model\TaxiModel.cs" />
     <Compile Include="Model\TaxiModelImpl.cs" />
     <Compile Include="Model\TaxiTypeModelImpl.cs" />
     <Compile Include="Model\TaxiTypeModel.cs" />
+    <Compile Include="Model\TripCheckModel.cs" />
+    <Compile Include="Model\TripCheckModelImpl.cs" />
     <Compile Include="Model\UserRoleModel.cs" />
     <Compile Include="Model\UserRoleModelImpl.cs" />
     <Compile Include="Program.cs" />

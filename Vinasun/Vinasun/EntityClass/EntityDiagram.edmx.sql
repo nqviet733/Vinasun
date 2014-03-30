@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/30/2014 13:12:50
+-- Date Created: 03/30/2014 14:39:44
 -- Generated from EDMX file: C:\Users\nqvie_000\Source\Repos\Vinasun\Vinasun\Vinasun\EntityClass\EntityDiagram.edmx
 -- --------------------------------------------------
 
@@ -27,7 +27,7 @@ IF OBJECT_ID(N'[dbo].[FK_pricedriver_percentange]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[DriverPercentanges] DROP CONSTRAINT [FK_pricedriver_percentange];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxisumary_no]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[SumaryNumbers] DROP CONSTRAINT [FK_taxisumary_no];
+    ALTER TABLE [dbo].[SummaryNumbers] DROP CONSTRAINT [FK_taxisumary_no];
 GO
 IF OBJECT_ID(N'[dbo].[FK_taxiincome_per_day]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[DayIncomes] DROP CONSTRAINT [FK_taxiincome_per_day];
@@ -85,8 +85,8 @@ GO
 IF OBJECT_ID(N'[dbo].[DriverPercentanges]', 'U') IS NOT NULL
     DROP TABLE [dbo].[DriverPercentanges];
 GO
-IF OBJECT_ID(N'[dbo].[SumaryNumbers]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[SumaryNumbers];
+IF OBJECT_ID(N'[dbo].[SummaryNumbers]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[SummaryNumbers];
 GO
 IF OBJECT_ID(N'[dbo].[DayIncomes]', 'U') IS NOT NULL
     DROP TABLE [dbo].[DayIncomes];
@@ -179,7 +179,7 @@ CREATE TABLE [dbo].[SummaryNumbers] (
     [created] datetime  NOT NULL,
     [total] int  NOT NULL,
     [kmSum] int  NOT NULL,
-    [tripSum] nvarchar(max)  NOT NULL,
+    [tripSum] int  NOT NULL,
     [Taxi_id] int  NULL
 );
 GO
@@ -210,7 +210,7 @@ GO
 -- Creating table 'SubtractionIncomes'
 CREATE TABLE [dbo].[SubtractionIncomes] (
     [id] bigint IDENTITY(1,1) NOT NULL,
-    [reason] int  NOT NULL,
+    [reason] nvarchar(max)  NOT NULL,
     [created] datetime  NOT NULL,
     [Taxi_id] int  NULL
 );

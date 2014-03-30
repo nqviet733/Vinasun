@@ -147,7 +147,7 @@
     <Property Name="created" Type="datetime" Nullable="false" />
     <Property Name="total" Type="int" Nullable="false" />
     <Property Name="kmSum" Type="int" Nullable="false" />
-    <Property Name="tripSum" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tripSum" Type="int" Nullable="false" />
     <Property Name="Taxi_id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="DayIncomes">
@@ -178,7 +178,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="reason" Type="int" Nullable="false" />
+    <Property Name="reason" Type="nvarchar(max)" Nullable="false" />
     <Property Name="created" Type="datetime" Nullable="false" />
     <Property Name="Taxi_id" Type="int" Nullable="true" />
   </EntityType>
@@ -603,7 +603,7 @@
           <NavigationProperty Name="Taxi" Relationship="EntityDiagram.taxisumary_no" FromRole="sumary_no" ToRole="taxi" />
           <Property Name="total" Type="Int32" Nullable="false" />
           <Property Name="kmSum" Type="Int32" Nullable="false" />
-          <Property Name="tripSum" Type="String" Nullable="false" />
+          <Property Name="tripSum" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="taxisumary_no">
           <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="0..1" />
@@ -646,7 +646,7 @@
           </Key>
           <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Taxi" Relationship="EntityDiagram.taxisubtraction_income" FromRole="subtraction_income" ToRole="taxi" />
-          <Property Name="reason" Type="Int32" Nullable="false" />
+          <Property Name="reason" Type="String" Nullable="false" />
           <Property Name="created" Type="DateTime" Nullable="false" />
         </EntityType>
         <Association Name="taxisubtraction_income">

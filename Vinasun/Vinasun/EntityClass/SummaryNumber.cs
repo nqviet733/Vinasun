@@ -18,7 +18,7 @@ namespace Vinasun.EntityClass
         public System.DateTime created { get; set; }
         public int total { get; set; }
         public int kmSum { get; set; }
-        public string tripSum { get; set; }
+        public int tripSum { get; set; }
     
         public virtual Taxi Taxi { get; set; }
     }
