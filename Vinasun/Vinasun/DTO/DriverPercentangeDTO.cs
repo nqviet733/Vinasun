@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface DriverPercentangeModel
+    interface DriverPercentangeDTO
     {
 
         int addDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentange);

@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface SubtractionIncomeModel
+    interface SubtractionIncomeDTO
     {
 
         int addSubtractionIncome(EntityDiagramContainer container, SubtractionIncome subtractionIncome);

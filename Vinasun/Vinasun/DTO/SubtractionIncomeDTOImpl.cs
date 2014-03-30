@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class SubtractionIncomeModelImpl : SubtractionIncomeModel
+    class SubtractionIncomeDTOImpl : SubtractionIncomeDTO
     {
 
         //Create new SubtractionIncome
-        int SubtractionIncomeModel.addSubtractionIncome(EntityDiagramContainer container, SubtractionIncome subtractionIncome)
+        int SubtractionIncomeDTO.addSubtractionIncome(EntityDiagramContainer container, SubtractionIncome subtractionIncome)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a SubtractionIncome already exist
-        SubtractionIncome SubtractionIncomeModel.retrieveSubtractionIncome(EntityDiagramContainer container, int subtractionIncomeId)
+        SubtractionIncome SubtractionIncomeDTO.retrieveSubtractionIncome(EntityDiagramContainer container, int subtractionIncomeId)
         {
             SubtractionIncome si = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all user roles
-        IList<SubtractionIncome> SubtractionIncomeModel.retrieveAllSubtractionIncomes(EntityDiagramContainer container)
+        IList<SubtractionIncome> SubtractionIncomeDTO.retrieveAllSubtractionIncomes(EntityDiagramContainer container)
         {
             IList<SubtractionIncome> sis = null;
             try
@@ -64,7 +64,7 @@ namespace Vinasun.Model
         }
 
         //update a SubtractionIncome already exist
-        int SubtractionIncomeModel.updateSubtractionIncome(EntityDiagramContainer container, SubtractionIncome subtractionIncomeIn)
+        int SubtractionIncomeDTO.updateSubtractionIncome(EntityDiagramContainer container, SubtractionIncome subtractionIncomeIn)
         {
             int signal = 0;
             try
@@ -80,7 +80,7 @@ namespace Vinasun.Model
         }
 
         //delete a SubtractionIncome already exist
-        int SubtractionIncomeModel.deleteSubtractionIncome(EntityDiagramContainer container, SubtractionIncome subtractionIncomeIn)
+        int SubtractionIncomeDTO.deleteSubtractionIncome(EntityDiagramContainer container, SubtractionIncome subtractionIncomeIn)
         {
             int signal = 0;
             try

@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface EntityModel
+    interface EntityDTO
     {
 
         int addEntity(EntityDiagramContainer container, Entity entity);

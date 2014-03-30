@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface SummaryNumberModel
+    interface SummaryNumberDTO
     {
 
         int addSummaryNumber(EntityDiagramContainer container, SummaryNumber summaryNumber);

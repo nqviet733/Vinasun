@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class TripCheckModelImpl : TripCheckModel
+    class TripCheckDTOImpl : TripCheckDTO
     {
 
         //Create new TripCheck
-        int TripCheckModel.addTripCheck(EntityDiagramContainer container, TripCheck tripCheck)
+        int TripCheckDTO.addTripCheck(EntityDiagramContainer container, TripCheck tripCheck)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a TripCheck already exist
-        TripCheck TripCheckModel.retrieveTripCheck(EntityDiagramContainer container, int tripCheckId)
+        TripCheck TripCheckDTO.retrieveTripCheck(EntityDiagramContainer container, int tripCheckId)
         {
             TripCheck tc = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all user roles
-        IList<TripCheck> TripCheckModel.retrieveAllTripChecks(EntityDiagramContainer container)
+        IList<TripCheck> TripCheckDTO.retrieveAllTripChecks(EntityDiagramContainer container)
         {
             IList<TripCheck> tcs = null;
             try
@@ -64,7 +64,7 @@ namespace Vinasun.Model
         }
 
         //update a TripCheck already exist
-        int TripCheckModel.updateTripCheck(EntityDiagramContainer container, TripCheck tripCheckIn)
+        int TripCheckDTO.updateTripCheck(EntityDiagramContainer container, TripCheck tripCheckIn)
         {
             int signal = 0;
             try
@@ -80,7 +80,7 @@ namespace Vinasun.Model
         }
 
         //delete a TripCheck already exist
-        int TripCheckModel.deleteTripCheck(EntityDiagramContainer container, TripCheck tripCheckIn)
+        int TripCheckDTO.deleteTripCheck(EntityDiagramContainer container, TripCheck tripCheckIn)
         {
             int signal = 0;
             try

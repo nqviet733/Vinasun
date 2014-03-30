@@ -8,11 +8,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class GroupModelImpl: GroupModel
+    class GroupDTOImpl: GroupDTO
     {
 
         //Create new group
-        int GroupModel.addGroup(EntityDiagramContainer container, Group group)
+        int GroupDTO.addGroup(EntityDiagramContainer container, Group group)
         {
             int signal = 0;
             try
@@ -28,7 +28,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a group already exist
-        Group GroupModel.retrieveGroup(EntityDiagramContainer container, int groupId)
+        Group GroupDTO.retrieveGroup(EntityDiagramContainer container, int groupId)
         {
             Group g = null;
             try
@@ -43,7 +43,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all groups
-        IList<Group> GroupModel.retrieveAllGroups(EntityDiagramContainer container)
+        IList<Group> GroupDTO.retrieveAllGroups(EntityDiagramContainer container)
         {
             IList<Group> gs = null;
             try
@@ -65,7 +65,7 @@ namespace Vinasun.Model
         }
 
         //update a group already exist
-        int GroupModel.updateGroup(EntityDiagramContainer container, Group group)
+        int GroupDTO.updateGroup(EntityDiagramContainer container, Group group)
         {
             int signal = 0;
             try
@@ -81,7 +81,7 @@ namespace Vinasun.Model
         }
 
         //delete a group already exist
-        int GroupModel.deleteGroup(EntityDiagramContainer container, Group groupIn)
+        int GroupDTO.deleteGroup(EntityDiagramContainer container, Group groupIn)
         {
             int signal = 0;
             try

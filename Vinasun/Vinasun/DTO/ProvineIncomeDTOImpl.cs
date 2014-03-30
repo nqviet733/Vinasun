@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class ProvineIncomeModelImpl : ProvineIncomeModel
+    class ProvineIncomeDTOImpl : ProvineIncomeDTO
     {
 
         //Create new ProvineIncome
-        int ProvineIncomeModel.addProvineIncome(EntityDiagramContainer container, ProvineIncome provineIncome)
+        int ProvineIncomeDTO.addProvineIncome(EntityDiagramContainer container, ProvineIncome provineIncome)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a ProvineIncome already exist
-        ProvineIncome ProvineIncomeModel.retrieveProvineIncome(EntityDiagramContainer container, int provineIncomeId)
+        ProvineIncome ProvineIncomeDTO.retrieveProvineIncome(EntityDiagramContainer container, int provineIncomeId)
         {
             ProvineIncome pi = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all user roles
-        IList<ProvineIncome> ProvineIncomeModel.retrieveAllProvineIncomes(EntityDiagramContainer container)
+        IList<ProvineIncome> ProvineIncomeDTO.retrieveAllProvineIncomes(EntityDiagramContainer container)
         {
             IList<ProvineIncome> pis = null;
             try
@@ -64,7 +64,7 @@ namespace Vinasun.Model
         }
 
         //update a ProvineIncome already exist
-        int ProvineIncomeModel.updateProvineIncome(EntityDiagramContainer container, ProvineIncome provineIncomeIn)
+        int ProvineIncomeDTO.updateProvineIncome(EntityDiagramContainer container, ProvineIncome provineIncomeIn)
         {
             int signal = 0;
             try
@@ -80,7 +80,7 @@ namespace Vinasun.Model
         }
 
         //delete a ProvineIncome already exist
-        int ProvineIncomeModel.deleteProvineIncome(EntityDiagramContainer container, ProvineIncome provineIncomeIn)
+        int ProvineIncomeDTO.deleteProvineIncome(EntityDiagramContainer container, ProvineIncome provineIncomeIn)
         {
             int signal = 0;
             try

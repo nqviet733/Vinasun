@@ -20,21 +20,21 @@ namespace Vinasun
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
 
-            GroupModel gm = new GroupModelImpl();
-            EntityModel em = new EntityModelImpl();
-            TaxiModel tm = new TaxiModelImpl();
-            UserRoleModel urm = new UserRoleModelImpl();
-            TaxiTypeModel ttm = new TaxiTypeModelImpl();
-            PriceRangeModel prm = new PriceRangeModelImpl();
-            DriverPercentangeModel dpm = new DriverPercentangeModelImpl();
-            CollectionModel cm = new CollectionModelImpl();
-            DayIncomeModel dim = new DayIncomeModelImpl();
-            ReasonNoIncomeModel rnim = new ReasonNoIncomeModelImpl();
-            RepairCostModel rcm = new RepairCostModelImpl();
-            SummaryNumberModel snm = new SummaryNumberModelImpl();
-            ProvineIncomeModel pim = new ProvineIncomeModelImpl();
-            TripCheckModel tcm = new TripCheckModelImpl();
-            SubtractionIncomeModel sim = new SubtractionIncomeModelImpl();
+            GroupDTO gm = new GroupDTOImpl();
+            EntityDTO em = new EntityDTOImpl();
+            TaxiDTO tm = new TaxiDTOImpl();
+            UserRoleDTO urm = new UserRoleDTOImpl();
+            TaxiTypeDTO ttm = new TaxiTypeDTOImpl();
+            PriceRangeDTO prm = new PriceRangeDTOImpl();
+            DriverPercentangeDTO dpm = new DriverPercentangeDTOImpl();
+            CollectionDTO cm = new CollectionDTOImpl();
+            DayIncomeDTO dim = new DayIncomeDTOImpl();
+            ReasonNoIncomeDTO rnim = new ReasonNoIncomeDTOImpl();
+            RepairCostDTO rcm = new RepairCostDTOImpl();
+            SummaryNumberDTO snm = new SummaryNumberDTOImpl();
+            ProvineIncomeDTO pim = new ProvineIncomeDTOImpl();
+            TripCheckDTO tcm = new TripCheckDTOImpl();
+            SubtractionIncomeDTO sim = new SubtractionIncomeDTOImpl();
             var con = new EntityDiagramContainer();
 
             //====Group
@@ -247,6 +247,7 @@ namespace Vinasun
             //subIncome.created = DateTime.Now.AddDays(1);
             //var ii = sim.updateSubtractionIncome(con, subIncome);
             //var iii = sim.deleteSubtractionIncome(con, subIncome);
+            
         }
     }
 }

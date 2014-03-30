@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface TripCheckModel
+    interface TripCheckDTO
     {
 
         int addTripCheck(EntityDiagramContainer container, TripCheck tripCheck);

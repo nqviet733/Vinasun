@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class UserRoleModelImpl : UserRoleModel
+    class UserRoleDTOImpl : UserRoleDTO
     {
 
         //Create new UserRole
-        int UserRoleModel.addUserRole(EntityDiagramContainer container, UserRole userRole)
+        int UserRoleDTO.addUserRole(EntityDiagramContainer container, UserRole userRole)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a UserRole already exist
-        UserRole UserRoleModel.retrieveUserRole(EntityDiagramContainer container, int userRoleId)
+        UserRole UserRoleDTO.retrieveUserRole(EntityDiagramContainer container, int userRoleId)
         {
             UserRole ur = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all user roles
-        IList<UserRole> UserRoleModel.retrieveAllUserRoles(EntityDiagramContainer container)
+        IList<UserRole> UserRoleDTO.retrieveAllUserRoles(EntityDiagramContainer container)
         {
             IList<UserRole> urs = null;
             try
@@ -64,7 +64,7 @@ namespace Vinasun.Model
         }
 
         //update a UserRole already exist
-        int UserRoleModel.updateUserRole(EntityDiagramContainer container, UserRole userRoleIn)
+        int UserRoleDTO.updateUserRole(EntityDiagramContainer container, UserRole userRoleIn)
         {
             int signal = 0;
             try
@@ -80,7 +80,7 @@ namespace Vinasun.Model
         }
 
         //delete a UserRole already exist
-        int UserRoleModel.deleteUserRole(EntityDiagramContainer container, UserRole userRoleIn)
+        int UserRoleDTO.deleteUserRole(EntityDiagramContainer container, UserRole userRoleIn)
         {
             int signal = 0;
             try

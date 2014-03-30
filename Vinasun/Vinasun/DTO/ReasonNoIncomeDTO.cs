@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface ReasonNoIncomeModel
+    interface ReasonNoIncomeDTO
     {
 
         int addReasonNoIncome(EntityDiagramContainer container, ReasonNoIncome reasonNoIncome);

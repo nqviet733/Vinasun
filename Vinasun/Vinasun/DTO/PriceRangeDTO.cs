@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface PriceRangeModel
+    interface PriceRangeDTO
     {
 
         int addPriceRange(EntityDiagramContainer container, PriceRange priceRange);

@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface RepairCostModel
+    interface RepairCostDTO
     {
 
         int addRepairCost(EntityDiagramContainer container, RepairCost repairCost);

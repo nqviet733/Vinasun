@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface DayIncomeModel
+    interface DayIncomeDTO
     {
 
         int addDayIncome(EntityDiagramContainer container, DayIncome dayIncome);

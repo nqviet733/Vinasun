@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class EntityModelImpl: EntityModel
+    class EntityDTOImpl: EntityDTO
     {
 
         //Create new entity
-        int EntityModel.addEntity(EntityDiagramContainer container, Entity entity)
+        int EntityDTO.addEntity(EntityDiagramContainer container, Entity entity)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a entity already exist
-        Entity EntityModel.retrieveEntity(EntityDiagramContainer container, int entityId)
+        Entity EntityDTO.retrieveEntity(EntityDiagramContainer container, int entityId)
         {
             Entity e = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all entities
-        IList<Entity> EntityModel.retrieveAllEntities(EntityDiagramContainer container)
+        IList<Entity> EntityDTO.retrieveAllEntities(EntityDiagramContainer container)
         {
             IList<Entity> es = null;
             try
@@ -64,7 +64,7 @@ namespace Vinasun.Model
         }
 
         //update a entity already exist
-        int EntityModel.updateEntity(EntityDiagramContainer container, Entity entityIn)
+        int EntityDTO.updateEntity(EntityDiagramContainer container, Entity entityIn)
         {
             int signal = 0;
             try
@@ -80,7 +80,7 @@ namespace Vinasun.Model
         }
 
         //delete a entity already exist
-        int EntityModel.deleteEntity(EntityDiagramContainer container, Entity entityIn)
+        int EntityDTO.deleteEntity(EntityDiagramContainer container, Entity entityIn)
         {
             int signal = 0;
             try

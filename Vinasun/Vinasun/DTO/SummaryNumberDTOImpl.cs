@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class SummaryNumberModelImpl : SummaryNumberModel
+    class SummaryNumberDTOImpl : SummaryNumberDTO
     {
 
         //Create new SummaryNumber
-        int SummaryNumberModel.addSummaryNumber(EntityDiagramContainer container, SummaryNumber summaryNumber)
+        int SummaryNumberDTO.addSummaryNumber(EntityDiagramContainer container, SummaryNumber summaryNumber)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a SummaryNumber already exist
-        SummaryNumber SummaryNumberModel.retrieveSummaryNumber(EntityDiagramContainer container, int summaryNumberId)
+        SummaryNumber SummaryNumberDTO.retrieveSummaryNumber(EntityDiagramContainer container, int summaryNumberId)
         {
             SummaryNumber ur = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all user roles
-        IList<SummaryNumber> SummaryNumberModel.retrieveAllSummaryNumbers(EntityDiagramContainer container)
+        IList<SummaryNumber> SummaryNumberDTO.retrieveAllSummaryNumbers(EntityDiagramContainer container)
         {
             IList<SummaryNumber> sns = null;
             try
@@ -64,7 +64,7 @@ namespace Vinasun.Model
         }
 
         //update a SummaryNumber already exist
-        int SummaryNumberModel.updateSummaryNumber(EntityDiagramContainer container, SummaryNumber summaryNumberIn)
+        int SummaryNumberDTO.updateSummaryNumber(EntityDiagramContainer container, SummaryNumber summaryNumberIn)
         {
             int signal = 0;
             try
@@ -80,7 +80,7 @@ namespace Vinasun.Model
         }
 
         //delete a SummaryNumber already exist
-        int SummaryNumberModel.deleteSummaryNumber(EntityDiagramContainer container, SummaryNumber summaryNumberIn)
+        int SummaryNumberDTO.deleteSummaryNumber(EntityDiagramContainer container, SummaryNumber summaryNumberIn)
         {
             int signal = 0;
             try

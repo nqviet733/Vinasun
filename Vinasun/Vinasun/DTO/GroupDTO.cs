@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface GroupModel
+    interface GroupDTO
     {
 
         int addGroup(EntityDiagramContainer container, Group group);

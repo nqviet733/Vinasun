@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface UserRoleModel
+    interface UserRoleDTO
     {
 
         int addUserRole(EntityDiagramContainer container, UserRole userRole);

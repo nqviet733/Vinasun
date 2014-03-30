@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class TaxiTypeModelImpl : TaxiTypeModel
+    class TaxiTypeDTOImpl : TaxiTypeDTO
     {
 
         //Create new TaxiType
-        int TaxiTypeModel.addTaxiType(EntityDiagramContainer container, TaxiType taxiType)
+        int TaxiTypeDTO.addTaxiType(EntityDiagramContainer container, TaxiType taxiType)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a TaxiType already exist
-        TaxiType TaxiTypeModel.retrieveTaxiType(EntityDiagramContainer container, int taxiTypeId)
+        TaxiType TaxiTypeDTO.retrieveTaxiType(EntityDiagramContainer container, int taxiTypeId)
         {
             TaxiType tt = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all taxi types
-        IList<TaxiType> TaxiTypeModel.retrieveAllTaxiTypes(EntityDiagramContainer container)
+        IList<TaxiType> TaxiTypeDTO.retrieveAllTaxiTypes(EntityDiagramContainer container)
         {
             IList<TaxiType> tts = null;
             try
@@ -64,7 +64,7 @@ namespace Vinasun.Model
         }
 
         //update a TaxiType already exist
-        int TaxiTypeModel.updateTaxiType(EntityDiagramContainer container, TaxiType taxiTypeIn)
+        int TaxiTypeDTO.updateTaxiType(EntityDiagramContainer container, TaxiType taxiTypeIn)
         {
             int signal = 0;
             try
@@ -80,7 +80,7 @@ namespace Vinasun.Model
         }
 
         //delete a TaxiType already exist
-        int TaxiTypeModel.deleteTaxiType(EntityDiagramContainer container, TaxiType taxiTypeIn)
+        int TaxiTypeDTO.deleteTaxiType(EntityDiagramContainer container, TaxiType taxiTypeIn)
         {
             int signal = 0;
             try

@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class PriceRangeModelImpl : PriceRangeModel
+    class PriceRangeDTOImpl : PriceRangeDTO
     {
 
         //Create new PriceRange
-        int PriceRangeModel.addPriceRange(EntityDiagramContainer container, PriceRange priceRange)
+        int PriceRangeDTO.addPriceRange(EntityDiagramContainer container, PriceRange priceRange)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a PriceRange already exist
-        PriceRange PriceRangeModel.retrievePriceRange(EntityDiagramContainer container, int priceRangeId)
+        PriceRange PriceRangeDTO.retrievePriceRange(EntityDiagramContainer container, int priceRangeId)
         {
             PriceRange pr = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all price ranges
-        IList<PriceRange> PriceRangeModel.retrieveAllPriceRanges(EntityDiagramContainer container)
+        IList<PriceRange> PriceRangeDTO.retrieveAllPriceRanges(EntityDiagramContainer container)
         {
             IList<PriceRange> prs = null;
             try
@@ -64,7 +64,7 @@ namespace Vinasun.Model
         }
 
         //update a PriceRange already exist
-        int PriceRangeModel.updatePriceRange(EntityDiagramContainer container, PriceRange priceRangeIn)
+        int PriceRangeDTO.updatePriceRange(EntityDiagramContainer container, PriceRange priceRangeIn)
         {
             int signal = 0;
             try
@@ -80,7 +80,7 @@ namespace Vinasun.Model
         }
 
         //delete a PriceRange already exist
-        int PriceRangeModel.deletePriceRange(EntityDiagramContainer container, PriceRange priceRangeIn)
+        int PriceRangeDTO.deletePriceRange(EntityDiagramContainer container, PriceRange priceRangeIn)
         {
             int signal = 0;
             try

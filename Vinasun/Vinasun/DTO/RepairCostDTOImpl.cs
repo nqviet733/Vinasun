@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class RepairCostModelImpl : RepairCostModel
+    class RepairCostDTOImpl : RepairCostDTO
     {
 
         //Create new repairCost
-        int RepairCostModel.addRepairCost(EntityDiagramContainer container, RepairCost repairCost)
+        int RepairCostDTO.addRepairCost(EntityDiagramContainer container, RepairCost repairCost)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a repairCost already exist
-        RepairCost RepairCostModel.retrieveRepairCost(EntityDiagramContainer container, int repairCostId)
+        RepairCost RepairCostDTO.retrieveRepairCost(EntityDiagramContainer container, int repairCostId)
         {
             RepairCost rc = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all repairCosts
-        IList<RepairCost> RepairCostModel.retrieveAllRepairCosts(EntityDiagramContainer container)
+        IList<RepairCost> RepairCostDTO.retrieveAllRepairCosts(EntityDiagramContainer container)
         {
             IList<RepairCost> rcs = null;
             try
@@ -64,7 +64,7 @@ namespace Vinasun.Model
         }
 
         //update a repairCost already exist
-        int RepairCostModel.updateRepairCost(EntityDiagramContainer container, RepairCost repairCostIn)
+        int RepairCostDTO.updateRepairCost(EntityDiagramContainer container, RepairCost repairCostIn)
         {
             int signal = 0;
             try
@@ -80,7 +80,7 @@ namespace Vinasun.Model
         }
 
         //delete a repairCost already exist
-        int RepairCostModel.deleteRepairCost(EntityDiagramContainer container, RepairCost repairCostIn)
+        int RepairCostDTO.deleteRepairCost(EntityDiagramContainer container, RepairCost repairCostIn)
         {
             int signal = 0;
             try

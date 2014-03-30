@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class ReasonNoIncomeModelImpl : ReasonNoIncomeModel
+    class ReasonNoIncomeDTOImpl : ReasonNoIncomeDTO
     {
 
         //Create new reasonNoIncome
-        int ReasonNoIncomeModel.addReasonNoIncome(EntityDiagramContainer container, ReasonNoIncome reasonNoIncome)
+        int ReasonNoIncomeDTO.addReasonNoIncome(EntityDiagramContainer container, ReasonNoIncome reasonNoIncome)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a reasonNoIncome already exist
-        ReasonNoIncome ReasonNoIncomeModel.retrieveReasonNoIncome(EntityDiagramContainer container, int reasonNoIncomeId)
+        ReasonNoIncome ReasonNoIncomeDTO.retrieveReasonNoIncome(EntityDiagramContainer container, int reasonNoIncomeId)
         {
             ReasonNoIncome rni = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all reasonNoIncomes
-        IList<ReasonNoIncome> ReasonNoIncomeModel.retrieveAllReasonNoIncomes(EntityDiagramContainer container)
+        IList<ReasonNoIncome> ReasonNoIncomeDTO.retrieveAllReasonNoIncomes(EntityDiagramContainer container)
         {
             IList<ReasonNoIncome> rnis = null;
             try
@@ -65,7 +65,7 @@ namespace Vinasun.Model
         }
 
         //update a reasonNoIncome already exist
-        int ReasonNoIncomeModel.updateReasonNoIncome(EntityDiagramContainer container, ReasonNoIncome reasonNoIncomeIn)
+        int ReasonNoIncomeDTO.updateReasonNoIncome(EntityDiagramContainer container, ReasonNoIncome reasonNoIncomeIn)
         {
             int signal = 0;
             try
@@ -81,7 +81,7 @@ namespace Vinasun.Model
         }
 
         //delete a reasonNoIncome already exist
-        int ReasonNoIncomeModel.deleteReasonNoIncome(EntityDiagramContainer container, ReasonNoIncome reasonNoIncomeIn)
+        int ReasonNoIncomeDTO.deleteReasonNoIncome(EntityDiagramContainer container, ReasonNoIncome reasonNoIncomeIn)
         {
             int signal = 0;
             try

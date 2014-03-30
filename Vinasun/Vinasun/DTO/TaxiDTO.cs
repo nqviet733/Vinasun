@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface TaxiModel
+    interface TaxiDTO
     {
 
         int addTaxi(EntityDiagramContainer container, Taxi taxi);

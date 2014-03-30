@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class DriverPercentangeModelImpl : DriverPercentangeModel
+    class DriverPercentangeDTOImpl : DriverPercentangeDTO
     {
 
         //Create new DriverPercentange
-        int DriverPercentangeModel.addDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentange)
+        int DriverPercentangeDTO.addDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentange)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a DriverPercentange already exist
-        DriverPercentange DriverPercentangeModel.retrieveDriverPercentange(EntityDiagramContainer container, int driverPercentangeId)
+        DriverPercentange DriverPercentangeDTO.retrieveDriverPercentange(EntityDiagramContainer container, int driverPercentangeId)
         {
             DriverPercentange dp = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all driver Percentange
-        IList<DriverPercentange> DriverPercentangeModel.retrieveAllDriverPercentanges(EntityDiagramContainer container)
+        IList<DriverPercentange> DriverPercentangeDTO.retrieveAllDriverPercentanges(EntityDiagramContainer container)
         {
             IList<DriverPercentange> dps = null;
             try
@@ -64,7 +64,7 @@ namespace Vinasun.Model
         }
 
         //update a DriverPercentange already exist
-        int DriverPercentangeModel.updateDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentangeIn)
+        int DriverPercentangeDTO.updateDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentangeIn)
         {
             int signal = 0;
             try
@@ -80,7 +80,7 @@ namespace Vinasun.Model
         }
 
         //delete a DriverPercentange already exist
-        int DriverPercentangeModel.deleteDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentangeIn)
+        int DriverPercentangeDTO.deleteDriverPercentange(EntityDiagramContainer container, DriverPercentange driverPercentangeIn)
         {
             int signal = 0;
             try

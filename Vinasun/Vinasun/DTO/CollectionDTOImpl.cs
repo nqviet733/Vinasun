@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class CollectionModelImpl : CollectionModel
+    class CollectionDTOImpl : CollectionDTO
     {
 
         //Create new collection
-        int CollectionModel.addCollection(EntityDiagramContainer container, Collection collection)
+        int CollectionDTO.addCollection(EntityDiagramContainer container, Collection collection)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a collection already exist
-        Collection CollectionModel.retrieveCollection(EntityDiagramContainer container, int collectionId)
+        Collection CollectionDTO.retrieveCollection(EntityDiagramContainer container, int collectionId)
         {
             Collection c = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all collections
-        IList<Collection> CollectionModel.retrieveAllCollections(EntityDiagramContainer container)
+        IList<Collection> CollectionDTO.retrieveAllCollections(EntityDiagramContainer container)
         {
             IList<Collection> cs = null;
             try
@@ -65,7 +65,7 @@ namespace Vinasun.Model
         }
 
         //update a collection already exist
-        int CollectionModel.updateCollection(EntityDiagramContainer container, Collection collectionIn)
+        int CollectionDTO.updateCollection(EntityDiagramContainer container, Collection collectionIn)
         {
             int signal = 0;
             try
@@ -81,7 +81,7 @@ namespace Vinasun.Model
         }
 
         //delete a collection already exist
-        int CollectionModel.deleteCollection(EntityDiagramContainer container, Collection collectionIn)
+        int CollectionDTO.deleteCollection(EntityDiagramContainer container, Collection collectionIn)
         {
             int signal = 0;
             try

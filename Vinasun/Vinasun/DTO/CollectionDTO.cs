@@ -7,7 +7,7 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    interface CollectionModel
+    interface CollectionDTO
     {
 
         int addCollection(EntityDiagramContainer container, Collection collection);

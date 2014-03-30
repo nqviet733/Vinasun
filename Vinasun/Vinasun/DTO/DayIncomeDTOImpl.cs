@@ -7,11 +7,11 @@ using Vinasun.EntityClass;
 
 namespace Vinasun.Model
 {
-    class DayIncomeModelImpl : DayIncomeModel
+    class DayIncomeDTOImpl : DayIncomeDTO
     {
 
         //Create new dayIncome
-        int DayIncomeModel.addDayIncome(EntityDiagramContainer container, DayIncome dayIncome)
+        int DayIncomeDTO.addDayIncome(EntityDiagramContainer container, DayIncome dayIncome)
         {
             int signal = 0;
             try
@@ -27,7 +27,7 @@ namespace Vinasun.Model
         }
 
         //retrieve a dayIncome already exist
-        DayIncome DayIncomeModel.retrieveDayIncome(EntityDiagramContainer container, int dayIncomeId)
+        DayIncome DayIncomeDTO.retrieveDayIncome(EntityDiagramContainer container, int dayIncomeId)
         {
             DayIncome di = null;
             try
@@ -42,7 +42,7 @@ namespace Vinasun.Model
         }
 
         //retrieve all dayIncomes
-        IList<DayIncome> DayIncomeModel.retrieveAllDayIncomes(EntityDiagramContainer container)
+        IList<DayIncome> DayIncomeDTO.retrieveAllDayIncomes(EntityDiagramContainer container)
         {
             IList<DayIncome> dis = null;
             try
@@ -64,7 +64,7 @@ namespace Vinasun.Model
         }
 
         //update a dayIncome already exist
-        int DayIncomeModel.updateDayIncome(EntityDiagramContainer container, DayIncome dayIncomeIn)
+        int DayIncomeDTO.updateDayIncome(EntityDiagramContainer container, DayIncome dayIncomeIn)
         {
             int signal = 0;
             try
@@ -80,7 +80,7 @@ namespace Vinasun.Model
         }
 
         //delete a dayIncome already exist
-        int DayIncomeModel.deleteDayIncome(EntityDiagramContainer container, DayIncome dayIncomeIn)
+        int DayIncomeDTO.deleteDayIncome(EntityDiagramContainer container, DayIncome dayIncomeIn)
         {
             int signal = 0;
             try
