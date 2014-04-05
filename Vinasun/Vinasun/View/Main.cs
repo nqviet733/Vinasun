@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vinasun.Model;
+using Vinasun.EntityClass;
 
 namespace Vinasun.View
 {
@@ -15,6 +17,12 @@ namespace Vinasun.View
         public Main()
         {
             InitializeComponent();
+
+            var entitiesContainer = new EntityDiagramContainer();
+            CollectionDTO colectionDTO = new CollectionDTOImpl();
+            IList<Collection> collections = colectionDTO.retrieveAllCollections(entitiesContainer);
+            collectionDataGridView.DataSource = collections;
+            
         }
 
     }
