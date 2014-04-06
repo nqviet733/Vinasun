@@ -21,22 +21,22 @@ namespace Vinasun
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
 
-            GroupDTO gm = new GroupDTOImpl();
-            EntityDTO em = new EntityDTOImpl();
-            TaxiDTO tm = new TaxiDTOImpl();
-            UserRoleDTO urm = new UserRoleDTOImpl();
-            TaxiTypeDTO ttm = new TaxiTypeDTOImpl();
-            PriceRangeDTO prm = new PriceRangeDTOImpl();
-            DriverPercentangeDTO dpm = new DriverPercentangeDTOImpl();
-            CollectionDTO cm = new CollectionDTOImpl();
-            DayIncomeDTO dim = new DayIncomeDTOImpl();
-            ReasonNoIncomeDTO rnim = new ReasonNoIncomeDTOImpl();
-            RepairCostDTO rcm = new RepairCostDTOImpl();
-            SummaryNumberDTO snm = new SummaryNumberDTOImpl();
-            ProvineIncomeDTO pim = new ProvineIncomeDTOImpl();
-            TripCheckDTO tcm = new TripCheckDTOImpl();
-            SubtractionIncomeDTO sim = new SubtractionIncomeDTOImpl();
-            var con = new EntityDiagramContainer();
+            //GroupDTO gm = new GroupDTOImpl();
+            //EntityDTO em = new EntityDTOImpl();
+            //TaxiDTO tm = new TaxiDTOImpl();
+            //UserRoleDTO urm = new UserRoleDTOImpl();
+            //TaxiTypeDTO ttm = new TaxiTypeDTOImpl();
+            //PriceRangeDTO prm = new PriceRangeDTOImpl();
+            //DriverPercentangeDTO dpm = new DriverPercentangeDTOImpl();
+            //CollectionDTO cm = new CollectionDTOImpl();
+            //DayIncomeDTO dim = new DayIncomeDTOImpl();
+            //ReasonNoIncomeDTO rnim = new ReasonNoIncomeDTOImpl();
+            //RepairCostDTO rcm = new RepairCostDTOImpl();
+            //SummaryNumberDTO snm = new SummaryNumberDTOImpl();
+            //ProvineIncomeDTO pim = new ProvineIncomeDTOImpl();
+            //TripCheckDTO tcm = new TripCheckDTOImpl();
+            //SubtractionIncomeDTO sim = new SubtractionIncomeDTOImpl();
+            //var con = new EntityDiagramContainer();
 
             //====Group
             //Group g = new Group();

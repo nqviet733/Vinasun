@@ -18,10 +18,10 @@ namespace Vinasun.View
         {
             InitializeComponent();
 
-            var entitiesContainer = new EntityDiagramContainer();
-            CollectionDTO colectionDTO = new CollectionDTOImpl();
-            IList<Collection> collections = colectionDTO.retrieveAllCollections(entitiesContainer);
-            collectionDataGridView.DataSource = collections;
+            //var entitiesContainer = new EntityDiagramContainer();
+            //CollectionDTO colectionDTO = new CollectionDTOImpl();
+            //IList<Collection> collections = colectionDTO.retrieveAllCollections(entitiesContainer);
+            //collectionDataGridView.DataSource = collections;
             
         }
 
@@ -62,6 +62,16 @@ namespace Vinasun.View
                 errorProvider1.SetError(this.textBoxX1, "Please Provide....");
             }
             return status;
+        }
+
+        private void textBoxX17_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
