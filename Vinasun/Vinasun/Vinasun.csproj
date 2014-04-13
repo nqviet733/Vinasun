@@ -167,6 +167,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -209,6 +210,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="EntityClass\EntityDiagram.edmx.sql" />
+    <None Include="Resources\Start-Menu-Search-icon.png" />
+    <None Include="Resources\Error-icon1.png" />
+    <None Include="Resources\Error-icon.png" />
+    <None Include="Resources\folder-add-icon %283%29.png" />
+    <None Include="Resources\folder-add-icon %282%291.png" />
+    <None Include="Resources\folder-add-icon %282%29.png" />
+    <None Include="Resources\folder-add-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />

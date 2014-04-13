@@ -74,5 +74,10 @@ namespace Vinasun.View
 
         }
 
+        private void superTabControlPanel13_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
