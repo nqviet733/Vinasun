@@ -81,7 +81,14 @@ namespace Vinasun.View
 
         private void bt_addEmployee_Click(object sender, EventArgs e)
         {
-
+            Entity entity = new Entity();
+            entity.entityNo = txt_employeeId.Text;
+            entity.firstname = txt_firstName.Text;
+            entity.lastname = txt_lastName.Text;
+            entity.birthday = dp_DOB.Value;
+            entity.email = txt_email.Text;
+            entity.businessPhone = txt_phoneNumber.Text;
+            entity.
         }
 
     }
