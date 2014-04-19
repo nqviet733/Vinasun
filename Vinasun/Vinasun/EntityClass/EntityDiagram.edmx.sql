@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/30/2014 14:39:44
+-- Date Created: 04/19/2014 22:26:46
 -- Generated from EDMX file: C:\Users\nqvie_000\Source\Repos\Vinasun\Vinasun\Vinasun\EntityClass\EntityDiagram.edmx
 -- --------------------------------------------------
 
@@ -130,6 +130,7 @@ CREATE TABLE [dbo].[Entities] (
     [email] nvarchar(max)  NULL,
     [businessPhone] nvarchar(max)  NOT NULL,
     [dateJoin] datetime  NULL,
+    [entityNo] nvarchar(max)  NOT NULL,
     [UserRole_id] int  NULL,
     [Leader_id] int  NULL,
     [Group_id] int  NULL
@@ -142,6 +143,7 @@ CREATE TABLE [dbo].[Taxis] (
     [taxiNo] nvarchar(max)  NOT NULL,
     [dateJoin] datetime  NULL,
     [model] nvarchar(max)  NULL,
+    [driverNoMain] nvarchar(max)  NOT NULL,
     [TaxiType_id] smallint  NULL,
     [Entity_id] int  NULL,
     [Group_id] int  NULL
@@ -230,7 +232,8 @@ GO
 CREATE TABLE [dbo].[Groups] (
     [id] int IDENTITY(1,1) NOT NULL,
     [name] nvarchar(max)  NOT NULL,
-    [address] nvarchar(max)  NOT NULL
+    [address] nvarchar(max)  NOT NULL,
+    [Branch_id] int  NULL
 );
 GO
 
@@ -271,6 +274,23 @@ CREATE TABLE [dbo].[UserRoles] (
     [id] int IDENTITY(1,1) NOT NULL,
     [description] nvarchar(max)  NOT NULL,
     [permission] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'Drivers'
+CREATE TABLE [dbo].[Drivers] (
+    [id] bigint IDENTITY(1,1) NOT NULL,
+    [driverNo] nvarchar(max)  NOT NULL,
+    [created] datetime  NOT NULL,
+    [Taxi_id] int  NOT NULL
+);
+GO
+
+-- Creating table 'Branches'
+CREATE TABLE [dbo].[Branches] (
+    [id] int IDENTITY(1,1) NOT NULL,
+    [created] datetime  NOT NULL,
+    [name] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -365,6 +385,18 @@ GO
 -- Creating primary key on [id] in table 'UserRoles'
 ALTER TABLE [dbo].[UserRoles]
 ADD CONSTRAINT [PK_UserRoles]
+    PRIMARY KEY CLUSTERED ([id] ASC);
+GO
+
+-- Creating primary key on [id] in table 'Drivers'
+ALTER TABLE [dbo].[Drivers]
+ADD CONSTRAINT [PK_Drivers]
+    PRIMARY KEY CLUSTERED ([id] ASC);
+GO
+
+-- Creating primary key on [id] in table 'Branches'
+ALTER TABLE [dbo].[Branches]
+ADD CONSTRAINT [PK_Branches]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
@@ -610,6 +642,36 @@ GO
 CREATE INDEX [IX_FK_grouptaxi]
 ON [dbo].[Taxis]
     ([Group_id]);
+GO
+
+-- Creating foreign key on [Taxi_id] in table 'Drivers'
+ALTER TABLE [dbo].[Drivers]
+ADD CONSTRAINT [FK_TaxiDriver]
+    FOREIGN KEY ([Taxi_id])
+    REFERENCES [dbo].[Taxis]
+        ([id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_TaxiDriver'
+CREATE INDEX [IX_FK_TaxiDriver]
+ON [dbo].[Drivers]
+    ([Taxi_id]);
+GO
+
+-- Creating foreign key on [Branch_id] in table 'Groups'
+ALTER TABLE [dbo].[Groups]
+ADD CONSTRAINT [FK_BranchGroup]
+    FOREIGN KEY ([Branch_id])
+    REFERENCES [dbo].[Branches]
+        ([id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_BranchGroup'
+CREATE INDEX [IX_FK_BranchGroup]
+ON [dbo].[Groups]
+    ([Branch_id]);
 GO
 
 -- --------------------------------------------------

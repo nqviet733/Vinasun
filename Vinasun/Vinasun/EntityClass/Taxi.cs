@@ -23,12 +23,14 @@ namespace Vinasun.EntityClass
             this.RepairCosts = new HashSet<RepairCost>();
             this.TripChecks = new HashSet<TripCheck>();
             this.ReasonNoIncomes = new HashSet<ReasonNoIncome>();
+            this.Drivers = new HashSet<Driver>();
         }
     
         public int id { get; set; }
         public string taxiNo { get; set; }
         public Nullable<System.DateTime> dateJoin { get; set; }
         public string model { get; set; }
+        public string driverNoMain { get; set; }
     
         public virtual TaxiType TaxiType { get; set; }
         public virtual ICollection<SummaryNumber> SummaryNumbers { get; set; }
@@ -40,5 +42,6 @@ namespace Vinasun.EntityClass
         public virtual ICollection<ReasonNoIncome> ReasonNoIncomes { get; set; }
         public virtual Entity Entity { get; set; }
         public virtual Group Group { get; set; }
+        public virtual ICollection<Driver> Drivers { get; set; }
     }
 }

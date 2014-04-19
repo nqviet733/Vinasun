@@ -40,5 +40,7 @@ namespace Vinasun.EntityClass
         public virtual DbSet<Collection> Collections { get; set; }
         public virtual DbSet<ReasonNoIncome> ReasonNoIncomes { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
+        public virtual DbSet<Driver> Drivers { get; set; }
+        public virtual DbSet<Branch> Branches { get; set; }
     }
 }

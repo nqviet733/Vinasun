@@ -21,6 +21,8 @@
     <EntitySet Name="Collections" EntityType="EntityDiagram.Store.Collections" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ReasonNoIncomes" EntityType="EntityDiagram.Store.ReasonNoIncomes" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="UserRoles" EntityType="EntityDiagram.Store.UserRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Drivers" EntityType="EntityDiagram.Store.Drivers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Branches" EntityType="EntityDiagram.Store.Branches" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="taxi_typetaxi" Association="EntityDiagram.Store.taxi_typetaxi">
       <End Role="taxi_type" EntitySet="TaxiTypes" />
       <End Role="taxi" EntitySet="Taxis" />
@@ -85,6 +87,14 @@
       <End Role="group" EntitySet="Groups" />
       <End Role="taxi" EntitySet="Taxis" />
     </AssociationSet>
+    <AssociationSet Name="TaxiDriver" Association="EntityDiagram.Store.TaxiDriver">
+      <End Role="Taxi" EntitySet="Taxis" />
+      <End Role="Driver" EntitySet="Drivers" />
+    </AssociationSet>
+    <AssociationSet Name="BranchGroup" Association="EntityDiagram.Store.BranchGroup">
+      <End Role="Branch" EntitySet="Branches" />
+      <End Role="Group" EntitySet="Groups" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Entities">
     <Key>
@@ -98,6 +108,7 @@
     <Property Name="email" Type="nvarchar(max)" Nullable="true" />
     <Property Name="businessPhone" Type="nvarchar(max)" Nullable="false" />
     <Property Name="dateJoin" Type="datetime" Nullable="true" />
+    <Property Name="entityNo" Type="nvarchar(max)" Nullable="false" />
     <Property Name="UserRole_id" Type="int" Nullable="true" />
     <Property Name="Leader_id" Type="int" Nullable="true" />
     <Property Name="Group_id" Type="int" Nullable="true" />
@@ -110,6 +121,7 @@
     <Property Name="taxiNo" Type="nvarchar(max)" Nullable="false" />
     <Property Name="dateJoin" Type="datetime" Nullable="true" />
     <Property Name="model" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="driverNoMain" Type="nvarchar(max)" Nullable="false" />
     <Property Name="TaxiType_id" Type="smallint" Nullable="true" />
     <Property Name="Entity_id" Type="int" Nullable="true" />
     <Property Name="Group_id" Type="int" Nullable="true" />
@@ -199,6 +211,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Branch_id" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="TripChecks">
     <Key>
@@ -239,6 +252,23 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="description" Type="nvarchar(max)" Nullable="false" />
     <Property Name="permission" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Drivers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="driverNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="created" Type="datetime" Nullable="false" />
+    <Property Name="Taxi_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Branches">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="created" Type="datetime" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <Association Name="taxi_typetaxi">
     <End Role="taxi_type" Type="EntityDiagram.Store.TaxiTypes" Multiplicity="0..1" />
@@ -432,6 +462,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="TaxiDriver">
+    <End Role="Taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="1" />
+    <End Role="Driver" Type="EntityDiagram.Store.Drivers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taxi">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Driver">
+        <PropertyRef Name="Taxi_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BranchGroup">
+    <End Role="Branch" Type="EntityDiagram.Store.Branches" Multiplicity="0..1" />
+    <End Role="Group" Type="EntityDiagram.Store.Groups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branch">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Group">
+        <PropertyRef Name="Branch_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -516,6 +570,16 @@
             <End Role="group" EntitySet="Groups" />
             <End Role="taxi" EntitySet="Taxis" />
           </AssociationSet>
+          <EntitySet Name="Drivers" EntityType="EntityDiagram.Driver" />
+          <AssociationSet Name="TaxiDriver" Association="EntityDiagram.TaxiDriver">
+            <End Role="Taxi" EntitySet="Taxis" />
+            <End Role="Driver" EntitySet="Drivers" />
+          </AssociationSet>
+          <EntitySet Name="Branches" EntityType="EntityDiagram.Branch" />
+          <AssociationSet Name="BranchGroup" Association="EntityDiagram.BranchGroup">
+            <End Role="Branch" EntitySet="Branches" />
+            <End Role="Group" EntitySet="Groups" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="Entity">
           <Key>
@@ -534,6 +598,7 @@
           <NavigationProperty Name="Leader" Relationship="EntityDiagram.entityentity" FromRole="entity1" ToRole="entity" />
           <NavigationProperty Name="Group" Relationship="EntityDiagram.entitygroup" FromRole="entity" ToRole="group" />
           <NavigationProperty Name="Taxis" Relationship="EntityDiagram.entitytaxi" FromRole="entity" ToRole="taxi" />
+          <Property Name="entityNo" Type="String" Nullable="false" />
           </EntityType>
         <EntityType Name="Taxi">
           <Key>
@@ -553,6 +618,8 @@
           <NavigationProperty Name="ReasonNoIncomes" Relationship="EntityDiagram.taxireason" FromRole="taxi" ToRole="reason" />
           <NavigationProperty Name="Entity" Relationship="EntityDiagram.entitytaxi" FromRole="taxi" ToRole="entity" />
           <NavigationProperty Name="Group" Relationship="EntityDiagram.grouptaxi" FromRole="taxi" ToRole="group" />
+          <NavigationProperty Name="Drivers" Relationship="EntityDiagram.TaxiDriver" FromRole="Taxi" ToRole="Driver" />
+          <Property Name="driverNoMain" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="TaxiType">
           <Key>
@@ -677,6 +744,7 @@
           <NavigationProperty Name="Collections" Relationship="EntityDiagram.groupCollection" FromRole="group" ToRole="Collection" />
           <NavigationProperty Name="Entities" Relationship="EntityDiagram.entitygroup" FromRole="group" ToRole="entity" />
           <NavigationProperty Name="Taxis" Relationship="EntityDiagram.grouptaxi" FromRole="group" ToRole="taxi" />
+          <NavigationProperty Name="Branch" Relationship="EntityDiagram.BranchGroup" FromRole="Group" ToRole="Branch" />
         </EntityType>
         <EntityType Name="TripCheck">
           <Key>
@@ -751,6 +819,32 @@
           <End Type="EntityDiagram.Group" Role="group" Multiplicity="0..1" />
           <End Type="EntityDiagram.Taxi" Role="taxi" Multiplicity="*" />
         </Association>
+        <EntityType Name="Driver">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="driverNo" Type="String" Nullable="false" />
+          <Property Name="created" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Taxi" Relationship="EntityDiagram.TaxiDriver" FromRole="Driver" ToRole="Taxi" />
+        </EntityType>
+        <Association Name="TaxiDriver">
+          <End Type="EntityDiagram.Taxi" Role="Taxi" Multiplicity="1" />
+          <End Type="EntityDiagram.Driver" Role="Driver" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created" Type="DateTime" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Groups" Relationship="EntityDiagram.BranchGroup" FromRole="Branch" ToRole="Group" />
+        </EntityType>
+        <Association Name="BranchGroup">
+          <End Type="EntityDiagram.Branch" Role="Branch" Multiplicity="0..1" />
+          <End Type="EntityDiagram.Group" Role="Group" Multiplicity="*" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -768,6 +862,7 @@
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="businessPhone" ColumnName="businessPhone" />
           <ScalarProperty Name="dateJoin" ColumnName="dateJoin" />
+          <ScalarProperty Name="entityNo" ColumnName="entityNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -778,6 +873,7 @@
           <ScalarProperty Name="taxiNo" ColumnName="taxiNo" />
           <ScalarProperty Name="dateJoin" ColumnName="dateJoin" />
           <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="driverNoMain" ColumnName="driverNoMain" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -907,6 +1003,24 @@
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="permission" ColumnName="permission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drivers">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.Driver)">
+        <MappingFragment StoreEntitySet="Drivers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="driverNo" ColumnName="driverNo" />
+          <ScalarProperty Name="created" ColumnName="created" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.Branch)">
+        <MappingFragment StoreEntitySet="Branches">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="created" ColumnName="created" />
+          <ScalarProperty Name="name" ColumnName="name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -1053,6 +1167,23 @@
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
       <Condition ColumnName="Group_id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TaxiDriver" TypeName="EntityDiagram.TaxiDriver" StoreEntitySet="Drivers">
+      <EndProperty Name="Taxi">
+        <ScalarProperty Name="id" ColumnName="Taxi_id" />
+      </EndProperty>
+      <EndProperty Name="Driver">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BranchGroup" TypeName="EntityDiagram.BranchGroup" StoreEntitySet="Groups">
+      <EndProperty Name="Branch">
+        <ScalarProperty Name="id" ColumnName="Branch_id" />
+      </EndProperty>
+      <EndProperty Name="Group">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+      <Condition ColumnName="Branch_id" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>

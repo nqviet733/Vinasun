@@ -28,6 +28,7 @@ namespace Vinasun.EntityClass
         public string email { get; set; }
         public string businessPhone { get; set; }
         public Nullable<System.DateTime> dateJoin { get; set; }
+        public string entityNo { get; set; }
     
         public virtual UserRole UserRole { get; set; }
         public virtual ICollection<Entity> Checkers { get; set; }

@@ -12,22 +12,17 @@ namespace Vinasun.EntityClass
     using System;
     using System.Collections.Generic;
     
-    public partial class Group
+    public partial class Branch
     {
-        public Group()
+        public Branch()
         {
-            this.Collections = new HashSet<Collection>();
-            this.Entities = new HashSet<Entity>();
-            this.Taxis = new HashSet<Taxi>();
+            this.Groups = new HashSet<Group>();
         }
     
         public int id { get; set; }
+        public System.DateTime created { get; set; }
         public string name { get; set; }
-        public string address { get; set; }
     
-        public virtual ICollection<Collection> Collections { get; set; }
-        public virtual ICollection<Entity> Entities { get; set; }
-        public virtual ICollection<Taxi> Taxis { get; set; }
-        public virtual Branch Branch { get; set; }
+        public virtual ICollection<Group> Groups { get; set; }
     }
 }

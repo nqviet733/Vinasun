@@ -79,5 +79,10 @@ namespace Vinasun.View
 
         }
 
+        private void bt_addEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
