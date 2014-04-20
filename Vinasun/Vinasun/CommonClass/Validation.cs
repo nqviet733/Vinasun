@@ -9,6 +9,8 @@ namespace Vinasun.CommonClass
 {
     class Validation
     {
+
+        //Prevent null or empty in textbox
         public bool isNotNullOrEmpty(Object o, ErrorProvider errorProvider, String errorString)
         {
             bool status = true;
@@ -27,6 +29,38 @@ namespace Vinasun.CommonClass
                 }
             }
             return status;
+        }
+
+        //Emp age must be >= 16 year old
+        public bool isValidDOB(Object o, ErrorProvider errorProvider, String errorString)
+        {
+            bool status = true;
+            if (o is DateTimePicker)
+            {
+                DateTimePicker dtp = o as DateTimePicker;
+                if (GetAge(dtp.Value) < 16 && dtp.Value != null)
+                {
+                    errorProvider.SetError(dtp, "Vui Lòng Nhập Năm Sinh Nhân Viên Trên 16 Tuổi" + errorString);
+                    //tb.Focus();
+                    status = false;
+                }
+                else
+                {
+                    errorProvider.SetError(dtp, "");
+                }
+            }
+            return status;
+        }
+
+        public int GetAge(DateTime dateOfBirth)
+        {
+            int age = DateTime.Now.Year - dateOfBirth.Year;
+            if (dateOfBirth.AddYears(age) > DateTime.Now)
+            {
+                age--;
+            }
+
+            return age;
         }
     }
 }

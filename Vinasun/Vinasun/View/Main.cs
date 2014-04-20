@@ -11,16 +11,26 @@ using Vinasun.Model;
 using Vinasun.EntityClass;
 using Vinasun.CommonClass;
 
+
 namespace Vinasun.View
 {
     public partial class Main : Form
     {
 
-         EntityDiagramContainer entitiesContainer = new EntityDiagramContainer();
+         EntityDiagramContainer entitiesContainer;
+         Validation validation;
+         Vinasun.CommonClass.EventHandler eventHandler;
+         ToolTip txt_empIdToolTip;
+         ToolTip txt_empFirstNameToolTip;
+         ToolTip txt_empLastNameToolTip;
 
         public Main()
         {
             InitializeComponent();
+
+            entitiesContainer = new EntityDiagramContainer();
+            validation = new Validation();
+            eventHandler = new Vinasun.CommonClass.EventHandler();
 
             Employee employee = new Employee();
             employee.showDGV(dgv_entities, entitiesContainer);
@@ -102,22 +112,81 @@ namespace Vinasun.View
 
         }
 
-        private void dp_DOB_Click(object sender, EventArgs e)
-        {
+        //Event Handler for Employee ID
 
+        private void txt_empIdValidattion(object sender, CancelEventArgs e)
+        {
+            validation.isNotNullOrEmpty(sender, errorProvider, "Mã Nhân Niên");
         }
 
-
-        private void txt_employeeIdValidattion(object sender, CancelEventArgs e)
+        private void txt_empIdKeyPress(object sender, KeyPressEventArgs e)
         {
-            Validation validation = new Validation();
-            validation.isNotNullOrEmpty(sender, errorProvider_EmployeeId, "Mã Nhân Niên");
-        }
-
-        private void employeeId_keyPress(object sender, KeyPressEventArgs e)
-        {
-            Vinasun.CommonClass.EventHandler eventHandler = new Vinasun.CommonClass.EventHandler();
             eventHandler.characterOnly(sender, e);
+        }
+
+        private void txt_empIdFocus(object sender, EventArgs e)
+        {
+            txt_empIdToolTip = new ToolTip();
+            txt_empIdToolTip.Show("Mã Sõ Nhân Viên Bao Gồm Kí Tự Và Số", txt_employeeId);
+        }
+
+        private void txt_empIdLeave(object sender, EventArgs e)
+        {
+            txt_empIdToolTip.Dispose();
+        }
+
+        //Event Handler for Employee FirstName
+        private void txt_empFirstNameFocus(object sender, EventArgs e)
+        {
+            txt_empFirstNameToolTip = new ToolTip();
+            txt_empFirstNameToolTip.Show("Tên Nhân Viên Chỉ Bao Gồm Kí Tự", txt_firstName);
+        }
+
+        private void txt_empFirstNameKeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.characterOnly(sender, e);
+        }
+
+        private void txt_empFirstNameValidatior(object sender, CancelEventArgs e)
+        {
+            validation.isNotNullOrEmpty(sender, errorProvider, "Tên Nhân Niên");
+        }
+
+        private void txt_empFirstNameLeave(object sender, EventArgs e)
+        {
+            txt_empFirstNameToolTip.Dispose();
+        }
+
+        //Event Handler for Employee LastName
+        private void txt_empLastNameFocus(object sender, EventArgs e)
+        {
+            txt_empLastNameToolTip = new ToolTip();
+            txt_empLastNameToolTip.Show("Họ Nhân Viên Chỉ Bao Gồm Kí Tự", txt_lastName);
+        }
+
+        private void txt_empLastNameKeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.characterOnly(sender, e);
+        }
+
+        private void txt_empLastNameValidatior(object sender, CancelEventArgs e)
+        {
+            validation.isNotNullOrEmpty(sender, errorProvider, "Họ Nhân Niên");
+        }
+
+        private void txt_empLastNameLeave(object sender, EventArgs e)
+        {
+            txt_empLastNameToolTip.Dispose();
+        }
+
+        private void dtp_dateOfBirthValidator(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void dtp_dateOfBirthLeave(object sender, EventArgs e)
+        {
+            //validation.isValidDOB(sender, errorProvider, "");
         }
 
     }

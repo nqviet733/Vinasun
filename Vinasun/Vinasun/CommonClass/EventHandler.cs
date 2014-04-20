@@ -18,7 +18,7 @@ namespace Vinasun.CommonClass
             if (o is TextBox)
             {
                 TextBox tb = o as TextBox;
-                if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != '.')
+                if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
                 {
                     e.Handled = true;
                 }
