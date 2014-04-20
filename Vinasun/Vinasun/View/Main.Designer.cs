@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -55,26 +55,9 @@
             this.tripSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Group = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.groupPanel9 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.superTabControl4 = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel14 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.comboBoxEx15 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.label65 = new System.Windows.Forms.Label();
-            this.comboBoxEx13 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.label60 = new System.Windows.Forms.Label();
-            this.dataGridViewX13 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.buttonX25 = new DevComponents.DotNetBar.ButtonX();
-            this.label59 = new System.Windows.Forms.Label();
-            this.comboBoxEx12 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.textBoxX43 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX41 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label58 = new System.Windows.Forms.Label();
-            this.superTabItem14 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel13 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.cb_checkerGroup = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.label64 = new System.Windows.Forms.Label();
@@ -82,7 +65,7 @@
             this.bt_addEmployee = new DevComponents.DotNetBar.ButtonX();
             this.buttonX21 = new DevComponents.DotNetBar.ButtonX();
             this.label56 = new System.Windows.Forms.Label();
-            this.dataGridViewX12 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.dgv_entities = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.cb_position = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.label55 = new System.Windows.Forms.Label();
             this.comboBoxEx11 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -104,6 +87,19 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.superTabItem13 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel14 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.comboBoxEx15 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.label65 = new System.Windows.Forms.Label();
+            this.comboBoxEx13 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.label60 = new System.Windows.Forms.Label();
+            this.dataGridViewX13 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.buttonX25 = new DevComponents.DotNetBar.ButtonX();
+            this.label59 = new System.Windows.Forms.Label();
+            this.comboBoxEx12 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.textBoxX43 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxX41 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label58 = new System.Windows.Forms.Label();
+            this.superTabItem14 = new DevComponents.DotNetBar.SuperTabItem();
             this.groupPanel7 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.superTabControl3 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel8 = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -173,6 +169,10 @@
             this.superTabItem11 = new DevComponents.DotNetBar.SuperTabItem();
             this.groupPanel8 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.superTabItem3 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabControl2 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -280,19 +280,19 @@
             this.bubbleButton4 = new DevComponents.DotNetBar.BubbleButton();
             this.bubbleButton5 = new DevComponents.DotNetBar.BubbleButton();
             this.bubbleButton6 = new DevComponents.DotNetBar.BubbleButton();
+            this.errorProvider_EmployeeId = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
-            this.superTabControlPanel1.SuspendLayout();
             this.superTabControlPanel3.SuspendLayout();
             this.groupPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl4)).BeginInit();
             this.superTabControl4.SuspendLayout();
+            this.superTabControlPanel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_entities)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dp_DOB)).BeginInit();
             this.superTabControlPanel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX13)).BeginInit();
-            this.superTabControlPanel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dp_DOB)).BeginInit();
             this.groupPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).BeginInit();
             this.superTabControl3.SuspendLayout();
@@ -311,6 +311,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX11)).BeginInit();
             this.superTabControlPanel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX9)).BeginInit();
+            this.superTabControlPanel1.SuspendLayout();
             this.superTabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl2)).BeginInit();
             this.superTabControl2.SuspendLayout();
@@ -335,6 +336,7 @@
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bubbleBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_EmployeeId)).BeginInit();
             this.SuspendLayout();
             // 
             // collectionDataGridView
@@ -429,8 +431,8 @@
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.superTabControl1.Location = new System.Drawing.Point(0, 0);
             this.superTabControl1.Name = "superTabControl1";
@@ -445,50 +447,6 @@
             this.superTabItem2,
             this.superTabItem3});
             this.superTabControl1.Text = "superTabControl1";
-            // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Controls.Add(this.buttonX1);
-            this.superTabControlPanel1.Controls.Add(this.textBoxX1);
-            this.superTabControlPanel1.Controls.Add(this.collectionDataGridView);
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 25);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Size = new System.Drawing.Size(1362, 619);
-            this.superTabControlPanel1.TabIndex = 1;
-            this.superTabControlPanel1.TabItem = this.superTabItem1;
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(103, 328);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(75, 23);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 2;
-            this.buttonX1.Text = "buttonX1";
-            // 
-            // textBoxX1
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Location = new System.Drawing.Point(87, 260);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.Size = new System.Drawing.Size(143, 20);
-            this.textBoxX1.TabIndex = 1;
-            this.textBoxX1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX1_KeyPress);
-            this.textBoxX1.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxX1_Validating);
-            // 
-            // superTabItem1
-            // 
-            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
-            this.superTabItem1.GlobalItem = false;
-            this.superTabItem1.Name = "superTabItem1";
-            this.superTabItem1.Text = "superTabItem1";
             // 
             // superTabControlPanel3
             // 
@@ -572,6 +530,428 @@
             this.superTabItem13,
             this.superTabItem14});
             this.superTabControl4.Text = "superTabControl4";
+            // 
+            // superTabControlPanel13
+            // 
+            this.superTabControlPanel13.Controls.Add(this.cb_checkerGroup);
+            this.superTabControlPanel13.Controls.Add(this.label64);
+            this.superTabControlPanel13.Controls.Add(this.bt_delEmployee);
+            this.superTabControlPanel13.Controls.Add(this.bt_addEmployee);
+            this.superTabControlPanel13.Controls.Add(this.buttonX21);
+            this.superTabControlPanel13.Controls.Add(this.label56);
+            this.superTabControlPanel13.Controls.Add(this.dgv_entities);
+            this.superTabControlPanel13.Controls.Add(this.cb_position);
+            this.superTabControlPanel13.Controls.Add(this.label55);
+            this.superTabControlPanel13.Controls.Add(this.comboBoxEx11);
+            this.superTabControlPanel13.Controls.Add(this.cb_Gender);
+            this.superTabControlPanel13.Controls.Add(this.dp_DOB);
+            this.superTabControlPanel13.Controls.Add(this.textBoxX39);
+            this.superTabControlPanel13.Controls.Add(this.txt_firstName);
+            this.superTabControlPanel13.Controls.Add(this.label52);
+            this.superTabControlPanel13.Controls.Add(this.label50);
+            this.superTabControlPanel13.Controls.Add(this.txt_address);
+            this.superTabControlPanel13.Controls.Add(this.txt_phoneNumber);
+            this.superTabControlPanel13.Controls.Add(this.txt_email);
+            this.superTabControlPanel13.Controls.Add(this.txt_lastName);
+            this.superTabControlPanel13.Controls.Add(this.txt_employeeId);
+            this.superTabControlPanel13.Controls.Add(this.label51);
+            this.superTabControlPanel13.Controls.Add(this.label61);
+            this.superTabControlPanel13.Controls.Add(this.label54);
+            this.superTabControlPanel13.Controls.Add(this.label53);
+            this.superTabControlPanel13.Controls.Add(this.label57);
+            this.superTabControlPanel13.Controls.Add(this.label49);
+            this.superTabControlPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel13.Location = new System.Drawing.Point(0, 27);
+            this.superTabControlPanel13.Name = "superTabControlPanel13";
+            this.superTabControlPanel13.Size = new System.Drawing.Size(907, 526);
+            this.superTabControlPanel13.TabIndex = 1;
+            this.superTabControlPanel13.TabItem = this.superTabItem13;
+            this.superTabControlPanel13.Click += new System.EventHandler(this.superTabControlPanel13_Click);
+            // 
+            // cb_checkerGroup
+            // 
+            this.cb_checkerGroup.DisplayMember = "Text";
+            this.cb_checkerGroup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_checkerGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_checkerGroup.FormattingEnabled = true;
+            this.cb_checkerGroup.ItemHeight = 20;
+            this.cb_checkerGroup.Location = new System.Drawing.Point(670, 148);
+            this.cb_checkerGroup.Name = "cb_checkerGroup";
+            this.cb_checkerGroup.Size = new System.Drawing.Size(118, 26);
+            this.cb_checkerGroup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_checkerGroup.TabIndex = 45;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.BackColor = System.Drawing.Color.Transparent;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Location = new System.Drawing.Point(569, 154);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(100, 20);
+            this.label64.TabIndex = 44;
+            this.label64.Text = "Tổ Checker";
+            // 
+            // bt_delEmployee
+            // 
+            this.bt_delEmployee.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_delEmployee.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_delEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delEmployee.Image = global::Vinasun.Properties.Resources.Error_icon1;
+            this.bt_delEmployee.Location = new System.Drawing.Point(515, 385);
+            this.bt_delEmployee.Name = "bt_delEmployee";
+            this.bt_delEmployee.Size = new System.Drawing.Size(79, 34);
+            this.bt_delEmployee.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bt_delEmployee.TabIndex = 43;
+            this.bt_delEmployee.Text = "Xóa";
+            // 
+            // bt_addEmployee
+            // 
+            this.bt_addEmployee.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_addEmployee.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_addEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_addEmployee.Image = global::Vinasun.Properties.Resources.folder_add_icon__3_;
+            this.bt_addEmployee.Location = new System.Drawing.Point(372, 385);
+            this.bt_addEmployee.Name = "bt_addEmployee";
+            this.bt_addEmployee.Size = new System.Drawing.Size(79, 34);
+            this.bt_addEmployee.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bt_addEmployee.TabIndex = 42;
+            this.bt_addEmployee.Text = "Thêm";
+            this.bt_addEmployee.Click += new System.EventHandler(this.bt_addEmployee_Click);
+            // 
+            // buttonX21
+            // 
+            this.buttonX21.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX21.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX21.Image = global::Vinasun.Properties.Resources.Start_Menu_Search_icon;
+            this.buttonX21.Location = new System.Drawing.Point(475, 7);
+            this.buttonX21.Name = "buttonX21";
+            this.buttonX21.Size = new System.Drawing.Size(79, 34);
+            this.buttonX21.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX21.TabIndex = 38;
+            this.buttonX21.Text = "Tìm";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.BackColor = System.Drawing.Color.Transparent;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Location = new System.Drawing.Point(3, 21);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(81, 20);
+            this.label56.TabIndex = 37;
+            this.label56.Text = "Tìm Kiếm";
+            // 
+            // dgv_entities
+            // 
+            this.dgv_entities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_entities.DefaultCellStyle = dataGridViewCellStyle17;
+            this.dgv_entities.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgv_entities.Location = new System.Drawing.Point(3, 63);
+            this.dgv_entities.Name = "dgv_entities";
+            this.dgv_entities.Size = new System.Drawing.Size(227, 462);
+            this.dgv_entities.TabIndex = 36;
+            // 
+            // cb_position
+            // 
+            this.cb_position.DisplayMember = "Text";
+            this.cb_position.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_position.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_position.FormattingEnabled = true;
+            this.cb_position.ItemHeight = 20;
+            this.cb_position.Location = new System.Drawing.Point(668, 237);
+            this.cb_position.Name = "cb_position";
+            this.cb_position.Size = new System.Drawing.Size(118, 26);
+            this.cb_position.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_position.TabIndex = 35;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.Transparent;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Location = new System.Drawing.Point(572, 243);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(77, 20);
+            this.label55.TabIndex = 34;
+            this.label55.Text = "Chức Vụ";
+            // 
+            // comboBoxEx11
+            // 
+            this.comboBoxEx11.DisplayMember = "Text";
+            this.comboBoxEx11.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxEx11.FormattingEnabled = true;
+            this.comboBoxEx11.ItemHeight = 20;
+            this.comboBoxEx11.Location = new System.Drawing.Point(90, 15);
+            this.comboBoxEx11.Name = "comboBoxEx11";
+            this.comboBoxEx11.Size = new System.Drawing.Size(118, 26);
+            this.comboBoxEx11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBoxEx11.TabIndex = 33;
+            // 
+            // cb_Gender
+            // 
+            this.cb_Gender.DisplayMember = "Text";
+            this.cb_Gender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Gender.FormattingEnabled = true;
+            this.cb_Gender.ItemHeight = 20;
+            this.cb_Gender.Location = new System.Drawing.Point(339, 232);
+            this.cb_Gender.Name = "cb_Gender";
+            this.cb_Gender.Size = new System.Drawing.Size(126, 26);
+            this.cb_Gender.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_Gender.TabIndex = 33;
+            // 
+            // dp_DOB
+            // 
+            // 
+            // 
+            // 
+            this.dp_DOB.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dp_DOB.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_DOB.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dp_DOB.ButtonDropDown.Visible = true;
+            this.dp_DOB.CustomFormat = "dd/MM/yy";
+            this.dp_DOB.DateTimeSelectorVisibility = DevComponents.Editors.DateTimeAdv.eDateTimeSelectorVisibility.Both;
+            this.dp_DOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dp_DOB.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
+            this.dp_DOB.IsPopupCalendarOpen = false;
+            this.dp_DOB.Location = new System.Drawing.Point(338, 290);
+            // 
+            // 
+            // 
+            this.dp_DOB.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dp_DOB.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_DOB.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dp_DOB.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_DOB.MonthCalendar.DayClickAutoClosePopup = false;
+            this.dp_DOB.MonthCalendar.DisplayMonth = new System.DateTime(2014, 4, 1, 0, 0, 0, 0);
+            this.dp_DOB.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dp_DOB.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dp_DOB.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dp_DOB.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dp_DOB.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dp_DOB.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_DOB.MonthCalendar.TodayButtonVisible = true;
+            this.dp_DOB.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dp_DOB.Name = "dp_DOB";
+            this.dp_DOB.Size = new System.Drawing.Size(127, 26);
+            this.dp_DOB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dp_DOB.TabIndex = 32;
+            this.dp_DOB.TimeSelectorTimeFormat = DevComponents.Editors.DateTimeAdv.eTimeSelectorFormat.Time24H;
+            this.dp_DOB.Click += new System.EventHandler(this.dp_DOB_Click);
+            // 
+            // textBoxX39
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX39.Border.Class = "TextBoxBorder";
+            this.textBoxX39.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX39.Location = new System.Drawing.Point(225, 15);
+            this.textBoxX39.Name = "textBoxX39";
+            this.textBoxX39.Size = new System.Drawing.Size(196, 26);
+            this.textBoxX39.TabIndex = 31;
+            // 
+            // txt_firstName
+            // 
+            // 
+            // 
+            // 
+            this.txt_firstName.Border.Class = "TextBoxBorder";
+            this.txt_firstName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_firstName.Location = new System.Drawing.Point(338, 140);
+            this.txt_firstName.Name = "txt_firstName";
+            this.txt_firstName.Size = new System.Drawing.Size(127, 26);
+            this.txt_firstName.TabIndex = 31;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.BackColor = System.Drawing.Color.Transparent;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(243, 238);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(80, 20);
+            this.label52.TabIndex = 30;
+            this.label52.Text = "Giới Tính";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.BackColor = System.Drawing.Color.Transparent;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(242, 146);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(39, 20);
+            this.label50.TabIndex = 30;
+            this.label50.Text = "Tên";
+            // 
+            // txt_address
+            // 
+            // 
+            // 
+            // 
+            this.txt_address.Border.Class = "TextBoxBorder";
+            this.txt_address.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_address.Location = new System.Drawing.Point(670, 285);
+            this.txt_address.Name = "txt_address";
+            this.txt_address.Size = new System.Drawing.Size(163, 26);
+            this.txt_address.TabIndex = 29;
+            // 
+            // txt_phoneNumber
+            // 
+            // 
+            // 
+            // 
+            this.txt_phoneNumber.Border.Class = "TextBoxBorder";
+            this.txt_phoneNumber.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_phoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_phoneNumber.Location = new System.Drawing.Point(668, 101);
+            this.txt_phoneNumber.Name = "txt_phoneNumber";
+            this.txt_phoneNumber.Size = new System.Drawing.Size(165, 26);
+            this.txt_phoneNumber.TabIndex = 29;
+            // 
+            // txt_email
+            // 
+            // 
+            // 
+            // 
+            this.txt_email.Border.Class = "TextBoxBorder";
+            this.txt_email.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_email.Location = new System.Drawing.Point(668, 191);
+            this.txt_email.Name = "txt_email";
+            this.txt_email.Size = new System.Drawing.Size(165, 26);
+            this.txt_email.TabIndex = 29;
+            // 
+            // txt_lastName
+            // 
+            // 
+            // 
+            // 
+            this.txt_lastName.Border.Class = "TextBoxBorder";
+            this.txt_lastName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_lastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_lastName.Location = new System.Drawing.Point(338, 187);
+            this.txt_lastName.Name = "txt_lastName";
+            this.txt_lastName.Size = new System.Drawing.Size(127, 26);
+            this.txt_lastName.TabIndex = 29;
+            // 
+            // txt_employeeId
+            // 
+            // 
+            // 
+            // 
+            this.txt_employeeId.Border.Class = "TextBoxBorder";
+            this.txt_employeeId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_employeeId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_employeeId.Location = new System.Drawing.Point(338, 101);
+            this.txt_employeeId.Name = "txt_employeeId";
+            this.txt_employeeId.Size = new System.Drawing.Size(127, 26);
+            this.txt_employeeId.TabIndex = 29;
+            this.txt_employeeId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.employeeId_keyPress);
+            this.txt_employeeId.Validating += new System.ComponentModel.CancelEventHandler(this.txt_employeeIdValidattion);
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.Color.Transparent;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(242, 296);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(90, 20);
+            this.label51.TabIndex = 28;
+            this.label51.Text = "Ngày Sinh";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.BackColor = System.Drawing.Color.Transparent;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(574, 291);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(67, 20);
+            this.label61.TabIndex = 28;
+            this.label61.Text = "Địa Chỉ";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(572, 107);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(74, 20);
+            this.label54.TabIndex = 28;
+            this.label54.Text = "Di Động";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.BackColor = System.Drawing.Color.Transparent;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(572, 197);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(53, 20);
+            this.label53.TabIndex = 28;
+            this.label53.Text = "Email";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.BackColor = System.Drawing.Color.Transparent;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Location = new System.Drawing.Point(242, 193);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(32, 20);
+            this.label57.TabIndex = 28;
+            this.label57.Text = "Họ";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.BackColor = System.Drawing.Color.Transparent;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(242, 107);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(62, 20);
+            this.label49.TabIndex = 28;
+            this.label49.Text = "Mã NV";
+            // 
+            // superTabItem13
+            // 
+            this.superTabItem13.AttachedControl = this.superTabControlPanel13;
+            this.superTabItem13.GlobalItem = false;
+            this.superTabItem13.Name = "superTabItem13";
+            this.superTabItem13.Text = "Nhân Viên";
             // 
             // superTabControlPanel14
             // 
@@ -738,425 +1118,6 @@
             this.superTabItem14.GlobalItem = false;
             this.superTabItem14.Name = "superTabItem14";
             this.superTabItem14.Text = "Xe Taxi";
-            // 
-            // superTabControlPanel13
-            // 
-            this.superTabControlPanel13.Controls.Add(this.cb_checkerGroup);
-            this.superTabControlPanel13.Controls.Add(this.label64);
-            this.superTabControlPanel13.Controls.Add(this.bt_delEmployee);
-            this.superTabControlPanel13.Controls.Add(this.bt_addEmployee);
-            this.superTabControlPanel13.Controls.Add(this.buttonX21);
-            this.superTabControlPanel13.Controls.Add(this.label56);
-            this.superTabControlPanel13.Controls.Add(this.dataGridViewX12);
-            this.superTabControlPanel13.Controls.Add(this.cb_position);
-            this.superTabControlPanel13.Controls.Add(this.label55);
-            this.superTabControlPanel13.Controls.Add(this.comboBoxEx11);
-            this.superTabControlPanel13.Controls.Add(this.cb_Gender);
-            this.superTabControlPanel13.Controls.Add(this.dp_DOB);
-            this.superTabControlPanel13.Controls.Add(this.textBoxX39);
-            this.superTabControlPanel13.Controls.Add(this.txt_firstName);
-            this.superTabControlPanel13.Controls.Add(this.label52);
-            this.superTabControlPanel13.Controls.Add(this.label50);
-            this.superTabControlPanel13.Controls.Add(this.txt_address);
-            this.superTabControlPanel13.Controls.Add(this.txt_phoneNumber);
-            this.superTabControlPanel13.Controls.Add(this.txt_email);
-            this.superTabControlPanel13.Controls.Add(this.txt_lastName);
-            this.superTabControlPanel13.Controls.Add(this.txt_employeeId);
-            this.superTabControlPanel13.Controls.Add(this.label51);
-            this.superTabControlPanel13.Controls.Add(this.label61);
-            this.superTabControlPanel13.Controls.Add(this.label54);
-            this.superTabControlPanel13.Controls.Add(this.label53);
-            this.superTabControlPanel13.Controls.Add(this.label57);
-            this.superTabControlPanel13.Controls.Add(this.label49);
-            this.superTabControlPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel13.Location = new System.Drawing.Point(0, 27);
-            this.superTabControlPanel13.Name = "superTabControlPanel13";
-            this.superTabControlPanel13.Size = new System.Drawing.Size(907, 526);
-            this.superTabControlPanel13.TabIndex = 1;
-            this.superTabControlPanel13.TabItem = this.superTabItem13;
-            this.superTabControlPanel13.Click += new System.EventHandler(this.superTabControlPanel13_Click);
-            // 
-            // cb_checkerGroup
-            // 
-            this.cb_checkerGroup.DisplayMember = "Text";
-            this.cb_checkerGroup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_checkerGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_checkerGroup.FormattingEnabled = true;
-            this.cb_checkerGroup.ItemHeight = 20;
-            this.cb_checkerGroup.Location = new System.Drawing.Point(341, 333);
-            this.cb_checkerGroup.Name = "cb_checkerGroup";
-            this.cb_checkerGroup.Size = new System.Drawing.Size(118, 26);
-            this.cb_checkerGroup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cb_checkerGroup.TabIndex = 45;
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.BackColor = System.Drawing.Color.Transparent;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(240, 339);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(100, 20);
-            this.label64.TabIndex = 44;
-            this.label64.Text = "Tổ Checker";
-            // 
-            // bt_delEmployee
-            // 
-            this.bt_delEmployee.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_delEmployee.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_delEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_delEmployee.Image = global::Vinasun.Properties.Resources.Error_icon1;
-            this.bt_delEmployee.Location = new System.Drawing.Point(515, 385);
-            this.bt_delEmployee.Name = "bt_delEmployee";
-            this.bt_delEmployee.Size = new System.Drawing.Size(79, 34);
-            this.bt_delEmployee.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bt_delEmployee.TabIndex = 43;
-            this.bt_delEmployee.Text = "Xóa";
-            // 
-            // bt_addEmployee
-            // 
-            this.bt_addEmployee.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_addEmployee.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_addEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_addEmployee.Image = global::Vinasun.Properties.Resources.folder_add_icon__3_;
-            this.bt_addEmployee.Location = new System.Drawing.Point(372, 385);
-            this.bt_addEmployee.Name = "bt_addEmployee";
-            this.bt_addEmployee.Size = new System.Drawing.Size(79, 34);
-            this.bt_addEmployee.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bt_addEmployee.TabIndex = 42;
-            this.bt_addEmployee.Text = "Thêm";
-            this.bt_addEmployee.Click += new System.EventHandler(this.bt_addEmployee_Click);
-            // 
-            // buttonX21
-            // 
-            this.buttonX21.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX21.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX21.Image = global::Vinasun.Properties.Resources.Start_Menu_Search_icon;
-            this.buttonX21.Location = new System.Drawing.Point(475, 7);
-            this.buttonX21.Name = "buttonX21";
-            this.buttonX21.Size = new System.Drawing.Size(79, 34);
-            this.buttonX21.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX21.TabIndex = 38;
-            this.buttonX21.Text = "Tìm";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.BackColor = System.Drawing.Color.Transparent;
-            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.Location = new System.Drawing.Point(3, 21);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(81, 20);
-            this.label56.TabIndex = 37;
-            this.label56.Text = "Tìm Kiếm";
-            // 
-            // dataGridViewX12
-            // 
-            this.dataGridViewX12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX12.DefaultCellStyle = dataGridViewCellStyle17;
-            this.dataGridViewX12.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX12.Location = new System.Drawing.Point(3, 63);
-            this.dataGridViewX12.Name = "dataGridViewX12";
-            this.dataGridViewX12.Size = new System.Drawing.Size(227, 462);
-            this.dataGridViewX12.TabIndex = 36;
-            // 
-            // cb_position
-            // 
-            this.cb_position.DisplayMember = "Text";
-            this.cb_position.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_position.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_position.FormattingEnabled = true;
-            this.cb_position.ItemHeight = 20;
-            this.cb_position.Location = new System.Drawing.Point(668, 237);
-            this.cb_position.Name = "cb_position";
-            this.cb_position.Size = new System.Drawing.Size(118, 26);
-            this.cb_position.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cb_position.TabIndex = 35;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.BackColor = System.Drawing.Color.Transparent;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(572, 243);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(77, 20);
-            this.label55.TabIndex = 34;
-            this.label55.Text = "Chức Vụ";
-            // 
-            // comboBoxEx11
-            // 
-            this.comboBoxEx11.DisplayMember = "Text";
-            this.comboBoxEx11.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEx11.FormattingEnabled = true;
-            this.comboBoxEx11.ItemHeight = 20;
-            this.comboBoxEx11.Location = new System.Drawing.Point(90, 15);
-            this.comboBoxEx11.Name = "comboBoxEx11";
-            this.comboBoxEx11.Size = new System.Drawing.Size(118, 26);
-            this.comboBoxEx11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx11.TabIndex = 33;
-            // 
-            // cb_Gender
-            // 
-            this.cb_Gender.DisplayMember = "Text";
-            this.cb_Gender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Gender.FormattingEnabled = true;
-            this.cb_Gender.ItemHeight = 20;
-            this.cb_Gender.Location = new System.Drawing.Point(668, 145);
-            this.cb_Gender.Name = "cb_Gender";
-            this.cb_Gender.Size = new System.Drawing.Size(118, 26);
-            this.cb_Gender.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cb_Gender.TabIndex = 33;
-            // 
-            // dp_DOB
-            // 
-            // 
-            // 
-            // 
-            this.dp_DOB.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dp_DOB.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_DOB.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dp_DOB.ButtonDropDown.Visible = true;
-            this.dp_DOB.CustomFormat = "dd/MM/yy";
-            this.dp_DOB.DateTimeSelectorVisibility = DevComponents.Editors.DateTimeAdv.eDateTimeSelectorVisibility.Both;
-            this.dp_DOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dp_DOB.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
-            this.dp_DOB.IsPopupCalendarOpen = false;
-            this.dp_DOB.Location = new System.Drawing.Point(338, 191);
-            // 
-            // 
-            // 
-            this.dp_DOB.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dp_DOB.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_DOB.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dp_DOB.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dp_DOB.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_DOB.MonthCalendar.DayClickAutoClosePopup = false;
-            this.dp_DOB.MonthCalendar.DisplayMonth = new System.DateTime(2014, 4, 1, 0, 0, 0, 0);
-            this.dp_DOB.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.dp_DOB.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dp_DOB.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dp_DOB.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dp_DOB.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dp_DOB.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_DOB.MonthCalendar.TodayButtonVisible = true;
-            this.dp_DOB.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.dp_DOB.Name = "dp_DOB";
-            this.dp_DOB.Size = new System.Drawing.Size(173, 26);
-            this.dp_DOB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dp_DOB.TabIndex = 32;
-            this.dp_DOB.TimeSelectorTimeFormat = DevComponents.Editors.DateTimeAdv.eTimeSelectorFormat.Time24H;
-            // 
-            // textBoxX39
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX39.Border.Class = "TextBoxBorder";
-            this.textBoxX39.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX39.Location = new System.Drawing.Point(225, 15);
-            this.textBoxX39.Name = "textBoxX39";
-            this.textBoxX39.Size = new System.Drawing.Size(196, 26);
-            this.textBoxX39.TabIndex = 31;
-            // 
-            // txt_firstName
-            // 
-            // 
-            // 
-            // 
-            this.txt_firstName.Border.Class = "TextBoxBorder";
-            this.txt_firstName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_firstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_firstName.Location = new System.Drawing.Point(668, 101);
-            this.txt_firstName.Name = "txt_firstName";
-            this.txt_firstName.Size = new System.Drawing.Size(196, 26);
-            this.txt_firstName.TabIndex = 31;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.BackColor = System.Drawing.Color.Transparent;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(572, 151);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(80, 20);
-            this.label52.TabIndex = 30;
-            this.label52.Text = "Giới Tính";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.BackColor = System.Drawing.Color.Transparent;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(572, 107);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(39, 20);
-            this.label50.TabIndex = 30;
-            this.label50.Text = "Tên";
-            // 
-            // txt_address
-            // 
-            // 
-            // 
-            // 
-            this.txt_address.Border.Class = "TextBoxBorder";
-            this.txt_address.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_address.Location = new System.Drawing.Point(339, 285);
-            this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(286, 26);
-            this.txt_address.TabIndex = 29;
-            // 
-            // txt_phoneNumber
-            // 
-            // 
-            // 
-            // 
-            this.txt_phoneNumber.Border.Class = "TextBoxBorder";
-            this.txt_phoneNumber.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_phoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_phoneNumber.Location = new System.Drawing.Point(338, 237);
-            this.txt_phoneNumber.Name = "txt_phoneNumber";
-            this.txt_phoneNumber.Size = new System.Drawing.Size(165, 26);
-            this.txt_phoneNumber.TabIndex = 29;
-            // 
-            // txt_email
-            // 
-            // 
-            // 
-            // 
-            this.txt_email.Border.Class = "TextBoxBorder";
-            this.txt_email.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_email.Location = new System.Drawing.Point(668, 191);
-            this.txt_email.Name = "txt_email";
-            this.txt_email.Size = new System.Drawing.Size(165, 26);
-            this.txt_email.TabIndex = 29;
-            // 
-            // txt_lastName
-            // 
-            // 
-            // 
-            // 
-            this.txt_lastName.Border.Class = "TextBoxBorder";
-            this.txt_lastName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_lastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_lastName.Location = new System.Drawing.Point(338, 145);
-            this.txt_lastName.Name = "txt_lastName";
-            this.txt_lastName.Size = new System.Drawing.Size(165, 26);
-            this.txt_lastName.TabIndex = 29;
-            // 
-            // txt_employeeId
-            // 
-            // 
-            // 
-            // 
-            this.txt_employeeId.Border.Class = "TextBoxBorder";
-            this.txt_employeeId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_employeeId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_employeeId.Location = new System.Drawing.Point(338, 101);
-            this.txt_employeeId.Name = "txt_employeeId";
-            this.txt_employeeId.Size = new System.Drawing.Size(127, 26);
-            this.txt_employeeId.TabIndex = 29;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.BackColor = System.Drawing.Color.Transparent;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(242, 197);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(90, 20);
-            this.label51.TabIndex = 28;
-            this.label51.Text = "Ngày Sinh";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.BackColor = System.Drawing.Color.Transparent;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(243, 291);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(67, 20);
-            this.label61.TabIndex = 28;
-            this.label61.Text = "Địa Chỉ";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.BackColor = System.Drawing.Color.Transparent;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(242, 243);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(74, 20);
-            this.label54.TabIndex = 28;
-            this.label54.Text = "Di Động";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.BackColor = System.Drawing.Color.Transparent;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(572, 197);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(53, 20);
-            this.label53.TabIndex = 28;
-            this.label53.Text = "Email";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.BackColor = System.Drawing.Color.Transparent;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(242, 151);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(32, 20);
-            this.label57.TabIndex = 28;
-            this.label57.Text = "Họ";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.BackColor = System.Drawing.Color.Transparent;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(242, 107);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(62, 20);
-            this.label49.TabIndex = 28;
-            this.label49.Text = "Mã NV";
-            // 
-            // superTabItem13
-            // 
-            this.superTabItem13.AttachedControl = this.superTabControlPanel13;
-            this.superTabItem13.GlobalItem = false;
-            this.superTabItem13.Name = "superTabItem13";
-            this.superTabItem13.Text = "Nhân Viên";
             // 
             // groupPanel7
             // 
@@ -1518,9 +1479,9 @@
             this.superTabControlPanel9.Controls.Add(this.label35);
             this.superTabControlPanel9.Controls.Add(this.label26);
             this.superTabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel9.Location = new System.Drawing.Point(0, 27);
+            this.superTabControlPanel9.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel9.Name = "superTabControlPanel9";
-            this.superTabControlPanel9.Size = new System.Drawing.Size(417, 526);
+            this.superTabControlPanel9.Size = new System.Drawing.Size(417, 553);
             this.superTabControlPanel9.TabIndex = 0;
             this.superTabControlPanel9.TabItem = this.superTabItem9;
             // 
@@ -2171,6 +2132,50 @@
             this.superTabItem3.Name = "superTabItem3";
             this.superTabItem3.Text = "superTabItem3";
             // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Controls.Add(this.buttonX1);
+            this.superTabControlPanel1.Controls.Add(this.textBoxX1);
+            this.superTabControlPanel1.Controls.Add(this.collectionDataGridView);
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(1362, 619);
+            this.superTabControlPanel1.TabIndex = 1;
+            this.superTabControlPanel1.TabItem = this.superTabItem1;
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(103, 328);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(75, 23);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 2;
+            this.buttonX1.Text = "buttonX1";
+            // 
+            // textBoxX1
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX1.Border.Class = "TextBoxBorder";
+            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX1.Location = new System.Drawing.Point(87, 260);
+            this.textBoxX1.Name = "textBoxX1";
+            this.textBoxX1.Size = new System.Drawing.Size(143, 20);
+            this.textBoxX1.TabIndex = 1;
+            this.textBoxX1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX1_KeyPress);
+            this.textBoxX1.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxX1_Validating);
+            // 
+            // superTabItem1
+            // 
+            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
+            this.superTabItem1.GlobalItem = false;
+            this.superTabItem1.Name = "superTabItem1";
+            this.superTabItem1.Text = "superTabItem1";
+            // 
             // superTabControlPanel2
             // 
             this.superTabControlPanel2.Controls.Add(this.superTabControl2);
@@ -2182,9 +2187,9 @@
             this.superTabControlPanel2.Controls.Add(this.label38);
             this.superTabControlPanel2.Controls.Add(this.label39);
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 25);
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
             this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(1362, 619);
+            this.superTabControlPanel2.Size = new System.Drawing.Size(1362, 644);
             this.superTabControlPanel2.TabIndex = 0;
             this.superTabControlPanel2.TabItem = this.superTabItem2;
             // 
@@ -3905,6 +3910,10 @@
             this.bubbleButton6.ImageLarge = ((System.Drawing.Image)(resources.GetObject("bubbleButton6.ImageLarge")));
             this.bubbleButton6.Name = "bubbleButton6";
             // 
+            // errorProvider_EmployeeId
+            // 
+            this.errorProvider_EmployeeId.ContainerControl = this;
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -3916,18 +3925,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
-            this.superTabControlPanel1.ResumeLayout(false);
             this.superTabControlPanel3.ResumeLayout(false);
             this.groupPanel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl4)).EndInit();
             this.superTabControl4.ResumeLayout(false);
+            this.superTabControlPanel13.ResumeLayout(false);
+            this.superTabControlPanel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_entities)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dp_DOB)).EndInit();
             this.superTabControlPanel14.ResumeLayout(false);
             this.superTabControlPanel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX13)).EndInit();
-            this.superTabControlPanel13.ResumeLayout(false);
-            this.superTabControlPanel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dp_DOB)).EndInit();
             this.groupPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).EndInit();
             this.superTabControl3.ResumeLayout(false);
@@ -3953,6 +3961,7 @@
             this.superTabControlPanel11.ResumeLayout(false);
             this.superTabControlPanel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX9)).EndInit();
+            this.superTabControlPanel1.ResumeLayout(false);
             this.superTabControlPanel2.ResumeLayout(false);
             this.superTabControlPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl2)).EndInit();
@@ -3984,6 +3993,7 @@
             this.groupPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bubbleBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_EmployeeId)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4191,7 +4201,7 @@
         private System.Windows.Forms.Label label53;
         private DevComponents.DotNetBar.ButtonX buttonX21;
         private System.Windows.Forms.Label label56;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX12;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgv_entities;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cb_position;
         private System.Windows.Forms.Label label55;
         private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx11;
@@ -4226,6 +4236,7 @@
         private System.Windows.Forms.Label label64;
         private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx15;
         private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.ErrorProvider errorProvider_EmployeeId;
 
 
     }

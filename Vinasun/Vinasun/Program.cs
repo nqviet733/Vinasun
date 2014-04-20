@@ -20,7 +20,7 @@ namespace Vinasun
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
-
+            
             //GroupDTO gm = new GroupDTOImpl();
             //EntityDTO em = new EntityDTOImpl();
             //TaxiDTO tm = new TaxiDTOImpl();
@@ -36,7 +36,7 @@ namespace Vinasun
             //ProvineIncomeDTO pim = new ProvineIncomeDTOImpl();
             //TripCheckDTO tcm = new TripCheckDTOImpl();
             //SubtractionIncomeDTO sim = new SubtractionIncomeDTOImpl();
-            //var con = new EntityDiagramContainer();
+            var con = new EntityDiagramContainer();
 
             //====Group
             //Group g = new Group();

@@ -58,6 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonClass\EventHandler.cs" />
+    <Compile Include="CommonClass\Validation.cs" />
     <Compile Include="DTO\BranchDTOImpl.cs" />
     <Compile Include="DTO\BranchDTO.cs" />
     <Compile Include="DTO\DriverDTO.cs" />
