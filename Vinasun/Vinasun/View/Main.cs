@@ -23,6 +23,8 @@ namespace Vinasun.View
          ToolTip txt_empIdToolTip;
          ToolTip txt_empFirstNameToolTip;
          ToolTip txt_empLastNameToolTip;
+         ToolTip txt_empPhoneNumberToolTip;
+         ToolTip txt_empEmailToolTip;
 
         public Main()
         {
@@ -179,6 +181,7 @@ namespace Vinasun.View
             txt_empLastNameToolTip.Dispose();
         }
 
+        //EventHandler for dateof birth
         private void dtp_dateOfBirthValidator(object sender, CancelEventArgs e)
         {
             
@@ -187,6 +190,40 @@ namespace Vinasun.View
         private void dtp_dateOfBirthLeave(object sender, EventArgs e)
         {
             //validation.isValidDOB(sender, errorProvider, "");
+        }
+
+        //EventHandler for phone nụmber
+        private void txt_phoneNumberFocus(object sender, EventArgs e)
+        {
+            txt_empPhoneNumberToolTip = new ToolTip();
+            txt_empPhoneNumberToolTip.Show("Số Điện Thoại Nhân Viên Bao Gồm Sõ Và Khoảng Trắng", txt_phoneNumber);
+        }
+
+        private void txt_phoneNumberKeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.numberOnly(sender, e);
+        }
+
+        private void txt_phoneNumberLeave(object sender, EventArgs e)
+        {
+            txt_empPhoneNumberToolTip.Dispose();
+        }
+
+        //EventHandler for email
+        private void txt_emailFocus(object sender, EventArgs e)
+        {
+            txt_empEmailToolTip = new ToolTip();
+            txt_empEmailToolTip.Show("Địa Chỉ Email Của Nhân Viên", txt_email);
+        }
+
+        private void txt_emailLeave(object sender, EventArgs e)
+        {
+            txt_empEmailToolTip.Dispose();
+        }
+
+        private void txt_emailValidator(object sender, CancelEventArgs e)
+        {
+            validation.isEmailValidator(sender, errorProvider,"");
         }
 
     }

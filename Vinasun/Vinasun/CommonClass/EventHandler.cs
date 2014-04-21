@@ -33,7 +33,7 @@ namespace Vinasun.CommonClass
             if (o is TextBox)
             {
                 TextBox tb = o as TextBox;
-                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ' ')
                 {
                     e.Handled = true;
                 }
