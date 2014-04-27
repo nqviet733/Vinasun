@@ -166,6 +166,12 @@
     <Compile Include="EntityClass\UserRole.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\AddListEntities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddListEntities.Designer.cs">
+      <DependentUpon>AddListEntities.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\AddListEntities.resx">
+      <DependentUpon>AddListEntities.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +198,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EntityDiagram.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
     <None Include="EntityClass\EntityDiagram.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EntityDiagram.Context.cs</LastGenOutput>

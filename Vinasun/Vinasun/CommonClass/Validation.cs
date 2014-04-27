@@ -40,7 +40,8 @@ namespace Vinasun.CommonClass
             if (o is DateTimeInput)
             {
                 DateTimeInput dtp = o as DateTimeInput;
-                if (getAge(dtp.Value) < 16 && dtp.Value != null)
+                DateTime dateTimeDefault = new DateTime(0);
+                if (getAge(dtp.Value) < 16 || !System.DateTime.Equals(dtp.Value, dateTimeDefault))
                 {
                     errorProvider.SetError(dtp, "Vui Lòng Nhập Năm Sinh Nhân Viên Trên 16 Tuổi" + errorString);
                     status = false;
@@ -71,7 +72,7 @@ namespace Vinasun.CommonClass
             if (o1 is RadioButton && o2 is RadioButton)
             {
                 RadioButton cb1 = o1 as RadioButton;
-                RadioButton cb2 = o1 as RadioButton;
+                RadioButton cb2 = o2 as RadioButton;
                 if (!cb1.Checked && !cb2.Checked)
                 {
                     errorProvider.SetError(cb1, "Vui Lòng Chọn " + errorString);

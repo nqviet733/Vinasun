@@ -16,6 +16,7 @@ namespace Vinasun.Model
         {
             EntityDTO entityDTO = new EntityDTOImpl();
             IList<Entity> entities = entityDTO.retrieveAllEntities(entitiesContainer);
+            dgv.DataSource = null;
             dgv.DataSource = entities;
             dgv.Columns["id"].HeaderText = "ID";
             dgv.Columns["firstName"].HeaderText = "Tên";

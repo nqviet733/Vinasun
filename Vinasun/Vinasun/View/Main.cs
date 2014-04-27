@@ -26,6 +26,7 @@ namespace Vinasun.View
          ToolTip txt_empPhoneNumberToolTip;
          ToolTip txt_empEmailToolTip;
          private bool statusEmpId;
+         Employee employee;
 
          public bool StatusEmpId
          {
@@ -86,7 +87,7 @@ namespace Vinasun.View
             validation = new Validation();
             eventHandler = new Vinasun.CommonClass.EventHandler();
 
-            Employee employee = new Employee();
+            employee = new Employee();
             employee.showDGV(dgv_entities, entitiesContainer);
 
             this.StatusEmpId = false;
@@ -154,6 +155,8 @@ namespace Vinasun.View
 
         private void bt_addEmployee_Click(object sender, EventArgs e)
         {
+            AddListEntities entitiesForm = new AddListEntities();
+            entitiesForm.Show();
             if (!StatusEmpId)
             {
                 //MessageBox.Show("Vui Lòng Nhập Mã Nhân Viên", "WARNING", 
@@ -184,19 +187,25 @@ namespace Vinasun.View
                 entity.entityNo = txt_employeeId.Text;
                 entity.firstname = txt_firstName.Text;
                 entity.lastname = txt_lastName.Text;
-                entity.birthday = dp_empDOB.Value;
+                entity.gender = rb_empNam.Checked ? true : false;
+                if (!System.DateTime.Equals(dp_empDOB.Value, new DateTime(0)))
+                {
+                    entity.birthday =  dp_empDOB.Value;
+                }
+
                 entity.email = txt_email.Text;
                 entity.businessPhone = txt_phoneNumber.Text;
                 EntityDTO entityDTO = new EntityDTOImpl();
                 int signal = entityDTO.addEntity(entitiesContainer, entity);
-                //if (signal == 1)
-                //{
-                //    MessageBox.Show("Thêm Nhân Viên Mới Thành Công");
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Mới Nhân Viên", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //}
+                if (signal == 1)
+                {
+                    MessageBox.Show("Thêm Nhân Viên Mới Thành Công");
+                    employee.showDGV(dgv_entities, entitiesContainer);
+                }
+                else
+                {
+                    MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Mới Nhân Viên", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -207,7 +216,8 @@ namespace Vinasun.View
 
         private void txt_empIdKeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.characterOnly(sender, e);
+            eventHandler.characterOrDigitOnly(sender, e);
+
         }
 
         private void txt_empIdFocus(object sender, EventArgs e)
@@ -252,7 +262,7 @@ namespace Vinasun.View
 
         private void txt_empLastNameKeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.characterOnly(sender, e);
+            eventHandler.characterOrSpaceOnly(sender, e);
         }
 
         private void txt_empLastNameValidatior(object sender, CancelEventArgs e)
@@ -285,7 +295,7 @@ namespace Vinasun.View
 
         private void txt_phoneNumberKeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.numberOnly(sender, e);
+            eventHandler.digitOrSpaceOnly(sender, e);
         }
 
         private void txt_phoneNumberLeave(object sender, EventArgs e)
