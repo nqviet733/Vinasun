@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
+using DevComponents.Editors.DateTimeAdv;
 
 namespace Vinasun.CommonClass
 {
@@ -22,7 +23,6 @@ namespace Vinasun.CommonClass
                 if (String.IsNullOrEmpty(tb.Text))
                 {
                     errorProvider.SetError(tb, "Vui Lòng Nhập " + errorString);
-                    //tb.Focus();
                     status = false;
                 }
                 else
@@ -37,13 +37,12 @@ namespace Vinasun.CommonClass
         public bool isValidDOB(Object o, ErrorProvider errorProvider, String errorString)
         {
             bool status = true;
-            if (o is DateTimePicker)
+            if (o is DateTimeInput)
             {
-                DateTimePicker dtp = o as DateTimePicker;
+                DateTimeInput dtp = o as DateTimeInput;
                 if (getAge(dtp.Value) < 16 && dtp.Value != null)
                 {
                     errorProvider.SetError(dtp, "Vui Lòng Nhập Năm Sinh Nhân Viên Trên 16 Tuổi" + errorString);
-                    //tb.Focus();
                     status = false;
                 }
                 else
@@ -65,6 +64,27 @@ namespace Vinasun.CommonClass
             return age;
         }
 
+        //Validation for gender
+        public bool isGenderNotEmpty(Object o1, Object o2, ErrorProvider errorProvider, String errorString)
+        {
+            bool status = true;
+            if (o1 is RadioButton && o2 is RadioButton)
+            {
+                RadioButton cb1 = o1 as RadioButton;
+                RadioButton cb2 = o1 as RadioButton;
+                if (!cb1.Checked && !cb2.Checked)
+                {
+                    errorProvider.SetError(cb1, "Vui Lòng Chọn " + errorString);
+                    status = false;
+                }
+                else
+                {
+                    errorProvider.SetError(cb2, "");
+                }
+            }
+            return status;
+        }
+
         //Validation for email
         public bool isEmailValidator(Object o, ErrorProvider errorProvider, String errorString)
         {
@@ -74,10 +94,9 @@ namespace Vinasun.CommonClass
             {
                 TextBox tb = o as TextBox;
                 status = ValidEmailRegex.IsMatch(tb.Text);
-                if (false.Equals(status))
+                if (false.Equals(status) && !String.IsNullOrEmpty(tb.Text))
                 {
                     errorProvider.SetError(tb, "Vui Lòng Nhập Đúng Địa Chỉ Email" + errorString);
-                    //tb.Focus();
                     status = false;
                 }
                 else

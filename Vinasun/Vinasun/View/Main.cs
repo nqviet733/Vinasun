@@ -25,6 +25,58 @@ namespace Vinasun.View
          ToolTip txt_empLastNameToolTip;
          ToolTip txt_empPhoneNumberToolTip;
          ToolTip txt_empEmailToolTip;
+         private bool statusEmpId;
+
+         public bool StatusEmpId
+         {
+             get { return statusEmpId; }
+             set { statusEmpId = value; }
+         }
+         private bool statusEmpFirtName;
+
+         public bool StatusEmpFirtName
+         {
+             get { return statusEmpFirtName; }
+             set { statusEmpFirtName = value; }
+         }
+         private bool statusEmpLastName;
+
+         public bool StatusEmpLastName
+         {
+             get { return statusEmpLastName; }
+             set { statusEmpLastName = value; }
+         }
+         private bool statusEmpDOB;
+
+         public bool StatusEmpDOB
+         {
+             get { return statusEmpDOB; }
+             set { statusEmpDOB = value; }
+         }
+
+         private bool statusGender;
+
+         public bool StatusEmpGender
+         {
+             get { return statusGender; }
+             set { statusGender = value; }
+         }
+
+         private bool statusEmpEmail;
+
+         public bool StatusEmpEmail
+         {
+             get { return statusEmpEmail; }
+             set { statusEmpEmail = value; }
+         }
+
+         private bool statusEmpPhone;
+
+         public bool StatusEmpPhone
+         {
+             get { return statusEmpPhone; }
+             set { statusEmpPhone = value; }
+         }
 
         public Main()
         {
@@ -36,6 +88,14 @@ namespace Vinasun.View
 
             Employee employee = new Employee();
             employee.showDGV(dgv_entities, entitiesContainer);
+
+            this.StatusEmpId = false;
+            this.StatusEmpFirtName = false;
+            this.StatusEmpLastName = false;
+            this.StatusEmpDOB = true;
+            this.StatusEmpEmail = true;
+            this.StatusEmpPhone = true;
+            this.statusGender = false;
         }
 
         private void textBoxX1_KeyPress(object sender, KeyPressEventArgs e)
@@ -94,31 +154,55 @@ namespace Vinasun.View
 
         private void bt_addEmployee_Click(object sender, EventArgs e)
         {
-            Entity entity = new Entity();
-            entity.entityNo = txt_employeeId.Text;
-            entity.firstname = txt_firstName.Text;
-            entity.lastname = txt_lastName.Text;
-            entity.birthday = dp_DOB.Value;
-            entity.email = txt_email.Text;
-            entity.businessPhone = txt_phoneNumber.Text;
-            EntityDTO entityDTO = new EntityDTOImpl();
-            int signal = entityDTO.addEntity(entitiesContainer, entity);
-            if (signal == 1)
+            if (!StatusEmpId)
             {
-                MessageBox.Show("Thêm Nhân Viên Mới Thành Công");
+                //MessageBox.Show("Vui Lòng Nhập Mã Nhân Viên", "WARNING", 
+                //                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_employeeId.Focus();
             }
-            else
+            if (!StatusEmpFirtName)
             {
-                MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Mới Nhân Viên", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txt_firstName.Focus();
             }
-
+            if (!StatusEmpLastName)
+            {
+                txt_lastName.Focus();
+            }
+            StatusEmpDOB = validation.isValidDOB(dp_empDOB, errorProvider, "");
+            if (!StatusEmpDOB)
+            {
+                dp_empDOB.Focus();
+            }
+            StatusEmpGender = validation.isGenderNotEmpty(rb_empNam, rb_empNu, errorProvider, "Giới Tính");
+            if (!StatusEmpGender)
+            {
+                //rb_empNu.Focus();
+            }
+            if (StatusEmpId && StatusEmpFirtName && StatusEmpLastName && StatusEmpGender && StatusEmpDOB && StatusEmpEmail && StatusEmpPhone)
+            {
+                Entity entity = new Entity();
+                entity.entityNo = txt_employeeId.Text;
+                entity.firstname = txt_firstName.Text;
+                entity.lastname = txt_lastName.Text;
+                entity.birthday = dp_empDOB.Value;
+                entity.email = txt_email.Text;
+                entity.businessPhone = txt_phoneNumber.Text;
+                EntityDTO entityDTO = new EntityDTOImpl();
+                int signal = entityDTO.addEntity(entitiesContainer, entity);
+                //if (signal == 1)
+                //{
+                //    MessageBox.Show("Thêm Nhân Viên Mới Thành Công");
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Mới Nhân Viên", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
+            }
         }
-
-        //Event Handler for Employee ID
 
         private void txt_empIdValidattion(object sender, CancelEventArgs e)
         {
-            validation.isNotNullOrEmpty(sender, errorProvider, "Mã Nhân Niên");
+            StatusEmpId = validation.isNotNullOrEmpty(sender, errorProvider, "Mã Nhân Niên");
         }
 
         private void txt_empIdKeyPress(object sender, KeyPressEventArgs e)
@@ -151,7 +235,7 @@ namespace Vinasun.View
 
         private void txt_empFirstNameValidatior(object sender, CancelEventArgs e)
         {
-            validation.isNotNullOrEmpty(sender, errorProvider, "Tên Nhân Niên");
+            StatusEmpFirtName = validation.isNotNullOrEmpty(sender, errorProvider, "Tên Nhân Niên");
         }
 
         private void txt_empFirstNameLeave(object sender, EventArgs e)
@@ -173,7 +257,7 @@ namespace Vinasun.View
 
         private void txt_empLastNameValidatior(object sender, CancelEventArgs e)
         {
-            validation.isNotNullOrEmpty(sender, errorProvider, "Họ Nhân Niên");
+            StatusEmpLastName = validation.isNotNullOrEmpty(sender, errorProvider, "Họ Nhân Niên");
         }
 
         private void txt_empLastNameLeave(object sender, EventArgs e)
@@ -223,7 +307,7 @@ namespace Vinasun.View
 
         private void txt_emailValidator(object sender, CancelEventArgs e)
         {
-            validation.isEmailValidator(sender, errorProvider,"");
+            StatusEmpEmail = validation.isEmailValidator(sender, errorProvider, "");
         }
 
     }
