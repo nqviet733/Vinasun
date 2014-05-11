@@ -39,7 +39,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.dataGridViewAddListEntities = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,14 +51,14 @@
             this.Position = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProviderAddEntities = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddListEntities)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddEntities)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridViewX1
+            // dataGridViewAddListEntities
             // 
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewX1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewAddListEntities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAddListEntities.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.firstName,
             this.lastName,
@@ -76,13 +76,19 @@
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.Size = new System.Drawing.Size(1153, 327);
-            this.dataGridViewX1.TabIndex = 0;
-            this.dataGridViewX1.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.cellValidatingEvent);
+            this.dataGridViewAddListEntities.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewAddListEntities.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dataGridViewAddListEntities.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewAddListEntities.Name = "dataGridViewAddListEntities";
+            this.dataGridViewAddListEntities.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewAddListEntities.Size = new System.Drawing.Size(1153, 327);
+            this.dataGridViewAddListEntities.TabIndex = 0;
+            this.dataGridViewAddListEntities.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellValidatedEvent);
+            this.dataGridViewAddListEntities.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.cellValidatingEvent);
+            this.dataGridViewAddListEntities.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.columnAddedEvent);
+            this.dataGridViewAddListEntities.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAddListEntities_RowLeave);
+            this.dataGridViewAddListEntities.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvAddListEntities_RowsAdded);
+            this.dataGridViewAddListEntities.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridViewAddListEntities_RowValidating);
             // 
             // id
             // 
@@ -199,11 +205,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 412);
-            this.Controls.Add(this.dataGridViewX1);
+            this.Controls.Add(this.dataGridViewAddListEntities);
             this.Name = "AddListEntities";
             this.Text = "AddListEntities";
-            this.TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddListEntities)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddEntities)).EndInit();
             this.ResumeLayout(false);
 
@@ -211,7 +216,7 @@
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewAddListEntities;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastName;

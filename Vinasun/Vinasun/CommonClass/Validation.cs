@@ -33,6 +33,47 @@ namespace Vinasun.CommonClass
             return status;
         }
 
+        //Prevent null or empty in cell datagridview
+        public bool isNotEmptyForCell(Object o, int rowIndex, int columnIndex)
+        {
+            bool status = true;
+            if (o is DataGridView)
+            {
+                DataGridView dtv = o as DataGridView;
+                if (String.IsNullOrEmpty(dtv.Rows[rowIndex].Cells[columnIndex].FormattedValue.ToString()))
+                {
+                    status = false;
+                    dtv.Rows[rowIndex].Cells[columnIndex].ErrorText = "Vui Long Nhap";
+                    if (rowIndex != 0)
+                        dtv.AllowUserToAddRows = false;
+                }
+                else
+                {
+                    dtv.Rows[rowIndex].Cells[columnIndex].ErrorText = "";
+                }
+            }
+            return status;
+        }
+
+        //Is cell validation
+        public bool isNotEmptyForNewCell(Object o, int rowIndex, int columnCount)
+        {
+            bool status = true;
+            if (o is DataGridView)
+            {
+                DataGridView dtv = o as DataGridView;
+                for (int i = 0; i < columnCount; i++)
+                {
+                            status = false;
+                            dtv.Rows[rowIndex].Cells[i].ErrorText = "Vui Long Nhap";
+                            if (rowIndex != 0)
+                                dtv.AllowUserToAddRows = false;
+                }
+            }
+            
+            return status;
+        }
+
         //Emp age must be >= 16 year old
         public bool isValidDOB(Object o, ErrorProvider errorProvider, String errorString)
         {
