@@ -25,6 +25,14 @@ namespace Vinasun.View
          ToolTip txt_empLastNameToolTip;
          ToolTip txt_empPhoneNumberToolTip;
          ToolTip txt_empEmailToolTip;
+
+         ToolTip txt_taxiDriverMainTootip;
+         ToolTip txt_taxiNoTooltip;
+         ToolTip txt_taxiGroupTootip;
+         ToolTip txt_taxiTypeTootip;
+         ToolTip txt_taxiDateJoinTootip;
+         ToolTip txt_taxiModelTootip;
+
          private bool statusEmpId;
          Employee employee;
 
@@ -79,6 +87,50 @@ namespace Vinasun.View
              set { statusEmpPhone = value; }
          }
 
+         private bool statusTaxiDriverMain;
+
+         public bool StatusTaxiDriverMain
+         {
+             get { return statusTaxiDriverMain; }
+             set { statusTaxiDriverMain = value; }
+         }
+         private bool statusTaxiNo;
+
+         public bool StatusTaxiNo
+         {
+             get { return statusTaxiNo; }
+             set { statusTaxiNo = value; }
+         }
+         private bool statusTaxiGroup;
+
+         public bool StatusTaxiGroup
+         {
+             get { return statusTaxiGroup; }
+             set { statusTaxiGroup = value; }
+         }
+         private bool statusTaxiType;
+
+         public bool StatusTaxiType
+         {
+             get { return statusTaxiType; }
+             set { statusTaxiType = value; }
+         }
+         private bool statusTaxiDateJoin;
+
+         public bool StatusTaxiDateJoin
+         {
+             get { return statusTaxiDateJoin; }
+             set { statusTaxiDateJoin = value; }
+         }
+         private bool statusTaxiModel;
+
+         public bool StatusTaxiModel
+         {
+             get { return statusTaxiModel; }
+             set { statusTaxiModel = value; }
+         }
+
+
         public Main()
         {
             InitializeComponent();
@@ -97,6 +149,12 @@ namespace Vinasun.View
             this.StatusEmpEmail = true;
             this.StatusEmpPhone = true;
             this.statusGender = false;
+
+            this.StatusTaxiDriverMain = false;
+            this.StatusTaxiNo = false;
+            this.StatusTaxiGroup = true;
+            this.StatusTaxiType = true;
+            this.StatusTaxiDateJoin = true;
         }
 
         private void textBoxX1_KeyPress(object sender, KeyPressEventArgs e)
@@ -209,7 +267,7 @@ namespace Vinasun.View
             }
         }
 
-        private void txt_empIdValidattion(object sender, CancelEventArgs e)
+        private void txt_empIdValidator(object sender, CancelEventArgs e)
         {
             StatusEmpId = validation.isNotNullOrEmpty(sender, errorProvider, "Mã Nhân Niên");
         }
@@ -217,7 +275,6 @@ namespace Vinasun.View
         private void txt_empIdKeyPress(object sender, KeyPressEventArgs e)
         {
             eventHandler.characterOrDigitOnly(sender, e);
-
         }
 
         private void txt_empIdFocus(object sender, EventArgs e)
@@ -318,6 +375,72 @@ namespace Vinasun.View
         private void txt_emailValidator(object sender, CancelEventArgs e)
         {
             StatusEmpEmail = validation.isEmailValidator(sender, errorProvider, "");
+        }
+
+        //button add new Taxi
+        private void btAddTaxi_Click(object sender, EventArgs e)
+        {
+            if (StatusTaxiNo && StatusTaxiType && StatusTaxiModel && StatusTaxiDriverMain && StatusTaxiDateJoin && StatusTaxiGroup)
+            {
+                Taxi taxi = new Taxi();
+                taxi.driverNoMain = txt_taxiDriverMain.Text;
+                taxi.taxiNo = txt_taxiNo.Text;
+                TaxiDTO taxiDTO = new TaxiDTOImpl();
+                int signal = taxiDTO.addTaxi(entitiesContainer, taxi);
+                if (signal == 1)
+                {
+                    MessageBox.Show("Thêm Taxi Mới Thành Công");
+                    //employee.showDGV(dgv_entities, entitiesContainer);
+                }
+                else
+                {
+                    MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Mới Taxi", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        //Event handler for taxi main driver
+        private void txt_taxiDriverMainFocus(object sender, EventArgs e)
+        {
+            txt_taxiDriverMainTootip = new ToolTip();
+            txt_taxiDriverMainTootip.Show("Mã Tài Chính", txt_taxiDriverMain);
+        }
+
+        private void txt_taxiDriverMainLeave(object sender, EventArgs e)
+        {
+            txt_taxiDriverMainTootip.Dispose();
+        }
+
+        private void txt_taxiDriverMainKeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.characterOrDigitOnly(sender, e);
+        }
+
+        private void txt_taxiDriverMainValidator(object sender, CancelEventArgs e)
+        {
+            StatusTaxiDriverMain = validation.isNotNullOrEmpty(sender, errorProvider, "Mã Tài Chính");
+        }
+
+        //Event handler for taxi no
+        private void txt_taxiNoKeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.taxiNoOnly(sender, e);
+        }
+
+        private void txt_taxiNoValidator(object sender, CancelEventArgs e)
+        {
+            StatusTaxiNo = validation.isNotNullOrEmpty(sender, errorProvider, "Biển Số Xe");
+        }
+
+        private void txt_taxiNoLeave(object sender, EventArgs e)
+        {
+            txt_taxiNoTooltip.Dispose();
+        }
+
+        private void txt_taxiNoFocus(object sender, EventArgs e)
+        {
+            txt_taxiNoTooltip = new ToolTip();
+            txt_taxiNoTooltip.Show("Biển Số Xe", txt_taxiNo);
         }
 
     }

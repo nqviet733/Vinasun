@@ -77,6 +77,19 @@ namespace Vinasun.CommonClass
             }
         }
 
+        //Only allow number || character || space || or "-"
+        public void taxiNoOnly(Object o, KeyPressEventArgs e)
+        {
+            if (o is TextBox)
+            {
+                TextBox tb = o as TextBox;
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != '-')
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
         //Only allow Comma
         public void digitOrCommaOnly(Object o, KeyPressEventArgs e)
         {
