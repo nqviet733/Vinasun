@@ -15,7 +15,7 @@ namespace Vinasun.CommonClass
         //Only allow character
         public void characterOnly(Object o, KeyPressEventArgs e)
         {
-            if (o is TextBox)
+            if (o is TextBox || o is DataGridTextBoxColumn)
             {
                 TextBox tb = o as TextBox;
                 if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))

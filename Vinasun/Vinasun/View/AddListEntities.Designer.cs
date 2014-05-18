@@ -51,6 +51,7 @@
             this.Position = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProviderAddEntities = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btAddEntities = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddListEntities)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAddEntities)).BeginInit();
             this.SuspendLayout();
@@ -83,12 +84,18 @@
             this.dataGridViewAddListEntities.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridViewAddListEntities.Size = new System.Drawing.Size(1153, 327);
             this.dataGridViewAddListEntities.TabIndex = 0;
+            this.dataGridViewAddListEntities.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.cellBeginEditEvent);
+            this.dataGridViewAddListEntities.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellContentClickEvent);
             this.dataGridViewAddListEntities.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellValidatedEvent);
             this.dataGridViewAddListEntities.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.cellValidatingEvent);
+            this.dataGridViewAddListEntities.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellValueChanged);
             this.dataGridViewAddListEntities.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.columnAddedEvent);
+            this.dataGridViewAddListEntities.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.EditingControlShowingEvent);
+            this.dataGridViewAddListEntities.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.rowEnterEvent);
             this.dataGridViewAddListEntities.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAddListEntities_RowLeave);
             this.dataGridViewAddListEntities.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvAddListEntities_RowsAdded);
             this.dataGridViewAddListEntities.RowValidating += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridViewAddListEntities_RowValidating);
+            this.dataGridViewAddListEntities.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keyPressEvent);
             // 
             // id
             // 
@@ -200,11 +207,24 @@
             // 
             this.errorProviderAddEntities.ContainerControl = this;
             // 
+            // btAddEntities
+            // 
+            this.btAddEntities.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btAddEntities.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btAddEntities.Location = new System.Drawing.Point(454, 371);
+            this.btAddEntities.Name = "btAddEntities";
+            this.btAddEntities.Size = new System.Drawing.Size(85, 29);
+            this.btAddEntities.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btAddEntities.TabIndex = 1;
+            this.btAddEntities.Text = "Them";
+            this.btAddEntities.Click += new System.EventHandler(this.btAddEntities_Click);
+            // 
             // AddListEntities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1176, 412);
+            this.Controls.Add(this.btAddEntities);
             this.Controls.Add(this.dataGridViewAddListEntities);
             this.Name = "AddListEntities";
             this.Text = "AddListEntities";
@@ -228,5 +248,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Position;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
         private System.Windows.Forms.ErrorProvider errorProviderAddEntities;
+        private DevComponents.DotNetBar.ButtonX btAddEntities;
     }
 }

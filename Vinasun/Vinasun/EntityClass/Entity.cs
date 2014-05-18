@@ -19,6 +19,7 @@ namespace Vinasun.EntityClass
             this.Checkers = new HashSet<Entity>();
             this.Taxis = new HashSet<Taxi>();
         }
+    
         public int id { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }

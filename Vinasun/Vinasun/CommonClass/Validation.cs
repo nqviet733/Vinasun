@@ -44,8 +44,6 @@ namespace Vinasun.CommonClass
                 {
                     status = false;
                     dtv.Rows[rowIndex].Cells[columnIndex].ErrorText = "Vui Long Nhap";
-                    if (rowIndex != 0)
-                        dtv.AllowUserToAddRows = false;
                 }
                 else
                 {
@@ -82,7 +80,7 @@ namespace Vinasun.CommonClass
             {
                 DateTimeInput dtp = o as DateTimeInput;
                 DateTime dateTimeDefault = new DateTime(0);
-                if (getAge(dtp.Value) < 16 || !System.DateTime.Equals(dtp.Value, dateTimeDefault))
+                if (getAge(dtp.Value) < 16 || System.DateTime.Equals(dtp.Value, dateTimeDefault))
                 {
                     errorProvider.SetError(dtp, "Vui Lòng Nhập Năm Sinh Nhân Viên Trên 16 Tuổi" + errorString);
                     status = false;
@@ -121,7 +119,7 @@ namespace Vinasun.CommonClass
                 }
                 else
                 {
-                    errorProvider.SetError(cb2, "");
+                    errorProvider.SetError(cb1, "");
                 }
             }
             return status;

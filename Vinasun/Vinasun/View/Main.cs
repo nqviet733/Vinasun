@@ -155,8 +155,8 @@ namespace Vinasun.View
 
         private void bt_addEmployee_Click(object sender, EventArgs e)
         {
-            AddListEntities entitiesForm = new AddListEntities();
-            entitiesForm.Show();
+            //AddListEntities entitiesForm = new AddListEntities();
+            //entitiesForm.Show();
             if (!StatusEmpId)
             {
                 //MessageBox.Show("Vui Lòng Nhập Mã Nhân Viên", "WARNING", 
