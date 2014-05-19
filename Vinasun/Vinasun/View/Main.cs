@@ -33,9 +33,10 @@ namespace Vinasun.View
          ToolTip txt_taxiDateJoinTootip;
          ToolTip txt_taxiModelTootip;
 
-         private bool statusEmpId;
-         Employee employee;
+         EmployeeModel employeeModel;
+         TaxiModel taxiModel;
 
+         private bool statusEmpId;
          public bool StatusEmpId
          {
              get { return statusEmpId; }
@@ -139,8 +140,11 @@ namespace Vinasun.View
             validation = new Validation();
             eventHandler = new Vinasun.CommonClass.EventHandler();
 
-            employee = new Employee();
-            employee.showDGV(dgv_entities, entitiesContainer);
+            employeeModel = new EmployeeModel();
+            employeeModel.showDGV(dgv_entities, entitiesContainer);
+
+            taxiModel = new TaxiModel();
+            taxiModel.showDGV(dgv_taxis, entitiesContainer);
 
             this.StatusEmpId = false;
             this.StatusEmpFirtName = false;
@@ -155,6 +159,7 @@ namespace Vinasun.View
             this.StatusTaxiGroup = true;
             this.StatusTaxiType = true;
             this.StatusTaxiDateJoin = true;
+            this.StatusTaxiModel = true;
         }
 
         private void textBoxX1_KeyPress(object sender, KeyPressEventArgs e)
@@ -258,7 +263,7 @@ namespace Vinasun.View
                 if (signal == 1)
                 {
                     MessageBox.Show("Thêm Nhân Viên Mới Thành Công");
-                    employee.showDGV(dgv_entities, entitiesContainer);
+                    employeeModel.showDGV(dgv_entities, entitiesContainer);
                 }
                 else
                 {
@@ -390,7 +395,7 @@ namespace Vinasun.View
                 if (signal == 1)
                 {
                     MessageBox.Show("Thêm Taxi Mới Thành Công");
-                    //employee.showDGV(dgv_entities, entitiesContainer);
+                    taxiModel.showDGV(dgv_taxis, entitiesContainer);
                 }
                 else
                 {
@@ -442,6 +447,72 @@ namespace Vinasun.View
             txt_taxiNoTooltip = new ToolTip();
             txt_taxiNoTooltip.Show("Biển Số Xe", txt_taxiNo);
         }
+        //expand datagridview width  when mouse over
+        private void dgv_entitiesMouseHover(object sender, EventArgs e)
+        {
+            isHidenEmpFieldForExpand(false);
+            dgv_entities.Width = 900;
+        }
+        //reset size when mouse out
+        private void dgv_entitiesMouseLeave(object sender, EventArgs e)
+        {
+            isHidenEmpFieldForExpand(true);
+            dgv_entities.Width = 227;
+        }
+        private void isHidenEmpFieldForExpand(bool visible)
+        {
+            txt_employeeId.Visible = visible;
+            lb_empId.Visible = visible;
+            txt_address.Visible = visible;
+            lb_address.Visible = visible;
+            txt_email.Visible = visible;
+            lb_email.Visible = visible;
+            txt_firstName.Visible = visible;
+            lb_firstname.Visible = visible;
+            txt_lastName.Visible = visible;
+            lb_lastname.Visible = visible;
+            txt_phoneNumber.Visible = visible;
+            lb_phoneNumber.Visible = visible;
+            cb_checkerGroup.Visible = visible;
+            lb_checkerGroup.Visible = visible;
+            rb_empNam.Visible = visible;
+            rb_empNu.Visible = visible;
+            bt_addEmployee.Visible = visible;
+            bt_delEmployee.Visible = visible;
+            dp_empDOB.Visible = visible;
+            cb_position.Visible = visible;
+            lb_position.Visible = visible;
+        }
+        private void isHidenTaxiFieldForExpand(bool visible)
+        {
+            txt_taxiDriverMain.Visible = visible;
+            lb_taxiDriverMain.Visible = visible;
+            txt_taxiModel.Visible = visible;
+            lb_taxiModel.Visible = visible;
+            txt_taxiNo.Visible = visible;
+            lb_taxiNo.Visible = visible;
+            txt_taxiModel.Visible = visible;
+            lb_taxiModel.Visible = visible;
+            cb_taxiGroup.Visible = visible;
+            lb_taxiGroup.Visible = visible;
+            cb_taxiType.Visible = visible;
+            lb_taxiType.Visible = visible;
+            bt_AddTaxi.Visible = visible;
+            bt_DelTaxi.Visible = visible;
+            dp_taxiDateJoin.Visible = visible;
+            lb_taxiDateJoin.Visible = visible;
+        }
 
+        private void dgv_taxiMouseOver(object sender, EventArgs e)
+        {
+            isHidenTaxiFieldForExpand(false);
+            dgv_taxis.Width = 900;
+        }
+
+        private void dgv_taxiMouseLeave(object sender, EventArgs e)
+        {
+            isHidenTaxiFieldForExpand(true);
+            dgv_taxis.Width = 227;
+        }
     }
 }

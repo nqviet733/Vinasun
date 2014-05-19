@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -58,57 +58,57 @@
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.groupPanel9 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.superTabControl4 = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel14 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.txt_taxiModel = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label68 = new System.Windows.Forms.Label();
-            this.txt_taxiNo = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label67 = new System.Windows.Forms.Label();
-            this.dp_taxiDateJoin = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.label66 = new System.Windows.Forms.Label();
-            this.buttonX23 = new DevComponents.DotNetBar.ButtonX();
-            this.btAddTaxi = new DevComponents.DotNetBar.ButtonX();
-            this.cb_taxiGroup = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.label65 = new System.Windows.Forms.Label();
-            this.cb_taxiType = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.label60 = new System.Windows.Forms.Label();
-            this.dataGridViewX13 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.buttonX25 = new DevComponents.DotNetBar.ButtonX();
-            this.label59 = new System.Windows.Forms.Label();
-            this.comboBoxEx12 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.textBoxX43 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txt_taxiDriverMain = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label58 = new System.Windows.Forms.Label();
-            this.superTabItem14 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel13 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.dp_empDOB = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.rb_empNu = new System.Windows.Forms.RadioButton();
             this.rb_empNam = new System.Windows.Forms.RadioButton();
             this.cb_checkerGroup = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.label64 = new System.Windows.Forms.Label();
+            this.lb_checkerGroup = new System.Windows.Forms.Label();
             this.bt_delEmployee = new DevComponents.DotNetBar.ButtonX();
             this.bt_addEmployee = new DevComponents.DotNetBar.ButtonX();
             this.buttonX21 = new DevComponents.DotNetBar.ButtonX();
             this.label56 = new System.Windows.Forms.Label();
             this.dgv_entities = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.cb_position = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.label55 = new System.Windows.Forms.Label();
+            this.lb_position = new System.Windows.Forms.Label();
             this.comboBoxEx11 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.textBoxX39 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txt_firstName = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
+            this.lb_gender = new System.Windows.Forms.Label();
+            this.lb_firstname = new System.Windows.Forms.Label();
             this.txt_address = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txt_phoneNumber = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txt_email = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txt_lastName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txt_employeeId = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
+            this.lb_birthday = new System.Windows.Forms.Label();
+            this.lb_address = new System.Windows.Forms.Label();
+            this.lb_phoneNumber = new System.Windows.Forms.Label();
+            this.lb_email = new System.Windows.Forms.Label();
+            this.lb_lastname = new System.Windows.Forms.Label();
+            this.lb_empId = new System.Windows.Forms.Label();
             this.superTabItem13 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel14 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.txt_taxiModel = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lb_taxiModel = new System.Windows.Forms.Label();
+            this.txt_taxiNo = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lb_taxiNo = new System.Windows.Forms.Label();
+            this.dp_taxiDateJoin = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.lb_taxiDateJoin = new System.Windows.Forms.Label();
+            this.bt_DelTaxi = new DevComponents.DotNetBar.ButtonX();
+            this.bt_AddTaxi = new DevComponents.DotNetBar.ButtonX();
+            this.cb_taxiGroup = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.lb_taxiGroup = new System.Windows.Forms.Label();
+            this.cb_taxiType = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.lb_taxiType = new System.Windows.Forms.Label();
+            this.dgv_taxis = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.buttonX25 = new DevComponents.DotNetBar.ButtonX();
+            this.label59 = new System.Windows.Forms.Label();
+            this.comboBoxEx12 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.textBoxX43 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_taxiDriverMain = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lb_taxiDriverMain = new System.Windows.Forms.Label();
+            this.superTabItem14 = new DevComponents.DotNetBar.SuperTabItem();
             this.groupPanel7 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.superTabControl3 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel8 = new DevComponents.DotNetBar.SuperTabControlPanel();
@@ -297,12 +297,12 @@
             this.groupPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl4)).BeginInit();
             this.superTabControl4.SuspendLayout();
-            this.superTabControlPanel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dp_taxiDateJoin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX13)).BeginInit();
             this.superTabControlPanel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dp_empDOB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_entities)).BeginInit();
+            this.superTabControlPanel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dp_taxiDateJoin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_taxis)).BeginInit();
             this.groupPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).BeginInit();
             this.superTabControl3.SuspendLayout();
@@ -541,352 +541,36 @@
             this.superTabItem14});
             this.superTabControl4.Text = "superTabControl4";
             // 
-            // superTabControlPanel14
-            // 
-            this.superTabControlPanel14.Controls.Add(this.txt_taxiModel);
-            this.superTabControlPanel14.Controls.Add(this.label68);
-            this.superTabControlPanel14.Controls.Add(this.txt_taxiNo);
-            this.superTabControlPanel14.Controls.Add(this.label67);
-            this.superTabControlPanel14.Controls.Add(this.dp_taxiDateJoin);
-            this.superTabControlPanel14.Controls.Add(this.label66);
-            this.superTabControlPanel14.Controls.Add(this.buttonX23);
-            this.superTabControlPanel14.Controls.Add(this.btAddTaxi);
-            this.superTabControlPanel14.Controls.Add(this.cb_taxiGroup);
-            this.superTabControlPanel14.Controls.Add(this.label65);
-            this.superTabControlPanel14.Controls.Add(this.cb_taxiType);
-            this.superTabControlPanel14.Controls.Add(this.label60);
-            this.superTabControlPanel14.Controls.Add(this.dataGridViewX13);
-            this.superTabControlPanel14.Controls.Add(this.buttonX25);
-            this.superTabControlPanel14.Controls.Add(this.label59);
-            this.superTabControlPanel14.Controls.Add(this.comboBoxEx12);
-            this.superTabControlPanel14.Controls.Add(this.textBoxX43);
-            this.superTabControlPanel14.Controls.Add(this.txt_taxiDriverMain);
-            this.superTabControlPanel14.Controls.Add(this.label58);
-            this.superTabControlPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel14.Location = new System.Drawing.Point(0, 27);
-            this.superTabControlPanel14.Name = "superTabControlPanel14";
-            this.superTabControlPanel14.Size = new System.Drawing.Size(907, 526);
-            this.superTabControlPanel14.TabIndex = 0;
-            this.superTabControlPanel14.TabItem = this.superTabItem14;
-            // 
-            // txt_taxiModel
-            // 
-            // 
-            // 
-            // 
-            this.txt_taxiModel.Border.Class = "TextBoxBorder";
-            this.txt_taxiModel.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_taxiModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_taxiModel.Location = new System.Drawing.Point(688, 189);
-            this.txt_taxiModel.Name = "txt_taxiModel";
-            this.txt_taxiModel.Size = new System.Drawing.Size(127, 26);
-            this.txt_taxiModel.TabIndex = 55;
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.BackColor = System.Drawing.Color.Transparent;
-            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(572, 195);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(57, 20);
-            this.label68.TabIndex = 54;
-            this.label68.Text = "Model";
-            // 
-            // txt_taxiNo
-            // 
-            // 
-            // 
-            // 
-            this.txt_taxiNo.Border.Class = "TextBoxBorder";
-            this.txt_taxiNo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_taxiNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_taxiNo.Location = new System.Drawing.Point(371, 132);
-            this.txt_taxiNo.Name = "txt_taxiNo";
-            this.txt_taxiNo.Size = new System.Drawing.Size(127, 26);
-            this.txt_taxiNo.TabIndex = 53;
-            this.txt_taxiNo.Enter += new System.EventHandler(this.txt_taxiNoFocus);
-            this.txt_taxiNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_taxiNoKeyPress);
-            this.txt_taxiNo.Leave += new System.EventHandler(this.txt_taxiNoLeave);
-            this.txt_taxiNo.Validating += new System.ComponentModel.CancelEventHandler(this.txt_taxiNoValidator);
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.BackColor = System.Drawing.Color.Transparent;
-            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.Location = new System.Drawing.Point(255, 138);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(58, 20);
-            this.label67.TabIndex = 52;
-            this.label67.Text = "Số Xe";
-            // 
-            // dp_taxiDateJoin
-            // 
-            // 
-            // 
-            // 
-            this.dp_taxiDateJoin.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dp_taxiDateJoin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_taxiDateJoin.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dp_taxiDateJoin.ButtonDropDown.Visible = true;
-            this.dp_taxiDateJoin.IsPopupCalendarOpen = false;
-            this.dp_taxiDateJoin.Location = new System.Drawing.Point(688, 144);
-            // 
-            // 
-            // 
-            this.dp_taxiDateJoin.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dp_taxiDateJoin.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_taxiDateJoin.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dp_taxiDateJoin.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_taxiDateJoin.MonthCalendar.DisplayMonth = new System.DateTime(2014, 4, 1, 0, 0, 0, 0);
-            this.dp_taxiDateJoin.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.dp_taxiDateJoin.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_taxiDateJoin.MonthCalendar.TodayButtonVisible = true;
-            this.dp_taxiDateJoin.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.dp_taxiDateJoin.Name = "dp_taxiDateJoin";
-            this.dp_taxiDateJoin.Size = new System.Drawing.Size(127, 22);
-            this.dp_taxiDateJoin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dp_taxiDateJoin.TabIndex = 51;
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.BackColor = System.Drawing.Color.Transparent;
-            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(574, 146);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(109, 20);
-            this.label66.TabIndex = 50;
-            this.label66.Text = "Ngày Ra Đội";
-            // 
-            // buttonX23
-            // 
-            this.buttonX23.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX23.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX23.Image = global::Vinasun.Properties.Resources.Error_icon1;
-            this.buttonX23.Location = new System.Drawing.Point(498, 246);
-            this.buttonX23.Name = "buttonX23";
-            this.buttonX23.Size = new System.Drawing.Size(79, 34);
-            this.buttonX23.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX23.TabIndex = 49;
-            this.buttonX23.Text = "Xóa";
-            // 
-            // btAddTaxi
-            // 
-            this.btAddTaxi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btAddTaxi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btAddTaxi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAddTaxi.Image = global::Vinasun.Properties.Resources.folder_add_icon__3_;
-            this.btAddTaxi.Location = new System.Drawing.Point(355, 246);
-            this.btAddTaxi.Name = "btAddTaxi";
-            this.btAddTaxi.Size = new System.Drawing.Size(79, 34);
-            this.btAddTaxi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btAddTaxi.TabIndex = 48;
-            this.btAddTaxi.Text = "Thêm";
-            this.btAddTaxi.Click += new System.EventHandler(this.btAddTaxi_Click);
-            // 
-            // cb_taxiGroup
-            // 
-            this.cb_taxiGroup.DisplayMember = "Text";
-            this.cb_taxiGroup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_taxiGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_taxiGroup.FormattingEnabled = true;
-            this.cb_taxiGroup.ItemHeight = 20;
-            this.cb_taxiGroup.Location = new System.Drawing.Point(371, 187);
-            this.cb_taxiGroup.Name = "cb_taxiGroup";
-            this.cb_taxiGroup.Size = new System.Drawing.Size(127, 26);
-            this.cb_taxiGroup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cb_taxiGroup.TabIndex = 47;
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.BackColor = System.Drawing.Color.Transparent;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(257, 187);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(63, 20);
-            this.label65.TabIndex = 46;
-            this.label65.Text = "Đội Xe";
-            // 
-            // cb_taxiType
-            // 
-            this.cb_taxiType.DisplayMember = "Text";
-            this.cb_taxiType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_taxiType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_taxiType.FormattingEnabled = true;
-            this.cb_taxiType.ItemHeight = 20;
-            this.cb_taxiType.Location = new System.Drawing.Point(688, 80);
-            this.cb_taxiType.Name = "cb_taxiType";
-            this.cb_taxiType.Size = new System.Drawing.Size(118, 26);
-            this.cb_taxiType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cb_taxiType.TabIndex = 45;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.BackColor = System.Drawing.Color.Transparent;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(574, 86);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(70, 20);
-            this.label60.TabIndex = 44;
-            this.label60.Text = "Loại Xe";
-            // 
-            // dataGridViewX13
-            // 
-            this.dataGridViewX13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX13.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewX13.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX13.Location = new System.Drawing.Point(7, 67);
-            this.dataGridViewX13.Name = "dataGridViewX13";
-            this.dataGridViewX13.Size = new System.Drawing.Size(227, 454);
-            this.dataGridViewX13.TabIndex = 43;
-            // 
-            // buttonX25
-            // 
-            this.buttonX25.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX25.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX25.Image = global::Vinasun.Properties.Resources.Start_Menu_Search_icon;
-            this.buttonX25.Location = new System.Drawing.Point(475, 18);
-            this.buttonX25.Name = "buttonX25";
-            this.buttonX25.Size = new System.Drawing.Size(79, 34);
-            this.buttonX25.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX25.TabIndex = 42;
-            this.buttonX25.Text = "Tìm";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.BackColor = System.Drawing.Color.Transparent;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(3, 32);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(81, 20);
-            this.label59.TabIndex = 41;
-            this.label59.Text = "Tìm Kiếm";
-            // 
-            // comboBoxEx12
-            // 
-            this.comboBoxEx12.DisplayMember = "Text";
-            this.comboBoxEx12.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEx12.FormattingEnabled = true;
-            this.comboBoxEx12.ItemHeight = 20;
-            this.comboBoxEx12.Location = new System.Drawing.Point(90, 26);
-            this.comboBoxEx12.Name = "comboBoxEx12";
-            this.comboBoxEx12.Size = new System.Drawing.Size(118, 26);
-            this.comboBoxEx12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx12.TabIndex = 40;
-            // 
-            // textBoxX43
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX43.Border.Class = "TextBoxBorder";
-            this.textBoxX43.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX43.Location = new System.Drawing.Point(225, 26);
-            this.textBoxX43.Name = "textBoxX43";
-            this.textBoxX43.Size = new System.Drawing.Size(196, 26);
-            this.textBoxX43.TabIndex = 39;
-            // 
-            // txt_taxiDriverMain
-            // 
-            // 
-            // 
-            // 
-            this.txt_taxiDriverMain.Border.Class = "TextBoxBorder";
-            this.txt_taxiDriverMain.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_taxiDriverMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_taxiDriverMain.Location = new System.Drawing.Point(371, 83);
-            this.txt_taxiDriverMain.Name = "txt_taxiDriverMain";
-            this.txt_taxiDriverMain.Size = new System.Drawing.Size(127, 26);
-            this.txt_taxiDriverMain.TabIndex = 31;
-            this.txt_taxiDriverMain.Enter += new System.EventHandler(this.txt_taxiDriverMainFocus);
-            this.txt_taxiDriverMain.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_taxiDriverMainKeyPress);
-            this.txt_taxiDriverMain.Leave += new System.EventHandler(this.txt_taxiDriverMainLeave);
-            this.txt_taxiDriverMain.Validating += new System.ComponentModel.CancelEventHandler(this.txt_taxiDriverMainValidator);
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.BackColor = System.Drawing.Color.Transparent;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(255, 89);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(111, 20);
-            this.label58.TabIndex = 30;
-            this.label58.Text = "Số Tài Chính";
-            // 
-            // superTabItem14
-            // 
-            this.superTabItem14.AttachedControl = this.superTabControlPanel14;
-            this.superTabItem14.GlobalItem = false;
-            this.superTabItem14.Name = "superTabItem14";
-            this.superTabItem14.Text = "Xe Taxi";
-            // 
             // superTabControlPanel13
             // 
             this.superTabControlPanel13.Controls.Add(this.dp_empDOB);
             this.superTabControlPanel13.Controls.Add(this.rb_empNu);
             this.superTabControlPanel13.Controls.Add(this.rb_empNam);
             this.superTabControlPanel13.Controls.Add(this.cb_checkerGroup);
-            this.superTabControlPanel13.Controls.Add(this.label64);
+            this.superTabControlPanel13.Controls.Add(this.lb_checkerGroup);
             this.superTabControlPanel13.Controls.Add(this.bt_delEmployee);
             this.superTabControlPanel13.Controls.Add(this.bt_addEmployee);
             this.superTabControlPanel13.Controls.Add(this.buttonX21);
             this.superTabControlPanel13.Controls.Add(this.label56);
             this.superTabControlPanel13.Controls.Add(this.dgv_entities);
             this.superTabControlPanel13.Controls.Add(this.cb_position);
-            this.superTabControlPanel13.Controls.Add(this.label55);
+            this.superTabControlPanel13.Controls.Add(this.lb_position);
             this.superTabControlPanel13.Controls.Add(this.comboBoxEx11);
             this.superTabControlPanel13.Controls.Add(this.textBoxX39);
             this.superTabControlPanel13.Controls.Add(this.txt_firstName);
-            this.superTabControlPanel13.Controls.Add(this.label52);
-            this.superTabControlPanel13.Controls.Add(this.label50);
+            this.superTabControlPanel13.Controls.Add(this.lb_gender);
+            this.superTabControlPanel13.Controls.Add(this.lb_firstname);
             this.superTabControlPanel13.Controls.Add(this.txt_address);
             this.superTabControlPanel13.Controls.Add(this.txt_phoneNumber);
             this.superTabControlPanel13.Controls.Add(this.txt_email);
             this.superTabControlPanel13.Controls.Add(this.txt_lastName);
             this.superTabControlPanel13.Controls.Add(this.txt_employeeId);
-            this.superTabControlPanel13.Controls.Add(this.label51);
-            this.superTabControlPanel13.Controls.Add(this.label61);
-            this.superTabControlPanel13.Controls.Add(this.label54);
-            this.superTabControlPanel13.Controls.Add(this.label53);
-            this.superTabControlPanel13.Controls.Add(this.label57);
-            this.superTabControlPanel13.Controls.Add(this.label49);
+            this.superTabControlPanel13.Controls.Add(this.lb_birthday);
+            this.superTabControlPanel13.Controls.Add(this.lb_address);
+            this.superTabControlPanel13.Controls.Add(this.lb_phoneNumber);
+            this.superTabControlPanel13.Controls.Add(this.lb_email);
+            this.superTabControlPanel13.Controls.Add(this.lb_lastname);
+            this.superTabControlPanel13.Controls.Add(this.lb_empId);
             this.superTabControlPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.superTabControlPanel13.Location = new System.Drawing.Point(0, 27);
             this.superTabControlPanel13.Name = "superTabControlPanel13";
@@ -978,16 +662,16 @@
             this.cb_checkerGroup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cb_checkerGroup.TabIndex = 45;
             // 
-            // label64
+            // lb_checkerGroup
             // 
-            this.label64.AutoSize = true;
-            this.label64.BackColor = System.Drawing.Color.Transparent;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(569, 154);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(100, 20);
-            this.label64.TabIndex = 44;
-            this.label64.Text = "Tổ Checker";
+            this.lb_checkerGroup.AutoSize = true;
+            this.lb_checkerGroup.BackColor = System.Drawing.Color.Transparent;
+            this.lb_checkerGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_checkerGroup.Location = new System.Drawing.Point(569, 154);
+            this.lb_checkerGroup.Name = "lb_checkerGroup";
+            this.lb_checkerGroup.Size = new System.Drawing.Size(100, 20);
+            this.lb_checkerGroup.TabIndex = 44;
+            this.lb_checkerGroup.Text = "Tổ Checker";
             // 
             // bt_delEmployee
             // 
@@ -1056,6 +740,8 @@
             this.dgv_entities.Name = "dgv_entities";
             this.dgv_entities.Size = new System.Drawing.Size(227, 462);
             this.dgv_entities.TabIndex = 36;
+            this.dgv_entities.MouseLeave += new System.EventHandler(this.dgv_entitiesMouseLeave);
+            this.dgv_entities.MouseHover += new System.EventHandler(this.dgv_entitiesMouseHover);
             // 
             // cb_position
             // 
@@ -1070,16 +756,16 @@
             this.cb_position.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cb_position.TabIndex = 35;
             // 
-            // label55
+            // lb_position
             // 
-            this.label55.AutoSize = true;
-            this.label55.BackColor = System.Drawing.Color.Transparent;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(572, 243);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(77, 20);
-            this.label55.TabIndex = 34;
-            this.label55.Text = "Chức Vụ";
+            this.lb_position.AutoSize = true;
+            this.lb_position.BackColor = System.Drawing.Color.Transparent;
+            this.lb_position.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_position.Location = new System.Drawing.Point(572, 243);
+            this.lb_position.Name = "lb_position";
+            this.lb_position.Size = new System.Drawing.Size(77, 20);
+            this.lb_position.TabIndex = 34;
+            this.lb_position.Text = "Chức Vụ";
             // 
             // comboBoxEx11
             // 
@@ -1124,27 +810,27 @@
             this.txt_firstName.Leave += new System.EventHandler(this.txt_empFirstNameLeave);
             this.txt_firstName.Validating += new System.ComponentModel.CancelEventHandler(this.txt_empFirstNameValidatior);
             // 
-            // label52
+            // lb_gender
             // 
-            this.label52.AutoSize = true;
-            this.label52.BackColor = System.Drawing.Color.Transparent;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.Location = new System.Drawing.Point(243, 238);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(80, 20);
-            this.label52.TabIndex = 30;
-            this.label52.Text = "Giới Tính";
+            this.lb_gender.AutoSize = true;
+            this.lb_gender.BackColor = System.Drawing.Color.Transparent;
+            this.lb_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_gender.Location = new System.Drawing.Point(243, 238);
+            this.lb_gender.Name = "lb_gender";
+            this.lb_gender.Size = new System.Drawing.Size(80, 20);
+            this.lb_gender.TabIndex = 30;
+            this.lb_gender.Text = "Giới Tính";
             // 
-            // label50
+            // lb_firstname
             // 
-            this.label50.AutoSize = true;
-            this.label50.BackColor = System.Drawing.Color.Transparent;
-            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(242, 146);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(39, 20);
-            this.label50.TabIndex = 30;
-            this.label50.Text = "Tên";
+            this.lb_firstname.AutoSize = true;
+            this.lb_firstname.BackColor = System.Drawing.Color.Transparent;
+            this.lb_firstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_firstname.Location = new System.Drawing.Point(242, 146);
+            this.lb_firstname.Name = "lb_firstname";
+            this.lb_firstname.Size = new System.Drawing.Size(39, 20);
+            this.lb_firstname.TabIndex = 30;
+            this.lb_firstname.Text = "Tên";
             // 
             // txt_address
             // 
@@ -1225,71 +911,71 @@
             this.txt_employeeId.Leave += new System.EventHandler(this.txt_empIdLeave);
             this.txt_employeeId.Validating += new System.ComponentModel.CancelEventHandler(this.txt_empIdValidator);
             // 
-            // label51
+            // lb_birthday
             // 
-            this.label51.AutoSize = true;
-            this.label51.BackColor = System.Drawing.Color.Transparent;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(242, 296);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(90, 20);
-            this.label51.TabIndex = 28;
-            this.label51.Text = "Ngày Sinh";
+            this.lb_birthday.AutoSize = true;
+            this.lb_birthday.BackColor = System.Drawing.Color.Transparent;
+            this.lb_birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_birthday.Location = new System.Drawing.Point(242, 296);
+            this.lb_birthday.Name = "lb_birthday";
+            this.lb_birthday.Size = new System.Drawing.Size(90, 20);
+            this.lb_birthday.TabIndex = 28;
+            this.lb_birthday.Text = "Ngày Sinh";
             // 
-            // label61
+            // lb_address
             // 
-            this.label61.AutoSize = true;
-            this.label61.BackColor = System.Drawing.Color.Transparent;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(574, 291);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(67, 20);
-            this.label61.TabIndex = 28;
-            this.label61.Text = "Địa Chỉ";
+            this.lb_address.AutoSize = true;
+            this.lb_address.BackColor = System.Drawing.Color.Transparent;
+            this.lb_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_address.Location = new System.Drawing.Point(574, 291);
+            this.lb_address.Name = "lb_address";
+            this.lb_address.Size = new System.Drawing.Size(67, 20);
+            this.lb_address.TabIndex = 28;
+            this.lb_address.Text = "Địa Chỉ";
             // 
-            // label54
+            // lb_phoneNumber
             // 
-            this.label54.AutoSize = true;
-            this.label54.BackColor = System.Drawing.Color.Transparent;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(572, 107);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(74, 20);
-            this.label54.TabIndex = 28;
-            this.label54.Text = "Di Động";
+            this.lb_phoneNumber.AutoSize = true;
+            this.lb_phoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lb_phoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_phoneNumber.Location = new System.Drawing.Point(572, 107);
+            this.lb_phoneNumber.Name = "lb_phoneNumber";
+            this.lb_phoneNumber.Size = new System.Drawing.Size(74, 20);
+            this.lb_phoneNumber.TabIndex = 28;
+            this.lb_phoneNumber.Text = "Di Động";
             // 
-            // label53
+            // lb_email
             // 
-            this.label53.AutoSize = true;
-            this.label53.BackColor = System.Drawing.Color.Transparent;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(572, 197);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(53, 20);
-            this.label53.TabIndex = 28;
-            this.label53.Text = "Email";
+            this.lb_email.AutoSize = true;
+            this.lb_email.BackColor = System.Drawing.Color.Transparent;
+            this.lb_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_email.Location = new System.Drawing.Point(572, 197);
+            this.lb_email.Name = "lb_email";
+            this.lb_email.Size = new System.Drawing.Size(53, 20);
+            this.lb_email.TabIndex = 28;
+            this.lb_email.Text = "Email";
             // 
-            // label57
+            // lb_lastname
             // 
-            this.label57.AutoSize = true;
-            this.label57.BackColor = System.Drawing.Color.Transparent;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(242, 193);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(32, 20);
-            this.label57.TabIndex = 28;
-            this.label57.Text = "Họ";
+            this.lb_lastname.AutoSize = true;
+            this.lb_lastname.BackColor = System.Drawing.Color.Transparent;
+            this.lb_lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_lastname.Location = new System.Drawing.Point(242, 193);
+            this.lb_lastname.Name = "lb_lastname";
+            this.lb_lastname.Size = new System.Drawing.Size(32, 20);
+            this.lb_lastname.TabIndex = 28;
+            this.lb_lastname.Text = "Họ";
             // 
-            // label49
+            // lb_empId
             // 
-            this.label49.AutoSize = true;
-            this.label49.BackColor = System.Drawing.Color.Transparent;
-            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(242, 107);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(62, 20);
-            this.label49.TabIndex = 28;
-            this.label49.Text = "Mã NV";
+            this.lb_empId.AutoSize = true;
+            this.lb_empId.BackColor = System.Drawing.Color.Transparent;
+            this.lb_empId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_empId.Location = new System.Drawing.Point(242, 107);
+            this.lb_empId.Name = "lb_empId";
+            this.lb_empId.Size = new System.Drawing.Size(62, 20);
+            this.lb_empId.TabIndex = 28;
+            this.lb_empId.Text = "Mã NV";
             // 
             // superTabItem13
             // 
@@ -1297,6 +983,324 @@
             this.superTabItem13.GlobalItem = false;
             this.superTabItem13.Name = "superTabItem13";
             this.superTabItem13.Text = "Nhân Viên";
+            // 
+            // superTabControlPanel14
+            // 
+            this.superTabControlPanel14.Controls.Add(this.txt_taxiModel);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiModel);
+            this.superTabControlPanel14.Controls.Add(this.txt_taxiNo);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiNo);
+            this.superTabControlPanel14.Controls.Add(this.dp_taxiDateJoin);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiDateJoin);
+            this.superTabControlPanel14.Controls.Add(this.bt_DelTaxi);
+            this.superTabControlPanel14.Controls.Add(this.bt_AddTaxi);
+            this.superTabControlPanel14.Controls.Add(this.cb_taxiGroup);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiGroup);
+            this.superTabControlPanel14.Controls.Add(this.cb_taxiType);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiType);
+            this.superTabControlPanel14.Controls.Add(this.dgv_taxis);
+            this.superTabControlPanel14.Controls.Add(this.buttonX25);
+            this.superTabControlPanel14.Controls.Add(this.label59);
+            this.superTabControlPanel14.Controls.Add(this.comboBoxEx12);
+            this.superTabControlPanel14.Controls.Add(this.textBoxX43);
+            this.superTabControlPanel14.Controls.Add(this.txt_taxiDriverMain);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiDriverMain);
+            this.superTabControlPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel14.Location = new System.Drawing.Point(0, 27);
+            this.superTabControlPanel14.Name = "superTabControlPanel14";
+            this.superTabControlPanel14.Size = new System.Drawing.Size(907, 526);
+            this.superTabControlPanel14.TabIndex = 0;
+            this.superTabControlPanel14.TabItem = this.superTabItem14;
+            // 
+            // txt_taxiModel
+            // 
+            // 
+            // 
+            // 
+            this.txt_taxiModel.Border.Class = "TextBoxBorder";
+            this.txt_taxiModel.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_taxiModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_taxiModel.Location = new System.Drawing.Point(688, 189);
+            this.txt_taxiModel.Name = "txt_taxiModel";
+            this.txt_taxiModel.Size = new System.Drawing.Size(127, 26);
+            this.txt_taxiModel.TabIndex = 55;
+            // 
+            // lb_taxiModel
+            // 
+            this.lb_taxiModel.AutoSize = true;
+            this.lb_taxiModel.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiModel.Location = new System.Drawing.Point(572, 195);
+            this.lb_taxiModel.Name = "lb_taxiModel";
+            this.lb_taxiModel.Size = new System.Drawing.Size(57, 20);
+            this.lb_taxiModel.TabIndex = 54;
+            this.lb_taxiModel.Text = "Model";
+            // 
+            // txt_taxiNo
+            // 
+            // 
+            // 
+            // 
+            this.txt_taxiNo.Border.Class = "TextBoxBorder";
+            this.txt_taxiNo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_taxiNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_taxiNo.Location = new System.Drawing.Point(371, 132);
+            this.txt_taxiNo.Name = "txt_taxiNo";
+            this.txt_taxiNo.Size = new System.Drawing.Size(127, 26);
+            this.txt_taxiNo.TabIndex = 53;
+            this.txt_taxiNo.Enter += new System.EventHandler(this.txt_taxiNoFocus);
+            this.txt_taxiNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_taxiNoKeyPress);
+            this.txt_taxiNo.Leave += new System.EventHandler(this.txt_taxiNoLeave);
+            this.txt_taxiNo.Validating += new System.ComponentModel.CancelEventHandler(this.txt_taxiNoValidator);
+            // 
+            // lb_taxiNo
+            // 
+            this.lb_taxiNo.AutoSize = true;
+            this.lb_taxiNo.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiNo.Location = new System.Drawing.Point(255, 138);
+            this.lb_taxiNo.Name = "lb_taxiNo";
+            this.lb_taxiNo.Size = new System.Drawing.Size(58, 20);
+            this.lb_taxiNo.TabIndex = 52;
+            this.lb_taxiNo.Text = "Số Xe";
+            // 
+            // dp_taxiDateJoin
+            // 
+            // 
+            // 
+            // 
+            this.dp_taxiDateJoin.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dp_taxiDateJoin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_taxiDateJoin.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dp_taxiDateJoin.ButtonDropDown.Visible = true;
+            this.dp_taxiDateJoin.IsPopupCalendarOpen = false;
+            this.dp_taxiDateJoin.Location = new System.Drawing.Point(688, 134);
+            // 
+            // 
+            // 
+            this.dp_taxiDateJoin.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dp_taxiDateJoin.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_taxiDateJoin.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dp_taxiDateJoin.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_taxiDateJoin.MonthCalendar.DisplayMonth = new System.DateTime(2014, 4, 1, 0, 0, 0, 0);
+            this.dp_taxiDateJoin.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dp_taxiDateJoin.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_taxiDateJoin.MonthCalendar.TodayButtonVisible = true;
+            this.dp_taxiDateJoin.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dp_taxiDateJoin.Name = "dp_taxiDateJoin";
+            this.dp_taxiDateJoin.Size = new System.Drawing.Size(127, 22);
+            this.dp_taxiDateJoin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dp_taxiDateJoin.TabIndex = 51;
+            // 
+            // lb_taxiDateJoin
+            // 
+            this.lb_taxiDateJoin.AutoSize = true;
+            this.lb_taxiDateJoin.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiDateJoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiDateJoin.Location = new System.Drawing.Point(574, 136);
+            this.lb_taxiDateJoin.Name = "lb_taxiDateJoin";
+            this.lb_taxiDateJoin.Size = new System.Drawing.Size(109, 20);
+            this.lb_taxiDateJoin.TabIndex = 50;
+            this.lb_taxiDateJoin.Text = "Ngày Ra Đội";
+            // 
+            // bt_DelTaxi
+            // 
+            this.bt_DelTaxi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_DelTaxi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_DelTaxi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_DelTaxi.Image = global::Vinasun.Properties.Resources.Error_icon1;
+            this.bt_DelTaxi.Location = new System.Drawing.Point(498, 246);
+            this.bt_DelTaxi.Name = "bt_DelTaxi";
+            this.bt_DelTaxi.Size = new System.Drawing.Size(79, 34);
+            this.bt_DelTaxi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bt_DelTaxi.TabIndex = 49;
+            this.bt_DelTaxi.Text = "Xóa";
+            // 
+            // bt_AddTaxi
+            // 
+            this.bt_AddTaxi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_AddTaxi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_AddTaxi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_AddTaxi.Image = global::Vinasun.Properties.Resources.folder_add_icon__3_;
+            this.bt_AddTaxi.Location = new System.Drawing.Point(355, 246);
+            this.bt_AddTaxi.Name = "bt_AddTaxi";
+            this.bt_AddTaxi.Size = new System.Drawing.Size(79, 34);
+            this.bt_AddTaxi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bt_AddTaxi.TabIndex = 48;
+            this.bt_AddTaxi.Text = "Thêm";
+            this.bt_AddTaxi.Click += new System.EventHandler(this.btAddTaxi_Click);
+            // 
+            // cb_taxiGroup
+            // 
+            this.cb_taxiGroup.DisplayMember = "Text";
+            this.cb_taxiGroup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_taxiGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_taxiGroup.FormattingEnabled = true;
+            this.cb_taxiGroup.ItemHeight = 20;
+            this.cb_taxiGroup.Location = new System.Drawing.Point(371, 187);
+            this.cb_taxiGroup.Name = "cb_taxiGroup";
+            this.cb_taxiGroup.Size = new System.Drawing.Size(127, 26);
+            this.cb_taxiGroup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_taxiGroup.TabIndex = 47;
+            // 
+            // lb_taxiGroup
+            // 
+            this.lb_taxiGroup.AutoSize = true;
+            this.lb_taxiGroup.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiGroup.Location = new System.Drawing.Point(257, 187);
+            this.lb_taxiGroup.Name = "lb_taxiGroup";
+            this.lb_taxiGroup.Size = new System.Drawing.Size(63, 20);
+            this.lb_taxiGroup.TabIndex = 46;
+            this.lb_taxiGroup.Text = "Đội Xe";
+            // 
+            // cb_taxiType
+            // 
+            this.cb_taxiType.DisplayMember = "Text";
+            this.cb_taxiType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_taxiType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_taxiType.FormattingEnabled = true;
+            this.cb_taxiType.ItemHeight = 20;
+            this.cb_taxiType.Location = new System.Drawing.Point(688, 80);
+            this.cb_taxiType.Name = "cb_taxiType";
+            this.cb_taxiType.Size = new System.Drawing.Size(118, 26);
+            this.cb_taxiType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_taxiType.TabIndex = 45;
+            // 
+            // lb_taxiType
+            // 
+            this.lb_taxiType.AutoSize = true;
+            this.lb_taxiType.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiType.Location = new System.Drawing.Point(574, 86);
+            this.lb_taxiType.Name = "lb_taxiType";
+            this.lb_taxiType.Size = new System.Drawing.Size(70, 20);
+            this.lb_taxiType.TabIndex = 44;
+            this.lb_taxiType.Text = "Loại Xe";
+            // 
+            // dgv_taxis
+            // 
+            this.dgv_taxis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_taxis.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_taxis.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgv_taxis.Location = new System.Drawing.Point(7, 67);
+            this.dgv_taxis.Name = "dgv_taxis";
+            this.dgv_taxis.Size = new System.Drawing.Size(227, 454);
+            this.dgv_taxis.TabIndex = 43;
+            this.dgv_taxis.MouseLeave += new System.EventHandler(this.dgv_taxiMouseLeave);
+            this.dgv_taxis.MouseHover += new System.EventHandler(this.dgv_taxiMouseOver);
+            // 
+            // buttonX25
+            // 
+            this.buttonX25.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX25.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX25.Image = global::Vinasun.Properties.Resources.Start_Menu_Search_icon;
+            this.buttonX25.Location = new System.Drawing.Point(475, 18);
+            this.buttonX25.Name = "buttonX25";
+            this.buttonX25.Size = new System.Drawing.Size(79, 34);
+            this.buttonX25.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX25.TabIndex = 42;
+            this.buttonX25.Text = "Tìm";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.BackColor = System.Drawing.Color.Transparent;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(3, 32);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(81, 20);
+            this.label59.TabIndex = 41;
+            this.label59.Text = "Tìm Kiếm";
+            // 
+            // comboBoxEx12
+            // 
+            this.comboBoxEx12.DisplayMember = "Text";
+            this.comboBoxEx12.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxEx12.FormattingEnabled = true;
+            this.comboBoxEx12.ItemHeight = 20;
+            this.comboBoxEx12.Location = new System.Drawing.Point(90, 26);
+            this.comboBoxEx12.Name = "comboBoxEx12";
+            this.comboBoxEx12.Size = new System.Drawing.Size(118, 26);
+            this.comboBoxEx12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBoxEx12.TabIndex = 40;
+            // 
+            // textBoxX43
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX43.Border.Class = "TextBoxBorder";
+            this.textBoxX43.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX43.Location = new System.Drawing.Point(225, 26);
+            this.textBoxX43.Name = "textBoxX43";
+            this.textBoxX43.Size = new System.Drawing.Size(196, 26);
+            this.textBoxX43.TabIndex = 39;
+            // 
+            // txt_taxiDriverMain
+            // 
+            // 
+            // 
+            // 
+            this.txt_taxiDriverMain.Border.Class = "TextBoxBorder";
+            this.txt_taxiDriverMain.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_taxiDriverMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_taxiDriverMain.Location = new System.Drawing.Point(371, 83);
+            this.txt_taxiDriverMain.Name = "txt_taxiDriverMain";
+            this.txt_taxiDriverMain.Size = new System.Drawing.Size(127, 26);
+            this.txt_taxiDriverMain.TabIndex = 31;
+            this.txt_taxiDriverMain.Enter += new System.EventHandler(this.txt_taxiDriverMainFocus);
+            this.txt_taxiDriverMain.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_taxiDriverMainKeyPress);
+            this.txt_taxiDriverMain.Leave += new System.EventHandler(this.txt_taxiDriverMainLeave);
+            this.txt_taxiDriverMain.Validating += new System.ComponentModel.CancelEventHandler(this.txt_taxiDriverMainValidator);
+            // 
+            // lb_taxiDriverMain
+            // 
+            this.lb_taxiDriverMain.AutoSize = true;
+            this.lb_taxiDriverMain.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiDriverMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiDriverMain.Location = new System.Drawing.Point(255, 89);
+            this.lb_taxiDriverMain.Name = "lb_taxiDriverMain";
+            this.lb_taxiDriverMain.Size = new System.Drawing.Size(111, 20);
+            this.lb_taxiDriverMain.TabIndex = 30;
+            this.lb_taxiDriverMain.Text = "Số Tài Chính";
+            // 
+            // superTabItem14
+            // 
+            this.superTabItem14.AttachedControl = this.superTabControlPanel14;
+            this.superTabItem14.GlobalItem = false;
+            this.superTabItem14.Name = "superTabItem14";
+            this.superTabItem14.Text = "Xe Taxi";
             // 
             // groupPanel7
             // 
@@ -4108,14 +4112,14 @@
             this.groupPanel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl4)).EndInit();
             this.superTabControl4.ResumeLayout(false);
-            this.superTabControlPanel14.ResumeLayout(false);
-            this.superTabControlPanel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dp_taxiDateJoin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX13)).EndInit();
             this.superTabControlPanel13.ResumeLayout(false);
             this.superTabControlPanel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dp_empDOB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_entities)).EndInit();
+            this.superTabControlPanel14.ResumeLayout(false);
+            this.superTabControlPanel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dp_taxiDateJoin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_taxis)).EndInit();
             this.groupPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).EndInit();
             this.superTabControl3.ResumeLayout(false);
@@ -4368,39 +4372,39 @@
         private DevComponents.DotNetBar.ButtonX buttonX7;
         private DevComponents.DotNetBar.ButtonX buttonX8;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_firstName;
-        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label lb_firstname;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_employeeId;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label lb_empId;
+        private System.Windows.Forms.Label lb_birthday;
+        private System.Windows.Forms.Label lb_gender;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_phoneNumber;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_email;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label lb_phoneNumber;
+        private System.Windows.Forms.Label lb_email;
         private DevComponents.DotNetBar.ButtonX buttonX21;
         private System.Windows.Forms.Label label56;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgv_entities;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cb_position;
-        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label lb_position;
         private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx11;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX39;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_lastName;
-        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label lb_lastname;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_address;
-        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label lb_address;
         private DevComponents.DotNetBar.ButtonX bt_delEmployee;
         private DevComponents.DotNetBar.ButtonX bt_addEmployee;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel14;
         private DevComponents.DotNetBar.SuperTabItem superTabItem14;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX13;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgv_taxis;
         private DevComponents.DotNetBar.ButtonX buttonX25;
         private System.Windows.Forms.Label label59;
         private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx12;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX43;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_taxiDriverMain;
-        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label lb_taxiDriverMain;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cb_taxiType;
-        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label lb_taxiType;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel15;
         private DevComponents.DotNetBar.SuperTabItem superTabItem15;
         private DevComponents.DotNetBar.ButtonX buttonX26;
@@ -4411,21 +4415,21 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX44;
         private System.Windows.Forms.Label label63;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cb_checkerGroup;
-        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label lb_checkerGroup;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cb_taxiGroup;
-        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label lb_taxiGroup;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.RadioButton rb_empNu;
         private System.Windows.Forms.RadioButton rb_empNam;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dp_empDOB;
-        private DevComponents.DotNetBar.ButtonX buttonX23;
-        private DevComponents.DotNetBar.ButtonX btAddTaxi;
+        private DevComponents.DotNetBar.ButtonX bt_DelTaxi;
+        private DevComponents.DotNetBar.ButtonX bt_AddTaxi;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dp_taxiDateJoin;
-        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label lb_taxiDateJoin;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_taxiNo;
-        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label lb_taxiNo;
         private DevComponents.DotNetBar.Controls.TextBoxX txt_taxiModel;
-        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label lb_taxiModel;
 
     }
 }
