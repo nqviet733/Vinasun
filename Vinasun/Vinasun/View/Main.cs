@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Vinasun.Model;
 using Vinasun.EntityClass;
 using Vinasun.CommonClass;
+using Vinasun.DTO;
 
 
 namespace Vinasun.View
@@ -33,8 +34,15 @@ namespace Vinasun.View
          ToolTip txt_taxiDateJoinTootip;
          ToolTip txt_taxiModelTootip;
 
+         ToolTip txt_taxiTypeSymbolTootip;
+         ToolTip txt_taxiTypeDescriptionTootip;
+
+         ToolTip txt_branchNameTootip;
+
          EmployeeModel employeeModel;
          TaxiModel taxiModel;
+         TaxiTypeModel taxiTypeModel;
+         BranchModel branchModel;
 
          private bool statusEmpId;
          public bool StatusEmpId
@@ -131,6 +139,28 @@ namespace Vinasun.View
              set { statusTaxiModel = value; }
          }
 
+         private bool statusTaxiTypeSymbol;
+
+         public bool StatusTaxiTypeSymbol
+         {
+             get { return statusTaxiTypeSymbol; }
+             set { statusTaxiTypeSymbol = value; }
+         }
+         private bool statusTaxiTypeDescription;
+
+         public bool StatusTaxiTypeDescription
+         {
+             get { return statusTaxiTypeDescription; }
+             set { statusTaxiTypeDescription = value; }
+         }
+
+         private bool statusBranchName;
+
+         public bool StatusBranchName
+         {
+             get { return statusBranchName; }
+             set { statusBranchName = value; }
+         }
 
         public Main()
         {
@@ -146,6 +176,12 @@ namespace Vinasun.View
             taxiModel = new TaxiModel();
             taxiModel.showDGV(dgv_taxis, entitiesContainer);
 
+            taxiTypeModel = new TaxiTypeModel();
+            taxiTypeModel.showDGV(dgv_taxiType, entitiesContainer);
+
+            branchModel = new BranchModel();
+            branchModel.showDGV(dgv_branches, entitiesContainer);
+
             this.StatusEmpId = false;
             this.StatusEmpFirtName = false;
             this.StatusEmpLastName = false;
@@ -160,6 +196,9 @@ namespace Vinasun.View
             this.StatusTaxiType = true;
             this.StatusTaxiDateJoin = true;
             this.StatusTaxiModel = true;
+
+            this.StatusTaxiTypeSymbol = false;
+            this.StatusTaxiTypeDescription = false;
         }
 
         private void textBoxX1_KeyPress(object sender, KeyPressEventArgs e)
@@ -513,6 +552,111 @@ namespace Vinasun.View
         {
             isHidenTaxiFieldForExpand(true);
             dgv_taxis.Width = 227;
+        }
+
+        private void txt_taxiTypeSymbol_Enter(object sender, EventArgs e)
+        {
+            txt_taxiTypeSymbolTootip = new ToolTip();
+            txt_taxiTypeSymbolTootip.Show("Kí Hiệu Xe", txt_taxiTypeSymbol);
+        }
+
+        private void txt_taxiTypeSymbol_Leave(object sender, EventArgs e)
+        {
+            txt_taxiTypeSymbolTootip.Dispose();
+        }
+
+        private void txt_taxiTypeSymbol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.characterOrDigitOnly(sender, e);
+        }
+
+        private void txt_taxiTypeSymbol_Validating(object sender, CancelEventArgs e)
+        {
+            StatusTaxiTypeSymbol = validation.isNotNullOrEmpty(sender, errorProvider, "Kí Hiệu Xe");
+        }
+
+        private void txt_taxiTypeDescription_Validating(object sender, CancelEventArgs e)
+        {
+            StatusTaxiTypeDescription = validation.isNotNullOrEmpty(sender, errorProvider, "Mô Tả Loại Xe");
+        }
+
+        private void txt_taxiTypeDescription_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.characterOrSpaceOnly(sender, e);
+        }
+
+        private void txt_taxiTypeDescription_Leave(object sender, EventArgs e)
+        {
+            txt_taxiTypeDescriptionTootip.Dispose();
+        }
+
+        private void txt_taxiTypeDescription_Enter(object sender, EventArgs e)
+        {
+            txt_taxiTypeDescriptionTootip = new ToolTip();
+            txt_taxiTypeDescriptionTootip.Show("Mô Tả Loại Xe", txt_taxiTypeSymbol);
+        }
+
+        private void bt_addTaxiType_Click(object sender, EventArgs e)
+        {
+            if (StatusTaxiTypeDescription && StatusTaxiTypeSymbol)
+            {
+                TaxiType taxiType = new TaxiType();
+                taxiType.symbol = txt_taxiTypeSymbol.Text;
+                taxiType.description = txt_taxiTypeDescription.Text;
+                TaxiTypeDTO taxiTypeDTO = new TaxiTypeDTOImpl();
+                int signal = taxiTypeDTO.addTaxiType(entitiesContainer, taxiType);
+                if (signal == 1)
+                {
+                    MessageBox.Show("Thêm Taxi Mới Thành Công");
+                    taxiTypeModel.showDGV(dgv_taxiType, entitiesContainer);
+                }
+                else
+                {
+                    MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Mới Loại Taxi", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void txt_branchName_Validating(object sender, CancelEventArgs e)
+        {
+            StatusBranchName = validation.isNotNullOrEmpty(sender, errorProvider, "Mô Tả Loại Xe");
+        }
+
+        private void txt_branchName_Leave(object sender, EventArgs e)
+        {
+            txt_branchNameTootip.Dispose();
+        }
+
+        private void txt_branchName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.characterOrSpaceOnly(sender, e);
+        }
+
+        private void txt_branchName_Enter(object sender, EventArgs e)
+        {
+            txt_branchNameTootip = new ToolTip();
+            txt_branchNameTootip.Show("Tên Chi Nhánh", txt_branchName);
+        }
+
+        private void bt_AddBranch_Click(object sender, EventArgs e)
+        {
+            if (StatusBranchName)
+            {
+                Branch branch = new Branch();
+                branch.name = txt_branchName.Text;
+                branch.created = DateTime.Now;
+                BranchDTO branchDTO = new BranchDTOImpl();
+                int signal = branchDTO.addBranch(entitiesContainer, branch);
+                if (signal == 1)
+                {
+                    MessageBox.Show("Thêm Taxi Mới Thành Công");
+                    branchModel.showDGV(dgv_branches, entitiesContainer);
+                }
+                else
+                {
+                    MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Mới Loại Taxi", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
