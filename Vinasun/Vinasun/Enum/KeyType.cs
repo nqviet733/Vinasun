@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace Vinasun.Enum
 {
-    public enum TaxiType
+    public enum KeyType
     {
-        T7J,
-        T4,
-        T7G,
-        T7J2,
+        Letter,
+        WhileSpace,
+        Digit,
+        Comma,
+        Special,
+        Dot,
+        Question,
+
     }
 }

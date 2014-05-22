@@ -60,6 +60,8 @@
   <ItemGroup>
     <Compile Include="CommonClass\EventHandler.cs" />
     <Compile Include="CommonClass\Validation.cs" />
+    <Compile Include="Decorator\ConcreteKeyPressHandler.cs" />
+    <Compile Include="Decorator\KeyPressHandler.cs" />
     <Compile Include="DTO\BranchDTOImpl.cs" />
     <Compile Include="DTO\BranchDTO.cs" />
     <Compile Include="DTO\DriverDTO.cs" />
@@ -106,8 +108,9 @@
     <Compile Include="EntityClass\SummaryNumber.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
+    <Compile Include="Enum\KeyType.cs" />
     <Compile Include="Enum\ReasonNoIncomeType.cs" />
-    <Compile Include="Enum\TaxiType.cs" />
+    <Compile Include="Enum\TaxiType1.cs" />
     <Compile Include="DTO\CollectionDTO.cs" />
     <Compile Include="DTO\CollectionDTOImpl.cs" />
     <Compile Include="DTO\ProvineIncomeDTO.cs" />
@@ -141,6 +144,7 @@
     <Compile Include="DTO\UserRoleDTOImpl.cs" />
     <Compile Include="Model\BranchModel.cs" />
     <Compile Include="Model\EmployeeModel.cs" />
+    <Compile Include="Model\GroupModel.cs" />
     <Compile Include="Model\TaxiModel.cs" />
     <Compile Include="Model\TaxiTypeModel.cs" />
     <Compile Include="Program.cs" />

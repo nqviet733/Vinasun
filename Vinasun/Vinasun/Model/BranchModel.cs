@@ -23,5 +23,21 @@ namespace Vinasun.Model
             dgv.Columns["name"].HeaderText = "Tên Nhánh";
             dgv.Columns["created"].HeaderText = "Ngày Thêm";
         }
+        public Dictionary<int, string> getBranchTypes(EntityDiagramContainer entitiesContainer)
+        {
+            Dictionary<int, string> branchTypes = new Dictionary<int, string>();
+            BranchDTO branchDTO = new BranchDTOImpl();
+            foreach (Branch branch in branchDTO.retrieveAllBranches(entitiesContainer))
+            {
+                branchTypes.Add(branch.id, branch.name);
+            }
+            return branchTypes;
+        }
+
+        public IList<Branch> getBranchTypes1(EntityDiagramContainer entitiesContainer)
+        {
+            BranchDTO branchDTO = new BranchDTOImpl();
+            return branchDTO.retrieveAllBranches(entitiesContainer);
+        }
     }
 }

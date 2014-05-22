@@ -23,5 +23,16 @@ namespace Vinasun.Model
             dgv.Columns["symbol"].HeaderText = "Kí Hiệu";
             dgv.Columns["description"].HeaderText = "Mô Tả Xe";
         }
+
+        public Dictionary<int, string> getTaxiTypes(EntityDiagramContainer entitiesContainer)
+        {
+            Dictionary<int, string> taxiTypes = new Dictionary<int, string>();
+            TaxiTypeDTO taxiTypeDTO = new TaxiTypeDTOImpl();
+            foreach (TaxiType taxiType in taxiTypeDTO.retrieveAllTaxiTypes(entitiesContainer))
+            {
+                taxiTypes.Add(taxiType.id, taxiType.symbol);
+            }
+            return taxiTypes;
+        }
     }
 }

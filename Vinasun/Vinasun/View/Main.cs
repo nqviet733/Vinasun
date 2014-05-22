@@ -11,8 +11,10 @@ using Vinasun.Model;
 using Vinasun.EntityClass;
 using Vinasun.CommonClass;
 using Vinasun.DTO;
+using Vinasun.Enum;
 
-
+/*Ctrl+Shift+C : Class View
+ Ctrl K, T: Call Hierarchy */
 namespace Vinasun.View
 {
     public partial class Main : Form
@@ -39,10 +41,16 @@ namespace Vinasun.View
 
          ToolTip txt_branchNameTootip;
 
+         ToolTip txt_groupNameTootip;
+         ToolTip txt_groupBranchTootip;
+         ToolTip txt_groupAddressTootip;
+
          EmployeeModel employeeModel;
          TaxiModel taxiModel;
          TaxiTypeModel taxiTypeModel;
          BranchModel branchModel;
+         GroupModel groupModel;
+
 
          private bool statusEmpId;
          public bool StatusEmpId
@@ -162,6 +170,29 @@ namespace Vinasun.View
              set { statusBranchName = value; }
          }
 
+         private bool statusGroupName;
+
+         public bool StatusGroupName
+         {
+             get { return statusGroupName; }
+             set { statusGroupName = value; }
+         }
+         private bool statusGroupBranch;
+
+         public bool StatusGroupBranch
+         {
+             get { return statusGroupBranch; }
+             set { statusGroupBranch = value; }
+         }
+
+         private bool statusGroupAddress;
+
+         public bool StatusGroupAddress
+         {
+             get { return statusGroupAddress; }
+             set { statusGroupAddress = value; }
+         }
+
         public Main()
         {
             InitializeComponent();
@@ -182,6 +213,17 @@ namespace Vinasun.View
             branchModel = new BranchModel();
             branchModel.showDGV(dgv_branches, entitiesContainer);
 
+            cb_groupBranchName.DataSource = new BindingSource(branchModel.getBranchTypes(entitiesContainer), null) ;
+            cb_groupBranchName.DisplayMember = "Value";
+            cb_groupBranchName.ValueMember = "Key";
+
+            cb_taxiType.DataSource = new BindingSource(taxiTypeModel.getTaxiTypes(entitiesContainer), null);
+            cb_taxiType.DisplayMember = "Value";
+            cb_taxiType.ValueMember = "Key";
+
+            groupModel = new GroupModel();
+            groupModel.showDGV(dgv_group, entitiesContainer);
+
             this.StatusEmpId = false;
             this.StatusEmpFirtName = false;
             this.StatusEmpLastName = false;
@@ -199,6 +241,10 @@ namespace Vinasun.View
 
             this.StatusTaxiTypeSymbol = false;
             this.StatusTaxiTypeDescription = false;
+
+            this.statusGroupName = false;
+            this.StatusGroupBranch = true;
+            this.StatusGroupAddress = false;
         }
 
         private void textBoxX1_KeyPress(object sender, KeyPressEventArgs e)
@@ -657,6 +703,72 @@ namespace Vinasun.View
                     MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Mới Loại Taxi", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void txt_groupName_Enter(object sender, EventArgs e)
+        {
+            txt_groupNameTootip = new ToolTip();
+            txt_groupNameTootip.Show("Tên Nhóm", txt_groupName);
+        }
+
+        private void txt_groupName_Validating(object sender, CancelEventArgs e)
+        {
+            StatusGroupName = validation.isNotNullOrEmpty(sender, errorProvider, "Tên Đội");
+        }
+
+        private void txt_groupName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.characterOrDigitOrSpaceOnly(sender, e);
+        }
+
+        private void txt_groupName_Leave(object sender, EventArgs e)
+        {
+            txt_groupNameTootip.Dispose();
+        }
+
+        private void bt_AddGroup_Click(object sender, EventArgs e)
+        {
+            if (StatusGroupName && StatusGroupAddress && statusGroupBranch)
+            {
+                Group group = new Group();
+                group.name = txt_groupName.Text;
+                group.address = txt_groupAddress.Text;
+                BranchDTO branchDTO = new BranchDTOImpl();
+                group.Branch = branchDTO.retrieveBranch(entitiesContainer, int.Parse(cb_groupBranchName.SelectedValue.ToString()));
+                GroupDTO groupDTO = new GroupDTOImpl();
+                int signal = groupDTO.addGroup(entitiesContainer, group);
+                if (signal > 0)
+                {
+                    MessageBox.Show("Thêm Group Mới Thành Công");
+                    groupModel.showDGV(dgv_group, entitiesContainer);
+                }
+                else
+                {
+                    MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Mới Tổ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void txt_groupAddress_Validating(object sender, CancelEventArgs e)
+        {
+            StatusGroupAddress = validation.isNotNullOrEmpty(sender, errorProvider, "Địa Chỉ Tổ");
+        }
+
+        private void txt_groupAddress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //eventHandler.keyPressHandler(txt_groupAddress, e);
+            eventHandler.keyPressHandler(txt_groupAddress, e, KeyType.Letter, KeyType.Digit);
+        }
+
+        private void txt_groupAddress_Enter(object sender, EventArgs e)
+        {
+            txt_groupAddressTootip = new ToolTip();
+            txt_groupAddressTootip.Show("Địa Chỉ Tổ", txt_groupAddress);
+        }
+
+        private void txt_groupAddress_Leave(object sender, EventArgs e)
+        {
+            txt_groupAddressTootip.Dispose();
         }
     }
 }
