@@ -21,11 +21,11 @@ namespace Vinasun.CommonClass
                 bool status = true;
                 foreach (KeyType k in kt)
                 {
-                    if (KeyType.Digit.Equals(k) && !char.IsControl(e.KeyChar) && char.IsDigit(e.KeyChar))
+                    if (KeyType.Digit.Equals(k) && char.IsDigit(e.KeyChar))
                     {
                         status = false;
                     }
-                    if (KeyType.Letter.Equals(k) && !char.IsControl(e.KeyChar) && char.IsLetter(e.KeyChar))
+                    if (KeyType.Letter.Equals(k) && char.IsLetter(e.KeyChar))
                     {
                         status = false;
                     }
