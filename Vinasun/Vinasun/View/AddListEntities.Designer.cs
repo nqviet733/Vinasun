@@ -90,7 +90,7 @@
             this.dataGridViewAddListEntities.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.cellValidatingEvent);
             this.dataGridViewAddListEntities.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellValueChanged);
             this.dataGridViewAddListEntities.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.columnAddedEvent);
-            this.dataGridViewAddListEntities.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.EditingControlShowingEvent);
+            //this.dataGridViewAddListEntities.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.EditingControlShowingEvent);
             this.dataGridViewAddListEntities.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.rowEnterEvent);
             this.dataGridViewAddListEntities.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAddListEntities_RowLeave);
             this.dataGridViewAddListEntities.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvAddListEntities_RowsAdded);

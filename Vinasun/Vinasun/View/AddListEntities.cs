@@ -87,53 +87,53 @@ namespace Vinasun.View
 
         }
 
-        private void EditingControlShowingEvent(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            if (dataGridViewAddListEntities.CurrentCell.ColumnIndex == 0)
-            {
-                e.Control.KeyPress += eventHandler.characterOnly;
-            }
-            else
-            {
-                e.Control.KeyPress -= eventHandler.characterOnly;
-            }
+        //private void EditingControlShowingEvent(object sender, DataGridViewEditingControlShowingEventArgs e)
+        //{
+        //    if (dataGridViewAddListEntities.CurrentCell.ColumnIndex == 0)
+        //    {
+        //        e.Control.KeyPress += eventHandler.keyPressHandler;
+        //    }
+        //    else
+        //    {
+        //        e.Control.KeyPress -= eventHandler.characterOnly;
+        //    }
 
-            if (dataGridViewAddListEntities.CurrentCell.ColumnIndex == 1)
-            {
-                e.Control.KeyPress += eventHandler.characterOrSpaceOnly;
-            }
-            else
-            {
-                e.Control.KeyPress -= eventHandler.characterOrSpaceOnly;
-            }
+        //    if (dataGridViewAddListEntities.CurrentCell.ColumnIndex == 1)
+        //    {
+        //        e.Control.KeyPress += eventHandler.characterOrSpaceOnly;
+        //    }
+        //    else
+        //    {
+        //        e.Control.KeyPress -= eventHandler.characterOrSpaceOnly;
+        //    }
 
-            if (dataGridViewAddListEntities.CurrentCell.ColumnIndex == 2)
-            {
-                e.Control.KeyPress += eventHandler.characterOrSpaceOnly;
-            }
-            else
-            {
-                e.Control.KeyPress -= eventHandler.characterOrSpaceOnly;
-            }
+        //    if (dataGridViewAddListEntities.CurrentCell.ColumnIndex == 2)
+        //    {
+        //        e.Control.KeyPress += eventHandler.characterOrSpaceOnly;
+        //    }
+        //    else
+        //    {
+        //        e.Control.KeyPress -= eventHandler.characterOrSpaceOnly;
+        //    }
 
-            if (dataGridViewAddListEntities.CurrentCell.ColumnIndex == 5)
-            {
-                e.Control.KeyPress += eventHandler.digitOrSpaceOnly;
-            }
-            else
-            {
-                e.Control.KeyPress -= eventHandler.digitOrSpaceOnly;
-            }
+        //    if (dataGridViewAddListEntities.CurrentCell.ColumnIndex == 5)
+        //    {
+        //        e.Control.KeyPress += eventHandler.digitOrSpaceOnly;
+        //    }
+        //    else
+        //    {
+        //        e.Control.KeyPress -= eventHandler.digitOrSpaceOnly;
+        //    }
 
-            if (dataGridViewAddListEntities.CurrentCell.ColumnIndex == 5)
-            {
-                e.Control.KeyPress += eventHandler.digitOrSpaceOnly;
-            }
-            else
-            {
-                e.Control.KeyPress -= eventHandler.digitOrSpaceOnly;
-            }
-        }
+        //    if (dataGridViewAddListEntities.CurrentCell.ColumnIndex == 5)
+        //    {
+        //        e.Control.KeyPress += eventHandler.digitOrSpaceOnly;
+        //    }
+        //    else
+        //    {
+        //        e.Control.KeyPress -= eventHandler.digitOrSpaceOnly;
+        //    }
+        //}
 
         private void btAddEntities_Click(object sender, EventArgs e)
         {

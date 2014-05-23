@@ -247,68 +247,10 @@ namespace Vinasun.View
             this.StatusGroupAddress = false;
         }
 
-        private void textBoxX1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if (e.KeyChar == '.' && textBoxX1.Text.IndexOf('.') > -1)
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void errorProvider1_RightToLeftChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxX1_Validating(object sender, CancelEventArgs e)
-        {
-            validate();
-        }
-        private bool validate()
-        {
-            bool status = true;
-            if (this.textBoxX1.Text.Length > 5)
-            {
-                errorProvider1.SetError(this.textBoxX1, "Please Provide....");
-                this.buttonX1.Focus();
-                status = false;
-            }
-            else
-            {
-                errorProvider1.SetError(this.textBoxX1, "Please Provide....");
-            }
-            return status;
-        }
-
-        private void textBoxX17_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void superTabControlPanel13_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bt_addEmployee_Click(object sender, EventArgs e)
         {
-            //AddListEntities entitiesForm = new AddListEntities();
-            //entitiesForm.Show();
             if (!StatusEmpId)
             {
-                //MessageBox.Show("Vui Lòng Nhập Mã Nhân Viên", "WARNING", 
-                //                MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txt_employeeId.Focus();
             }
             if (!StatusEmpFirtName)
@@ -364,7 +306,8 @@ namespace Vinasun.View
 
         private void txt_empIdKeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.characterOrDigitOnly(sender, e);
+            eventHandler.keyPressHandler(sender, e, KeyType.Letter, KeyType.Digit);
+            //eventHandler.characterOrDigitOnly(sender, e);
         }
 
         private void txt_empIdFocus(object sender, EventArgs e)
@@ -387,7 +330,7 @@ namespace Vinasun.View
 
         private void txt_empFirstNameKeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.characterOnly(sender, e);
+            eventHandler.keyPressHandler(sender, e, KeyType.Letter); ;
         }
 
         private void txt_empFirstNameValidatior(object sender, CancelEventArgs e)
@@ -409,7 +352,7 @@ namespace Vinasun.View
 
         private void txt_empLastNameKeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.characterOrSpaceOnly(sender, e);
+            eventHandler.keyPressHandler(sender, e, KeyType.Letter, KeyType.WhiteSpace); ;
         }
 
         private void txt_empLastNameValidatior(object sender, CancelEventArgs e)
@@ -442,7 +385,7 @@ namespace Vinasun.View
 
         private void txt_phoneNumberKeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.digitOrSpaceOnly(sender, e);
+            eventHandler.keyPressHandler(sender, e, KeyType.WhiteSpace, KeyType.Digit); ;
         }
 
         private void txt_phoneNumberLeave(object sender, EventArgs e)
@@ -503,7 +446,7 @@ namespace Vinasun.View
 
         private void txt_taxiDriverMainKeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.characterOrDigitOnly(sender, e);
+            eventHandler.keyPressHandler(sender, e, KeyType.Digit); ;
         }
 
         private void txt_taxiDriverMainValidator(object sender, CancelEventArgs e)
@@ -514,7 +457,7 @@ namespace Vinasun.View
         //Event handler for taxi no
         private void txt_taxiNoKeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.taxiNoOnly(sender, e);
+            eventHandler.keyPressHandler(sender, e, KeyType.Letter, KeyType.Digit, KeyType.Hyphen); ;
         }
 
         private void txt_taxiNoValidator(object sender, CancelEventArgs e)
@@ -613,7 +556,7 @@ namespace Vinasun.View
 
         private void txt_taxiTypeSymbol_KeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.characterOrDigitOnly(sender, e);
+            eventHandler.keyPressHandler(sender, e, KeyType.Letter, KeyType.Digit); ;
         }
 
         private void txt_taxiTypeSymbol_Validating(object sender, CancelEventArgs e)
@@ -628,7 +571,7 @@ namespace Vinasun.View
 
         private void txt_taxiTypeDescription_KeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.characterOrSpaceOnly(sender, e);
+            eventHandler.keyPressHandler(sender, e, KeyType.Letter, KeyType.Digit, KeyType.WhiteSpace);
         }
 
         private void txt_taxiTypeDescription_Leave(object sender, EventArgs e)
@@ -675,7 +618,7 @@ namespace Vinasun.View
 
         private void txt_branchName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.characterOrSpaceOnly(sender, e);
+            eventHandler.keyPressHandler(sender, e, KeyType.Letter, KeyType.Digit, KeyType.WhiteSpace);
         }
 
         private void txt_branchName_Enter(object sender, EventArgs e)
@@ -718,7 +661,7 @@ namespace Vinasun.View
 
         private void txt_groupName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            eventHandler.characterOrDigitOrSpaceOnly(sender, e);
+            eventHandler.keyPressHandler(sender, e, KeyType.Letter, KeyType.Digit, KeyType.WhiteSpace);
         }
 
         private void txt_groupName_Leave(object sender, EventArgs e)
@@ -756,7 +699,6 @@ namespace Vinasun.View
 
         private void txt_groupAddress_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //eventHandler.keyPressHandler(txt_groupAddress, e);
             eventHandler.keyPressHandler(txt_groupAddress, e, KeyType.Letter, KeyType.Digit);
         }
 

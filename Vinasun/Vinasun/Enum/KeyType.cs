@@ -8,13 +8,23 @@ namespace Vinasun.Enum
 {
     public enum KeyType
     {
-        Letter,
-        WhileSpace,
-        Digit,
-        Comma,
-        Special,
-        Dot,
-        Question,
+        Letter,//a,b,c
+        WhiteSpace,//'space'
+        Digit,//0-9
+        Punctuation,//'.'
+        Comma,//','
+        QuestionMark,//'?'
+        BackSlash,//'\'
+        Slash,//'/'
+        Ampersand,//'&'
+        Asterisk,//'*'
+        AtSign,//'@'
+        Apostrophe,//'''
+        Colon,//':'
+        Hyphen,//'-'
+        Underscore,//'_'
+        VerticalBar,//'|'
+        Semicolon,//';'
 
     }
 }

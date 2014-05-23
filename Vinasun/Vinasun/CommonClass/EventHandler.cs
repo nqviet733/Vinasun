@@ -21,11 +21,71 @@ namespace Vinasun.CommonClass
                 bool status = true;
                 foreach (KeyType k in kt)
                 {
-                    if (KeyType.Digit.Equals(k) && char.IsDigit(e.KeyChar))
+                    if (char.IsControl(e.KeyChar))
                     {
                         status = false;
                     }
                     if (KeyType.Letter.Equals(k) && char.IsLetter(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.WhiteSpace.Equals(k) && char.IsWhiteSpace(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.Digit.Equals(k) && char.IsDigit(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.Punctuation.Equals(k) && char.IsPunctuation(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.Comma.Equals(k) && ','.Equals(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.QuestionMark.Equals(k) && '?'.Equals(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.BackSlash.Equals(k) && '\\'.Equals(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.Slash.Equals(k) && '/'.Equals(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.Asterisk.Equals(k) && '*'.Equals(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.AtSign.Equals(k) && '@'.Equals(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.Apostrophe.Equals(k) && '\''.Equals(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.Colon.Equals(k) && ':'.Equals(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.Hyphen.Equals(k) && '-'.Equals(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.Underscore.Equals(k) && '_'.Equals(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.VerticalBar.Equals(k) && '|'.Equals(e.KeyChar))
+                    {
+                        status = false;
+                    }
+                    if (KeyType.Ampersand.Equals(k) && ';'.Equals(e.KeyChar))
                     {
                         status = false;
                     }
@@ -34,116 +94,5 @@ namespace Vinasun.CommonClass
             }
         }
 
-
-        //Only allow character
-        public void characterOnly(Object o, KeyPressEventArgs e)
-        {
-            if (o is TextBox || o is DataGridTextBoxColumn)
-            {
-                TextBox tb = o as TextBox;
-                if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        //Only allow character or sapce
-        public void characterOrSpaceOnly(Object o, KeyPressEventArgs e)
-        {
-            if (o is TextBox)
-            {
-                TextBox tb = o as TextBox;
-                if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        //Only allow character or digit
-        public void characterOrDigitOnly(Object o, KeyPressEventArgs e)
-        {
-            if (o is TextBox)
-            {
-                TextBox tb = o as TextBox;
-                if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        //Only allow character or digit or space
-        public void characterOrDigitOrSpaceOnly(Object o, KeyPressEventArgs e)
-        {
-            if (o is TextBox)
-            {
-                TextBox tb = o as TextBox;
-                if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        //Only allow digit only
-        public void digitOnly(Object o, KeyPressEventArgs e)
-        {
-            if (o is TextBox)
-            {
-                TextBox tb = o as TextBox;
-                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        //Only allow number||phone number
-        public void digitOrSpaceOnly(Object o, KeyPressEventArgs e)
-        {
-            if (o is TextBox)
-            {
-                TextBox tb = o as TextBox;
-                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        //Only allow number || character || space || or "-"
-        public void taxiNoOnly(Object o, KeyPressEventArgs e)
-        {
-            if (o is TextBox)
-            {
-                TextBox tb = o as TextBox;
-                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != '-')
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        //Only allow Comma
-        public void digitOrCommaOnly(Object o, KeyPressEventArgs e)
-        {
-            if (o is TextBox)
-            {
-                TextBox tb = o as TextBox;
-                if (!char.IsControl(e.KeyChar) && e.KeyChar != '.')
-                {
-                    e.Handled = true;
-                }
-
-                // only allow one decimal point
-                if (e.KeyChar == '.' && tb.Text.IndexOf('.') > -1)
-                {
-                    e.Handled = true;
-                }
-
-            }
-        }
     }
 }

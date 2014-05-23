@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -58,27 +58,6 @@
             this.superTabControlPanel3 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.groupPanel9 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.superTabControl4 = new DevComponents.DotNetBar.SuperTabControl();
-            this.superTabControlPanel14 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.txt_taxiModel = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.lb_taxiModel = new System.Windows.Forms.Label();
-            this.txt_taxiNo = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.lb_taxiNo = new System.Windows.Forms.Label();
-            this.dp_taxiDateJoin = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.lb_taxiDateJoin = new System.Windows.Forms.Label();
-            this.bt_DelTaxi = new DevComponents.DotNetBar.ButtonX();
-            this.bt_AddTaxi = new DevComponents.DotNetBar.ButtonX();
-            this.cb_taxiGroup = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.lb_taxiGroup = new System.Windows.Forms.Label();
-            this.cb_taxiType = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.lb_taxiType = new System.Windows.Forms.Label();
-            this.dgv_taxis = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.buttonX25 = new DevComponents.DotNetBar.ButtonX();
-            this.label59 = new System.Windows.Forms.Label();
-            this.comboBoxEx12 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.textBoxX43 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txt_taxiDriverMain = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.lb_taxiDriverMain = new System.Windows.Forms.Label();
-            this.superTabItem14 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel13 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.dp_empDOB = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.rb_empNu = new System.Windows.Forms.RadioButton();
@@ -109,9 +88,32 @@
             this.lb_lastname = new System.Windows.Forms.Label();
             this.lb_empId = new System.Windows.Forms.Label();
             this.superTabItem13 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel14 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.txt_taxiModel = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lb_taxiModel = new System.Windows.Forms.Label();
+            this.txt_taxiNo = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lb_taxiNo = new System.Windows.Forms.Label();
+            this.dp_taxiDateJoin = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.lb_taxiDateJoin = new System.Windows.Forms.Label();
+            this.bt_DelTaxi = new DevComponents.DotNetBar.ButtonX();
+            this.bt_AddTaxi = new DevComponents.DotNetBar.ButtonX();
+            this.cb_taxiGroup = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.lb_taxiGroup = new System.Windows.Forms.Label();
+            this.cb_taxiType = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.lb_taxiType = new System.Windows.Forms.Label();
+            this.dgv_taxis = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.buttonX25 = new DevComponents.DotNetBar.ButtonX();
+            this.label59 = new System.Windows.Forms.Label();
+            this.comboBoxEx12 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.textBoxX43 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txt_taxiDriverMain = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lb_taxiDriverMain = new System.Windows.Forms.Label();
+            this.superTabItem14 = new DevComponents.DotNetBar.SuperTabItem();
             this.groupPanel7 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.superTabControl3 = new DevComponents.DotNetBar.SuperTabControl();
             this.superTabControlPanel11 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.lb_groupAddress = new System.Windows.Forms.Label();
+            this.txt_groupAddress = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.buttonX16 = new DevComponents.DotNetBar.ButtonX();
             this.bt_addGroup = new DevComponents.DotNetBar.ButtonX();
             this.dgv_group = new DevComponents.DotNetBar.Controls.DataGridViewX();
@@ -120,26 +122,6 @@
             this.txt_groupName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lb_groupName = new System.Windows.Forms.Label();
             this.superTabItem11 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel10 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.buttonX15 = new DevComponents.DotNetBar.ButtonX();
-            this.bt_AddBranch = new DevComponents.DotNetBar.ButtonX();
-            this.dgv_branches = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.txt_branchName = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.lb_branchName = new System.Windows.Forms.Label();
-            this.superTabItem10 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel9 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.buttonX10 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX11 = new DevComponents.DotNetBar.ButtonX();
-            this.comboBoxEx3 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboBoxEx5 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.dataGridViewX6 = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.textBoxX30 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.superTabItem9 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel8 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.groupPanel16 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.buttonX13 = new DevComponents.DotNetBar.ButtonX();
@@ -158,6 +140,26 @@
             this.txt_taxiTypeSymbol = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lb_taxiTypeSymbol = new System.Windows.Forms.Label();
             this.superTabItem8 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel10 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.buttonX15 = new DevComponents.DotNetBar.ButtonX();
+            this.bt_AddBranch = new DevComponents.DotNetBar.ButtonX();
+            this.dgv_branches = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.txt_branchName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lb_branchName = new System.Windows.Forms.Label();
+            this.superTabItem10 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel9 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.bt_delPriceRate = new DevComponents.DotNetBar.ButtonX();
+            this.bt_addPriceRate = new DevComponents.DotNetBar.ButtonX();
+            this.cb_priceEnd = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cb_priceStart = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cb_priceTaxiType = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.dataGridViewX6 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.txt_priceRateDivision = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lb_priceTaxiType = new System.Windows.Forms.Label();
+            this.lb_priceStart = new System.Windows.Forms.Label();
+            this.lb_txtPriceRateDivision = new System.Windows.Forms.Label();
+            this.lb_priceEnd = new System.Windows.Forms.Label();
+            this.superTabItem9 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel15 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.buttonX26 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX27 = new DevComponents.DotNetBar.ButtonX();
@@ -292,8 +294,6 @@
             this.bubbleButton5 = new DevComponents.DotNetBar.BubbleButton();
             this.bubbleButton6 = new DevComponents.DotNetBar.BubbleButton();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txt_groupAddress = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.lb_groupAddress = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
@@ -301,26 +301,26 @@
             this.groupPanel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl4)).BeginInit();
             this.superTabControl4.SuspendLayout();
-            this.superTabControlPanel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dp_taxiDateJoin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_taxis)).BeginInit();
             this.superTabControlPanel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dp_empDOB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_entities)).BeginInit();
+            this.superTabControlPanel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dp_taxiDateJoin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_taxis)).BeginInit();
             this.groupPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).BeginInit();
             this.superTabControl3.SuspendLayout();
             this.superTabControlPanel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_group)).BeginInit();
-            this.superTabControlPanel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_branches)).BeginInit();
-            this.superTabControlPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX6)).BeginInit();
             this.superTabControlPanel8.SuspendLayout();
             this.groupPanel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX8)).BeginInit();
             this.groupPanel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_taxiType)).BeginInit();
+            this.superTabControlPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_branches)).BeginInit();
+            this.superTabControlPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX6)).BeginInit();
             this.superTabControlPanel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX14)).BeginInit();
             this.superTabControlPanel12.SuspendLayout();
@@ -445,8 +445,8 @@
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Controls.Add(this.superTabControlPanel2);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
             this.superTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.superTabControl1.Location = new System.Drawing.Point(0, 0);
             this.superTabControl1.Name = "superTabControl1";
@@ -545,324 +545,6 @@
             this.superTabItem14});
             this.superTabControl4.Text = "superTabControl4";
             // 
-            // superTabControlPanel14
-            // 
-            this.superTabControlPanel14.Controls.Add(this.txt_taxiModel);
-            this.superTabControlPanel14.Controls.Add(this.lb_taxiModel);
-            this.superTabControlPanel14.Controls.Add(this.txt_taxiNo);
-            this.superTabControlPanel14.Controls.Add(this.lb_taxiNo);
-            this.superTabControlPanel14.Controls.Add(this.dp_taxiDateJoin);
-            this.superTabControlPanel14.Controls.Add(this.lb_taxiDateJoin);
-            this.superTabControlPanel14.Controls.Add(this.bt_DelTaxi);
-            this.superTabControlPanel14.Controls.Add(this.bt_AddTaxi);
-            this.superTabControlPanel14.Controls.Add(this.cb_taxiGroup);
-            this.superTabControlPanel14.Controls.Add(this.lb_taxiGroup);
-            this.superTabControlPanel14.Controls.Add(this.cb_taxiType);
-            this.superTabControlPanel14.Controls.Add(this.lb_taxiType);
-            this.superTabControlPanel14.Controls.Add(this.dgv_taxis);
-            this.superTabControlPanel14.Controls.Add(this.buttonX25);
-            this.superTabControlPanel14.Controls.Add(this.label59);
-            this.superTabControlPanel14.Controls.Add(this.comboBoxEx12);
-            this.superTabControlPanel14.Controls.Add(this.textBoxX43);
-            this.superTabControlPanel14.Controls.Add(this.txt_taxiDriverMain);
-            this.superTabControlPanel14.Controls.Add(this.lb_taxiDriverMain);
-            this.superTabControlPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel14.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel14.Name = "superTabControlPanel14";
-            this.superTabControlPanel14.Size = new System.Drawing.Size(907, 553);
-            this.superTabControlPanel14.TabIndex = 0;
-            this.superTabControlPanel14.TabItem = this.superTabItem14;
-            // 
-            // txt_taxiModel
-            // 
-            // 
-            // 
-            // 
-            this.txt_taxiModel.Border.Class = "TextBoxBorder";
-            this.txt_taxiModel.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_taxiModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_taxiModel.Location = new System.Drawing.Point(688, 189);
-            this.txt_taxiModel.Name = "txt_taxiModel";
-            this.txt_taxiModel.Size = new System.Drawing.Size(127, 26);
-            this.txt_taxiModel.TabIndex = 55;
-            // 
-            // lb_taxiModel
-            // 
-            this.lb_taxiModel.AutoSize = true;
-            this.lb_taxiModel.BackColor = System.Drawing.Color.Transparent;
-            this.lb_taxiModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_taxiModel.Location = new System.Drawing.Point(572, 195);
-            this.lb_taxiModel.Name = "lb_taxiModel";
-            this.lb_taxiModel.Size = new System.Drawing.Size(57, 20);
-            this.lb_taxiModel.TabIndex = 54;
-            this.lb_taxiModel.Text = "Model";
-            // 
-            // txt_taxiNo
-            // 
-            // 
-            // 
-            // 
-            this.txt_taxiNo.Border.Class = "TextBoxBorder";
-            this.txt_taxiNo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_taxiNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_taxiNo.Location = new System.Drawing.Point(371, 132);
-            this.txt_taxiNo.Name = "txt_taxiNo";
-            this.txt_taxiNo.Size = new System.Drawing.Size(127, 26);
-            this.txt_taxiNo.TabIndex = 53;
-            this.txt_taxiNo.Enter += new System.EventHandler(this.txt_taxiNoFocus);
-            this.txt_taxiNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_taxiNoKeyPress);
-            this.txt_taxiNo.Leave += new System.EventHandler(this.txt_taxiNoLeave);
-            this.txt_taxiNo.Validating += new System.ComponentModel.CancelEventHandler(this.txt_taxiNoValidator);
-            // 
-            // lb_taxiNo
-            // 
-            this.lb_taxiNo.AutoSize = true;
-            this.lb_taxiNo.BackColor = System.Drawing.Color.Transparent;
-            this.lb_taxiNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_taxiNo.Location = new System.Drawing.Point(255, 138);
-            this.lb_taxiNo.Name = "lb_taxiNo";
-            this.lb_taxiNo.Size = new System.Drawing.Size(58, 20);
-            this.lb_taxiNo.TabIndex = 52;
-            this.lb_taxiNo.Text = "Số Xe";
-            // 
-            // dp_taxiDateJoin
-            // 
-            // 
-            // 
-            // 
-            this.dp_taxiDateJoin.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dp_taxiDateJoin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_taxiDateJoin.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dp_taxiDateJoin.ButtonDropDown.Visible = true;
-            this.dp_taxiDateJoin.IsPopupCalendarOpen = false;
-            this.dp_taxiDateJoin.Location = new System.Drawing.Point(688, 134);
-            // 
-            // 
-            // 
-            this.dp_taxiDateJoin.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dp_taxiDateJoin.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_taxiDateJoin.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dp_taxiDateJoin.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_taxiDateJoin.MonthCalendar.DisplayMonth = new System.DateTime(2014, 4, 1, 0, 0, 0, 0);
-            this.dp_taxiDateJoin.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.dp_taxiDateJoin.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dp_taxiDateJoin.MonthCalendar.TodayButtonVisible = true;
-            this.dp_taxiDateJoin.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.dp_taxiDateJoin.Name = "dp_taxiDateJoin";
-            this.dp_taxiDateJoin.Size = new System.Drawing.Size(127, 22);
-            this.dp_taxiDateJoin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dp_taxiDateJoin.TabIndex = 51;
-            // 
-            // lb_taxiDateJoin
-            // 
-            this.lb_taxiDateJoin.AutoSize = true;
-            this.lb_taxiDateJoin.BackColor = System.Drawing.Color.Transparent;
-            this.lb_taxiDateJoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_taxiDateJoin.Location = new System.Drawing.Point(574, 136);
-            this.lb_taxiDateJoin.Name = "lb_taxiDateJoin";
-            this.lb_taxiDateJoin.Size = new System.Drawing.Size(109, 20);
-            this.lb_taxiDateJoin.TabIndex = 50;
-            this.lb_taxiDateJoin.Text = "Ngày Ra Đội";
-            // 
-            // bt_DelTaxi
-            // 
-            this.bt_DelTaxi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_DelTaxi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_DelTaxi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_DelTaxi.Image = global::Vinasun.Properties.Resources.Error_icon1;
-            this.bt_DelTaxi.Location = new System.Drawing.Point(498, 246);
-            this.bt_DelTaxi.Name = "bt_DelTaxi";
-            this.bt_DelTaxi.Size = new System.Drawing.Size(79, 34);
-            this.bt_DelTaxi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bt_DelTaxi.TabIndex = 49;
-            this.bt_DelTaxi.Text = "Xóa";
-            // 
-            // bt_AddTaxi
-            // 
-            this.bt_AddTaxi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_AddTaxi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_AddTaxi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_AddTaxi.Image = global::Vinasun.Properties.Resources.folder_add_icon__3_;
-            this.bt_AddTaxi.Location = new System.Drawing.Point(355, 246);
-            this.bt_AddTaxi.Name = "bt_AddTaxi";
-            this.bt_AddTaxi.Size = new System.Drawing.Size(79, 34);
-            this.bt_AddTaxi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bt_AddTaxi.TabIndex = 48;
-            this.bt_AddTaxi.Text = "Thêm";
-            this.bt_AddTaxi.Click += new System.EventHandler(this.btAddTaxi_Click);
-            // 
-            // cb_taxiGroup
-            // 
-            this.cb_taxiGroup.DisplayMember = "Text";
-            this.cb_taxiGroup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_taxiGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_taxiGroup.FormattingEnabled = true;
-            this.cb_taxiGroup.ItemHeight = 20;
-            this.cb_taxiGroup.Location = new System.Drawing.Point(371, 187);
-            this.cb_taxiGroup.Name = "cb_taxiGroup";
-            this.cb_taxiGroup.Size = new System.Drawing.Size(127, 26);
-            this.cb_taxiGroup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cb_taxiGroup.TabIndex = 47;
-            // 
-            // lb_taxiGroup
-            // 
-            this.lb_taxiGroup.AutoSize = true;
-            this.lb_taxiGroup.BackColor = System.Drawing.Color.Transparent;
-            this.lb_taxiGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_taxiGroup.Location = new System.Drawing.Point(257, 187);
-            this.lb_taxiGroup.Name = "lb_taxiGroup";
-            this.lb_taxiGroup.Size = new System.Drawing.Size(63, 20);
-            this.lb_taxiGroup.TabIndex = 46;
-            this.lb_taxiGroup.Text = "Đội Xe";
-            // 
-            // cb_taxiType
-            // 
-            this.cb_taxiType.DisplayMember = "Text";
-            this.cb_taxiType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cb_taxiType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_taxiType.FormattingEnabled = true;
-            this.cb_taxiType.ItemHeight = 20;
-            this.cb_taxiType.Location = new System.Drawing.Point(688, 80);
-            this.cb_taxiType.Name = "cb_taxiType";
-            this.cb_taxiType.Size = new System.Drawing.Size(118, 26);
-            this.cb_taxiType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cb_taxiType.TabIndex = 45;
-            // 
-            // lb_taxiType
-            // 
-            this.lb_taxiType.AutoSize = true;
-            this.lb_taxiType.BackColor = System.Drawing.Color.Transparent;
-            this.lb_taxiType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_taxiType.Location = new System.Drawing.Point(574, 86);
-            this.lb_taxiType.Name = "lb_taxiType";
-            this.lb_taxiType.Size = new System.Drawing.Size(70, 20);
-            this.lb_taxiType.TabIndex = 44;
-            this.lb_taxiType.Text = "Loại Xe";
-            // 
-            // dgv_taxis
-            // 
-            this.dgv_taxis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_taxis.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_taxis.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgv_taxis.Location = new System.Drawing.Point(7, 67);
-            this.dgv_taxis.Name = "dgv_taxis";
-            this.dgv_taxis.Size = new System.Drawing.Size(227, 454);
-            this.dgv_taxis.TabIndex = 43;
-            this.dgv_taxis.MouseLeave += new System.EventHandler(this.dgv_taxiMouseLeave);
-            this.dgv_taxis.MouseHover += new System.EventHandler(this.dgv_taxiMouseOver);
-            // 
-            // buttonX25
-            // 
-            this.buttonX25.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX25.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX25.Image = global::Vinasun.Properties.Resources.Start_Menu_Search_icon;
-            this.buttonX25.Location = new System.Drawing.Point(475, 18);
-            this.buttonX25.Name = "buttonX25";
-            this.buttonX25.Size = new System.Drawing.Size(79, 34);
-            this.buttonX25.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX25.TabIndex = 42;
-            this.buttonX25.Text = "Tìm";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.BackColor = System.Drawing.Color.Transparent;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(3, 32);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(81, 20);
-            this.label59.TabIndex = 41;
-            this.label59.Text = "Tìm Kiếm";
-            // 
-            // comboBoxEx12
-            // 
-            this.comboBoxEx12.DisplayMember = "Text";
-            this.comboBoxEx12.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEx12.FormattingEnabled = true;
-            this.comboBoxEx12.ItemHeight = 20;
-            this.comboBoxEx12.Location = new System.Drawing.Point(90, 26);
-            this.comboBoxEx12.Name = "comboBoxEx12";
-            this.comboBoxEx12.Size = new System.Drawing.Size(118, 26);
-            this.comboBoxEx12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx12.TabIndex = 40;
-            // 
-            // textBoxX43
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX43.Border.Class = "TextBoxBorder";
-            this.textBoxX43.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX43.Location = new System.Drawing.Point(225, 26);
-            this.textBoxX43.Name = "textBoxX43";
-            this.textBoxX43.Size = new System.Drawing.Size(196, 26);
-            this.textBoxX43.TabIndex = 39;
-            // 
-            // txt_taxiDriverMain
-            // 
-            // 
-            // 
-            // 
-            this.txt_taxiDriverMain.Border.Class = "TextBoxBorder";
-            this.txt_taxiDriverMain.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_taxiDriverMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_taxiDriverMain.Location = new System.Drawing.Point(371, 83);
-            this.txt_taxiDriverMain.Name = "txt_taxiDriverMain";
-            this.txt_taxiDriverMain.Size = new System.Drawing.Size(127, 26);
-            this.txt_taxiDriverMain.TabIndex = 31;
-            this.txt_taxiDriverMain.Enter += new System.EventHandler(this.txt_taxiDriverMainFocus);
-            this.txt_taxiDriverMain.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_taxiDriverMainKeyPress);
-            this.txt_taxiDriverMain.Leave += new System.EventHandler(this.txt_taxiDriverMainLeave);
-            this.txt_taxiDriverMain.Validating += new System.ComponentModel.CancelEventHandler(this.txt_taxiDriverMainValidator);
-            // 
-            // lb_taxiDriverMain
-            // 
-            this.lb_taxiDriverMain.AutoSize = true;
-            this.lb_taxiDriverMain.BackColor = System.Drawing.Color.Transparent;
-            this.lb_taxiDriverMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_taxiDriverMain.Location = new System.Drawing.Point(255, 89);
-            this.lb_taxiDriverMain.Name = "lb_taxiDriverMain";
-            this.lb_taxiDriverMain.Size = new System.Drawing.Size(111, 20);
-            this.lb_taxiDriverMain.TabIndex = 30;
-            this.lb_taxiDriverMain.Text = "Số Tài Chính";
-            // 
-            // superTabItem14
-            // 
-            this.superTabItem14.AttachedControl = this.superTabControlPanel14;
-            this.superTabItem14.GlobalItem = false;
-            this.superTabItem14.Name = "superTabItem14";
-            this.superTabItem14.Text = "Xe Taxi";
-            // 
             // superTabControlPanel13
             // 
             this.superTabControlPanel13.Controls.Add(this.dp_empDOB);
@@ -899,7 +581,6 @@
             this.superTabControlPanel13.Size = new System.Drawing.Size(907, 526);
             this.superTabControlPanel13.TabIndex = 1;
             this.superTabControlPanel13.TabItem = this.superTabItem13;
-            this.superTabControlPanel13.Click += new System.EventHandler(this.superTabControlPanel13_Click);
             // 
             // dp_empDOB
             // 
@@ -1306,6 +987,324 @@
             this.superTabItem13.Name = "superTabItem13";
             this.superTabItem13.Text = "Nhân Viên";
             // 
+            // superTabControlPanel14
+            // 
+            this.superTabControlPanel14.Controls.Add(this.txt_taxiModel);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiModel);
+            this.superTabControlPanel14.Controls.Add(this.txt_taxiNo);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiNo);
+            this.superTabControlPanel14.Controls.Add(this.dp_taxiDateJoin);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiDateJoin);
+            this.superTabControlPanel14.Controls.Add(this.bt_DelTaxi);
+            this.superTabControlPanel14.Controls.Add(this.bt_AddTaxi);
+            this.superTabControlPanel14.Controls.Add(this.cb_taxiGroup);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiGroup);
+            this.superTabControlPanel14.Controls.Add(this.cb_taxiType);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiType);
+            this.superTabControlPanel14.Controls.Add(this.dgv_taxis);
+            this.superTabControlPanel14.Controls.Add(this.buttonX25);
+            this.superTabControlPanel14.Controls.Add(this.label59);
+            this.superTabControlPanel14.Controls.Add(this.comboBoxEx12);
+            this.superTabControlPanel14.Controls.Add(this.textBoxX43);
+            this.superTabControlPanel14.Controls.Add(this.txt_taxiDriverMain);
+            this.superTabControlPanel14.Controls.Add(this.lb_taxiDriverMain);
+            this.superTabControlPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel14.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel14.Name = "superTabControlPanel14";
+            this.superTabControlPanel14.Size = new System.Drawing.Size(907, 553);
+            this.superTabControlPanel14.TabIndex = 0;
+            this.superTabControlPanel14.TabItem = this.superTabItem14;
+            // 
+            // txt_taxiModel
+            // 
+            // 
+            // 
+            // 
+            this.txt_taxiModel.Border.Class = "TextBoxBorder";
+            this.txt_taxiModel.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_taxiModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_taxiModel.Location = new System.Drawing.Point(688, 189);
+            this.txt_taxiModel.Name = "txt_taxiModel";
+            this.txt_taxiModel.Size = new System.Drawing.Size(127, 26);
+            this.txt_taxiModel.TabIndex = 55;
+            // 
+            // lb_taxiModel
+            // 
+            this.lb_taxiModel.AutoSize = true;
+            this.lb_taxiModel.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiModel.Location = new System.Drawing.Point(572, 195);
+            this.lb_taxiModel.Name = "lb_taxiModel";
+            this.lb_taxiModel.Size = new System.Drawing.Size(57, 20);
+            this.lb_taxiModel.TabIndex = 54;
+            this.lb_taxiModel.Text = "Model";
+            // 
+            // txt_taxiNo
+            // 
+            // 
+            // 
+            // 
+            this.txt_taxiNo.Border.Class = "TextBoxBorder";
+            this.txt_taxiNo.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_taxiNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_taxiNo.Location = new System.Drawing.Point(371, 132);
+            this.txt_taxiNo.Name = "txt_taxiNo";
+            this.txt_taxiNo.Size = new System.Drawing.Size(127, 26);
+            this.txt_taxiNo.TabIndex = 53;
+            this.txt_taxiNo.Enter += new System.EventHandler(this.txt_taxiNoFocus);
+            this.txt_taxiNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_taxiNoKeyPress);
+            this.txt_taxiNo.Leave += new System.EventHandler(this.txt_taxiNoLeave);
+            this.txt_taxiNo.Validating += new System.ComponentModel.CancelEventHandler(this.txt_taxiNoValidator);
+            // 
+            // lb_taxiNo
+            // 
+            this.lb_taxiNo.AutoSize = true;
+            this.lb_taxiNo.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiNo.Location = new System.Drawing.Point(255, 138);
+            this.lb_taxiNo.Name = "lb_taxiNo";
+            this.lb_taxiNo.Size = new System.Drawing.Size(58, 20);
+            this.lb_taxiNo.TabIndex = 52;
+            this.lb_taxiNo.Text = "Số Xe";
+            // 
+            // dp_taxiDateJoin
+            // 
+            // 
+            // 
+            // 
+            this.dp_taxiDateJoin.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dp_taxiDateJoin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_taxiDateJoin.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dp_taxiDateJoin.ButtonDropDown.Visible = true;
+            this.dp_taxiDateJoin.IsPopupCalendarOpen = false;
+            this.dp_taxiDateJoin.Location = new System.Drawing.Point(688, 134);
+            // 
+            // 
+            // 
+            this.dp_taxiDateJoin.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dp_taxiDateJoin.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_taxiDateJoin.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dp_taxiDateJoin.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dp_taxiDateJoin.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_taxiDateJoin.MonthCalendar.DisplayMonth = new System.DateTime(2014, 4, 1, 0, 0, 0, 0);
+            this.dp_taxiDateJoin.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dp_taxiDateJoin.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dp_taxiDateJoin.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dp_taxiDateJoin.MonthCalendar.TodayButtonVisible = true;
+            this.dp_taxiDateJoin.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dp_taxiDateJoin.Name = "dp_taxiDateJoin";
+            this.dp_taxiDateJoin.Size = new System.Drawing.Size(127, 22);
+            this.dp_taxiDateJoin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dp_taxiDateJoin.TabIndex = 51;
+            // 
+            // lb_taxiDateJoin
+            // 
+            this.lb_taxiDateJoin.AutoSize = true;
+            this.lb_taxiDateJoin.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiDateJoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiDateJoin.Location = new System.Drawing.Point(574, 136);
+            this.lb_taxiDateJoin.Name = "lb_taxiDateJoin";
+            this.lb_taxiDateJoin.Size = new System.Drawing.Size(109, 20);
+            this.lb_taxiDateJoin.TabIndex = 50;
+            this.lb_taxiDateJoin.Text = "Ngày Ra Đội";
+            // 
+            // bt_DelTaxi
+            // 
+            this.bt_DelTaxi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_DelTaxi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_DelTaxi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_DelTaxi.Image = global::Vinasun.Properties.Resources.Error_icon1;
+            this.bt_DelTaxi.Location = new System.Drawing.Point(498, 246);
+            this.bt_DelTaxi.Name = "bt_DelTaxi";
+            this.bt_DelTaxi.Size = new System.Drawing.Size(79, 34);
+            this.bt_DelTaxi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bt_DelTaxi.TabIndex = 49;
+            this.bt_DelTaxi.Text = "Xóa";
+            // 
+            // bt_AddTaxi
+            // 
+            this.bt_AddTaxi.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_AddTaxi.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_AddTaxi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_AddTaxi.Image = global::Vinasun.Properties.Resources.folder_add_icon__3_;
+            this.bt_AddTaxi.Location = new System.Drawing.Point(355, 246);
+            this.bt_AddTaxi.Name = "bt_AddTaxi";
+            this.bt_AddTaxi.Size = new System.Drawing.Size(79, 34);
+            this.bt_AddTaxi.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bt_AddTaxi.TabIndex = 48;
+            this.bt_AddTaxi.Text = "Thêm";
+            this.bt_AddTaxi.Click += new System.EventHandler(this.btAddTaxi_Click);
+            // 
+            // cb_taxiGroup
+            // 
+            this.cb_taxiGroup.DisplayMember = "Text";
+            this.cb_taxiGroup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_taxiGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_taxiGroup.FormattingEnabled = true;
+            this.cb_taxiGroup.ItemHeight = 20;
+            this.cb_taxiGroup.Location = new System.Drawing.Point(371, 187);
+            this.cb_taxiGroup.Name = "cb_taxiGroup";
+            this.cb_taxiGroup.Size = new System.Drawing.Size(127, 26);
+            this.cb_taxiGroup.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_taxiGroup.TabIndex = 47;
+            // 
+            // lb_taxiGroup
+            // 
+            this.lb_taxiGroup.AutoSize = true;
+            this.lb_taxiGroup.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiGroup.Location = new System.Drawing.Point(257, 187);
+            this.lb_taxiGroup.Name = "lb_taxiGroup";
+            this.lb_taxiGroup.Size = new System.Drawing.Size(63, 20);
+            this.lb_taxiGroup.TabIndex = 46;
+            this.lb_taxiGroup.Text = "Đội Xe";
+            // 
+            // cb_taxiType
+            // 
+            this.cb_taxiType.DisplayMember = "Text";
+            this.cb_taxiType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_taxiType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_taxiType.FormattingEnabled = true;
+            this.cb_taxiType.ItemHeight = 20;
+            this.cb_taxiType.Location = new System.Drawing.Point(688, 80);
+            this.cb_taxiType.Name = "cb_taxiType";
+            this.cb_taxiType.Size = new System.Drawing.Size(118, 26);
+            this.cb_taxiType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_taxiType.TabIndex = 45;
+            // 
+            // lb_taxiType
+            // 
+            this.lb_taxiType.AutoSize = true;
+            this.lb_taxiType.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiType.Location = new System.Drawing.Point(574, 86);
+            this.lb_taxiType.Name = "lb_taxiType";
+            this.lb_taxiType.Size = new System.Drawing.Size(70, 20);
+            this.lb_taxiType.TabIndex = 44;
+            this.lb_taxiType.Text = "Loại Xe";
+            // 
+            // dgv_taxis
+            // 
+            this.dgv_taxis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_taxis.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_taxis.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgv_taxis.Location = new System.Drawing.Point(7, 67);
+            this.dgv_taxis.Name = "dgv_taxis";
+            this.dgv_taxis.Size = new System.Drawing.Size(227, 454);
+            this.dgv_taxis.TabIndex = 43;
+            this.dgv_taxis.MouseLeave += new System.EventHandler(this.dgv_taxiMouseLeave);
+            this.dgv_taxis.MouseHover += new System.EventHandler(this.dgv_taxiMouseOver);
+            // 
+            // buttonX25
+            // 
+            this.buttonX25.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX25.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX25.Image = global::Vinasun.Properties.Resources.Start_Menu_Search_icon;
+            this.buttonX25.Location = new System.Drawing.Point(475, 18);
+            this.buttonX25.Name = "buttonX25";
+            this.buttonX25.Size = new System.Drawing.Size(79, 34);
+            this.buttonX25.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX25.TabIndex = 42;
+            this.buttonX25.Text = "Tìm";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.BackColor = System.Drawing.Color.Transparent;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(3, 32);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(81, 20);
+            this.label59.TabIndex = 41;
+            this.label59.Text = "Tìm Kiếm";
+            // 
+            // comboBoxEx12
+            // 
+            this.comboBoxEx12.DisplayMember = "Text";
+            this.comboBoxEx12.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxEx12.FormattingEnabled = true;
+            this.comboBoxEx12.ItemHeight = 20;
+            this.comboBoxEx12.Location = new System.Drawing.Point(90, 26);
+            this.comboBoxEx12.Name = "comboBoxEx12";
+            this.comboBoxEx12.Size = new System.Drawing.Size(118, 26);
+            this.comboBoxEx12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBoxEx12.TabIndex = 40;
+            // 
+            // textBoxX43
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX43.Border.Class = "TextBoxBorder";
+            this.textBoxX43.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxX43.Location = new System.Drawing.Point(225, 26);
+            this.textBoxX43.Name = "textBoxX43";
+            this.textBoxX43.Size = new System.Drawing.Size(196, 26);
+            this.textBoxX43.TabIndex = 39;
+            // 
+            // txt_taxiDriverMain
+            // 
+            // 
+            // 
+            // 
+            this.txt_taxiDriverMain.Border.Class = "TextBoxBorder";
+            this.txt_taxiDriverMain.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_taxiDriverMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_taxiDriverMain.Location = new System.Drawing.Point(371, 83);
+            this.txt_taxiDriverMain.Name = "txt_taxiDriverMain";
+            this.txt_taxiDriverMain.Size = new System.Drawing.Size(127, 26);
+            this.txt_taxiDriverMain.TabIndex = 31;
+            this.txt_taxiDriverMain.Enter += new System.EventHandler(this.txt_taxiDriverMainFocus);
+            this.txt_taxiDriverMain.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_taxiDriverMainKeyPress);
+            this.txt_taxiDriverMain.Leave += new System.EventHandler(this.txt_taxiDriverMainLeave);
+            this.txt_taxiDriverMain.Validating += new System.ComponentModel.CancelEventHandler(this.txt_taxiDriverMainValidator);
+            // 
+            // lb_taxiDriverMain
+            // 
+            this.lb_taxiDriverMain.AutoSize = true;
+            this.lb_taxiDriverMain.BackColor = System.Drawing.Color.Transparent;
+            this.lb_taxiDriverMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_taxiDriverMain.Location = new System.Drawing.Point(255, 89);
+            this.lb_taxiDriverMain.Name = "lb_taxiDriverMain";
+            this.lb_taxiDriverMain.Size = new System.Drawing.Size(111, 20);
+            this.lb_taxiDriverMain.TabIndex = 30;
+            this.lb_taxiDriverMain.Text = "Số Tài Chính";
+            // 
+            // superTabItem14
+            // 
+            this.superTabItem14.AttachedControl = this.superTabControlPanel14;
+            this.superTabItem14.GlobalItem = false;
+            this.superTabItem14.Name = "superTabItem14";
+            this.superTabItem14.Text = "Xe Taxi";
+            // 
             // groupPanel7
             // 
             this.groupPanel7.CanvasColor = System.Drawing.SystemColors.Control;
@@ -1364,10 +1363,10 @@
             this.superTabControl3.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.superTabControl3.ControlBox.MenuBox,
             this.superTabControl3.ControlBox.CloseBox});
+            this.superTabControl3.Controls.Add(this.superTabControlPanel9);
+            this.superTabControl3.Controls.Add(this.superTabControlPanel10);
             this.superTabControl3.Controls.Add(this.superTabControlPanel11);
             this.superTabControl3.Controls.Add(this.superTabControlPanel8);
-            this.superTabControl3.Controls.Add(this.superTabControlPanel10);
-            this.superTabControl3.Controls.Add(this.superTabControlPanel9);
             this.superTabControl3.Controls.Add(this.superTabControlPanel15);
             this.superTabControl3.Controls.Add(this.superTabControlPanel12);
             this.superTabControl3.Location = new System.Drawing.Point(3, 3);
@@ -1405,6 +1404,34 @@
             this.superTabControlPanel11.TabIndex = 0;
             this.superTabControlPanel11.TabItem = this.superTabItem11;
             // 
+            // lb_groupAddress
+            // 
+            this.lb_groupAddress.AutoSize = true;
+            this.lb_groupAddress.BackColor = System.Drawing.Color.Transparent;
+            this.lb_groupAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_groupAddress.Location = new System.Drawing.Point(15, 103);
+            this.lb_groupAddress.Name = "lb_groupAddress";
+            this.lb_groupAddress.Size = new System.Drawing.Size(64, 20);
+            this.lb_groupAddress.TabIndex = 43;
+            this.lb_groupAddress.Text = "Địa chỉ";
+            // 
+            // txt_groupAddress
+            // 
+            // 
+            // 
+            // 
+            this.txt_groupAddress.Border.Class = "TextBoxBorder";
+            this.txt_groupAddress.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_groupAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_groupAddress.Location = new System.Drawing.Point(148, 99);
+            this.txt_groupAddress.Name = "txt_groupAddress";
+            this.txt_groupAddress.Size = new System.Drawing.Size(207, 26);
+            this.txt_groupAddress.TabIndex = 42;
+            this.txt_groupAddress.Enter += new System.EventHandler(this.txt_groupAddress_Enter);
+            this.txt_groupAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_groupAddress_KeyPress);
+            this.txt_groupAddress.Leave += new System.EventHandler(this.txt_groupAddress_Leave);
+            this.txt_groupAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txt_groupAddress_Validating);
+            // 
             // buttonX16
             // 
             this.buttonX16.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -1435,14 +1462,14 @@
             // dgv_group
             // 
             this.dgv_group.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_group.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_group.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_group.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgv_group.Location = new System.Drawing.Point(3, 175);
             this.dgv_group.Name = "dgv_group";
@@ -1507,265 +1534,6 @@
             this.superTabItem11.GlobalItem = false;
             this.superTabItem11.Name = "superTabItem11";
             this.superTabItem11.Text = "Tên Đội Xe";
-            // 
-            // superTabControlPanel10
-            // 
-            this.superTabControlPanel10.Controls.Add(this.buttonX15);
-            this.superTabControlPanel10.Controls.Add(this.bt_AddBranch);
-            this.superTabControlPanel10.Controls.Add(this.dgv_branches);
-            this.superTabControlPanel10.Controls.Add(this.txt_branchName);
-            this.superTabControlPanel10.Controls.Add(this.lb_branchName);
-            this.superTabControlPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel10.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel10.Name = "superTabControlPanel10";
-            this.superTabControlPanel10.Size = new System.Drawing.Size(417, 553);
-            this.superTabControlPanel10.TabIndex = 0;
-            this.superTabControlPanel10.TabItem = this.superTabItem10;
-            // 
-            // buttonX15
-            // 
-            this.buttonX15.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX15.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX15.Image = global::Vinasun.Properties.Resources.Error_icon1;
-            this.buttonX15.Location = new System.Drawing.Point(247, 59);
-            this.buttonX15.Name = "buttonX15";
-            this.buttonX15.Size = new System.Drawing.Size(79, 34);
-            this.buttonX15.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX15.TabIndex = 32;
-            this.buttonX15.Text = "Xóa";
-            // 
-            // bt_AddBranch
-            // 
-            this.bt_AddBranch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.bt_AddBranch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.bt_AddBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_AddBranch.Image = global::Vinasun.Properties.Resources.folder_add_icon__3_;
-            this.bt_AddBranch.Location = new System.Drawing.Point(104, 59);
-            this.bt_AddBranch.Name = "bt_AddBranch";
-            this.bt_AddBranch.Size = new System.Drawing.Size(79, 34);
-            this.bt_AddBranch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.bt_AddBranch.TabIndex = 31;
-            this.bt_AddBranch.Text = "Thêm";
-            this.bt_AddBranch.Click += new System.EventHandler(this.bt_AddBranch_Click);
-            // 
-            // dgv_branches
-            // 
-            this.dgv_branches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_branches.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgv_branches.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgv_branches.Location = new System.Drawing.Point(5, 99);
-            this.dgv_branches.Name = "dgv_branches";
-            this.dgv_branches.Size = new System.Drawing.Size(409, 424);
-            this.dgv_branches.TabIndex = 30;
-            // 
-            // txt_branchName
-            // 
-            // 
-            // 
-            // 
-            this.txt_branchName.Border.Class = "TextBoxBorder";
-            this.txt_branchName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_branchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_branchName.Location = new System.Drawing.Point(200, 19);
-            this.txt_branchName.Name = "txt_branchName";
-            this.txt_branchName.Size = new System.Drawing.Size(160, 26);
-            this.txt_branchName.TabIndex = 29;
-            this.txt_branchName.Enter += new System.EventHandler(this.txt_branchName_Enter);
-            this.txt_branchName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_branchName_KeyPress);
-            this.txt_branchName.Leave += new System.EventHandler(this.txt_branchName_Leave);
-            this.txt_branchName.Validating += new System.ComponentModel.CancelEventHandler(this.txt_branchName_Validating);
-            // 
-            // lb_branchName
-            // 
-            this.lb_branchName.AutoSize = true;
-            this.lb_branchName.BackColor = System.Drawing.Color.Transparent;
-            this.lb_branchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_branchName.Location = new System.Drawing.Point(67, 21);
-            this.lb_branchName.Name = "lb_branchName";
-            this.lb_branchName.Size = new System.Drawing.Size(127, 20);
-            this.lb_branchName.TabIndex = 28;
-            this.lb_branchName.Text = "Tên Chi Nhánh";
-            // 
-            // superTabItem10
-            // 
-            this.superTabItem10.AttachedControl = this.superTabControlPanel10;
-            this.superTabItem10.GlobalItem = false;
-            this.superTabItem10.Name = "superTabItem10";
-            this.superTabItem10.Text = "Chi Nhánh";
-            // 
-            // superTabControlPanel9
-            // 
-            this.superTabControlPanel9.Controls.Add(this.buttonX10);
-            this.superTabControlPanel9.Controls.Add(this.buttonX11);
-            this.superTabControlPanel9.Controls.Add(this.comboBoxEx3);
-            this.superTabControlPanel9.Controls.Add(this.comboBoxEx2);
-            this.superTabControlPanel9.Controls.Add(this.comboBoxEx5);
-            this.superTabControlPanel9.Controls.Add(this.dataGridViewX6);
-            this.superTabControlPanel9.Controls.Add(this.textBoxX30);
-            this.superTabControlPanel9.Controls.Add(this.label37);
-            this.superTabControlPanel9.Controls.Add(this.label23);
-            this.superTabControlPanel9.Controls.Add(this.label35);
-            this.superTabControlPanel9.Controls.Add(this.label26);
-            this.superTabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel9.Location = new System.Drawing.Point(0, 0);
-            this.superTabControlPanel9.Name = "superTabControlPanel9";
-            this.superTabControlPanel9.Size = new System.Drawing.Size(417, 553);
-            this.superTabControlPanel9.TabIndex = 0;
-            this.superTabControlPanel9.TabItem = this.superTabItem9;
-            // 
-            // buttonX10
-            // 
-            this.buttonX10.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX10.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX10.Image = global::Vinasun.Properties.Resources.Error_icon1;
-            this.buttonX10.Location = new System.Drawing.Point(223, 137);
-            this.buttonX10.Name = "buttonX10";
-            this.buttonX10.Size = new System.Drawing.Size(79, 34);
-            this.buttonX10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX10.TabIndex = 23;
-            this.buttonX10.Text = "Xóa";
-            // 
-            // buttonX11
-            // 
-            this.buttonX11.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX11.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX11.Image = global::Vinasun.Properties.Resources.folder_add_icon__3_;
-            this.buttonX11.Location = new System.Drawing.Point(80, 137);
-            this.buttonX11.Name = "buttonX11";
-            this.buttonX11.Size = new System.Drawing.Size(79, 34);
-            this.buttonX11.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX11.TabIndex = 22;
-            this.buttonX11.Text = "Thêm";
-            // 
-            // comboBoxEx3
-            // 
-            this.comboBoxEx3.DisplayMember = "Text";
-            this.comboBoxEx3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEx3.FormattingEnabled = true;
-            this.comboBoxEx3.ItemHeight = 20;
-            this.comboBoxEx3.Location = new System.Drawing.Point(321, 17);
-            this.comboBoxEx3.Name = "comboBoxEx3";
-            this.comboBoxEx3.Size = new System.Drawing.Size(93, 26);
-            this.comboBoxEx3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx3.TabIndex = 21;
-            // 
-            // comboBoxEx2
-            // 
-            this.comboBoxEx2.DisplayMember = "Text";
-            this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEx2.FormattingEnabled = true;
-            this.comboBoxEx2.ItemHeight = 20;
-            this.comboBoxEx2.Location = new System.Drawing.Point(110, 17);
-            this.comboBoxEx2.Name = "comboBoxEx2";
-            this.comboBoxEx2.Size = new System.Drawing.Size(92, 26);
-            this.comboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx2.TabIndex = 21;
-            // 
-            // comboBoxEx5
-            // 
-            this.comboBoxEx5.DisplayMember = "Text";
-            this.comboBoxEx5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxEx5.FormattingEnabled = true;
-            this.comboBoxEx5.ItemHeight = 20;
-            this.comboBoxEx5.Location = new System.Drawing.Point(110, 69);
-            this.comboBoxEx5.Name = "comboBoxEx5";
-            this.comboBoxEx5.Size = new System.Drawing.Size(100, 26);
-            this.comboBoxEx5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx5.TabIndex = 21;
-            // 
-            // dataGridViewX6
-            // 
-            this.dataGridViewX6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX6.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridViewX6.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dataGridViewX6.Location = new System.Drawing.Point(5, 206);
-            this.dataGridViewX6.Name = "dataGridViewX6";
-            this.dataGridViewX6.Size = new System.Drawing.Size(409, 317);
-            this.dataGridViewX6.TabIndex = 18;
-            // 
-            // textBoxX30
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX30.Border.Class = "TextBoxBorder";
-            this.textBoxX30.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxX30.Location = new System.Drawing.Point(348, 69);
-            this.textBoxX30.Name = "textBoxX30";
-            this.textBoxX30.Size = new System.Drawing.Size(59, 26);
-            this.textBoxX30.TabIndex = 17;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(1, 75);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(70, 20);
-            this.label37.TabIndex = 12;
-            this.label37.Text = "Loại Xe";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(3, 23);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(108, 20);
-            this.label23.TabIndex = 12;
-            this.label23.Text = "Giá Bắt Đầu";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(236, 75);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(89, 20);
-            this.label35.TabIndex = 16;
-            this.label35.Text = "Tỉ Lệ Chia";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(208, 21);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(113, 20);
-            this.label26.TabIndex = 14;
-            this.label26.Text = "Giá Kết Thúc";
-            // 
-            // superTabItem9
-            // 
-            this.superTabItem9.AttachedControl = this.superTabControlPanel9;
-            this.superTabItem9.GlobalItem = false;
-            this.superTabItem9.Name = "superTabItem9";
-            this.superTabItem9.Text = "Bảng Giá";
             // 
             // superTabControlPanel8
             // 
@@ -1876,14 +1644,14 @@
             // dataGridViewX8
             // 
             this.dataGridViewX8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX8.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX8.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewX8.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX8.Location = new System.Drawing.Point(0, 86);
             this.dataGridViewX8.Name = "dataGridViewX8";
@@ -2017,14 +1785,14 @@
             // dgv_taxiType
             // 
             this.dgv_taxiType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_taxiType.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_taxiType.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_taxiType.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgv_taxiType.Location = new System.Drawing.Point(3, 89);
             this.dgv_taxiType.Name = "dgv_taxiType";
@@ -2066,6 +1834,265 @@
             this.superTabItem8.Name = "superTabItem8";
             this.superTabItem8.Text = "Loại Xe - Giá";
             this.superTabItem8.TextAlignment = DevComponents.DotNetBar.eItemAlignment.Center;
+            // 
+            // superTabControlPanel10
+            // 
+            this.superTabControlPanel10.Controls.Add(this.buttonX15);
+            this.superTabControlPanel10.Controls.Add(this.bt_AddBranch);
+            this.superTabControlPanel10.Controls.Add(this.dgv_branches);
+            this.superTabControlPanel10.Controls.Add(this.txt_branchName);
+            this.superTabControlPanel10.Controls.Add(this.lb_branchName);
+            this.superTabControlPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel10.Location = new System.Drawing.Point(0, 27);
+            this.superTabControlPanel10.Name = "superTabControlPanel10";
+            this.superTabControlPanel10.Size = new System.Drawing.Size(417, 526);
+            this.superTabControlPanel10.TabIndex = 0;
+            this.superTabControlPanel10.TabItem = this.superTabItem10;
+            // 
+            // buttonX15
+            // 
+            this.buttonX15.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX15.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonX15.Image = global::Vinasun.Properties.Resources.Error_icon1;
+            this.buttonX15.Location = new System.Drawing.Point(247, 59);
+            this.buttonX15.Name = "buttonX15";
+            this.buttonX15.Size = new System.Drawing.Size(79, 34);
+            this.buttonX15.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX15.TabIndex = 32;
+            this.buttonX15.Text = "Xóa";
+            // 
+            // bt_AddBranch
+            // 
+            this.bt_AddBranch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_AddBranch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_AddBranch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_AddBranch.Image = global::Vinasun.Properties.Resources.folder_add_icon__3_;
+            this.bt_AddBranch.Location = new System.Drawing.Point(104, 59);
+            this.bt_AddBranch.Name = "bt_AddBranch";
+            this.bt_AddBranch.Size = new System.Drawing.Size(79, 34);
+            this.bt_AddBranch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bt_AddBranch.TabIndex = 31;
+            this.bt_AddBranch.Text = "Thêm";
+            this.bt_AddBranch.Click += new System.EventHandler(this.bt_AddBranch_Click);
+            // 
+            // dgv_branches
+            // 
+            this.dgv_branches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_branches.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_branches.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgv_branches.Location = new System.Drawing.Point(5, 99);
+            this.dgv_branches.Name = "dgv_branches";
+            this.dgv_branches.Size = new System.Drawing.Size(409, 424);
+            this.dgv_branches.TabIndex = 30;
+            // 
+            // txt_branchName
+            // 
+            // 
+            // 
+            // 
+            this.txt_branchName.Border.Class = "TextBoxBorder";
+            this.txt_branchName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_branchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_branchName.Location = new System.Drawing.Point(200, 19);
+            this.txt_branchName.Name = "txt_branchName";
+            this.txt_branchName.Size = new System.Drawing.Size(160, 26);
+            this.txt_branchName.TabIndex = 29;
+            this.txt_branchName.Enter += new System.EventHandler(this.txt_branchName_Enter);
+            this.txt_branchName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_branchName_KeyPress);
+            this.txt_branchName.Leave += new System.EventHandler(this.txt_branchName_Leave);
+            this.txt_branchName.Validating += new System.ComponentModel.CancelEventHandler(this.txt_branchName_Validating);
+            // 
+            // lb_branchName
+            // 
+            this.lb_branchName.AutoSize = true;
+            this.lb_branchName.BackColor = System.Drawing.Color.Transparent;
+            this.lb_branchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_branchName.Location = new System.Drawing.Point(67, 21);
+            this.lb_branchName.Name = "lb_branchName";
+            this.lb_branchName.Size = new System.Drawing.Size(127, 20);
+            this.lb_branchName.TabIndex = 28;
+            this.lb_branchName.Text = "Tên Chi Nhánh";
+            // 
+            // superTabItem10
+            // 
+            this.superTabItem10.AttachedControl = this.superTabControlPanel10;
+            this.superTabItem10.GlobalItem = false;
+            this.superTabItem10.Name = "superTabItem10";
+            this.superTabItem10.Text = "Chi Nhánh";
+            // 
+            // superTabControlPanel9
+            // 
+            this.superTabControlPanel9.Controls.Add(this.bt_delPriceRate);
+            this.superTabControlPanel9.Controls.Add(this.bt_addPriceRate);
+            this.superTabControlPanel9.Controls.Add(this.cb_priceEnd);
+            this.superTabControlPanel9.Controls.Add(this.cb_priceStart);
+            this.superTabControlPanel9.Controls.Add(this.cb_priceTaxiType);
+            this.superTabControlPanel9.Controls.Add(this.dataGridViewX6);
+            this.superTabControlPanel9.Controls.Add(this.txt_priceRateDivision);
+            this.superTabControlPanel9.Controls.Add(this.lb_priceTaxiType);
+            this.superTabControlPanel9.Controls.Add(this.lb_priceStart);
+            this.superTabControlPanel9.Controls.Add(this.lb_txtPriceRateDivision);
+            this.superTabControlPanel9.Controls.Add(this.lb_priceEnd);
+            this.superTabControlPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel9.Location = new System.Drawing.Point(0, 27);
+            this.superTabControlPanel9.Name = "superTabControlPanel9";
+            this.superTabControlPanel9.Size = new System.Drawing.Size(417, 526);
+            this.superTabControlPanel9.TabIndex = 0;
+            this.superTabControlPanel9.TabItem = this.superTabItem9;
+            // 
+            // bt_delPriceRate
+            // 
+            this.bt_delPriceRate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_delPriceRate.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_delPriceRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_delPriceRate.Image = global::Vinasun.Properties.Resources.Error_icon1;
+            this.bt_delPriceRate.Location = new System.Drawing.Point(223, 137);
+            this.bt_delPriceRate.Name = "bt_delPriceRate";
+            this.bt_delPriceRate.Size = new System.Drawing.Size(79, 34);
+            this.bt_delPriceRate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bt_delPriceRate.TabIndex = 23;
+            this.bt_delPriceRate.Text = "Xóa";
+            // 
+            // bt_addPriceRate
+            // 
+            this.bt_addPriceRate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.bt_addPriceRate.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.bt_addPriceRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_addPriceRate.Image = global::Vinasun.Properties.Resources.folder_add_icon__3_;
+            this.bt_addPriceRate.Location = new System.Drawing.Point(80, 137);
+            this.bt_addPriceRate.Name = "bt_addPriceRate";
+            this.bt_addPriceRate.Size = new System.Drawing.Size(79, 34);
+            this.bt_addPriceRate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.bt_addPriceRate.TabIndex = 22;
+            this.bt_addPriceRate.Text = "Thêm";
+            // 
+            // cb_priceEnd
+            // 
+            this.cb_priceEnd.DisplayMember = "Text";
+            this.cb_priceEnd.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_priceEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_priceEnd.FormattingEnabled = true;
+            this.cb_priceEnd.ItemHeight = 20;
+            this.cb_priceEnd.Location = new System.Drawing.Point(321, 17);
+            this.cb_priceEnd.Name = "cb_priceEnd";
+            this.cb_priceEnd.Size = new System.Drawing.Size(93, 26);
+            this.cb_priceEnd.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_priceEnd.TabIndex = 21;
+            // 
+            // cb_priceStart
+            // 
+            this.cb_priceStart.DisplayMember = "Text";
+            this.cb_priceStart.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_priceStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_priceStart.FormattingEnabled = true;
+            this.cb_priceStart.ItemHeight = 20;
+            this.cb_priceStart.Location = new System.Drawing.Point(110, 17);
+            this.cb_priceStart.Name = "cb_priceStart";
+            this.cb_priceStart.Size = new System.Drawing.Size(92, 26);
+            this.cb_priceStart.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_priceStart.TabIndex = 21;
+            // 
+            // cb_priceTaxiType
+            // 
+            this.cb_priceTaxiType.DisplayMember = "Text";
+            this.cb_priceTaxiType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cb_priceTaxiType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_priceTaxiType.FormattingEnabled = true;
+            this.cb_priceTaxiType.ItemHeight = 20;
+            this.cb_priceTaxiType.Location = new System.Drawing.Point(110, 69);
+            this.cb_priceTaxiType.Name = "cb_priceTaxiType";
+            this.cb_priceTaxiType.Size = new System.Drawing.Size(100, 26);
+            this.cb_priceTaxiType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_priceTaxiType.TabIndex = 21;
+            // 
+            // dataGridViewX6
+            // 
+            this.dataGridViewX6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX6.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewX6.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dataGridViewX6.Location = new System.Drawing.Point(5, 206);
+            this.dataGridViewX6.Name = "dataGridViewX6";
+            this.dataGridViewX6.Size = new System.Drawing.Size(409, 317);
+            this.dataGridViewX6.TabIndex = 18;
+            // 
+            // txt_priceRateDivision
+            // 
+            // 
+            // 
+            // 
+            this.txt_priceRateDivision.Border.Class = "TextBoxBorder";
+            this.txt_priceRateDivision.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txt_priceRateDivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_priceRateDivision.Location = new System.Drawing.Point(348, 69);
+            this.txt_priceRateDivision.Name = "txt_priceRateDivision";
+            this.txt_priceRateDivision.Size = new System.Drawing.Size(59, 26);
+            this.txt_priceRateDivision.TabIndex = 17;
+            // 
+            // lb_priceTaxiType
+            // 
+            this.lb_priceTaxiType.AutoSize = true;
+            this.lb_priceTaxiType.BackColor = System.Drawing.Color.Transparent;
+            this.lb_priceTaxiType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_priceTaxiType.Location = new System.Drawing.Point(1, 75);
+            this.lb_priceTaxiType.Name = "lb_priceTaxiType";
+            this.lb_priceTaxiType.Size = new System.Drawing.Size(70, 20);
+            this.lb_priceTaxiType.TabIndex = 12;
+            this.lb_priceTaxiType.Text = "Loại Xe";
+            // 
+            // lb_priceStart
+            // 
+            this.lb_priceStart.AutoSize = true;
+            this.lb_priceStart.BackColor = System.Drawing.Color.Transparent;
+            this.lb_priceStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_priceStart.Location = new System.Drawing.Point(3, 23);
+            this.lb_priceStart.Name = "lb_priceStart";
+            this.lb_priceStart.Size = new System.Drawing.Size(108, 20);
+            this.lb_priceStart.TabIndex = 12;
+            this.lb_priceStart.Text = "Giá Bắt Đầu";
+            // 
+            // lb_txtPriceRateDivision
+            // 
+            this.lb_txtPriceRateDivision.AutoSize = true;
+            this.lb_txtPriceRateDivision.BackColor = System.Drawing.Color.Transparent;
+            this.lb_txtPriceRateDivision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_txtPriceRateDivision.Location = new System.Drawing.Point(236, 75);
+            this.lb_txtPriceRateDivision.Name = "lb_txtPriceRateDivision";
+            this.lb_txtPriceRateDivision.Size = new System.Drawing.Size(89, 20);
+            this.lb_txtPriceRateDivision.TabIndex = 16;
+            this.lb_txtPriceRateDivision.Text = "Tỉ Lệ Chia";
+            // 
+            // lb_priceEnd
+            // 
+            this.lb_priceEnd.AutoSize = true;
+            this.lb_priceEnd.BackColor = System.Drawing.Color.Transparent;
+            this.lb_priceEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_priceEnd.Location = new System.Drawing.Point(208, 21);
+            this.lb_priceEnd.Name = "lb_priceEnd";
+            this.lb_priceEnd.Size = new System.Drawing.Size(113, 20);
+            this.lb_priceEnd.TabIndex = 14;
+            this.lb_priceEnd.Text = "Giá Kết Thúc";
+            // 
+            // superTabItem9
+            // 
+            this.superTabItem9.AttachedControl = this.superTabControlPanel9;
+            this.superTabItem9.GlobalItem = false;
+            this.superTabItem9.Name = "superTabItem9";
+            this.superTabItem9.Text = "Bảng Giá";
             // 
             // superTabControlPanel15
             // 
@@ -2400,8 +2427,6 @@
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.Size = new System.Drawing.Size(143, 20);
             this.textBoxX1.TabIndex = 1;
-            this.textBoxX1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxX1_KeyPress);
-            this.textBoxX1.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxX1_Validating);
             // 
             // superTabItem1
             // 
@@ -2421,9 +2446,9 @@
             this.superTabControlPanel2.Controls.Add(this.label38);
             this.superTabControlPanel2.Controls.Add(this.label39);
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 0);
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 25);
             this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(1362, 644);
+            this.superTabControlPanel2.Size = new System.Drawing.Size(1362, 619);
             this.superTabControlPanel2.TabIndex = 0;
             this.superTabControlPanel2.TabItem = this.superTabItem2;
             // 
@@ -3555,7 +3580,6 @@
             this.textBoxX17.ReadOnly = true;
             this.textBoxX17.Size = new System.Drawing.Size(149, 26);
             this.textBoxX17.TabIndex = 1;
-            this.textBoxX17.TextChanged += new System.EventHandler(this.textBoxX17_TextChanged);
             // 
             // label32
             // 
@@ -3636,7 +3660,6 @@
             this.label19.Size = new System.Drawing.Size(76, 20);
             this.label19.TabIndex = 0;
             this.label19.Text = "DT Tỉ Lệ";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label17
             // 
@@ -4044,7 +4067,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            this.errorProvider1.RightToLeftChanged += new System.EventHandler(this.errorProvider1_RightToLeftChanged);
             // 
             // bubbleBar1
             // 
@@ -4148,34 +4170,6 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // txt_groupAddress
-            // 
-            // 
-            // 
-            // 
-            this.txt_groupAddress.Border.Class = "TextBoxBorder";
-            this.txt_groupAddress.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txt_groupAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_groupAddress.Location = new System.Drawing.Point(148, 99);
-            this.txt_groupAddress.Name = "txt_groupAddress";
-            this.txt_groupAddress.Size = new System.Drawing.Size(207, 26);
-            this.txt_groupAddress.TabIndex = 42;
-            this.txt_groupAddress.Enter += new System.EventHandler(this.txt_groupAddress_Enter);
-            this.txt_groupAddress.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_groupAddress_KeyPress);
-            this.txt_groupAddress.Leave += new System.EventHandler(this.txt_groupAddress_Leave);
-            this.txt_groupAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txt_groupAddress_Validating);
-            // 
-            // lb_groupAddress
-            // 
-            this.lb_groupAddress.AutoSize = true;
-            this.lb_groupAddress.BackColor = System.Drawing.Color.Transparent;
-            this.lb_groupAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_groupAddress.Location = new System.Drawing.Point(15, 103);
-            this.lb_groupAddress.Name = "lb_groupAddress";
-            this.lb_groupAddress.Size = new System.Drawing.Size(64, 20);
-            this.lb_groupAddress.TabIndex = 43;
-            this.lb_groupAddress.Text = "Địa chỉ";
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -4191,26 +4185,20 @@
             this.groupPanel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl4)).EndInit();
             this.superTabControl4.ResumeLayout(false);
-            this.superTabControlPanel14.ResumeLayout(false);
-            this.superTabControlPanel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dp_taxiDateJoin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_taxis)).EndInit();
             this.superTabControlPanel13.ResumeLayout(false);
             this.superTabControlPanel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dp_empDOB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_entities)).EndInit();
+            this.superTabControlPanel14.ResumeLayout(false);
+            this.superTabControlPanel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dp_taxiDateJoin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_taxis)).EndInit();
             this.groupPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl3)).EndInit();
             this.superTabControl3.ResumeLayout(false);
             this.superTabControlPanel11.ResumeLayout(false);
             this.superTabControlPanel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_group)).EndInit();
-            this.superTabControlPanel10.ResumeLayout(false);
-            this.superTabControlPanel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_branches)).EndInit();
-            this.superTabControlPanel9.ResumeLayout(false);
-            this.superTabControlPanel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX6)).EndInit();
             this.superTabControlPanel8.ResumeLayout(false);
             this.groupPanel16.ResumeLayout(false);
             this.groupPanel16.PerformLayout();
@@ -4218,6 +4206,12 @@
             this.groupPanel15.ResumeLayout(false);
             this.groupPanel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_taxiType)).EndInit();
+            this.superTabControlPanel10.ResumeLayout(false);
+            this.superTabControlPanel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_branches)).EndInit();
+            this.superTabControlPanel9.ResumeLayout(false);
+            this.superTabControlPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX6)).EndInit();
             this.superTabControlPanel15.ResumeLayout(false);
             this.superTabControlPanel15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX14)).EndInit();
@@ -4381,15 +4375,15 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX26;
         private DevComponents.DotNetBar.SuperTabControl superTabControl3;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel9;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx3;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx2;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx5;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cb_priceEnd;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cb_priceStart;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cb_priceTaxiType;
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX6;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX30;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label26;
+        private DevComponents.DotNetBar.Controls.TextBoxX txt_priceRateDivision;
+        private System.Windows.Forms.Label lb_priceTaxiType;
+        private System.Windows.Forms.Label lb_priceStart;
+        private System.Windows.Forms.Label lb_txtPriceRateDivision;
+        private System.Windows.Forms.Label lb_priceEnd;
         private DevComponents.DotNetBar.SuperTabItem superTabItem9;
         private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel8;
         private DevComponents.DotNetBar.SuperTabItem superTabItem8;
@@ -4436,8 +4430,8 @@
         private DevComponents.DotNetBar.ButtonX buttonX14;
         private DevComponents.DotNetBar.ButtonX buttonX9;
         private DevComponents.DotNetBar.ButtonX bt_addTaxiType;
-        private DevComponents.DotNetBar.ButtonX buttonX10;
-        private DevComponents.DotNetBar.ButtonX buttonX11;
+        private DevComponents.DotNetBar.ButtonX bt_delPriceRate;
+        private DevComponents.DotNetBar.ButtonX bt_addPriceRate;
         private DevComponents.DotNetBar.ButtonX buttonX15;
         private DevComponents.DotNetBar.ButtonX bt_AddBranch;
         private DevComponents.DotNetBar.ButtonX buttonX16;

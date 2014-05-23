@@ -48,7 +48,6 @@ namespace Vinasun.DTO
             try
             {
                 ds = container.Set<Branch>().ToList();
-
             }
             catch (Exception ex)
             {
