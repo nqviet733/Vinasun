@@ -29,27 +29,34 @@ namespace Vinasun.View
          ToolTip txt_empPhoneNumberToolTip;
          ToolTip txt_empEmailToolTip;
 
-         ToolTip txt_taxiDriverMainTootip;
+         ToolTip txt_taxiDriverMainTooltip;
          ToolTip txt_taxiNoTooltip;
-         ToolTip txt_taxiGroupTootip;
-         ToolTip txt_taxiTypeTootip;
-         ToolTip txt_taxiDateJoinTootip;
-         ToolTip txt_taxiModelTootip;
+         ToolTip txt_taxiGroupTooltip;
+         ToolTip txt_taxiTypeTooltip;
+         ToolTip txt_taxiDateJoinTooltip;
+         ToolTip txt_taxiModelTooltip;
 
-         ToolTip txt_taxiTypeSymbolTootip;
-         ToolTip txt_taxiTypeDescriptionTootip;
+         ToolTip txt_taxiTypeSymbolTooltip;
+         ToolTip txt_taxiTypeDescriptionTooltip;
 
-         ToolTip txt_branchNameTootip;
+         ToolTip txt_branchNameTooltip;
 
-         ToolTip txt_groupNameTootip;
-         ToolTip txt_groupBranchTootip;
-         ToolTip txt_groupAddressTootip;
+         ToolTip txt_groupNameTooltip;
+         ToolTip txt_groupBranchTooltip;
+         ToolTip txt_groupAddressTooltip;
+
+         ToolTip txt_priceRangeStartTooltip;
+         ToolTip txt_priceRangeEndTooltip;
+
+         ToolTip txt_driverPercentageRateTooltip;
 
          EmployeeModel employeeModel;
          TaxiModel taxiModel;
          TaxiTypeModel taxiTypeModel;
          BranchModel branchModel;
          GroupModel groupModel;
+         PriceRangeModel priceRangeModel;
+         DriverPercentageModel driverPercentageModel;
 
 
          private bool statusEmpId;
@@ -193,6 +200,29 @@ namespace Vinasun.View
              set { statusGroupAddress = value; }
          }
 
+         private bool statusPriceRangeStart;
+
+         public bool StatusPriceRangeStart
+         {
+             get { return statusPriceRangeStart; }
+             set { statusPriceRangeStart = value; }
+         }
+         private bool statusPriceRangeEnd;
+
+         public bool StatusPriceRangeEnd
+         {
+             get { return statusPriceRangeEnd; }
+             set { statusPriceRangeEnd = value; }
+         }
+
+         private bool statusDriverPercentageRate;
+
+         public bool StatusDriverPercentageRate
+         {
+             get { return statusDriverPercentageRate; }
+             set { statusDriverPercentageRate = value; }
+         }
+
         public Main()
         {
             InitializeComponent();
@@ -224,6 +254,20 @@ namespace Vinasun.View
             groupModel = new GroupModel();
             groupModel.showDGV(dgv_group, entitiesContainer);
 
+            priceRangeModel = new PriceRangeModel();
+            priceRangeModel.showDGV(dgv_priceRange, entitiesContainer);
+
+            cb_driverPercentagePriceRange.DataSource = new BindingSource(priceRangeModel.getPriceRanges(entitiesContainer), null);
+            cb_driverPercentagePriceRange.DisplayMember = "Value";
+            cb_driverPercentagePriceRange.ValueMember = "Key";
+
+            cb_driverPercentageTaxiType.DataSource = new BindingSource(taxiTypeModel.getTaxiTypes(entitiesContainer), null);
+            cb_driverPercentageTaxiType.DisplayMember = "Value";
+            cb_driverPercentageTaxiType.ValueMember = "Key";
+
+            driverPercentageModel = new DriverPercentageModel();
+            driverPercentageModel.showDGV(dgv_driverPercentage, entitiesContainer);
+
             this.StatusEmpId = false;
             this.StatusEmpFirtName = false;
             this.StatusEmpLastName = false;
@@ -245,6 +289,11 @@ namespace Vinasun.View
             this.statusGroupName = false;
             this.StatusGroupBranch = true;
             this.StatusGroupAddress = false;
+
+            this.StatusPriceRangeStart = false;
+            this.StatusPriceRangeStart = false;
+
+            this.StatusDriverPercentageRate = false;
         }
 
         private void bt_addEmployee_Click(object sender, EventArgs e)
@@ -435,13 +484,13 @@ namespace Vinasun.View
         //Event handler for taxi main driver
         private void txt_taxiDriverMainFocus(object sender, EventArgs e)
         {
-            txt_taxiDriverMainTootip = new ToolTip();
-            txt_taxiDriverMainTootip.Show("Mã Tài Chính", txt_taxiDriverMain);
+            txt_taxiDriverMainTooltip = new ToolTip();
+            txt_taxiDriverMainTooltip.Show("Mã Tài Chính", txt_taxiDriverMain);
         }
 
         private void txt_taxiDriverMainLeave(object sender, EventArgs e)
         {
-            txt_taxiDriverMainTootip.Dispose();
+            txt_taxiDriverMainTooltip.Dispose();
         }
 
         private void txt_taxiDriverMainKeyPress(object sender, KeyPressEventArgs e)
@@ -545,13 +594,13 @@ namespace Vinasun.View
 
         private void txt_taxiTypeSymbol_Enter(object sender, EventArgs e)
         {
-            txt_taxiTypeSymbolTootip = new ToolTip();
-            txt_taxiTypeSymbolTootip.Show("Kí Hiệu Xe", txt_taxiTypeSymbol);
+            txt_taxiTypeSymbolTooltip = new ToolTip();
+            txt_taxiTypeSymbolTooltip.Show("Kí Hiệu Xe", txt_taxiTypeSymbol);
         }
 
         private void txt_taxiTypeSymbol_Leave(object sender, EventArgs e)
         {
-            txt_taxiTypeSymbolTootip.Dispose();
+            txt_taxiTypeSymbolTooltip.Dispose();
         }
 
         private void txt_taxiTypeSymbol_KeyPress(object sender, KeyPressEventArgs e)
@@ -576,13 +625,13 @@ namespace Vinasun.View
 
         private void txt_taxiTypeDescription_Leave(object sender, EventArgs e)
         {
-            txt_taxiTypeDescriptionTootip.Dispose();
+            txt_taxiTypeDescriptionTooltip.Dispose();
         }
 
         private void txt_taxiTypeDescription_Enter(object sender, EventArgs e)
         {
-            txt_taxiTypeDescriptionTootip = new ToolTip();
-            txt_taxiTypeDescriptionTootip.Show("Mô Tả Loại Xe", txt_taxiTypeSymbol);
+            txt_taxiTypeDescriptionTooltip = new ToolTip();
+            txt_taxiTypeDescriptionTooltip.Show("Mô Tả Loại Xe", txt_taxiTypeSymbol);
         }
 
         private void bt_addTaxiType_Click(object sender, EventArgs e)
@@ -613,7 +662,7 @@ namespace Vinasun.View
 
         private void txt_branchName_Leave(object sender, EventArgs e)
         {
-            txt_branchNameTootip.Dispose();
+            txt_branchNameTooltip.Dispose();
         }
 
         private void txt_branchName_KeyPress(object sender, KeyPressEventArgs e)
@@ -623,8 +672,8 @@ namespace Vinasun.View
 
         private void txt_branchName_Enter(object sender, EventArgs e)
         {
-            txt_branchNameTootip = new ToolTip();
-            txt_branchNameTootip.Show("Tên Chi Nhánh", txt_branchName);
+            txt_branchNameTooltip = new ToolTip();
+            txt_branchNameTooltip.Show("Tên Chi Nhánh", txt_branchName);
         }
 
         private void bt_AddBranch_Click(object sender, EventArgs e)
@@ -650,8 +699,8 @@ namespace Vinasun.View
 
         private void txt_groupName_Enter(object sender, EventArgs e)
         {
-            txt_groupNameTootip = new ToolTip();
-            txt_groupNameTootip.Show("Tên Nhóm", txt_groupName);
+            txt_groupNameTooltip = new ToolTip();
+            txt_groupNameTooltip.Show("Tên Nhóm", txt_groupName);
         }
 
         private void txt_groupName_Validating(object sender, CancelEventArgs e)
@@ -666,7 +715,7 @@ namespace Vinasun.View
 
         private void txt_groupName_Leave(object sender, EventArgs e)
         {
-            txt_groupNameTootip.Dispose();
+            txt_groupNameTooltip.Dispose();
         }
 
         private void bt_AddGroup_Click(object sender, EventArgs e)
@@ -704,13 +753,124 @@ namespace Vinasun.View
 
         private void txt_groupAddress_Enter(object sender, EventArgs e)
         {
-            txt_groupAddressTootip = new ToolTip();
-            txt_groupAddressTootip.Show("Địa Chỉ Tổ", txt_groupAddress);
+            txt_groupAddressTooltip = new ToolTip();
+            txt_groupAddressTooltip.Show("Địa Chỉ Tổ", txt_groupAddress);
         }
 
         private void txt_groupAddress_Leave(object sender, EventArgs e)
         {
-            txt_groupAddressTootip.Dispose();
+            txt_groupAddressTooltip.Dispose();
         }
+
+        private void txt_priceRangeStart_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.keyPressHandler(sender, e, KeyType.Digit);
+        }
+
+        private void txt_priceRangeStart_Enter(object sender, EventArgs e)
+        {
+            txt_priceRangeStartTooltip = new ToolTip();
+            txt_priceRangeStartTooltip.Show("Giá Bắt Đầu", txt_priceRangeStart);
+        }
+
+        private void txt_priceRangeStart_Validating(object sender, CancelEventArgs e)
+        {
+            StatusPriceRangeStart = validation.isNotNullOrEmpty(sender, errorProvider, "Giá Bắt Đầu");
+        }
+
+        private void txt_priceRangeStart_Leave(object sender, EventArgs e)
+        {
+            txt_priceRangeStartTooltip.Dispose();
+        }
+
+        private void txt_priceRangeEnd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.keyPressHandler(sender, e, KeyType.Digit);
+        }
+
+        private void txt_priceRangeEnd_Validating(object sender, CancelEventArgs e)
+        {
+            StatusPriceRangeEnd = validation.isNotNullOrEmpty(sender, errorProvider, "Giá Kết Thúc");
+        }
+
+        private void txt_priceRangeEnd_Leave(object sender, EventArgs e)
+        {
+            txt_priceRangeEndTooltip.Dispose();
+        }
+
+        private void txt_priceRangeEnd_Enter(object sender, EventArgs e)
+        {
+            txt_priceRangeEndTooltip = new ToolTip();
+            txt_priceRangeEndTooltip.Show("Giá Kết Thúc", txt_priceRangeEnd);
+        }
+
+        private void bt_addPriceRange_Click(object sender, EventArgs e)
+        {
+            if (StatusPriceRangeEnd && StatusPriceRangeStart)
+            {
+                PriceRange priceRange = new PriceRange();
+                priceRange.start = int.Parse(txt_priceRangeStart.Text);
+                priceRange.end = int.Parse(txt_priceRangeEnd.Text);
+                PriceRangeDTO priceRangeDTO = new PriceRangeDTOImpl();
+                int signal = priceRangeDTO.addPriceRange(entitiesContainer, priceRange);
+                if (signal > 0)
+                {
+                    MessageBox.Show("Thêm Giá Mới Thành Công");
+                    priceRangeModel.showDGV(dgv_priceRange, entitiesContainer);
+                }
+                else
+                {
+                    MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Mới Tổ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void bt_addDriverPercentage_Click(object sender, EventArgs e)
+        {
+            if (StatusDriverPercentageRate)
+            {
+                DriverPercentange driverPercentage = new DriverPercentange();
+
+                driverPercentage.percent = int.Parse(txt_driverPercentageRate.Text);
+                PriceRangeDTO priceRangeDTO = new PriceRangeDTOImpl();
+                driverPercentage.PriceRange = priceRangeDTO.retrievePriceRange(entitiesContainer, int.Parse(cb_driverPercentagePriceRange.SelectedValue.ToString()));
+                TaxiTypeDTO taxiTypeDTO = new TaxiTypeDTOImpl();
+                driverPercentage.TaxiType = taxiTypeDTO.retrieveTaxiType(entitiesContainer, int.Parse(cb_driverPercentageTaxiType.SelectedValue.ToString()));
+                
+                DriverPercentangeDTO driverPercentageDTO = new DriverPercentangeDTOImpl();
+                int signal = driverPercentageDTO.addDriverPercentange(entitiesContainer, driverPercentage);
+                if (signal > 0)
+                {
+                    MessageBox.Show("Thêm Giá Tỉ Lệ Giá Cho Taxi Thành Công");
+                    driverPercentageModel.showDGV(dgv_driverPercentage, entitiesContainer);
+                }
+                else
+                {
+                    MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Mới Tổ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void txt_driverPercentageRate_Validating(object sender, CancelEventArgs e)
+        {
+            StatusDriverPercentageRate = validation.isNotNullOrEmpty(sender, errorProvider, "Giá Bắt Đầu");
+        }
+
+        private void txt_driverPercentageRate_Enter(object sender, EventArgs e)
+        {
+            txt_driverPercentageRateTooltip = new ToolTip();
+            txt_driverPercentageRateTooltip.Show("Tỉ Lệ % chia cho tài xế", txt_driverPercentageRate);
+        }
+
+        private void txt_driverPercentageRate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.keyPressHandler(sender, e, KeyType.Digit);
+        }
+
+        private void txt_driverPercentageRate_Leave(object sender, EventArgs e)
+        {
+            txt_driverPercentageRateTooltip.Dispose();
+        }
+
     }
 }

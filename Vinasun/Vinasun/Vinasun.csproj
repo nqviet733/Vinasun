@@ -109,6 +109,7 @@
       <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
     <Compile Include="Enum\KeyType.cs" />
+    <Compile Include="Enum\PriceType.cs" />
     <Compile Include="Enum\ReasonNoIncomeType.cs" />
     <Compile Include="Enum\TaxiType1.cs" />
     <Compile Include="DTO\CollectionDTO.cs" />
@@ -143,8 +144,10 @@
     <Compile Include="DTO\UserRoleDTO.cs" />
     <Compile Include="DTO\UserRoleDTOImpl.cs" />
     <Compile Include="Model\BranchModel.cs" />
+    <Compile Include="Model\DriverPercentageModel.cs" />
     <Compile Include="Model\EmployeeModel.cs" />
     <Compile Include="Model\GroupModel.cs" />
+    <Compile Include="Model\PriceRangeModel.cs" />
     <Compile Include="Model\TaxiModel.cs" />
     <Compile Include="Model\TaxiTypeModel.cs" />
     <Compile Include="Program.cs" />
