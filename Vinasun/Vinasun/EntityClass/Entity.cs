@@ -18,6 +18,7 @@ namespace Vinasun.EntityClass
         {
             this.Checkers = new HashSet<Entity>();
             this.Taxis = new HashSet<Taxi>();
+            this.EntityRoles = new HashSet<EntityRole>();
         }
     
         public int id { get; set; }
@@ -30,10 +31,10 @@ namespace Vinasun.EntityClass
         public Nullable<System.DateTime> dateJoin { get; set; }
         public string entityNo { get; set; }
     
-        public virtual UserRole UserRole { get; set; }
         public virtual ICollection<Entity> Checkers { get; set; }
         public virtual Entity Leader { get; set; }
         public virtual Group Group { get; set; }
         public virtual ICollection<Taxi> Taxis { get; set; }
+        public virtual ICollection<EntityRole> EntityRoles { get; set; }
     }
 }

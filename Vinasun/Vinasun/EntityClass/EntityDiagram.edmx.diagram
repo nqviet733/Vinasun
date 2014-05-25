@@ -27,13 +27,12 @@
         <EntityTypeShape EntityType="EntityDiagram.Group" Width="2" PointX="13.25" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EntityDiagram.TripCheck" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.taxicheck_cuoc" />
-        <EntityTypeShape EntityType="EntityDiagram.Collection" Width="1.5" PointX="16" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityDiagram.Collection" Width="1.5" PointX="16.875" PointY="5.875" IsExpanded="true" />
         <AssociationConnector Association="EntityDiagram.groupCollection" ManuallyRouted="false" >
         </AssociationConnector>
         <EntityTypeShape EntityType="EntityDiagram.ReasonNoIncome" Width="2" PointX="2.5" PointY="10.125" />
         <AssociationConnector Association="EntityDiagram.taxireason" />
-        <EntityTypeShape EntityType="EntityDiagram.UserRole" Width="1.5" PointX="15.75" PointY="3" />
-        <AssociationConnector Association="EntityDiagram.user_roleentity" />
+        <EntityTypeShape EntityType="EntityDiagram.UserRole" Width="1.5" PointX="16.75" PointY="2.25" />
         <AssociationConnector Association="EntityDiagram.entityentity" ManuallyRouted="true" >
           <ConnectorPoint PointX="11.985682057596209" PointY="2.8749999999999996" />
           <ConnectorPoint PointX="11.985682057596209" PointY="2.0208333106181477" />
@@ -48,6 +47,9 @@
         <AssociationConnector Association="EntityDiagram.TaxiDriver" />
         <EntityTypeShape EntityType="EntityDiagram.Branch" Width="1.5" PointX="16.125" PointY="10.375" />
         <AssociationConnector Association="EntityDiagram.BranchGroup" />
+        <EntityTypeShape EntityType="EntityDiagram.EntityRole" Width="1.5" PointX="14.25" PointY="5.375" />
+        <AssociationConnector Association="EntityDiagram.UserRoleEntityRole" />
+        <AssociationConnector Association="EntityDiagram.EntityEntityRole" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -42,5 +42,6 @@ namespace Vinasun.EntityClass
         public virtual DbSet<UserRole> UserRoles { get; set; }
         public virtual DbSet<Driver> Drivers { get; set; }
         public virtual DbSet<Branch> Branches { get; set; }
+        public virtual DbSet<EntityRole> EntityRoles { get; set; }
     }
 }

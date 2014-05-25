@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/19/2014 22:26:46
+-- Date Created: 05/25/2014 17:29:28
 -- Generated from EDMX file: C:\Users\nqvie_000\Source\Repos\Vinasun\Vinasun\Vinasun\EntityClass\EntityDiagram.edmx
 -- --------------------------------------------------
 
@@ -65,6 +65,12 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_grouptaxi]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Taxis] DROP CONSTRAINT [FK_grouptaxi];
 GO
+IF OBJECT_ID(N'[dbo].[FK_TaxiDriver]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Drivers] DROP CONSTRAINT [FK_TaxiDriver];
+GO
+IF OBJECT_ID(N'[dbo].[FK_BranchGroup]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Groups] DROP CONSTRAINT [FK_BranchGroup];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -115,6 +121,12 @@ GO
 IF OBJECT_ID(N'[dbo].[UserRoles]', 'U') IS NOT NULL
     DROP TABLE [dbo].[UserRoles];
 GO
+IF OBJECT_ID(N'[dbo].[Drivers]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Drivers];
+GO
+IF OBJECT_ID(N'[dbo].[Branches]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Branches];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -131,7 +143,6 @@ CREATE TABLE [dbo].[Entities] (
     [businessPhone] nvarchar(max)  NOT NULL,
     [dateJoin] datetime  NULL,
     [entityNo] nvarchar(max)  NOT NULL,
-    [UserRole_id] int  NULL,
     [Leader_id] int  NULL,
     [Group_id] int  NULL
 );
@@ -294,6 +305,14 @@ CREATE TABLE [dbo].[Branches] (
 );
 GO
 
+-- Creating table 'EntityRoles'
+CREATE TABLE [dbo].[EntityRoles] (
+    [id] int IDENTITY(1,1) NOT NULL,
+    [UserRole_id] int  NULL,
+    [Entity_id] int  NULL
+);
+GO
+
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -397,6 +416,12 @@ GO
 -- Creating primary key on [id] in table 'Branches'
 ALTER TABLE [dbo].[Branches]
 ADD CONSTRAINT [PK_Branches]
+    PRIMARY KEY CLUSTERED ([id] ASC);
+GO
+
+-- Creating primary key on [id] in table 'EntityRoles'
+ALTER TABLE [dbo].[EntityRoles]
+ADD CONSTRAINT [PK_EntityRoles]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
@@ -569,21 +594,6 @@ ON [dbo].[ReasonNoIncomes]
     ([Taxi_id]);
 GO
 
--- Creating foreign key on [UserRole_id] in table 'Entities'
-ALTER TABLE [dbo].[Entities]
-ADD CONSTRAINT [FK_user_roleentity]
-    FOREIGN KEY ([UserRole_id])
-    REFERENCES [dbo].[UserRoles]
-        ([id])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_user_roleentity'
-CREATE INDEX [IX_FK_user_roleentity]
-ON [dbo].[Entities]
-    ([UserRole_id]);
-GO
-
 -- Creating foreign key on [Leader_id] in table 'Entities'
 ALTER TABLE [dbo].[Entities]
 ADD CONSTRAINT [FK_entityentity]
@@ -672,6 +682,36 @@ GO
 CREATE INDEX [IX_FK_BranchGroup]
 ON [dbo].[Groups]
     ([Branch_id]);
+GO
+
+-- Creating foreign key on [UserRole_id] in table 'EntityRoles'
+ALTER TABLE [dbo].[EntityRoles]
+ADD CONSTRAINT [FK_UserRoleEntityRole]
+    FOREIGN KEY ([UserRole_id])
+    REFERENCES [dbo].[UserRoles]
+        ([id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UserRoleEntityRole'
+CREATE INDEX [IX_FK_UserRoleEntityRole]
+ON [dbo].[EntityRoles]
+    ([UserRole_id]);
+GO
+
+-- Creating foreign key on [Entity_id] in table 'EntityRoles'
+ALTER TABLE [dbo].[EntityRoles]
+ADD CONSTRAINT [FK_EntityEntityRole]
+    FOREIGN KEY ([Entity_id])
+    REFERENCES [dbo].[Entities]
+        ([id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_EntityEntityRole'
+CREATE INDEX [IX_FK_EntityEntityRole]
+ON [dbo].[EntityRoles]
+    ([Entity_id]);
 GO
 
 -- --------------------------------------------------

@@ -64,6 +64,8 @@
     <Compile Include="Decorator\KeyPressHandler.cs" />
     <Compile Include="DTO\BranchDTOImpl.cs" />
     <Compile Include="DTO\BranchDTO.cs" />
+    <Compile Include="DTO\EntityRoleDTO.cs" />
+    <Compile Include="DTO\EntityRoleDTOImpl.cs" />
     <Compile Include="DTO\DriverDTO.cs" />
     <Compile Include="DTO\DriverDTOImpl.cs" />
     <Compile Include="EntityClass\Branch.cs">
@@ -98,6 +100,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityDiagram.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityClass\EntityRole.cs">
+      <DependentUpon>EntityDiagram.tt</DependentUpon>
     </Compile>
     <Compile Include="EntityClass\Group.cs">
       <DependentUpon>EntityDiagram.tt</DependentUpon>
@@ -150,6 +155,7 @@
     <Compile Include="Model\PriceRangeModel.cs" />
     <Compile Include="Model\TaxiModel.cs" />
     <Compile Include="Model\TaxiTypeModel.cs" />
+    <Compile Include="Model\UserRoleModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EntityClass\ProvineIncome.cs">

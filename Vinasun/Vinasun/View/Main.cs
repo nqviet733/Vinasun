@@ -50,6 +50,9 @@ namespace Vinasun.View
 
          ToolTip txt_driverPercentageRateTooltip;
 
+         ToolTip txt_userRolePermissionNameTooltip;
+         ToolTip txt_userRolePermissionDescriptionTooltip;
+
          EmployeeModel employeeModel;
          TaxiModel taxiModel;
          TaxiTypeModel taxiTypeModel;
@@ -57,6 +60,7 @@ namespace Vinasun.View
          GroupModel groupModel;
          PriceRangeModel priceRangeModel;
          DriverPercentageModel driverPercentageModel;
+         UserRoleModel userRoleModel;
 
 
          private bool statusEmpId;
@@ -223,6 +227,21 @@ namespace Vinasun.View
              set { statusDriverPercentageRate = value; }
          }
 
+         private bool statusUserRolePermissionName;
+
+         public bool StatusUserRolePermissionName
+         {
+             get { return statusUserRolePermissionName; }
+             set { statusUserRolePermissionName = value; }
+         }
+         private bool statusUserRolePermissionDescription;
+
+         public bool StatusUserRolePermissionDescription
+         {
+             get { return statusUserRolePermissionDescription; }
+             set { statusUserRolePermissionDescription = value; }
+         }
+
         public Main()
         {
             InitializeComponent();
@@ -230,43 +249,68 @@ namespace Vinasun.View
             entitiesContainer = new EntityDiagramContainer();
             validation = new Validation();
             eventHandler = new Vinasun.CommonClass.EventHandler();
-
             employeeModel = new EmployeeModel();
-            employeeModel.showDGV(dgv_entities, entitiesContainer);
-
             taxiModel = new TaxiModel();
-            taxiModel.showDGV(dgv_taxis, entitiesContainer);
-
             taxiTypeModel = new TaxiTypeModel();
-            taxiTypeModel.showDGV(dgv_taxiType, entitiesContainer);
-
             branchModel = new BranchModel();
-            branchModel.showDGV(dgv_branches, entitiesContainer);
-
-            cb_groupBranchName.DataSource = new BindingSource(branchModel.getBranchTypes(entitiesContainer), null) ;
-            cb_groupBranchName.DisplayMember = "Value";
-            cb_groupBranchName.ValueMember = "Key";
-
-            cb_taxiType.DataSource = new BindingSource(taxiTypeModel.getTaxiTypes(entitiesContainer), null);
-            cb_taxiType.DisplayMember = "Value";
-            cb_taxiType.ValueMember = "Key";
-
-            groupModel = new GroupModel();
-            groupModel.showDGV(dgv_group, entitiesContainer);
-
-            priceRangeModel = new PriceRangeModel();
-            priceRangeModel.showDGV(dgv_priceRange, entitiesContainer);
-
-            cb_driverPercentagePriceRange.DataSource = new BindingSource(priceRangeModel.getPriceRanges(entitiesContainer), null);
-            cb_driverPercentagePriceRange.DisplayMember = "Value";
-            cb_driverPercentagePriceRange.ValueMember = "Key";
-
-            cb_driverPercentageTaxiType.DataSource = new BindingSource(taxiTypeModel.getTaxiTypes(entitiesContainer), null);
-            cb_driverPercentageTaxiType.DisplayMember = "Value";
-            cb_driverPercentageTaxiType.ValueMember = "Key";
-
+            userRoleModel = new UserRoleModel();
             driverPercentageModel = new DriverPercentageModel();
+            priceRangeModel = new PriceRangeModel();
+            groupModel = new GroupModel();
+
+            groupModel.showDGV(dgv_group, entitiesContainer);
+            priceRangeModel.showDGV(dgv_priceRange, entitiesContainer);
+            employeeModel.showDGV(dgv_entities, entitiesContainer);
+            taxiModel.showDGV(dgv_taxis, entitiesContainer);
+            taxiTypeModel.showDGV(dgv_taxiType, entitiesContainer);
+            branchModel.showDGV(dgv_branches, entitiesContainer);
             driverPercentageModel.showDGV(dgv_driverPercentage, entitiesContainer);
+            userRoleModel.showDGV(dgv_userRole, entitiesContainer);
+
+            Dictionary<int, string> branchTypes = branchModel.getBranchTypes(entitiesContainer);
+            if (branchTypes.Count != 0)
+            {
+                cb_groupBranchName.DataSource = new BindingSource(branchTypes, null);
+                cb_groupBranchName.DisplayMember = "Value";
+                cb_groupBranchName.ValueMember = "Key";
+            }
+
+            Dictionary<int, string> taxiTypes = taxiTypeModel.getTaxiTypes(entitiesContainer);
+            if (taxiTypes.Count != 0)
+            {
+                cb_taxiType.DataSource = new BindingSource(taxiTypes, null);
+                cb_taxiType.DisplayMember = "Value";
+                cb_taxiType.ValueMember = "Key";
+
+                cb_driverPercentageTaxiType.DataSource = new BindingSource(taxiTypes, null);
+                cb_driverPercentageTaxiType.DisplayMember = "Value";
+                cb_driverPercentageTaxiType.ValueMember = "Key";
+            }
+
+            Dictionary<int, string> priceRanges = priceRangeModel.getPriceRanges(entitiesContainer);
+            if (priceRanges.Count != 0)
+            {
+                cb_driverPercentagePriceRange.DataSource = new BindingSource(priceRangeModel.getPriceRanges(entitiesContainer), null);
+                cb_driverPercentagePriceRange.DisplayMember = "Value";
+                cb_driverPercentagePriceRange.ValueMember = "Key";
+            }
+
+            Dictionary<int, string> groupNames = groupModel.getGroupNames(entitiesContainer);
+            if (groupNames.Count != 0)
+            {
+                cb_taxiGroup.DataSource = new BindingSource(groupNames, null);
+                cb_taxiGroup.DisplayMember = "Value";
+                cb_taxiGroup.ValueMember = "Key";
+            }
+
+            Dictionary<int, string> userRoles = userRoleModel.getUserRoles(entitiesContainer);
+            if (userRoles.Count != 0)
+            {
+                lstb_userRole.DataSource = new BindingSource(userRoles, null);
+                lstb_userRole.DisplayMember = "Value";
+                lstb_userRole.ValueMember = "Key";
+                lstb_userRole.SelectedIndex = 1;
+            }
 
             this.StatusEmpId = false;
             this.StatusEmpFirtName = false;
@@ -294,6 +338,9 @@ namespace Vinasun.View
             this.StatusPriceRangeStart = false;
 
             this.StatusDriverPercentageRate = false;
+
+            this.StatusUserRolePermissionName = false;
+            this.StatusUserRolePermissionDescription = false;
         }
 
         private void bt_addEmployee_Click(object sender, EventArgs e)
@@ -467,6 +514,10 @@ namespace Vinasun.View
                 Taxi taxi = new Taxi();
                 taxi.driverNoMain = txt_taxiDriverMain.Text;
                 taxi.taxiNo = txt_taxiNo.Text;
+                GroupDTO groupDTO = new GroupDTOImpl();
+                taxi.Group = groupDTO.retrieveGroup(entitiesContainer, int.Parse(cb_taxiGroup.SelectedValue.ToString()));
+                TaxiTypeDTO taxiTypeDTO = new TaxiTypeDTOImpl();
+                taxi.TaxiType = taxiTypeDTO.retrieveTaxiType(entitiesContainer, int.Parse(cb_taxiType.SelectedValue.ToString()));
                 TaxiDTO taxiDTO = new TaxiDTOImpl();
                 int signal = taxiDTO.addTaxi(entitiesContainer, taxi);
                 if (signal == 1)
@@ -870,6 +921,82 @@ namespace Vinasun.View
         private void txt_driverPercentageRate_Leave(object sender, EventArgs e)
         {
             txt_driverPercentageRateTooltip.Dispose();
+        }
+
+        private void txt_userRoleName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.keyPressHandler(sender, e, KeyType.Letter);
+        }
+
+        private void txt_userRoleName_Validating(object sender, CancelEventArgs e)
+        {
+            StatusUserRolePermissionName = validation.isNotNullOrEmpty(sender, errorProvider, "Tên Quyền");
+        }
+
+        private void txt_userRoleName_Leave(object sender, EventArgs e)
+        {
+            txt_userRolePermissionNameTooltip.Dispose();
+        }
+
+        private void txt_userRoleName_Enter(object sender, EventArgs e)
+        {
+            txt_userRolePermissionNameTooltip = new ToolTip();
+            txt_userRolePermissionNameTooltip.Show("Tên Quyền", txt_userRolePermissionName);
+        }
+
+        private void txt_userRoleDescription_Enter(object sender, EventArgs e)
+        {
+            txt_userRolePermissionDescriptionTooltip = new ToolTip();
+            txt_userRolePermissionDescriptionTooltip.Show("Mô Tả Tên Quyền", txt_userRolePermissionDescription);
+        }
+
+        private void txt_userRoleDescription_Validating(object sender, CancelEventArgs e)
+        {
+            StatusUserRolePermissionDescription = validation.isNotNullOrEmpty(sender, errorProvider, "Mô Tả Tên Quyền");
+        }
+
+        private void txt_userRoleDescription_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            eventHandler.keyPressHandler(sender, e, KeyType.Letter, KeyType.WhiteSpace);
+        }
+
+        private void txt_userRoleDescription_Leave(object sender, EventArgs e)
+        {
+            txt_userRolePermissionDescriptionTooltip.Dispose();
+        }
+
+        private void bt_addUserRole_Click(object sender, EventArgs e)
+        {
+            if (StatusUserRolePermissionName && StatusUserRolePermissionDescription)
+            {
+                UserRole userRole = new UserRole();
+
+                userRole.permission = txt_userRolePermissionName.Text;
+                userRole.description = txt_userRolePermissionDescription.Text;
+                UserRoleDTO userRoleDTO = new UserRoleDTOImpl();
+                int signal = userRoleDTO.addUserRole(entitiesContainer, userRole);
+                if (signal > 0)
+                {
+                    MessageBox.Show("Thêm Quyền Mới Thành Công");
+                    userRoleModel.showDGV(dgv_userRole, entitiesContainer);
+                }
+                else
+                {
+                    MessageBox.Show("Xảy Ra Lỗi Trong Quá Trình Thêm Quyền Mới", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void lstb_userRole_MouseHover(object sender, EventArgs e)
+        {
+            lstb_userRole.Width = 200;
+            lstb_userRole.Height = 100;
+        }
+
+        private void lstb_userRole_MouseLeave(object sender, EventArgs e)
+        {
+            lstb_userRole.Width = 113;
+            lstb_userRole.Height = 20;
         }
 
     }

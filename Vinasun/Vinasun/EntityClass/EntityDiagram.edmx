@@ -23,6 +23,7 @@
     <EntitySet Name="UserRoles" EntityType="EntityDiagram.Store.UserRoles" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Drivers" EntityType="EntityDiagram.Store.Drivers" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Branches" EntityType="EntityDiagram.Store.Branches" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EntityRoles" EntityType="EntityDiagram.Store.EntityRoles" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="taxi_typetaxi" Association="EntityDiagram.Store.taxi_typetaxi">
       <End Role="taxi_type" EntitySet="TaxiTypes" />
       <End Role="taxi" EntitySet="Taxis" />
@@ -67,10 +68,6 @@
       <End Role="taxi" EntitySet="Taxis" />
       <End Role="reason" EntitySet="ReasonNoIncomes" />
     </AssociationSet>
-    <AssociationSet Name="user_roleentity" Association="EntityDiagram.Store.user_roleentity">
-      <End Role="user_role" EntitySet="UserRoles" />
-      <End Role="entity" EntitySet="Entities" />
-    </AssociationSet>
     <AssociationSet Name="entityentity" Association="EntityDiagram.Store.entityentity">
       <End Role="entity" EntitySet="Entities" />
       <End Role="entity1" EntitySet="Entities" />
@@ -95,6 +92,14 @@
       <End Role="Branch" EntitySet="Branches" />
       <End Role="Group" EntitySet="Groups" />
     </AssociationSet>
+    <AssociationSet Name="UserRoleEntityRole" Association="EntityDiagram.Store.UserRoleEntityRole">
+      <End Role="UserRole" EntitySet="UserRoles" />
+      <End Role="EntityRole" EntitySet="EntityRoles" />
+    </AssociationSet>
+    <AssociationSet Name="EntityEntityRole" Association="EntityDiagram.Store.EntityEntityRole">
+      <End Role="Entity" EntitySet="Entities" />
+      <End Role="EntityRole" EntitySet="EntityRoles" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Entities">
     <Key>
@@ -109,7 +114,6 @@
     <Property Name="businessPhone" Type="nvarchar(max)" Nullable="false" />
     <Property Name="dateJoin" Type="datetime" Nullable="true" />
     <Property Name="entityNo" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="UserRole_id" Type="int" Nullable="true" />
     <Property Name="Leader_id" Type="int" Nullable="true" />
     <Property Name="Group_id" Type="int" Nullable="true" />
   </EntityType>
@@ -270,6 +274,14 @@
     <Property Name="created" Type="datetime" Nullable="false" />
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
+  <EntityType Name="EntityRoles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserRole_id" Type="int" Nullable="true" />
+    <Property Name="Entity_id" Type="int" Nullable="true" />
+  </EntityType>
   <Association Name="taxi_typetaxi">
     <End Role="taxi_type" Type="EntityDiagram.Store.TaxiTypes" Multiplicity="0..1" />
     <End Role="taxi" Type="EntityDiagram.Store.Taxis" Multiplicity="*" />
@@ -402,18 +414,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="user_roleentity">
-    <End Role="user_role" Type="EntityDiagram.Store.UserRoles" Multiplicity="0..1" />
-    <End Role="entity" Type="EntityDiagram.Store.Entities" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="user_role">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="entity">
-        <PropertyRef Name="UserRole_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="entityentity">
     <End Role="entity" Type="EntityDiagram.Store.Entities" Multiplicity="0..1" />
     <End Role="entity1" Type="EntityDiagram.Store.Entities" Multiplicity="*" />
@@ -486,6 +486,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="UserRoleEntityRole">
+    <End Role="UserRole" Type="EntityDiagram.Store.UserRoles" Multiplicity="0..1" />
+    <End Role="EntityRole" Type="EntityDiagram.Store.EntityRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRole">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EntityRole">
+        <PropertyRef Name="UserRole_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EntityEntityRole">
+    <End Role="Entity" Type="EntityDiagram.Store.Entities" Multiplicity="0..1" />
+    <End Role="EntityRole" Type="EntityDiagram.Store.EntityRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entity">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="EntityRole">
+        <PropertyRef Name="Entity_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -550,10 +574,6 @@
             <End Role="reason" EntitySet="ReasonNoIncomes" />
           </AssociationSet>
           <EntitySet Name="UserRoles" EntityType="EntityDiagram.UserRole" />
-          <AssociationSet Name="user_roleentity" Association="EntityDiagram.user_roleentity">
-            <End Role="user_role" EntitySet="UserRoles" />
-            <End Role="entity" EntitySet="Entities" />
-          </AssociationSet>
           <AssociationSet Name="entityentity" Association="EntityDiagram.entityentity">
             <End Role="entity" EntitySet="Entities" />
             <End Role="entity1" EntitySet="Entities" />
@@ -580,6 +600,15 @@
             <End Role="Branch" EntitySet="Branches" />
             <End Role="Group" EntitySet="Groups" />
           </AssociationSet>
+          <EntitySet Name="EntityRoles" EntityType="EntityDiagram.EntityRole" />
+          <AssociationSet Name="UserRoleEntityRole" Association="EntityDiagram.UserRoleEntityRole">
+            <End Role="UserRole" EntitySet="UserRoles" />
+            <End Role="EntityRole" EntitySet="EntityRoles" />
+          </AssociationSet>
+          <AssociationSet Name="EntityEntityRole" Association="EntityDiagram.EntityEntityRole">
+            <End Role="Entity" EntitySet="Entities" />
+            <End Role="EntityRole" EntitySet="EntityRoles" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="Entity">
           <Key>
@@ -593,12 +622,12 @@
           <Property Name="email" Type="String" Nullable="true" />
           <Property Name="businessPhone" Type="String" Nullable="false" />
           <Property Name="dateJoin" Type="DateTime" Nullable="true" />
-          <NavigationProperty Name="UserRole" Relationship="EntityDiagram.user_roleentity" FromRole="entity" ToRole="user_role" />
           <NavigationProperty Name="Checkers" Relationship="EntityDiagram.entityentity" FromRole="entity" ToRole="entity1" />
           <NavigationProperty Name="Leader" Relationship="EntityDiagram.entityentity" FromRole="entity1" ToRole="entity" />
           <NavigationProperty Name="Group" Relationship="EntityDiagram.entitygroup" FromRole="entity" ToRole="group" />
           <NavigationProperty Name="Taxis" Relationship="EntityDiagram.entitytaxi" FromRole="entity" ToRole="taxi" />
           <Property Name="entityNo" Type="String" Nullable="false" />
+          <NavigationProperty Name="EntityRoles" Relationship="EntityDiagram.EntityEntityRole" FromRole="Entity" ToRole="EntityRole" />
           </EntityType>
         <EntityType Name="Taxi">
           <Key>
@@ -797,12 +826,8 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="description" Type="String" Nullable="false" />
           <Property Name="permission" Type="String" Nullable="false" />
-          <NavigationProperty Name="Entities" Relationship="EntityDiagram.user_roleentity" FromRole="user_role" ToRole="entity" />
+          <NavigationProperty Name="EntityRoles" Relationship="EntityDiagram.UserRoleEntityRole" FromRole="UserRole" ToRole="EntityRole" />
         </EntityType>
-        <Association Name="user_roleentity">
-          <End Type="EntityDiagram.UserRole" Role="user_role" Multiplicity="0..1" />
-          <End Type="EntityDiagram.Entity" Role="entity" Multiplicity="*" />
-        </Association>
         <Association Name="entityentity">
           <End Type="EntityDiagram.Entity" Role="entity" Multiplicity="0..1" />
           <End Type="EntityDiagram.Entity" Role="entity1" Multiplicity="*" />
@@ -844,6 +869,22 @@
         <Association Name="BranchGroup">
           <End Type="EntityDiagram.Branch" Role="Branch" Multiplicity="0..1" />
           <End Type="EntityDiagram.Group" Role="Group" Multiplicity="*" />
+        </Association>
+        <EntityType Name="EntityRole">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="UserRole" Relationship="EntityDiagram.UserRoleEntityRole" FromRole="EntityRole" ToRole="UserRole" />
+          <NavigationProperty Name="Entity" Relationship="EntityDiagram.EntityEntityRole" FromRole="EntityRole" ToRole="Entity" />
+        </EntityType>
+        <Association Name="UserRoleEntityRole">
+          <End Type="EntityDiagram.UserRole" Role="UserRole" Multiplicity="0..1" />
+          <End Type="EntityDiagram.EntityRole" Role="EntityRole" Multiplicity="*" />
+        </Association>
+        <Association Name="EntityEntityRole">
+          <End Type="EntityDiagram.Entity" Role="Entity" Multiplicity="0..1" />
+          <End Type="EntityDiagram.EntityRole" Role="EntityRole" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -1024,6 +1065,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="EntityRoles">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityDiagram.EntityRole)">
+        <MappingFragment StoreEntitySet="EntityRoles">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <AssociationSetMapping Name="taxi_typetaxi" TypeName="EntityDiagram.taxi_typetaxi" StoreEntitySet="Taxis">
       <EndProperty Name="taxi_type">
         <ScalarProperty Name="id" ColumnName="TaxiType_id" />
@@ -1123,15 +1171,6 @@
       </EndProperty>
       <Condition ColumnName="Taxi_id" IsNull="false" />
     </AssociationSetMapping>
-    <AssociationSetMapping Name="user_roleentity" TypeName="EntityDiagram.user_roleentity" StoreEntitySet="Entities">
-      <EndProperty Name="user_role">
-        <ScalarProperty Name="id" ColumnName="UserRole_id" />
-      </EndProperty>
-      <EndProperty Name="entity">
-        <ScalarProperty Name="id" ColumnName="id" />
-      </EndProperty>
-      <Condition ColumnName="UserRole_id" IsNull="false" />
-    </AssociationSetMapping>
     <AssociationSetMapping Name="entityentity" TypeName="EntityDiagram.entityentity" StoreEntitySet="Entities">
       <EndProperty Name="entity">
         <ScalarProperty Name="id" ColumnName="Leader_id" />
@@ -1184,6 +1223,24 @@
         <ScalarProperty Name="id" ColumnName="id" />
       </EndProperty>
       <Condition ColumnName="Branch_id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserRoleEntityRole" TypeName="EntityDiagram.UserRoleEntityRole" StoreEntitySet="EntityRoles">
+      <EndProperty Name="UserRole">
+        <ScalarProperty Name="id" ColumnName="UserRole_id" />
+      </EndProperty>
+      <EndProperty Name="EntityRole">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+      <Condition ColumnName="UserRole_id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EntityEntityRole" TypeName="EntityDiagram.EntityEntityRole" StoreEntitySet="EntityRoles">
+      <EndProperty Name="Entity">
+        <ScalarProperty Name="id" ColumnName="Entity_id" />
+      </EndProperty>
+      <EndProperty Name="EntityRole">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+      <Condition ColumnName="Entity_id" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>

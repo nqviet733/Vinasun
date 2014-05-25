@@ -12,17 +12,11 @@ namespace Vinasun.EntityClass
     using System;
     using System.Collections.Generic;
     
-    public partial class UserRole
+    public partial class EntityRole
     {
-        public UserRole()
-        {
-            this.EntityRoles = new HashSet<EntityRole>();
-        }
-    
         public int id { get; set; }
-        public string description { get; set; }
-        public string permission { get; set; }
     
-        public virtual ICollection<EntityRole> EntityRoles { get; set; }
+        public virtual UserRole UserRole { get; set; }
+        public virtual Entity Entity { get; set; }
     }
 }
