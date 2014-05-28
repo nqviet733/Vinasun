@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonClass\EventHandler.cs" />
+    <Compile Include="CommonClass\StringProcess.cs" />
     <Compile Include="CommonClass\Validation.cs" />
     <Compile Include="Decorator\ConcreteKeyPressHandler.cs" />
     <Compile Include="Decorator\KeyPressHandler.cs" />

@@ -12,6 +12,7 @@ using Vinasun.EntityClass;
 using Vinasun.CommonClass;
 using Vinasun.DTO;
 using Vinasun.Enum;
+using System.Collections;
 
 /*Ctrl+Shift+C : Class View
  Ctrl K, T: Call Hierarchy */
@@ -61,6 +62,7 @@ namespace Vinasun.View
          PriceRangeModel priceRangeModel;
          DriverPercentageModel driverPercentageModel;
          UserRoleModel userRoleModel;
+         StringProcess stringProcess;
 
 
          private bool statusEmpId;
@@ -381,9 +383,24 @@ namespace Vinasun.View
 
                 entity.email = txt_email.Text;
                 entity.businessPhone = txt_phoneNumber.Text;
+                UserRoleDTO userRoleDTO = new UserRoleDTOImpl();
+                stringProcess = new StringProcess();
+                Dictionary<int, string> choises = stringProcess.getMultiChoiseFromListBox(lstb_userRole);
+                int count = choises.Count;
+                if (count > 0)
+                {
+                    foreach (KeyValuePair<int, string> choise in choises)
+                    {
+                            EntityRole entityRole = new EntityRole();
+                            entityRole.UserRole = userRoleDTO.retrieveUserRole(entitiesContainer, choise.Key);
+                            entityRole.Entity = entity;
+                            EntityRoleDTO entityRoleDTO = new EntityRoleDTOImpl();
+                            int s = entityRoleDTO.addEntityRole(entitiesContainer, entityRole);
+                    }
+                }
                 EntityDTO entityDTO = new EntityDTOImpl();
                 int signal = entityDTO.addEntity(entitiesContainer, entity);
-                if (signal == 1)
+                if (signal >= 0)
                 {
                     MessageBox.Show("Thêm Nhân Viên Mới Thành Công");
                     employeeModel.showDGV(dgv_entities, entitiesContainer);
@@ -520,7 +537,7 @@ namespace Vinasun.View
                 taxi.TaxiType = taxiTypeDTO.retrieveTaxiType(entitiesContainer, int.Parse(cb_taxiType.SelectedValue.ToString()));
                 TaxiDTO taxiDTO = new TaxiDTOImpl();
                 int signal = taxiDTO.addTaxi(entitiesContainer, taxi);
-                if (signal == 1)
+                if (signal >= 0)
                 {
                     MessageBox.Show("Thêm Taxi Mới Thành Công");
                     taxiModel.showDGV(dgv_taxis, entitiesContainer);
@@ -694,7 +711,7 @@ namespace Vinasun.View
                 taxiType.description = txt_taxiTypeDescription.Text;
                 TaxiTypeDTO taxiTypeDTO = new TaxiTypeDTOImpl();
                 int signal = taxiTypeDTO.addTaxiType(entitiesContainer, taxiType);
-                if (signal == 1)
+                if (signal >= 0)
                 {
                     MessageBox.Show("Thêm Taxi Mới Thành Công");
                     taxiTypeModel.showDGV(dgv_taxiType, entitiesContainer);
@@ -736,7 +753,7 @@ namespace Vinasun.View
                 branch.created = DateTime.Now;
                 BranchDTO branchDTO = new BranchDTOImpl();
                 int signal = branchDTO.addBranch(entitiesContainer, branch);
-                if (signal == 1)
+                if (signal >= 0)
                 {
                     MessageBox.Show("Thêm Taxi Mới Thành Công");
                     branchModel.showDGV(dgv_branches, entitiesContainer);
@@ -997,6 +1014,24 @@ namespace Vinasun.View
         {
             lstb_userRole.Width = 113;
             lstb_userRole.Height = 20;
+        }
+
+        private void dgv_taxis_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string a = dgv_taxis.Rows[e.RowIndex].Cells[0].Value.ToString();
+            MessageBox.Show(a);
+
+            string b = dgv_taxis.Rows[e.RowIndex].Cells[1].Value.ToString();
+            MessageBox.Show(b);
+            
+            string d = dgv_taxis.Rows[e.RowIndex].Cells[3].Value.ToString();
+            MessageBox.Show(d);
+
+            string f = dgv_taxis.Rows[e.RowIndex].Cells[4].Value.ToString();
+            MessageBox.Show(f);
+
+            string c = dgv_taxis.Rows[e.RowIndex].Cells[5].Value.ToString();
+            MessageBox.Show(c);
         }
 
     }
