@@ -1018,20 +1018,35 @@ namespace Vinasun.View
 
         private void dgv_taxis_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string a = dgv_taxis.Rows[e.RowIndex].Cells[0].Value.ToString();
-            MessageBox.Show(a);
+            if (dgv_taxis.Rows[e.RowIndex].Cells["taxiNo"].Value != null)
+            {
+                txt_taxiNo.Text = dgv_taxis.Rows[e.RowIndex].Cells["taxiNo"].Value.ToString();
+            }
 
-            string b = dgv_taxis.Rows[e.RowIndex].Cells[1].Value.ToString();
-            MessageBox.Show(b);
-            
-            string d = dgv_taxis.Rows[e.RowIndex].Cells[3].Value.ToString();
-            MessageBox.Show(d);
+            if (dgv_taxis.Rows[e.RowIndex].Cells["dateJoin"].Value != null)
+            {
+                dp_taxiDateJoin.Value = Convert.ToDateTime(dgv_taxis.Rows[e.RowIndex].Cells["dateJoin"].Value.ToString());
+            }
 
-            string f = dgv_taxis.Rows[e.RowIndex].Cells[4].Value.ToString();
-            MessageBox.Show(f);
+            if (dgv_taxis.Rows[e.RowIndex].Cells["model"].Value != null)
+            {
+                txt_taxiModel.Text = dgv_taxis.Rows[e.RowIndex].Cells["model"].Value.ToString();
+            }
 
-            string c = dgv_taxis.Rows[e.RowIndex].Cells[5].Value.ToString();
-            MessageBox.Show(c);
+            if (dgv_taxis.Rows[e.RowIndex].Cells["driverNoMain"].Value != null)
+            {
+                txt_taxiDriverMain.Text = dgv_taxis.Rows[e.RowIndex].Cells["driverNoMain"].Value.ToString();
+            }
+
+            //if (dgv_taxis.Rows[e.RowIndex].Cells["TaxiType"].Value != null)
+            //{
+            //    cb_taxiType.SelectedIndex = stringProcess.getIdOfComboboxCell(cb_taxiType, dgv_taxis.Rows[e.RowIndex].Cells["TaxiType"].Value.ToString());
+            //}
+
+            //if (dgv_taxis.Rows[e.RowIndex].Cells["Group"].Value != null)
+            //{
+            //    cb_taxiGroup.SelectedIndex = stringProcess.getIdOfComboboxCell(cb_taxiGroup, dgv_taxis.Rows[e.RowIndex].Cells["Group"].Value.ToString());
+            //}
         }
 
     }

@@ -27,5 +27,11 @@ namespace Vinasun.CommonClass
             }
             return choises;
         }
+
+        public int getIdOfComboboxCell(ComboBox cb, string s)
+        {
+            int index = cb.Items.IndexOf(s);
+            return index;
+        }
     }
 }
