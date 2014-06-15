@@ -27,5 +27,16 @@ namespace Vinasun.Model
             dgv.Columns["TaxiType"].HeaderText = "Loại Xe";
             dgv.Columns["Group"].HeaderText = "Đội Xe";
         }
+
+        public Dictionary<int, string> getMainDrivers(EntityDiagramContainer entitiesContainer)
+        {
+            Dictionary<int, string> mainDrivers = new Dictionary<int, string>();
+            TaxiDTO taxiDTO = new TaxiDTOImpl();
+            foreach (Taxi taxi in taxiDTO.retrieveAllTaxis(entitiesContainer))
+            {
+                mainDrivers.Add(taxi.id, taxi.driverNoMain);
+            }
+            return mainDrivers;
+        }
     }
 }

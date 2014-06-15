@@ -314,6 +314,15 @@ namespace Vinasun.View
                 lstb_userRole.SelectedIndex = 1;
             }
 
+            Dictionary<int, string> mainDrivers = taxiModel.getMainDrivers(entitiesContainer);
+            if (mainDrivers.Count != 0)
+            {
+                cb_mainDriver.DataSource = new BindingSource(mainDrivers, null);
+                cb_mainDriver.DisplayMember = "Value";
+                cb_mainDriver.ValueMember = "Key";
+                cb_mainDriver.SelectedIndex = 1;
+            }
+
             this.StatusEmpId = false;
             this.StatusEmpFirtName = false;
             this.StatusEmpLastName = false;

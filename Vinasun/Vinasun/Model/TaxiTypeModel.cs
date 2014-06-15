@@ -34,5 +34,6 @@ namespace Vinasun.Model
             }
             return taxiTypes;
         }
+
     }
 }
